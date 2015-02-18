@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sfu.ca/OnCampusNavigationSchema.xml"" xmlns:tns="http://www.sfu.ca/OnCampusNavigationSchema.xml" elementFormDefault="qualified">
+
+    <element name="e" type="tns:Pair">
+    	<annotation>
+    		<documentation>Short for edge. Represents an adjacency between the node identified by a, and the one identified by b.</documentation>
+    	</annotation></element>
+
+    <complexType name="Pair">
+        <annotation>
+        	<documentation>Represents adjacency between node a and node b, where the attribute refer to nodes on the same page.</documentation>
+        </annotation>
+        <attribute name="a" type="int" use="required"></attribute>
+    	<attribute name="b" type="int" use="required"></attribute>
+    </complexType>
+
+    <element name="n" type="tns:Node"></element>
+
+    <complexType name="Node">
+    	
+    	<attribute name="id" type="int" use="required"></attribute>
+    	<attribute name="x" type="double" use="required"></attribute>
+    	<attribute name="y" type="double" use="required"></attribute>
+    </complexType>
+
+    <element name="page" type="tns:Page"></element>
+
+    <complexType name="Page">
+
+        <annotation>
+        	<documentation>Contains information regarding nodes nae and background display</documentation>
+        </annotation>
+        <attribute name="name" type="string" use="required"></attribute>
+    	<attribute name="img" type="anyURI" use="required"></attribute>
+    	<attribute name="path" type="anyURI" use="optional"></attribute>
+    </complexType>
+
+    <element name="domain" type="tns:Domain">
+    <all><xs:element name="firstname" type="tns:Page"/></all>
+    	<annotation>
+    		<documentation>A domain refers to a building, it can be thought of as a folder for pages</documentation>
+    	</annotation></element>
+
+    <element name="label" type="tns:Label">
+    	<annotation>
+    		<documentation>A label provides a name to nodes that is not just required for turn by turn navigation.  They are not stored as attributes of nodes,nor domains because they are an index.
+Labels must appear in meta blocks and all fields must be specified.  Label names should not conflict.</documentation>
+    	</annotation></element>
+
+    <complexType name="Label">
+    	<attribute name="name" type="string" use="required">
+    		<annotation>
+    			<documentation>The name of this label</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="domain" type="string" use="required"></attribute>
+    	<attribute name="refID" type="int" use="required">
+    		<annotation>
+    			<documentation>
+    				The id of a node this label references.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    </complexType>
+
+    <complexType name="Domain">
+    	<attribute name="name" type="string" use="required">
+    		<annotation>
+    			<documentation>A name describing this domain, usually a building code, must not conflict with existing domains.</documentation>
+    		</annotation></attribute>
+    </complexType>
+
+    <element name="graft" type="tns:Junction">
+    	<annotation>
+    		<documentation>Defines pairs that may travel off pages</documentation>
+    	</annotation></element>
+
+    <element name="meta" type="tns:Container"></element>
+
+    <complexType name="Container">
+    	<annotation>
+    		<documentation>Used to hold types, but has no specific function(e.g Meta)</documentation>
+    	</annotation></complexType>
+
+    <complexType name="Junction">
+    	<complexContent>
+    		<extension base="tns:Pair">
+    			<attribute name="aPage" type="string" use="optional">
+    				<annotation>
+    					<documentation>
+    						Required if specified outside a page,
+    						implicitly use parent page otherwise
+    					</documentation>
+    				</annotation>
+    			</attribute>
+    			<attribute name="bPage" type="string" use="required">
+    				<annotation>
+    					<documentation>
+    						Required: The page of the adjacent node as
+    						specified by attribute b.
+    					</documentation>
+    				</annotation>
+    			</attribute>
+    			<attribute name="aDomain" type="string"
+    				use="optional">
+    				<annotation>
+    					<documentation>
+    						Specify if the page of a is not in the
+    						current domain
+    					</documentation>
+    				</annotation>
+    			</attribute>
+    			<attribute name="bDomain" type="string"
+    				use="optional">
+    				<annotation>
+    					<documentation>
+    						Specify if the page of b is not in the
+    						current domain
+    					</documentation>
+    				</annotation>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+</schema>

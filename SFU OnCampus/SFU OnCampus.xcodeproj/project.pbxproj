@@ -11,10 +11,10 @@
 		F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8131A95CFA90006FC17 /* AppDelegate.m */; };
 		F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8161A95CFA90006FC17 /* MasterViewController.m */; };
 		F808D81A1A95CFA90006FC17 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8191A95CFA90006FC17 /* DetailViewController.m */; };
-		F808D81D1A95CFA90006FC17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F808D81B1A95CFA90006FC17 /* Main.storyboard */; };
 		F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F808D81E1A95CFA90006FC17 /* Images.xcassets */; };
 		F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F808D8201A95CFA90006FC17 /* LaunchScreen.xib */; };
 		F808D82E1A95CFA90006FC17 /* SFU_OnCampusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */; };
+		F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A28D291A994D5700CD5829 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +37,12 @@
 		F808D8161A95CFA90006FC17 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		F808D8181A95CFA90006FC17 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F808D8191A95CFA90006FC17 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		F808D81C1A95CFA90006FC17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F808D81E1A95CFA90006FC17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F808D8211A95CFA90006FC17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F808D8271A95CFA90006FC17 /* SFU OnCampusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SFU OnCampusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D82C1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFU_OnCampusTests.m; sourceTree = "<group>"; };
+		F8A28D2A1A994D5700CD5829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +84,13 @@
 		F808D80D1A95CFA90006FC17 /* SFU OnCampus */ = {
 			isa = PBXGroup;
 			children = (
+				F8A28D291A994D5700CD5829 /* Main.storyboard */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
 				F808D8131A95CFA90006FC17 /* AppDelegate.m */,
 				F808D8151A95CFA90006FC17 /* MasterViewController.h */,
 				F808D8161A95CFA90006FC17 /* MasterViewController.m */,
 				F808D8181A95CFA90006FC17 /* DetailViewController.h */,
 				F808D8191A95CFA90006FC17 /* DetailViewController.m */,
-				F808D81B1A95CFA90006FC17 /* Main.storyboard */,
 				F808D81E1A95CFA90006FC17 /* Images.xcassets */,
 				F808D8201A95CFA90006FC17 /* LaunchScreen.xib */,
 				F808D80E1A95CFA90006FC17 /* Supporting Files */,
@@ -204,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F808D81D1A95CFA90006FC17 /* Main.storyboard in Resources */,
+				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
 			);
@@ -250,20 +250,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F808D81B1A95CFA90006FC17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F808D81C1A95CFA90006FC17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F808D8201A95CFA90006FC17 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F808D8211A95CFA90006FC17 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F8A28D291A994D5700CD5829 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8A28D2A1A994D5700CD5829 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,6 +421,7 @@
 				F808D8331A95CFA90006FC17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F808D8341A95CFA90006FC17 /* Build configuration list for PBXNativeTarget "SFU OnCampusTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +430,7 @@
 				F808D8361A95CFA90006FC17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

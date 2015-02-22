@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="C0M-n2-wWX">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="C0M-n2-wWX">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0M-n2-wWX" id="dbd-Ug-K7G">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -93,6 +93,9 @@
                             <outlet property="delegate" destination="bxn-Di-IxC" id="uKS-xe-ECV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="tYm-vM-u2C" kind="showDetail" identifier="displayWebInApp" id="4Qt-pK-U04"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nab-y9-o5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,7 +305,7 @@
                                             <segue destination="bxn-Di-IxC" kind="showDetail" id="sKk-IF-iik"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="HbG-KL-ixN" style="IBUITableViewCellStyleDefault" id="pe1-D6-07D">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="HbG-KL-ixN" style="IBUITableViewCellStyleDefault" id="pe1-D6-07D">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pe1-D6-07D" id="V31-1r-xsh">
@@ -320,7 +323,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kmO-cc-f9Z" style="IBUITableViewCellStyleDefault" id="oS4-l1-185">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="kmO-cc-f9Z" style="IBUITableViewCellStyleDefault" id="oS4-l1-185">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oS4-l1-185" id="fcQ-pW-3Uk">
@@ -338,7 +341,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="01H-RN-E5X" style="IBUITableViewCellStyleDefault" id="Eih-2N-7NS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="01H-RN-E5X" style="IBUITableViewCellStyleDefault" id="Eih-2N-7NS">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eih-2N-7NS" id="Qbq-rC-Wyd">
@@ -387,5 +390,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="UvV-92-ifD"/>
+        <segue reference="4Qt-pK-U04"/>
     </inferredMetricsTieBreakers>
 </document>

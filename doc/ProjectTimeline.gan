@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="SFU OnCampus" company="fiveOf10" webLink="https://sites.google.com/site/cmpt275group10project/" view-date="2015-01-30" view-index="0" gantt-divider-location="420" resource-divider-location="300" version="2.7" locale="en_US">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Name" width="59" order="0"/>
+        <field id="tpd4" name="Begin date" width="18" order="1"/>
+        <field id="tpd5" name="End date" width="21" order="2"/>
+        <option id="taskLabelUp" value=""/>
+        <option id="taskLabelDown" value="advancement"/>
+        <option id="taskLabelLeft" value="resources"/>
+        <option id="taskLabelRight" value=""/>
+        <option id="color.recent"><![CDATA[#000000 #ff3333 #ff3333]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="50" order="0"/>
+        <field id="1" name="Default role" width="50" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2015" month="2" date="3" type="HOLIDAY"><![CDATA[Holiday on 2/3/15 12:00 AM]]></date>
+        <date year="2015" month="2" date="18" type="HOLIDAY"><![CDATA[Holiday on 2/18/15 12:00 AM]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="153" name="Preparation" meeting="false" start="2015-01-19" duration="15" complete="76" expand="false">
+            <task id="154" name="Initial Project Planning" color="#8cb6ce" meeting="false" start="2015-01-19" duration="8" complete="100" expand="true"/>
+            <task id="155" name="Familiarize Team With iOS Platform" color="#8cb6ce" meeting="false" start="2015-01-27" duration="7" complete="50" priority="2" expand="true"/>
+        </task>
+        <task id="156" name="Version 1" color="#000000" meeting="false" start="2015-01-31" duration="35" complete="3" expand="true">
+            <task id="24" name="Library View" color="#8cb6ce" meeting="false" start="2015-02-09" duration="9" complete="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="Library API" color="#8cb6ce" meeting="false" start="2015-02-06" duration="3" complete="0" expand="true">
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" name="JSON Parsing" color="#8cb6ce" meeting="false" start="2015-01-31" duration="5" complete="5" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="8" name="Obtain Maps" color="#8cb6ce" meeting="false" start="2015-01-31" duration="1" complete="100" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+                <depend id="72" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="34" name="GPSWayFinding" color="#8cb6ce" meeting="false" start="2015-02-16" duration="7" complete="0" expand="true">
+                <depend id="72" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="35" name="WayFinding" color="#ff3333" meeting="false" start="2015-02-01" duration="14" complete="0" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+                <depend id="36" type="2" difference="0" hardness="Strong"/>
+                <depend id="72" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="36" name="Shortcode WayFinding" color="#8cb6ce" meeting="false" start="2015-02-16" duration="3" complete="0" expand="true">
+                <depend id="41" type="2" difference="0" hardness="Strong"/>
+                <depend id="72" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="41" name="QR Wayfinding" color="#8cb6ce" meeting="false" start="2015-02-20" duration="3" complete="50" expand="true">
+                <depend id="72" type="2" difference="0" hardness="Rubber"/>
+                <task id="231" name="QRCode To Node" color="#8cb6ce" meeting="false" start="2015-02-20" duration="3" complete="0" expand="true"/>
+            </task>
+            <task id="229" name="QR Code Reading" color="#8cb6ce" meeting="false" start="2015-02-01" duration="1" complete="100" expand="true">
+                <depend id="231" type="2" difference="0" hardness="Strong"/>
+                <depend id="278" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="278" name="Loyalty Card View(Dummy)" color="#8cb6ce" meeting="false" start="2015-02-02" duration="7" complete="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="72" name="Map View" color="#8cb6ce" meeting="false" start="2015-02-24" duration="9" complete="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="326" name="Web Views" color="#8cb6ce" meeting="false" start="2015-02-22" duration="11" complete="5" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+                <task id="329" name="Dining Services" color="#8cb6ce" meeting="false" start="2015-02-25" duration="8" complete="0" expand="true"/>
+                <task id="332" name="talkSFU" color="#8cb6ce" meeting="false" start="2015-02-25" duration="8" complete="0" expand="true"/>
+                <task id="334" name="Canvas" color="#8cb6ce" meeting="false" start="2015-02-27" duration="6" complete="0" expand="true"/>
+                <task id="336" name="Credential Storage" color="#8cb6ce" meeting="false" start="2015-02-22" duration="5" complete="0" expand="true">
+                    <depend id="334" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="339" name="Weather Alerts" color="#8cb6ce" meeting="false" start="2015-02-25" duration="8" complete="0" expand="true"/>
+                <task id="352" name="SFU Youtube" color="#8cb6ce" meeting="false" start="2015-02-25" duration="8" complete="30" expand="true"/>
+            </task>
+            <task id="87" name="RSS Stream Reading" color="#8cb6ce" meeting="false" start="2015-02-04" duration="6" complete="0" expand="true">
+                <depend id="90" type="2" difference="0" hardness="Strong"/>
+                <depend id="91" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="90" name="Parse Althetics RSS" color="#8cb6ce" meeting="false" start="2015-02-10" duration="5" complete="0" expand="true">
+                <depend id="86" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="91" name="Parse Other RSS" color="#8cb6ce" meeting="false" start="2015-02-10" duration="5" complete="0" expand="true">
+                <depend id="86" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="86" name="News View" color="#8cb6ce" meeting="false" start="2015-02-15" duration="9" complete="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="88" name="Feedback View(Dummy)" color="#8cb6ce" meeting="false" start="2015-02-04" duration="10" complete="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="89" name="Transit View" color="#8cb6ce" meeting="false" start="2015-02-04" duration="8" complete="0" priority="2" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="2" name="SubModules" color="#8cb6ce" meeting="true" start="2015-03-05" duration="0" complete="0" expand="true">
+                <depend id="3" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="3" name="Main Menu/Module Integration" color="#ff3333" meeting="false" start="2015-03-05" duration="4" complete="0" priority="4" expand="true"/>
+            <task id="127" name="Asthetics/Spell Checking" color="#8cb6ce" meeting="false" start="2015-03-02" duration="7" complete="0" expand="true"/>
+        </task>
+        <task id="158" name="Version 2" color="#8cb6ce" meeting="false" start="2015-03-09" duration="15" complete="0" expand="false">
+            <task id="0" name="Calendars" color="#8cb6ce" meeting="false" start="2015-03-13" duration="3" complete="0" expand="true">
+                <depend id="313" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="313" name="Calendar Debug" color="#8cb6ce" meeting="false" start="2015-03-16" duration="3" complete="0" expand="true"/>
+            <task id="178" name="Aesthetics/Spell Checking 2" color="#8cb6ce" meeting="false" start="2015-03-19" duration="5" complete="0" expand="true"/>
+            <task id="279" name="Advertisment RSS Stream" color="#8cb6ce" meeting="false" start="2015-03-09" duration="4" complete="0" expand="true">
+                <depend id="317" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="283" name="Advertisment GeoFence" color="#8cb6ce" meeting="false" start="2015-03-09" duration="7" complete="0" expand="true">
+                <depend id="317" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="317" name="Advertisment Debug" color="#8cb6ce" meeting="false" start="2015-03-16" duration="3" complete="0" expand="true"/>
+            <task id="401" name="Usability(Focus) Testing" color="#8cb6ce" meeting="false" start="2015-03-13" duration="6" complete="0" expand="true"/>
+            <task id="305" name="News View Debug" color="#8cb6ce" meeting="false" start="2015-03-09" duration="7" complete="0" expand="true"/>
+            <task id="309" name="Map View Debug" color="#8cb6ce" meeting="false" start="2015-03-09" duration="7" complete="0" expand="true"/>
+            <task id="311" name="Transit View Debug" color="#8cb6ce" meeting="false" start="2015-03-09" duration="7" complete="0" expand="true"/>
+        </task>
+        <task id="160" name="Final Candidate" color="#8cb6ce" meeting="false" start="2015-03-24" duration="21" complete="0" expand="true">
+            <task id="367" name="Regression Tests" color="#8cb6ce" meeting="false" start="2015-03-24" duration="21" complete="0" expand="true"/>
+            <task id="369" name="Copyright Information" color="#8cb6ce" meeting="false" start="2015-03-27" duration="6" complete="0" expand="true">
+                <depend id="373" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="383" name="Help and FAQ" color="#8cb6ce" meeting="false" start="2015-03-24" duration="8" complete="0" expand="true">
+                <depend id="373" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="371" name="Verify SFU Branding" color="#8cb6ce" meeting="false" start="2015-03-30" duration="7" complete="0" expand="true">
+                <depend id="373" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="373" name="Spelling and Grammar Check" color="#8cb6ce" meeting="false" start="2015-04-06" duration="7" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Abram Wiebe" function="Default:0" contacts="abramw@sfu.ca" phone="7788871361"/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd12" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="238" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="74" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="87" visible="true"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

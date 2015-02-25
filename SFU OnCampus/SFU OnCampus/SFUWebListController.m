@@ -10,6 +10,8 @@
 
 @implementation SFUWebListController
 
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -20,7 +22,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2" forIndexPath:indexPath];
 
     //    NSDate *object = self.objects[indexPath.row];
     // cell.textLabel.text = [object description];
@@ -58,6 +60,9 @@
     {
         // segue to web view with url
     }
+    
+}
+- (void)setDetailItem:(id)newDetailItem {
     
 }
 

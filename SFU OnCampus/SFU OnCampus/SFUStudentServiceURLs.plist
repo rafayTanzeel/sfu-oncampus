@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Canvas</string>
+		<key>url</key>
+		<string>https://canvas.sfu.ca</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>goSFU</string>
+		<key>url</key>
+		<string>https://go.sfu.ca</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Connect</string>
+		<key>url</key>
+		<string>https://connect.sfu.ca</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>talkSFU</string>
+		<key>url</key>
+		<string>http://talksfu.ca</string>
+	</dict>
+</array>
+</plist>

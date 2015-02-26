@@ -113,7 +113,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="9wB-3i-gb4"/>
-                                    <barButtonItem systemItem="play" id="p51-Ea-arZ">
+                                    <barButtonItem systemItem="fastForward" id="p51-Ea-arZ">
                                         <connections>
                                             <action selector="goForward" destination="B6C-Kv-5E2" id="65h-tw-QjX"/>
                                         </connections>

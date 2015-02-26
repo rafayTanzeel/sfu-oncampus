@@ -88,17 +88,21 @@
     if([webView canGoBack])
     {
         self.backButton.tintColor = [UIColor whiteColor];
+        self.backButton.enabled=YES;
     }else
     {
-        self.backButton.tintColor = [UIColor grayColor];
+        self.backButton.tintColor = [[UIColor blackColor] colorWithAlphaComponent:.5f];
+        self.backButton.enabled=NO;
     }
     
     if([webView canGoForward])
     {
         self.forwardButton.tintColor = [UIColor whiteColor];
+        self.forwardButton.enabled=YES;
     }else
     {
-        self.forwardButton.tintColor = [UIColor grayColor];
+        self.forwardButton.tintColor=[[UIColor blackColor] colorWithAlphaComponent:.5f];
+        self.forwardButton.enabled=NO;
     }
 
 }

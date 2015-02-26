@@ -536,6 +536,52 @@
             </objects>
             <point key="canvasLocation" x="2953.5" y="-2180"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="ADa-Op-jIN">
+            <objects>
+                <tableViewController id="03b-bX-8R1" customClass="SFUSocialTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="op6-TW-E7s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZnJ-NA-sUB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZnJ-NA-sUB" id="TK9-ZE-H98">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="03b-bX-8R1" id="YcF-wQ-mKC"/>
+                            <outlet property="delegate" destination="03b-bX-8R1" id="IHI-p8-qhs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="7Jt-uX-zK7"/>
+                    <connections>
+                        <segue destination="Xlk-at-zxH" kind="showDetail" identifier="socialWebSegue" id="eBl-g0-RTb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NL-Tc-saR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942" y="-2900"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MpJ-Fj-rn2">
+            <objects>
+                <navigationController id="Uek-28-jeT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="glg-LQ-WIi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="03b-bX-8R1" kind="relationship" relationship="rootViewController" id="0uF-dV-URx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URd-sU-ETW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="-2900"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehc-MB-GN5">
             <objects>
@@ -829,6 +875,30 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="jdI-Dn-3UW" kind="showDetail" id="g1Z-Bu-rFm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="vA7-SO-jfE" imageView="GGH-Zr-Bh5" style="IBUITableViewCellStyleDefault" id="SXR-kN-hnE" userLabel="Social Cell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXR-kN-hnE" id="FHs-U2-hz0">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Social" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vA7-SO-jfE">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon" id="GGH-Zr-Bh5">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Uek-28-jeT" kind="showDetail" id="z1l-qR-KgQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1168,6 +1238,9 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="weatherDescription" destination="3Fm-Tn-SvE" id="Lu2-Ol-5nT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -98,7 +98,9 @@ NSMutableDictionary *currentObservation;
     
     cell.location.text = @"SFU Burnaby";
     
-    cell.description.text = [currentObservation valueForKey:@"dewpoint_c"];
+    NSNumber *dewpoint = [currentObservation valueForKey:@"dewpoint_c"];
+    
+    cell.weatherDescription.text = [dewpoint stringValue];
     
     return cell;
 }

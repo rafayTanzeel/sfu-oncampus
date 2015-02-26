@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *location;
 
 // Description of current weather, current wind, and precipitation
-@property (weak, nonatomic) IBOutlet UILabel *description;
+@property (weak, nonatomic) IBOutlet UILabel *weatherDescription;
 @property (weak, nonatomic) IBOutlet UILabel *wind;
 @property (weak, nonatomic) IBOutlet UILabel *precipitation;
 

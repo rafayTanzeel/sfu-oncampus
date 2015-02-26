@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
+		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
 		F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */; };
 		F808D8111A95CFA90006FC17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8101A95CFA90006FC17 /* main.m */; };
 		F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8131A95CFA90006FC17 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		04EEBE201A9F9E44003E1DD3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		04EEBE211A9F9E44003E1DD3 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
 		04EEBE221A9F9E44003E1DD3 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
+		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
 		F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUStudentServiceURLs.plist; sourceTree = "<group>"; };
 		F808D80B1A95CFA90006FC17 /* SFU OnCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SFU OnCampus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D80F1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A28D291A994D5700CD5829 /* Main.storyboard */,
+				350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */,
+				350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */,
 				F8477E921A99626200152C83 /* SFUWebViewController.h */,
 				F8477E931A99626200152C83 /* SFUWebViewController.m */,
 				F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */,
@@ -281,6 +286,7 @@
 				F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */,
 				F84ED38A1A9EDF0E008AD45B /* SFUWebListModel.m in Sources */,
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
+				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
 				F808D81A1A95CFA90006FC17 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

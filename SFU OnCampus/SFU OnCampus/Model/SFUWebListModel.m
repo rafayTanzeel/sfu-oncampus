@@ -15,7 +15,7 @@ NSArray* array;
     //This is a user defined path in interface builder
     //Take a look under the identity panel to see it.
     @try{
-        array = [NSArray arrayWithContentsOfFile:self.path];
+        array = [NSArray arrayWithContentsOfFile:@"SFUStudentServiceURLs.plist"];
     }
     @catch (NSException* e)
     {
@@ -37,5 +37,10 @@ NSArray* array;
 {
     NSDictionary* d = [array objectAtIndex:idx];
     return [d objectForKey:@"title"];
+}
+
+-(NSInteger)sizeOfArray
+{
+    return [array count];
 }
 @end

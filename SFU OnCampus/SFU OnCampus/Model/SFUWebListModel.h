@@ -10,6 +10,10 @@
 
 @interface SFUWebListModel : NSObject
 
+-(NSInteger)sizeOfArray;
+-(NSString*) titleStringForIndex:(NSUInteger)idx;
+-(NSString*) urlStringForIndex:(NSUInteger)idx;
+
 @property NSString* path;
 
 

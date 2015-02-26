@@ -18,14 +18,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //    return self.objects.count;
-    return 1;
+    return [self.model sizeOfArray];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2" forIndexPath:indexPath];
 
     //    NSDate *object = self.objects[indexPath.row];
-    // cell.textLabel.text = [object description];
+     cell.textLabel.text = [self.model titleStringForIndex:indexPath.row];
     return cell;
 }
 

@@ -14,6 +14,8 @@
 @property NSMutableDictionary* completionHandlerDictionary;
 @property NSURLSession* defaultSession;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *forwardButton;
 
 -(void)displayPageForURL:(NSURL*)url inApp:(BOOL)showInApp;
 @end

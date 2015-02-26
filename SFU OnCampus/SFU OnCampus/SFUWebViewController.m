@@ -74,9 +74,28 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     NSLog(@"startLoad");
+
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"finishLoad"); 
+    NSLog(@"finishLoad");
+   self.title =[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    
+    if([webView canGoBack])
+    {
+        self.backButton.tintColor = [UIColor whiteColor];
+    }else
+    {
+        self.backButton.tintColor = [UIColor grayColor];
+    }
+    
+    if([webView canGoForward])
+    {
+        self.forwardButton.tintColor = [UIColor whiteColor];
+    }else
+    {
+        self.forwardButton.tintColor = [UIColor grayColor];
+    }
+
 }
 @end

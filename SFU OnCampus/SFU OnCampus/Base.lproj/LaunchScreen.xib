@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -13,6 +14,9 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Simon Fraser University. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="439" width="441" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="1px-A5-aM2"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -23,19 +27,46 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAr-S0-AVF">
+                    <rect key="frame" x="8" y="8" width="464" height="423"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBlock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="paP-kw-gmB">
+                            <rect key="frame" x="-7" y="52" width="479" height="319"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="paP-kw-gmB" firstAttribute="centerX" secondItem="cAr-S0-AVF" secondAttribute="centerX" id="IO1-xh-FhR"/>
+                        <constraint firstItem="paP-kw-gmB" firstAttribute="top" secondItem="cAr-S0-AVF" secondAttribute="top" constant="52" id="Q5Q-Rf-8DX"/>
+                        <constraint firstItem="paP-kw-gmB" firstAttribute="centerY" secondItem="cAr-S0-AVF" secondAttribute="centerY" id="ci9-y3-lML"/>
+                        <constraint firstItem="paP-kw-gmB" firstAttribute="leading" secondItem="cAr-S0-AVF" secondAttribute="leading" constant="-7" id="zJd-Bd-n3P"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstItem="cAr-S0-AVF" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="L8Y-4J-mGj"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Ls7-ma-Oqp"/>
+                <constraint firstItem="cAr-S0-AVF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="SNJ-e1-Jpb"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="cAr-S0-AVF" secondAttribute="bottom" constant="8" symbolic="YES" id="ffN-Vf-lo4"/>
+                <constraint firstItem="cAr-S0-AVF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="fne-Ie-bAF"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="cAr-S0-AVF" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="kpL-LG-TxO"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="lOI-On-FaC"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="kId-c2-rCX"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="LogoBlock.jpg" width="651" height="486"/>
+    </resources>
 </document>

@@ -18,6 +18,7 @@
 		F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8477E931A99626200152C83 /* SFUWebViewController.m */; };
 		F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3811A9EA4DA008AD45B /* food-99072_640.png */; };
 		F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */; };
+		F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3861A9EBE05008AD45B /* appicon.jpg */; };
 		F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A28D291A994D5700CD5829 /* Main.storyboard */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		F8477E931A99626200152C83 /* SFUWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebViewController.m; sourceTree = "<group>"; };
 		F84ED3811A9EA4DA008AD45B /* food-99072_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food-99072_640.png"; sourceTree = "<group>"; };
 		F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LogoBlock.jpg; sourceTree = "<group>"; };
+		F84ED3861A9EBE05008AD45B /* appicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appicon.jpg; sourceTree = "<group>"; };
 		F8A28D2A1A994D5700CD5829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				F84ED3811A9EA4DA008AD45B /* food-99072_640.png */,
 				F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */,
+				F84ED3861A9EBE05008AD45B /* appicon.jpg */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -207,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F808D8061A95CFA90006FC17 /* Build configuration list for PBXProject "SFU OnCampus" */;
+			buildConfigurationList = F808D8061A95CFA90006FC17 /* Build configuration list for PBXProject "OnCampus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,6 +240,7 @@
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
+				F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F808D8061A95CFA90006FC17 /* Build configuration list for PBXProject "SFU OnCampus" */ = {
+		F808D8061A95CFA90006FC17 /* Build configuration list for PBXProject "OnCampus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F808D82F1A95CFA90006FC17 /* Debug */,

@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F808D80A1A95CFA90006FC17"
                BuildableName = "SFU OnCampus.app"
                BlueprintName = "SFU OnCampus"
-               ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+               ReferencedContainer = "container:OnCampus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "F808D8261A95CFA90006FC17"
                BuildableName = "SFU OnCampusTests.xctest"
                BlueprintName = "SFU OnCampusTests"
-               ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+               ReferencedContainer = "container:OnCampus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "F808D8261A95CFA90006FC17"
                BuildableName = "SFU OnCampusTests.xctest"
                BlueprintName = "SFU OnCampusTests"
-               ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+               ReferencedContainer = "container:OnCampus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "F808D80A1A95CFA90006FC17"
             BuildableName = "SFU OnCampus.app"
             BlueprintName = "SFU OnCampus"
-            ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+            ReferencedContainer = "container:OnCampus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "F808D80A1A95CFA90006FC17"
             BuildableName = "SFU OnCampus.app"
             BlueprintName = "SFU OnCampus"
-            ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+            ReferencedContainer = "container:OnCampus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "F808D80A1A95CFA90006FC17"
             BuildableName = "SFU OnCampus.app"
             BlueprintName = "SFU OnCampus"
-            ReferencedContainer = "container:SFU OnCampus.xcodeproj">
+            ReferencedContainer = "container:OnCampus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

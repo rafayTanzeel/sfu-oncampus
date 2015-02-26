@@ -1168,6 +1168,9 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="weatherDescription" destination="3Fm-Tn-SvE" id="Lu2-Ol-5nT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -43,25 +43,25 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UIAlertView *messageAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    // Display Alert Message
-    [messageAlert show];
-    
-    //get url from model
-    
-    if(!self.displayInApp)
-    {
-    // [UIApplication sharedApplication] openURL:<#(NSURL *)#>
-    }else
-    {
-        // segue to web view with url
-    }
-    
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UIAlertView *messageAlert = [[UIAlertView alloc]
+//                                 initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    
+//    // Display Alert Message
+//    [messageAlert show];
+//    
+//    //get url from model
+//    
+//    if(!self.displayInApp)
+//    {
+//    // [UIApplication sharedApplication] openURL:<#(NSURL *)#>
+//    }else
+//    {
+//        // segue to web view with url
+//    }
+//    
+//}
 - (void)setDetailItem:(id)newDetailItem {
     
 }

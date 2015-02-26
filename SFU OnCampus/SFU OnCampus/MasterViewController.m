@@ -88,7 +88,10 @@
     //UITableView* tv = (UITableView*)self.view;
     // UITableViewCell* cell =  [tv cellForRowAtIndexPath:indexPath];
     //  NSString* selected = cell.textLabel.text;
+    if([controller respondsToSelector:@selector(setDetailItem:)])
+    {
         [controller setDetailItem:[segue identifier]];
+    }
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     // }

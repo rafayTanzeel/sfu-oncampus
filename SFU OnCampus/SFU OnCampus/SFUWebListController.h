@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SFUWebListModel.h"
 @interface SFUWebListController : UITableViewController
 
 @property BOOL displayInApp;
-
+@property IBOutlet SFUWebListModel* model;
 @end

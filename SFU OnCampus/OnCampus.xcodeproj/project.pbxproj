@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
+		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
 		F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */; };
 		F808D8111A95CFA90006FC17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8101A95CFA90006FC17 /* main.m */; };
 		F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8131A95CFA90006FC17 /* AppDelegate.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		04EEBE201A9F9E44003E1DD3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		04EEBE211A9F9E44003E1DD3 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		04EEBE221A9F9E44003E1DD3 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUStudentServiceURLs.plist; sourceTree = "<group>"; };
 		F808D80B1A95CFA90006FC17 /* SFU OnCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SFU OnCampus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D80F1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +114,10 @@
 				F84ED3881A9EDF0E008AD45B /* SFUWebListModel.h */,
 				F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */,
 				F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */,
+				04EEBE201A9F9E44003E1DD3 /* CardViewController.h */,
+				04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */,
+				04EEBE211A9F9E44003E1DD3 /* CardCell.h */,
+				04EEBE221A9F9E44003E1DD3 /* CardCell.m */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
 				F808D8131A95CFA90006FC17 /* AppDelegate.m */,
 				F808D8151A95CFA90006FC17 /* MasterViewController.h */,
@@ -263,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */,
+				04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */,
 				F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */,
 				F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */,
 				F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */,

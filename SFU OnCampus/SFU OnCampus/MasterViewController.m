@@ -37,7 +37,20 @@
     }
 
 }
-
+-(void)updateCopyright
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"- yyyy"];
+    NSString *yearString = [formatter stringFromDate:[NSDate date]];
+    
+    NSString* s = @"© 2015 ";
+    NSString* sfuString=@"Simon Fraiser University";
+    if( ![yearString isEqualToString:@"- 2015"])
+    {
+        s =[s stringByAppendingString:yearString];
+    }
+    self.copyrighLabel.text= [s stringByAppendingString:sfuString];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -46,6 +59,8 @@
     // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self updateCopyright];
+    
 }
 
 - (void)didReceiveMemoryWarning {

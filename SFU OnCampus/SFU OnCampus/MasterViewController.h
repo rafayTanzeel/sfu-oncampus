@@ -11,6 +11,7 @@
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UILabel *copyrighLabel;
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

@@ -72,7 +72,7 @@
     //NSDate *object = self.objects[indexPath.row];
    SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
     
-    [controller displayPageForURL:[NSURL URLWithString:@"http://www.sfu.ca/index.html"] inApp:YES];
+    [controller displayPageForURL:[NSURL URLWithString:@"http://www.dineoncampus.ca/sfu"] inApp:YES];
     
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     controller.navigationItem.leftItemsSupplementBackButton = YES;

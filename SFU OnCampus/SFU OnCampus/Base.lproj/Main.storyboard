@@ -94,10 +94,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-Kv-5E2">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-Kv-5E2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="561"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" calendarEvent="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="tYm-vM-u2C" id="gux-0Z-SXf"/>
                                 </connections>
@@ -411,6 +411,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Menu" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="copyrighLabel" destination="l0e-ak-NfM" id="9n5-sq-0A3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

@@ -70,8 +70,10 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Error Loading page : %@",[error description]) ;
-    [self.webView stringByEvaluatingJavaScriptFromString:@"document.write(\"<tty>Unable to load</tty>\");"];
-    self.title=@"Error";
+     if(!webView.isLoading)
+     {
+         self.title = @"Failed to load page";
+     }
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {

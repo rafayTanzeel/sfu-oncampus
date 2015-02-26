@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
         </scene>
-        <!--Dining Options-->
+        <!--Web Navigation-->
         <scene sceneID="NiM-ux-Fbv">
             <objects>
-                <navigationController title="Dining Options" id="Xlk-at-zxH" sceneMemberID="viewController">
+                <navigationController title="Web Navigation" id="Xlk-at-zxH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAX-h1-t47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,17 +98,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tYm-vM-u2C" id="gux-0Z-SXf"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="top" secondItem="hca-7J-tnx" secondAttribute="top" id="3Xb-XF-5m5"/>
-                            <constraint firstAttribute="trailing" secondItem="B6C-Kv-5E2" secondAttribute="trailing" id="Dow-rx-K6W"/>
-                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="leading" secondItem="hca-7J-tnx" secondAttribute="leading" id="MkK-46-bvj"/>
-                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="bottom" secondItem="rDH-6i-KPE" secondAttribute="top" id="ysd-68-qUS"/>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="top" secondItem="hca-7J-tnx" secondAttribute="top" id="FpE-dL-D7r"/>
+                            <constraint firstAttribute="trailing" secondItem="B6C-Kv-5E2" secondAttribute="trailing" id="g99-LG-5Uf"/>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="bottom" secondItem="rDH-6i-KPE" secondAttribute="top" id="ndj-g9-n2Y"/>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="leading" secondItem="hca-7J-tnx" secondAttribute="leading" id="vdj-Wy-FZO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dining Options" id="sde-Aq-G0e"/>
+                    <connections>
+                        <outlet property="webView" destination="B6C-Kv-5E2" id="iXN-xE-uj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha2-pR-CGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +157,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tYm-vM-u2C" kind="showDetail" id="aCi-Ut-kiP"/>
+                                    <segue destination="Xlk-at-zxH" kind="showDetail" id="u2l-lC-zyr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -433,7 +439,7 @@
         <image name="food-99072_640.png" width="640" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dIH-ZD-xO7"/>
+        <segue reference="u2l-lC-zyr"/>
         <segue reference="UvV-92-ifD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>

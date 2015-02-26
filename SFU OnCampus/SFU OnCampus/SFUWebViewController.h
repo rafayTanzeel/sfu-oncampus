@@ -8,6 +8,12 @@
 
 #import "DetailViewController.h"
 
-@interface SFUWebViewController : DetailViewController
+@interface SFUWebViewController : DetailViewController <UIWebViewDelegate>
 
+@property NSURL* startURL;
+@property NSMutableDictionary* completionHandlerDictionary;
+@property NSURLSession* defaultSession;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
+-(void)displayPageForURL:(NSURL*)url inApp:(BOOL)showInApp;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "SFUWebListController.h"
-
+#import "SFUWebViewController.h"
 @implementation SFUWebListController
 
 
@@ -65,5 +65,20 @@
 - (void)setDetailItem:(id)newDetailItem {
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    //NSDate *object = self.objects[indexPath.row];
+   SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
+    
+    [controller displayPageForURL:[NSURL URLWithString:@"http://www.sfu.ca/index.html"] inApp:YES];
+    
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
+    // }
+}
+
+
 
 @end

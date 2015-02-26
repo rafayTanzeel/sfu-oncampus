@@ -15,7 +15,8 @@ NSArray* array;
     //This is a user defined path in interface builder
     //Take a look under the identity panel to see it.
     @try{
-        array = [NSArray arrayWithContentsOfFile:@"SFUStudentServiceURLs.plist"];
+        NSString* path=[[NSBundle mainBundle]pathForResource:@"SFUStudentServiceURLs" ofType:@"plist"];
+        array = [NSArray arrayWithContentsOfFile:path];
     }
     @catch (NSException* e)
     {

@@ -69,10 +69,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //if ([[segue identifier] isEqualToString:@"showDetail"]) {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSString* URL=[self.model urlStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
    SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
     
-    [controller displayPageForURL:[NSURL URLWithString:@"http://www.dineoncampus.ca/sfu"] inApp:YES];
+    [controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
     
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     controller.navigationItem.leftItemsSupplementBackButton = YES;

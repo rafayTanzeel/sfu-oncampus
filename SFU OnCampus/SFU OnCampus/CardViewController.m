@@ -102,11 +102,11 @@ NSMutableDictionary *currentObservation;
     NSString *condition = [currentObservation valueForKey:@"icon"];
     cell.weatherDescription.text = condition;
     
-    // Current wind
-    cell.wind.text = @"Wind %d km/h",[currentObservation valueForKey:@"wind_kph"];
+    // Current wind and Precipitation
+    NSString *wind = [currentObservation valueForKey:@"wind_kph"];
+    NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
+    cell.windAndPrecip.text = @"Wind %d km/h",[currentObservation valueForKey:@"wind_kph"];
     
-    // Current precipitation
-    cell.precipitation.text = @"Precip %@mm", [currentObservation valueForKey:@"precip_today_in"];
    
     return cell;
 }

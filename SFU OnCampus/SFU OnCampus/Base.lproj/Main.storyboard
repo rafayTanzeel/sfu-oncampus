@@ -1087,7 +1087,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view autoresizesSubviews="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="CardCell" translatesAutoresizingMaskIntoConstraints="NO" id="Kmg-Vo-y7K">
-                                            <rect key="frame" x="8" y="9" width="300" height="340"/>
+                                            <rect key="frame" x="8" y="10" width="300" height="340"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SFU Burnaby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HA-z2-jYE">
                                                     <rect key="frame" x="20" y="0.0" width="106" height="35"/>
@@ -1102,7 +1102,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wind" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSp-sh-oSB">
-                                                    <rect key="frame" x="99" y="36" width="63" height="21"/>
+                                                    <rect key="frame" x="99" y="37" width="163" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1210,12 +1210,6 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="precp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-mJ-b7L">
-                                                    <rect key="frame" x="170" y="35" width="72" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <constraints>
@@ -1227,7 +1221,25 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="dayFive" destination="QwH-2D-EmZ" id="kg2-Ou-hoc"/>
+                                    <outlet property="dayFiveHigh" destination="keu-Nl-H3b" id="g9U-gN-2oZ"/>
+                                    <outlet property="dayFiveLow" destination="eZj-Z2-GWj" id="T5C-ce-kJQ"/>
+                                    <outlet property="dayFour" destination="RIP-lX-KQZ" id="9Di-Ya-T6o"/>
+                                    <outlet property="dayFourHigh" destination="o6m-mL-bd3" id="UzX-lE-KMs"/>
+                                    <outlet property="dayFourLow" destination="c1G-uQ-DlQ" id="ME1-ZK-qgF"/>
+                                    <outlet property="dayOne" destination="Ztn-fT-Xwc" id="If8-xb-Cj5"/>
+                                    <outlet property="dayOneHigh" destination="wcP-MG-YaJ" id="2VP-bU-Vqi"/>
+                                    <outlet property="dayOneLow" destination="MAY-Gi-4C2" id="Abm-TS-TxZ"/>
+                                    <outlet property="dayThree" destination="QIx-Q5-w7f" id="9gP-vW-UVL"/>
+                                    <outlet property="dayThreeHigh" destination="Mt8-h0-zz8" id="yyG-F6-QUT"/>
+                                    <outlet property="dayThreeLow" destination="TNE-Fh-Nv8" id="iQN-xf-nH3"/>
+                                    <outlet property="dayTwo" destination="Uff-sZ-Rdf" id="dtx-Az-ohk"/>
+                                    <outlet property="dayTwoHigh" destination="zvF-ao-Nqp" id="BUi-vM-9s9"/>
+                                    <outlet property="dayTwoLow" destination="THt-1N-ChD" id="myn-gS-Kho"/>
+                                    <outlet property="temperature" destination="Wqh-lc-0Cp" id="ADH-Ff-Fbj"/>
                                     <outlet property="weatherDescription" destination="3Fm-Tn-SvE" id="Lu2-Ol-5nT"/>
+                                    <outlet property="wind" destination="hSp-sh-oSB" id="E6Y-3N-786"/>
+                                    <outlet property="windAndPrecip" destination="hSp-sh-oSB" id="meL-8R-yt8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1243,7 +1255,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAH-KK-rsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="-1805"/>
+            <point key="canvasLocation" x="233" y="-1807"/>
         </scene>
     </scenes>
     <resources>
@@ -1255,7 +1267,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="TnW-HA-Lw3"/>
         <segue reference="UvV-92-ifD"/>
-        <segue reference="eBl-g0-RTb"/>
+        <segue reference="u2l-lC-zyr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

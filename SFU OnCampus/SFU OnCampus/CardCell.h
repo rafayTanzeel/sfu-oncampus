@@ -19,7 +19,7 @@
 
 // Description of current weather, current wind, and precipitation
 @property (weak, nonatomic) IBOutlet UILabel *weatherDescription;
-@property (weak, nonatomic) IBOutlet UILabel *wind;
+@property (weak, nonatomic) IBOutlet UILabel *windAndPrecip;
 @property (weak, nonatomic) IBOutlet UILabel *precipitation;
 
 // Large weather icon and current temperature

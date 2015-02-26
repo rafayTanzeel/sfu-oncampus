@@ -98,10 +98,16 @@ NSMutableDictionary *currentObservation;
     
     cell.location.text = @"SFU Burnaby";
     
-    NSNumber *dewpoint = [currentObservation valueForKey:@"dewpoint_c"];
+    // Current conditions description
+    NSString *condition = [currentObservation valueForKey:@"icon"];
+    cell.weatherDescription.text = condition;
     
-    cell.weatherDescription.text = [dewpoint stringValue];
+    // Current wind
+    cell.wind.text = @"Wind %d km/h",[currentObservation valueForKey:@"wind_kph"];
     
+    // Current precipitation
+    cell.precipitation.text = @"Precip %@mm", [currentObservation valueForKey:@"precip_today_in"];
+   
     return cell;
 }
 

@@ -22,14 +22,20 @@
         self.clearsSelectionOnViewWillAppear = NO;
         self.preferredContentSize = CGSizeMake(320.0, 600.0);
         
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSelf)];
-        self.navigationItem.rightBarButtonItem = doneButton;
+        
+        //Cannot easily programatically dismiss menu, so trust that apple users know how to dismiss a master detail menu.
+//        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSelf)];
+//        self.navigationItem.rightBarButtonItem = doneButton;
     }
 }
 
 -(void)dismissSelf
 {
     NSLog(@"Should dimiss self, not implemented");
+    if (self.splitViewController) {
+        
+    }
+
 }
 
 - (void)viewDidLoad {

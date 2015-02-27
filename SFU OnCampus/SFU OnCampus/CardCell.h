@@ -10,6 +10,8 @@
 
 @interface CardCell : UITableViewCell
 
+// Updates the labels for five day forecast
+- (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;
 
 // UI View
 @property (weak, nonatomic) IBOutlet UIView *cardView;
@@ -26,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *weatherIcon;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
 
+#pragma mark day labels
 // Day name labels for five day forecast
 @property (weak, nonatomic) IBOutlet UILabel *dayOne;
 @property (weak, nonatomic) IBOutlet UILabel *dayTwo;

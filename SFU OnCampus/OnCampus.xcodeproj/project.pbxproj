@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
 		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
 		04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		04EEBE201A9F9E44003E1DD3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		04EEBE211A9F9E44003E1DD3 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */,
 				04EEBE201A9F9E44003E1DD3 /* CardViewController.h */,
 				04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */,
+				04715A2F1A9FEBDA004F242B /* weatherIcons.plist */,
 				04EEBE211A9F9E44003E1DD3 /* CardCell.h */,
 				04EEBE221A9F9E44003E1DD3 /* CardCell.m */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
@@ -254,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */,
 				F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */,
 				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,

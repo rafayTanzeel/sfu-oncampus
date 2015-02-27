@@ -42,6 +42,20 @@
     self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% I prefer choosing colors programmatically than on the storyboard
 }
 
+// Updates Labels for five day forecast
+- (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary: (NSDictionary *) d
+{
+    NSString *high = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"high"] objectForKey:@"celsius"]];
+    NSString *low = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"low"] objectForKey:@"celsius"]];
+    
+    NSString *icon_URL = [d valueForKey:@"icon_url"];
+    imageDay.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
+    
+    dayLabel.text = [[d objectForKey:@"date"] objectForKey:@"weekday_short"];
+    highLabel.text = high;
+    lowLabel.text = low;
+}
+
 - (void)awakeFromNib
 {
     // Initialization code

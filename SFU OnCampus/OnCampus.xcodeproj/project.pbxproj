@@ -24,6 +24,10 @@
 		F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */; };
 		F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3861A9EBE05008AD45B /* appicon.jpg */; };
 		F84ED38A1A9EDF0E008AD45B /* SFUWebListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */; };
+		F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F87701511AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg */; };
+		F87701561AA00513001FE1FE /* SFU_2013_10cm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */; };
+		F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */; };
+		F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */; };
 		F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A28D291A994D5700CD5829 /* Main.storyboard */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 /* End PBXBuildFile section */
@@ -68,6 +72,10 @@
 		F84ED3861A9EBE05008AD45B /* appicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appicon.jpg; sourceTree = "<group>"; };
 		F84ED3881A9EDF0E008AD45B /* SFUWebListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUWebListModel.h; path = Model/SFUWebListModel.h; sourceTree = "<group>"; };
 		F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUWebListModel.m; path = Model/SFUWebListModel.m; sourceTree = "<group>"; };
+		F87701511AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CampusDiningMapwSbux-Large.jpg"; sourceTree = "<group>"; };
+		F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFU_2013_10cm.jpg; sourceTree = "<group>"; };
+		F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sfu_accessibility_map_2010_colour.pdf; sourceTree = "<group>"; };
+		F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sfu_new_campus_map_2k14_50x34(AUG).pdf"; sourceTree = "<group>"; };
 		F8A28D2A1A994D5700CD5829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		F808D8021A95CFA90006FC17 = {
 			isa = PBXGroup;
 			children = (
+				F877014F1AA00513001FE1FE /* images */,
 				F808D80D1A95CFA90006FC17 /* SFU OnCampus */,
 				F808D82A1A95CFA90006FC17 /* SFU OnCampusTests */,
 				F808D80C1A95CFA90006FC17 /* Products */,
@@ -175,6 +184,26 @@
 				F84ED3861A9EBE05008AD45B /* appicon.jpg */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		F877014F1AA00513001FE1FE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F87701501AA00513001FE1FE /* maps */,
+			);
+			name = images;
+			path = "SFU OnCampus/images";
+			sourceTree = "<group>";
+		};
+		F87701501AA00513001FE1FE /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				F87701511AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg */,
+				F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */,
+				F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */,
+				F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */,
+			);
+			path = maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +290,14 @@
 				F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */,
 				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
+				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
+				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
 				F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */,
+				F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */,
+				F87701561AA00513001FE1FE /* SFU_2013_10cm.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "SFUWebViewController.h"
 
 @interface MasterViewController ()
 
@@ -24,8 +25,8 @@
         
         
         //Cannot easily programatically dismiss menu, so trust that apple users know how to dismiss a master detail menu.
-//        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSelf)];
-//        self.navigationItem.rightBarButtonItem = doneButton;
+        //        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSelf)];
+        //        self.navigationItem.rightBarButtonItem = doneButton;
     }
 }
 
@@ -35,7 +36,7 @@
     if (self.splitViewController) {
         
     }
-
+    
 }
 -(void)updateCopyright
 {
@@ -55,7 +56,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
+    
     // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     //self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -81,19 +82,36 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        //NSDate *object = self.objects[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    //NSDate *object = self.objects[indexPath.row];
+    DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
     
     //UITableView* tv = (UITableView*)self.view;
     // UITableViewCell* cell =  [tv cellForRowAtIndexPath:indexPath];
     //  NSString* selected = cell.textLabel.text;
-    if([controller respondsToSelector:@selector(setDetailItem:)])
+    
+    //Special Case for dining button
+    UITableViewCell* cell =[self.tableView cellForRowAtIndexPath:indexPath];
+    if([cell.reuseIdentifier isEqualToString:@"diningOptionsCell"])
     {
-        [controller setDetailItem:[segue identifier]];
+        SFUWebViewController* w =  (SFUWebViewController*)[[segue destinationViewController] topViewController];
+        NSURL* url = [NSURL URLWithString:@"http://dineoncampus.ca/sfu"];
+        [w displayPageForURL:url inApp:YES ];
+        //-(void)displayPageForURL:(NSURL*)url inApp:(BOOL)showInApp
+        w.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        w.navigationItem.leftItemsSupplementBackButton = YES;
+        
     }
+    else
+    {
+        
+        if([controller respondsToSelector:@selector(setDetailItem:)])
+        {
+            [controller setDetailItem:[segue identifier]];
+        }
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
     // }
 }
 

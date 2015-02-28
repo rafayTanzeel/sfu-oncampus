@@ -733,7 +733,7 @@
                                             <segue destination="QV3-Vv-onu" kind="showDetail" identifier="socialSegue" id="wWC-X9-jYG"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="65G-JZ-pd9" imageView="nN9-56-DcS" style="IBUITableViewCellStyleDefault" id="Ler-AM-C0f" userLabel="Dining Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="diningOptionsCell" textLabel="65G-JZ-pd9" imageView="nN9-56-DcS" style="IBUITableViewCellStyleDefault" id="Ler-AM-C0f" userLabel="Dining Cell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ler-AM-C0f" id="8UF-24-iVp">
@@ -1316,7 +1316,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UvV-92-ifD"/>
         <segue reference="TnW-HA-Lw3"/>
-        <segue reference="4Zx-GR-x6K"/>
+        <segue reference="u2l-lC-zyr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -19,6 +19,7 @@
 		F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F808D81E1A95CFA90006FC17 /* Images.xcassets */; };
 		F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F808D8201A95CFA90006FC17 /* LaunchScreen.xib */; };
 		F808D82E1A95CFA90006FC17 /* SFU_OnCampusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */; };
+		F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */; };
 		F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8477E931A99626200152C83 /* SFUWebViewController.m */; };
 		F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3811A9EA4DA008AD45B /* food-99072_640.png */; };
 		F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */; };
@@ -65,6 +66,8 @@
 		F808D8271A95CFA90006FC17 /* SFU OnCampusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SFU OnCampusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D82C1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFU_OnCampusTests.m; sourceTree = "<group>"; };
+		F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULoyaltyCardModel.h; sourceTree = "<group>"; };
+		F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULoyaltyCardModel.m; sourceTree = "<group>"; };
 		F8477E921A99626200152C83 /* SFUWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebViewController.h; sourceTree = "<group>"; };
 		F8477E931A99626200152C83 /* SFUWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebViewController.m; sourceTree = "<group>"; };
 		F84ED3811A9EA4DA008AD45B /* food-99072_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food-99072_640.png"; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A28D291A994D5700CD5829 /* Main.storyboard */,
+				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
+				F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */,
 				350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */,
 				350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */,
 				F8477E921A99626200152C83 /* SFUWebViewController.h */,
@@ -322,6 +327,7 @@
 				F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */,
 				F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */,
 				F84ED38A1A9EDF0E008AD45B /* SFUWebListModel.m in Sources */,
+				F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */,
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
 				F808D81A1A95CFA90006FC17 /* DetailViewController.m in Sources */,

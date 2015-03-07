@@ -26,6 +26,7 @@
 
     //    NSDate *object = self.objects[indexPath.row];
      cell.textLabel.text = [self.model titleStringForIndex:indexPath.row];
+    cell.imageView.image=[UIImage imageNamed: [self.model imageNameForIndex:indexPath.row]];
     return cell;
 }
 

@@ -13,6 +13,7 @@
 -(NSInteger)sizeOfArray;
 -(NSString*) titleStringForIndex:(NSUInteger)idx;
 -(NSString*) urlStringForIndex:(NSUInteger)idx;
+-(NSString*) imageNameForIndex:(NSUInteger) idx;
 
 @property NSString* path;
 

@@ -44,4 +44,10 @@ NSArray* array;
 {
     return [array count];
 }
+
+-(NSString*) imageNameForIndex: (NSUInteger) idx
+{
+    NSDictionary* d = [array objectAtIndex:idx];
+    return [d objectForKey:@"image"];
+}
 @end

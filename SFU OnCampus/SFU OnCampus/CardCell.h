@@ -13,8 +13,15 @@
 // Updates the labels for five day forecast
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;
 
+// Updates labels for the hourly forecast
+- (void)updateHourlyLables:(UILabel*) hourLabel labelTemp:(UILabel*) tempLabel image:(UIImageView*) imageHour cond:(UILabel*) condLabel withDictionary:(NSDictionary*) d;
+
 // UI View
 @property (weak, nonatomic) IBOutlet UIView *cardView;
+
+//----------------------------------
+// MAIN WEATHER VIEW
+//----------------------------------
 
 // SFU Burnaby Label
 @property (weak, nonatomic) IBOutlet UILabel *location;
@@ -59,5 +66,35 @@
 
 // Hourly forecast button
 @property (weak, nonatomic) IBOutlet UIButton *hourlyForecastButton;
+
+//----------------------------------
+// HOURLY FORECAST VIEW
+//----------------------------------
+
+// Each hour
+@property (weak, nonatomic) IBOutlet UILabel *hourOne;
+@property (weak, nonatomic) IBOutlet UILabel *hourTwo;
+@property (weak, nonatomic) IBOutlet UILabel *hourThree;
+@property (weak, nonatomic) IBOutlet UILabel *hourFour;
+
+// Each hour icon
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourOne;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourTwo;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourThree;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourFour;
+
+// Each hour conditions
+@property (weak, nonatomic) IBOutlet UILabel *condHourOne;
+@property (weak, nonatomic) IBOutlet UILabel *condHourTwo;
+@property (weak, nonatomic) IBOutlet UILabel *condHourThree;
+@property (weak, nonatomic) IBOutlet UILabel *condHourFour;
+
+//Each hour temperature
+@property (weak, nonatomic) IBOutlet UILabel *tempHourOne;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourTwo;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourThree;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourFour;
+
+
 
 @end

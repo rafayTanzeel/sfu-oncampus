@@ -54,13 +54,14 @@ NSArray *hourlyWeather;
 }
 
 - (void)viewDidLoad {
+   
     [super viewDidLoad];
+
+    self.tableView.separatorColor = [UIColor clearColor];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% This is so if you overscroll, the color is still gray
+   
+    [self getHourlyWeather:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,18 +80,26 @@ NSArray *hourlyWeather;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CardCell"];
     
     // Configure the cell...
+    if (cell == nil) {
+        cell = [[CardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardCell"];
+    }
+    
+    NSDictionary *zero = [hourlyWeather objectAtIndex:0];
+    [cell updateHourlyLables:cell.hourOne labelTemp:cell.tempHourOne image:cell.iconHourOne cond:cell.condHourOne withDictionary:zero];
+    
+    NSDictionary *one = [hourlyWeather objectAtIndex:1];
+    [cell updateHourlyLables:cell.hourTwo labelTemp:cell.tempHourTwo image:cell.iconHourTwo cond:cell.condHourTwo withDictionary:one];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

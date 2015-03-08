@@ -56,6 +56,25 @@
     lowLabel.text = low;
 }
 
+// Update labels for hourly forecast
+- (void)updateHourlyLables:(UILabel*) hourLabel labelTemp:(UILabel*) tempLabel image:(UIImageView*) imageHour cond:(UILabel*) condLabel withDictionary:(NSDictionary*) d
+{
+    NSString *hour = [NSString stringWithFormat:@"%@",[[d objectForKey:@"FCTTIME"] objectForKey:@"civil"]];
+    NSString *temp = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"temp"] objectForKey:@"metric"]];
+    
+    NSString *cond = [NSString stringWithFormat:@"%@", [d objectForKey:@"condition"]];
+    NSString *pop  = [NSString stringWithFormat:@"pop: %@%", [d objectForKey:@"pop"]];
+    NSString *conditions = [NSString stringWithFormat:@"%@\t%@", cond, pop];
+    
+    NSString *icon_URL = [d valueForKey:@"icon_url"];
+    imageHour.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
+    
+    hourLabel.text = hour;
+    tempLabel.text = temp;
+    condLabel.text = conditions;
+    
+}
+
 - (void)awakeFromNib
 {
     // Initialization code

@@ -10,6 +10,12 @@
 
 @interface SFUCardCell : UITableViewCell
 
+// Sets image for weather
+- (void)updateImage:(UIImageView*) weatherImage current:(NSString*) currentWeather;
+
+// Sets weather images for five day forecast
+- (void)updateForecastImage:(UIImageView*) weatherImage current:(NSString*) icon;
+
 // Updates the labels for five day forecast
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;
 

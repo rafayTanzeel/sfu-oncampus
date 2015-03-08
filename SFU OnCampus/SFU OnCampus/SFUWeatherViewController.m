@@ -161,6 +161,10 @@ NSArray *forecastDay;
     NSString *icon_URL = [currentObservation valueForKey:@"icon_url"];
     cell.weatherIcon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
     
+    if ([condition isEqualToString:@"Mostly Cloudy"]) {
+        cell.weatherIcon.image = [UIImage imageNamed:@"mostly_cloudy_d.png"];
+    }
+    
     // Day One Lables
     NSDictionary *zero = [forecastDay objectAtIndex:0];
     [cell updateForecastLabels:cell.dayOne labelHigh:cell.dayOneHigh labelLow:cell.dayOneLow image:cell.iconDayOne withDictionary:zero];

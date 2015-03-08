@@ -1,14 +1,14 @@
 //
-//  CardCell.m
-//  test
+//  SFUCardCell.m
+//  OnCampus
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
 //
 
-#import "CardCell.h"
+#import "SFUCardCell.h"
 
-@implementation CardCell
+@implementation SFUCardCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -63,8 +63,8 @@
     NSString *temp = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"temp"] objectForKey:@"metric"]];
     
     NSString *cond = [NSString stringWithFormat:@"%@", [d objectForKey:@"condition"]];
-    NSString *pop  = [NSString stringWithFormat:@"pop: %@%", [d objectForKey:@"pop"]];
-    NSString *conditions = [NSString stringWithFormat:@"%@\t%@", cond, pop];
+    NSString *pop  = [NSString stringWithFormat:@"precip: %@%%", [d objectForKey:@"pop"]];
+    NSString *conditions = [NSString stringWithFormat:@"%@    %@",cond, pop];
     
     NSString *icon_URL = [d valueForKey:@"icon_url"];
     imageHour.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];

@@ -1,19 +1,19 @@
 //
-//  HourlyViewController.m
+//  SFUHourlyViewController.m
 //  OnCampus
 //
 //  Created by Kevin Grant on 2015-03-07.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import "HourlyViewController.h"
-#import "CardCell.h"
+#import "SFUHourlyViewController.h"
+#import "SFUCardCell.h"
 
-@interface HourlyViewController ()
+@interface SFUHourlyViewController ()
 
 @end
 
-@implementation HourlyViewController
+@implementation SFUHourlyViewController
 
 NSArray *hourlyWeather;
 
@@ -85,13 +85,16 @@ NSArray *hourlyWeather;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CardCell"];
+    SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[CardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardCell"];
+        cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
     }
     
+    // -----------------------------------------------------
+    // Time, icon, conditions, and temperature for each hour
+    // -----------------------------------------------------
     NSDictionary *zero = [hourlyWeather objectAtIndex:0];
     [cell updateHourlyLables:cell.hourOne labelTemp:cell.tempHourOne image:cell.iconHourOne cond:cell.condHourOne withDictionary:zero];
     
@@ -104,7 +107,29 @@ NSArray *hourlyWeather;
     NSDictionary *three = [hourlyWeather objectAtIndex:3];
     [cell updateHourlyLables:cell.hourFour labelTemp:cell.tempHourFour image:cell.iconHourFour cond:cell.condHourFour withDictionary:three];
     
+    NSDictionary *four = [hourlyWeather objectAtIndex:4];
+    [cell updateHourlyLables:cell.hourFive labelTemp:cell.tempHourFive image:cell.iconHourFive cond:cell.condHourFive withDictionary:four];
     
+    NSDictionary *five = [hourlyWeather objectAtIndex:5];
+    [cell updateHourlyLables:cell.hourSix labelTemp:cell.tempHourSix image:cell.iconHourSix cond:cell.condHourSix withDictionary:five];
+    
+    NSDictionary *six = [hourlyWeather objectAtIndex:6];
+    [cell updateHourlyLables:cell.hourSeven labelTemp:cell.tempHourSeven image:cell.iconHourSeven cond:cell.condHourSeven withDictionary:six];
+    
+    NSDictionary *seven = [hourlyWeather objectAtIndex:7];
+    [cell updateHourlyLables:cell.hourEight labelTemp:cell.tempHourEight image:cell.iconHourEight cond:cell.condHourEight withDictionary:seven];
+    
+    NSDictionary *eight = [hourlyWeather objectAtIndex:8];
+    [cell updateHourlyLables:cell.hourNine labelTemp:cell.tempHourNine image:cell.iconHourNine cond:cell.condHourNine withDictionary:eight];
+    
+    NSDictionary *nine = [hourlyWeather objectAtIndex:9];
+    [cell updateHourlyLables:cell.hourTen labelTemp:cell.tempHourTen image:cell.iconHourTen cond:cell.condHourTen withDictionary:nine];
+    
+    NSDictionary *ten = [hourlyWeather objectAtIndex:10];
+    [cell updateHourlyLables:cell.hourEleven labelTemp:cell.tempHourEleven image:cell.iconHourEleven cond:cell.condHourEleven withDictionary:ten];
+    
+    NSDictionary *eleven = [hourlyWeather objectAtIndex:11];
+    [cell updateHourlyLables:cell.hourTwelve labelTemp:cell.tempHourTwelve image:cell.iconHourTwelve cond:cell.condHourTwelve withDictionary:eleven];
     
     return cell;
 }

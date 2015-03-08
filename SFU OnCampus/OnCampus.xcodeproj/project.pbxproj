@@ -197,6 +197,9 @@
 		F877014F1AA00513001FE1FE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */,
+				5D11B5AE1AABBB31000DBC1B /* forum_icon.png */,
+				5D11B5AC1AABBAFD000DBC1B /* email_icon.png */,
 				F87701501AA00513001FE1FE /* maps */,
 			);
 			name = images;
@@ -296,7 +299,9 @@
 			files = (
 				04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */,
 				F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */,
+				5D11B5AF1AABBB31000DBC1B /* forum_icon.png in Resources */,
 				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
+				5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */,
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
 				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
 				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
@@ -304,6 +309,7 @@
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
+				5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */,
 				F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */,
 				F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */,
 				F87701561AA00513001FE1FE /* SFU_2013_10cm.jpg in Resources */,

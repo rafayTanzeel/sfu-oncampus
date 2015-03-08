@@ -181,28 +181,13 @@ NSArray *forecastDay;
     NSDictionary *four = [forecastDay objectAtIndex:4];
     [cell updateForecastLabels:cell.dayFive labelHigh:cell.dayFiveHigh labelLow:cell.dayFiveLow image:cell.iconDayFive withDictionary:four];
     
+    // Announcements
+    cell.AnnouncementsTitle.text = @"Announcements";
+    cell.AnnouncementsBody.text = @"It is currently 6°C on campus with clear skies. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
+Please drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
+        This report will be updated as conditions change.";
     return cell;
 }
-
-//-(IBAction)getCurrentWeather:(id)sender {
-//    // Prepare the URL that we'll get the country info data from.
-//    NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/conditions/q/Canada/Burnaby.json"];
-//    //Get URL page into NSData Object
-//    NSData *currentWeather = [NSData dataWithContentsOfURL:url];
-//    //Read JSON and convert to object
-//    if(currentWeather != nil)
-//    {
-//        NSError *error = nil;
-//        
-//        id result = [NSJSONSerialization JSONObjectWithData:currentWeather options:NSJSONReadingMutableContainers error:&error];
-//        
-//        if(error == nil)
-//            NSLog(@"%@", result);
-//    }
-//    
-//}
-//-(void)getForecastWeather;
-
 
 /*
 // Override to support conditional editing of the table view.

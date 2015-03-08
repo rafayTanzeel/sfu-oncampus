@@ -11,6 +11,7 @@
 		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
+		F1149C3B1AABC3A20030BE47 /* SFUSocialServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1149C3A1AABC3A10030BE47 /* SFUSocialServiceURLs.plist */; };
 		F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */; };
 		F808D8111A95CFA90006FC17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8101A95CFA90006FC17 /* main.m */; };
 		F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8131A95CFA90006FC17 /* AppDelegate.m */; };
@@ -51,6 +52,7 @@
 		04EEBE221A9F9E44003E1DD3 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
 		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
+		F1149C3A1AABC3A10030BE47 /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
 		F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUStudentServiceURLs.plist; sourceTree = "<group>"; };
 		F808D80B1A95CFA90006FC17 /* SFU OnCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SFU OnCampus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D80F1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				F808D8201A95CFA90006FC17 /* LaunchScreen.xib */,
 				F808D80E1A95CFA90006FC17 /* Supporting Files */,
 				F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */,
+				F1149C3A1AABC3A10030BE47 /* SFUSocialServiceURLs.plist */,
 			);
 			path = "SFU OnCampus";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
 				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
 				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
+				F1149C3B1AABC3A20030BE47 /* SFUSocialServiceURLs.plist in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,

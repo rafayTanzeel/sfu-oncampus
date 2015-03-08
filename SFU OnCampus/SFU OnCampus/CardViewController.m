@@ -147,7 +147,7 @@ NSArray *forecastDay;
     NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
     NSInteger windInt = [wind integerValue];
     NSNumber *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
-    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h - precip %@mm",(long)windInt,precipitation];
+    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
     cell.windAndPrecip.text = pw;
     
     // Large temperature icon and string

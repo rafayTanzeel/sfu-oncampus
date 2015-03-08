@@ -34,12 +34,12 @@ NSArray *forecastDay;
 //------------------------------
 -(IBAction)getCurrentWeather:(id)sender {
     
-    // Prepare the URL that we'll get the country info data from.
+    // Prepare the URL that we'll get the weather info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/conditions/q/Canada/Burnaby.json"];
     //Get URL page into NSData Object
     NSData *currentWeatherData = [NSData dataWithContentsOfURL:url];
-    //Read JSON and convert to object
     
+    //Read JSON and convert to object
     NSError *error;
     if(currentWeatherData != nil)
     {
@@ -48,11 +48,11 @@ NSArray *forecastDay;
     NSMutableDictionary *currentDictionary = [NSJSONSerialization JSONObjectWithData:currentWeatherData options:kNilOptions error:&error];
 
     if (error != nil) {
-       // NSLog(@"%@", [error localizedDescription]);
+        // NSLog(@"%@", [error localizedDescription]);
     }
     else{
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
-        NSLog(@"%@", currentObservation);
+        // NSLog(@"%@", currentObservation);
     }
 }
 

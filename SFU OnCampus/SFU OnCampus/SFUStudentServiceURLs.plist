@@ -4,19 +4,19 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Canvas</string>
-		<key>url</key>
-		<string>https://canvas.sfu.ca</string>
-		<key>image</key>
-		<string>SFU_2013_10cm.jpg</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>goSFU</string>
 		<key>url</key>
 		<string>https://go.sfu.ca</string>
 		<key>image</key>
-		<string>SFU_2013_10cm.jpg</string>
+		<string>appicon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Canvas</string>
+		<key>url</key>
+		<string>https://canvas.sfu.ca</string>
+		<key>image</key>
+		<string>canvas_icon.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -24,7 +24,7 @@
 		<key>url</key>
 		<string>https://connect.sfu.ca</string>
 		<key>image</key>
-		<string></string>
+		<string>email_icon.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -32,7 +32,7 @@
 		<key>url</key>
 		<string>http://talksfu.ca</string>
 		<key>image</key>
-		<string></string>
+		<string>forum_icon.png</string>
 	</dict>
 </array>
 </plist>

@@ -19,6 +19,9 @@
 		F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB47A1AAC5770004E8ADC /* SFUStoryboardListModel.m */; };
 		F89FB47D1AAC5B75004E8ADC /* storyboardlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = F89FB47C1AAC5B75004E8ADC /* storyboardlist.plist */; };
 		F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FB47E1AAC5F3D004E8ADC /* News.storyboard */; };
+		F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FB4801AACE31F004E8ADC /* Weather.storyboard */; };
+		F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */; };
+		F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		F89FB47A1AAC5770004E8ADC /* SFUStoryboardListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUStoryboardListModel.m; sourceTree = "<group>"; };
 		F89FB47C1AAC5B75004E8ADC /* storyboardlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storyboardlist.plist; sourceTree = "<group>"; };
 		F89FB47E1AAC5F3D004E8ADC /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		F89FB4801AACE31F004E8ADC /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		F89FB4821AACE474004E8ADC /* SFUHourlyForecastTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyForecastTableViewController.h; sourceTree = "<group>"; };
+		F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableViewController.m; sourceTree = "<group>"; };
+		F89FB4851AACE4A4004E8ADC /* SFUHourlyForecastTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyForecastTableCell.h; sourceTree = "<group>"; };
+		F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,11 @@
 				F89FB4591AAC533B004E8ADC /* LaunchScreen.xib */,
 				F89FB44A1AAC533B004E8ADC /* Supporting Files */,
 				F89FB4741AAC5580004E8ADC /* Social.storyboard */,
+				F89FB4801AACE31F004E8ADC /* Weather.storyboard */,
+				F89FB4851AACE4A4004E8ADC /* SFUHourlyForecastTableCell.h */,
+				F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */,
+				F89FB4821AACE474004E8ADC /* SFUHourlyForecastTableViewController.h */,
+				F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */,
 				F89FB47E1AAC5F3D004E8ADC /* News.storyboard */,
 			);
 			path = "Multi Storyboard";
@@ -218,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */,
 				F89FB47D1AAC5B75004E8ADC /* storyboardlist.plist in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
@@ -241,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */,
 				F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */,
 				F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */,
+				F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,
 				F89FB4781AAC56FD004E8ADC /* SFUStoryboardListTableViewController.m in Sources */,

@@ -68,10 +68,28 @@ SFUStoryboardListModel* model;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* URL=[model storyboardStringForIndex:indexPath.row];
+    
+    self.targetViewIdentifier=[model targetViewStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
     
     UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:URL bundle:nil];
-    UIViewController *controller = [secondStoryBoard instantiateInitialViewController];
+    UIViewController *controller = nil;
+    
+    if(self.targetViewIdentifier == nil)
+    {
+        controller = [secondStoryBoard instantiateInitialViewController];
+    }
+    else
+    {
+        controller = [secondStoryBoard instantiateViewControllerWithIdentifier:self.targetViewIdentifier];
+    }
+    
+    if(controller == nil)
+    {
+        NSLog(@"SFUStorboardListController:: Error: Could not transition, no target view with given identifier");
+        return;
+    }
+    
     [self.navigationController pushViewController:controller animated:YES];
     //[controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
     

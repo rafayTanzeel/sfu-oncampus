@@ -4,6 +4,12 @@
 <array>
 	<dict>
 		<key>title</key>
+		<string>Weather</string>
+		<key>path</key>
+		<string>Weather</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>News</string>
 		<key>path</key>
 		<string>News</string>

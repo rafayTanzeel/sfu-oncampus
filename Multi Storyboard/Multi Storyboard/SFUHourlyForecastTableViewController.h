@@ -1,5 +1,5 @@
 //
-//  SFUStoryboardListTableViewController.h
+//  SFUHourlyForecastTableViewController.h
 //  Multi Storyboard
 //
 //  Created by Abram Wiebe on 2015-03-08.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SFUHourlyForecastTableCell.h"
+@interface SFUHourlyForecastTableViewController : UITableViewController
 
-@interface SFUStoryboardListTableViewController : UITableViewController
-@property NSString* targetViewIdentifier;
+
 @end

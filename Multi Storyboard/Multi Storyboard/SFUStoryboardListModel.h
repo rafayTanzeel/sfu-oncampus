@@ -14,6 +14,7 @@
 -(NSString*) storyboardStringForIndex:(NSUInteger)idx;
 -(NSString*) titleStringForIndex:(NSUInteger)idx;
 -(NSString*) imageNameForIndex:(NSUInteger) idx;
+-(NSString*) targetViewStringForIndex:(NSUInteger)idx;
 -(void)initWithPlist:(NSString*) plist;
 
 @end

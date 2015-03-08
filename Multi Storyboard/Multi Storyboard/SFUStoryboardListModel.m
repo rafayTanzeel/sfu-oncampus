@@ -48,5 +48,11 @@ NSArray* array;
     return [d objectForKey:@"image"];
 }
 
+-(NSString*) targetViewStringForIndex:(NSUInteger)idx
+{
+    NSDictionary* d = [array objectAtIndex:idx];
+    return [d objectForKey:@"viewid"];
+}
+
 
 @end

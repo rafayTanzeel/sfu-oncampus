@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nFj-SY-E7f" kind="showDetail" id="BJ6-PB-22a"/>
+                                    <segue destination="nFj-SY-E7f" kind="showDetail" id="yen-Ib-vi0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +74,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CWK-4s-mgz">
             <objects>
-                <navigationController id="nFj-SY-E7f" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="nFj-SY-E7f" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6w-D1-oMm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

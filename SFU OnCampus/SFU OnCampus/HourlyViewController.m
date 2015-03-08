@@ -98,6 +98,14 @@ NSArray *hourlyWeather;
     NSDictionary *one = [hourlyWeather objectAtIndex:1];
     [cell updateHourlyLables:cell.hourTwo labelTemp:cell.tempHourTwo image:cell.iconHourTwo cond:cell.condHourTwo withDictionary:one];
     
+    NSDictionary *two = [hourlyWeather objectAtIndex:2];
+    [cell updateHourlyLables:cell.hourThree labelTemp:cell.tempHourThree image:cell.iconHourThree cond:cell.condHourThree withDictionary:two];
+    
+    NSDictionary *three = [hourlyWeather objectAtIndex:3];
+    [cell updateHourlyLables:cell.hourFour labelTemp:cell.tempHourFour image:cell.iconHourFour cond:cell.condHourFour withDictionary:three];
+    
+    
+    
     return cell;
 }
 

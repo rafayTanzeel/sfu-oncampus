@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1100,7 +1102,6 @@
         <!--Card View Controller-->
         <scene sceneID="WIP-Pj-8M0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-Ar-2tU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DWp-Zk-ObE" customClass="CardViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="22" sectionFooterHeight="22" id="1ov-Eq-lhH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
@@ -1430,6 +1431,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="796-KE-2RD"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-Ar-2tU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="230" y="-1794"/>
         </scene>

@@ -1,19 +1,19 @@
 //
-//  CardViewController.m
+//  SFUWeatherViewController.m
 //  test
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
 //
 
-#import "CardViewController.h"
-#import "CardCell.h"
+#import "SFUWeatherViewController.h"
+#import "SFUCardCell.h"
 
-@interface CardViewController ()
+@interface SFUWeatherViewController ()
 
 @end
 
-@implementation CardViewController
+@implementation SFUWeatherViewController
 
 NSMutableDictionary *currentObservation;
 NSArray *forecastDay;
@@ -130,11 +130,11 @@ NSArray *forecastDay;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CardCell"];
+    SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[CardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardCell"];
+        cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
     }
     
     cell.location.text = @"SFU Burnaby";

@@ -1,19 +1,19 @@
 //
-//  HourlyViewController.m
+//  SFUHourlyViewController.m
 //  OnCampus
 //
 //  Created by Kevin Grant on 2015-03-07.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import "HourlyViewController.h"
-#import "CardCell.h"
+#import "SFUHourlyViewController.h"
+#import "SFUCardCell.h"
 
-@interface HourlyViewController ()
+@interface SFUHourlyViewController ()
 
 @end
 
-@implementation HourlyViewController
+@implementation SFUHourlyViewController
 
 NSArray *hourlyWeather;
 
@@ -85,11 +85,11 @@ NSArray *hourlyWeather;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CardCell"];
+    SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[CardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardCell"];
+        cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
     }
     
     // -----------------------------------------------------

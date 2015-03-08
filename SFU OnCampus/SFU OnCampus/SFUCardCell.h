@@ -1,5 +1,5 @@
 //
-//  CardCell.h
+//  SFUCardCell.h
 //  test
 //
 //  Created by Kevin Grant on 2/25/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardCell : UITableViewCell
+@interface SFUCardCell : UITableViewCell
 
 // Updates the labels for five day forecast
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;

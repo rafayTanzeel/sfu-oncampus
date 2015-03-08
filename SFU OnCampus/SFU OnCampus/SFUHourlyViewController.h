@@ -1,5 +1,5 @@
 //
-//  HourlyViewController.h
+//  SFUHourlyViewController.h
 //  OnCampus
 //
 //  Created by Kevin Grant on 2015-03-07.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HourlyViewController : UITableViewController
+@interface SFUHourlyViewController : UITableViewController
 
 @end

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04335A901AABE929006444EF /* HourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* HourlyViewController.m */; };
+		04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* SFUHourlyViewController.m */; };
 		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
-		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
-		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
+		04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */; };
+		04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
 		35DB33B51AAC08B200A3B42D /* SFUSocialServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */; };
 		5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5AC1AABBAFD000DBC1B /* email_icon.png */; };
@@ -54,13 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04335A8E1AABE929006444EF /* HourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourlyViewController.h; sourceTree = "<group>"; };
-		04335A8F1AABE929006444EF /* HourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourlyViewController.m; sourceTree = "<group>"; };
+		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyViewController.h; sourceTree = "<group>"; };
+		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyViewController.m; sourceTree = "<group>"; };
 		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
-		04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
-		04EEBE201A9F9E44003E1DD3 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		04EEBE211A9F9E44003E1DD3 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
-		04EEBE221A9F9E44003E1DD3 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWeatherViewController.m; sourceTree = "<group>"; };
+		04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWeatherViewController.h; sourceTree = "<group>"; };
+		04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUCardCell.h; sourceTree = "<group>"; };
+		04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUCardCell.m; sourceTree = "<group>"; };
 		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
 		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
 		35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A28D291A994D5700CD5829 /* Main.storyboard */,
-				04335A8E1AABE929006444EF /* HourlyViewController.h */,
-				04335A8F1AABE929006444EF /* HourlyViewController.m */,
+				04335A8E1AABE929006444EF /* SFUHourlyViewController.h */,
+				04335A8F1AABE929006444EF /* SFUHourlyViewController.m */,
 				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
 				F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */,
 				350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */,
@@ -170,11 +170,11 @@
 				F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */,
 				F84ED3881A9EDF0E008AD45B /* SFUWebListModel.h */,
 				F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */,
-				04EEBE201A9F9E44003E1DD3 /* CardViewController.h */,
-				04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */,
+				04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */,
+				04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */,
 				04715A2F1A9FEBDA004F242B /* weatherIcons.plist */,
-				04EEBE211A9F9E44003E1DD3 /* CardCell.h */,
-				04EEBE221A9F9E44003E1DD3 /* CardCell.m */,
+				04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */,
+				04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
 				F808D8131A95CFA90006FC17 /* AppDelegate.m */,
 				F808D8151A95CFA90006FC17 /* MasterViewController.h */,
@@ -369,10 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */,
-				04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */,
+				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
+				04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */,
 				F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */,
-				04335A901AABE929006444EF /* HourlyViewController.m in Sources */,
+				04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */,
 				F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */,
 				F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */,
 				F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */,

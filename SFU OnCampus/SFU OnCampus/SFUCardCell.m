@@ -1,14 +1,14 @@
 //
-//  CardCell.m
+//  SFUCardCell.m
 //  test
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
 //
 
-#import "CardCell.h"
+#import "SFUCardCell.h"
 
-@implementation CardCell
+@implementation SFUCardCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

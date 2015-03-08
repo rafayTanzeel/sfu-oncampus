@@ -12,6 +12,7 @@
 		04EEBE1F1A9F9E25003E1DD3 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* CardViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* CardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
+		35DB33B51AAC08B200A3B42D /* SFUSocialServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */; };
 		5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5AC1AABBAFD000DBC1B /* email_icon.png */; };
 		5D11B5AF1AABBB31000DBC1B /* forum_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5AE1AABBB31000DBC1B /* forum_icon.png */; };
 		5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */; };
@@ -62,6 +63,7 @@
 		04EEBE221A9F9E44003E1DD3 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
 		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
+		35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
 		5D11B5AC1AABBAFD000DBC1B /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
 		5D11B5AE1AABBB31000DBC1B /* forum_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forum_icon.png; sourceTree = "<group>"; };
 		5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas_icon.png; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F808D8201A95CFA90006FC17 /* LaunchScreen.xib */,
 				F808D80E1A95CFA90006FC17 /* Supporting Files */,
 				F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */,
+				35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */,
 			);
 			path = "SFU OnCampus";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */,
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
 				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
+				35DB33B51AAC08B200A3B42D /* SFUSocialServiceURLs.plist in Resources */,
 				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,

@@ -52,7 +52,7 @@ NSArray *forecastDay;
     }
     else{
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
-        // NSLog(@"%@", currentObservation);
+         NSLog(@"%@", currentObservation);
     }
 }
 
@@ -146,7 +146,10 @@ NSArray *forecastDay;
     // Current wind and Precipitation
     NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
     NSInteger windInt = [wind integerValue];
-    NSNumber *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
+    NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
+    if ([precipitation isEqualToString:@"--"]) {
+        precipitation = @"0";
+    }
     NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
     cell.windAndPrecip.text = pw;
     

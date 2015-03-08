@@ -52,7 +52,7 @@ NSArray *forecastDay;
     }
     else{
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
-      //  NSLog(@"%@", currentObservation);
+        NSLog(@"%@", currentObservation);
     }
 }
 
@@ -81,14 +81,14 @@ NSArray *forecastDay;
     }
     else{
         simpleForecast = [[forecastDictionary objectForKey:@"forecast"] objectForKey:@"simpleforecast"];
-        NSLog(@"%@", simpleForecast);
+        //NSLog(@"%@", simpleForecast);
         
     }
     forecastDay = [simpleForecast objectForKey:@"forecastday"];
     
     for (NSDictionary *d in forecastDay) {
-        NSLog (@"---------------------\n");
-        NSLog (@"%@\n", [d description]);
+        //NSLog (@"---------------------\n");
+        //NSLog (@"%@\n", [d description]);
     }
 }
 
@@ -140,7 +140,7 @@ NSArray *forecastDay;
     cell.location.text = @"SFU Burnaby";
     
     // Current conditions description
-    NSString *condition = [currentObservation valueForKey:@"icon"];
+    NSString *condition = [currentObservation valueForKey:@"weather"];
     cell.weatherDescription.text = condition;
     
     // Current wind and Precipitation

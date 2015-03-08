@@ -11,5 +11,6 @@
 
 @interface SFUSocialTableViewController : UITableViewController
 @property IBOutlet SFUWebListModel* model;
+@property (strong, nonatomic) IBOutlet SFUSocialOtherModel *otherModel;
 @property BOOL displayInApp;
 @end

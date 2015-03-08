@@ -92,6 +92,9 @@ NSArray *hourlyWeather;
         cell = [[CardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CardCell"];
     }
     
+    // -----------------------------------------------------
+    // Time, icon, conditions, and temperature for each hour
+    // -----------------------------------------------------
     NSDictionary *zero = [hourlyWeather objectAtIndex:0];
     [cell updateHourlyLables:cell.hourOne labelTemp:cell.tempHourOne image:cell.iconHourOne cond:cell.condHourOne withDictionary:zero];
     
@@ -113,7 +116,20 @@ NSArray *hourlyWeather;
     NSDictionary *six = [hourlyWeather objectAtIndex:6];
     [cell updateHourlyLables:cell.hourSeven labelTemp:cell.tempHourSeven image:cell.iconHourSeven cond:cell.condHourSeven withDictionary:six];
     
+    NSDictionary *seven = [hourlyWeather objectAtIndex:7];
+    [cell updateHourlyLables:cell.hourEight labelTemp:cell.tempHourEight image:cell.iconHourEight cond:cell.condHourEight withDictionary:seven];
     
+    NSDictionary *eight = [hourlyWeather objectAtIndex:8];
+    [cell updateHourlyLables:cell.hourNine labelTemp:cell.tempHourNine image:cell.iconHourNine cond:cell.condHourNine withDictionary:eight];
+    
+    NSDictionary *nine = [hourlyWeather objectAtIndex:9];
+    [cell updateHourlyLables:cell.hourTen labelTemp:cell.tempHourTen image:cell.iconHourTen cond:cell.condHourTen withDictionary:nine];
+    
+    NSDictionary *ten = [hourlyWeather objectAtIndex:10];
+    [cell updateHourlyLables:cell.hourEleven labelTemp:cell.tempHourEleven image:cell.iconHourEleven cond:cell.condHourEleven withDictionary:ten];
+    
+    NSDictionary *eleven = [hourlyWeather objectAtIndex:11];
+    [cell updateHourlyLables:cell.hourTwelve labelTemp:cell.tempHourTwelve image:cell.iconHourTwelve cond:cell.condHourTwelve withDictionary:eleven];
     
     return cell;
 }

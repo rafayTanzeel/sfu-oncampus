@@ -85,6 +85,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *hourFive;
 @property (weak, nonatomic) IBOutlet UILabel *hourSix;
 @property (weak, nonatomic) IBOutlet UILabel *hourSeven;
+@property (weak, nonatomic) IBOutlet UILabel *hourEight;
+@property (weak, nonatomic) IBOutlet UILabel *hourNine;
+@property (weak, nonatomic) IBOutlet UILabel *hourTen;
+@property (weak, nonatomic) IBOutlet UILabel *hourEleven;
+@property (weak, nonatomic) IBOutlet UILabel *hourTwelve;
 
 // Each hour icon
 @property (weak, nonatomic) IBOutlet UIImageView *iconHourOne;
@@ -94,6 +99,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconHourFive;
 @property (weak, nonatomic) IBOutlet UIImageView *iconHourSix;
 @property (weak, nonatomic) IBOutlet UIImageView *iconHourSeven;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourEight;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourNine;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourTen;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourEleven;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHourTwelve;
 
 // Each hour conditions
 @property (weak, nonatomic) IBOutlet UILabel *condHourOne;
@@ -103,6 +113,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *condHourFive;
 @property (weak, nonatomic) IBOutlet UILabel *condHourSix;
 @property (weak, nonatomic) IBOutlet UILabel *condHourSeven;
+@property (weak, nonatomic) IBOutlet UILabel *condHourEight;
+@property (weak, nonatomic) IBOutlet UILabel *condHourNine;
+@property (weak, nonatomic) IBOutlet UILabel *condHourTen;
+@property (weak, nonatomic) IBOutlet UILabel *condHourEleven;
+@property (weak, nonatomic) IBOutlet UILabel *condHourTwelve;
 
 //Each hour temperature
 @property (weak, nonatomic) IBOutlet UILabel *tempHourOne;
@@ -112,6 +127,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *tempHourFive;
 @property (weak, nonatomic) IBOutlet UILabel *tempHourSix;
 @property (weak, nonatomic) IBOutlet UILabel *tempHourSeven;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourEight;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourNine;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourTen;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourEleven;
+@property (weak, nonatomic) IBOutlet UILabel *tempHourTwelve;
 
 
 

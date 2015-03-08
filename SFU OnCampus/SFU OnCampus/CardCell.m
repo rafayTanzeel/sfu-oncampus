@@ -63,8 +63,8 @@
     NSString *temp = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"temp"] objectForKey:@"metric"]];
     
     NSString *cond = [NSString stringWithFormat:@"%@", [d objectForKey:@"condition"]];
-    NSString *pop  = [NSString stringWithFormat:@"precip: %@%", [d objectForKey:@"pop"]];
-    NSString *conditions = [NSString stringWithFormat:@"%@\t%@", cond, pop];
+    NSString *pop  = [NSString stringWithFormat:@"precip: %@%%", [d objectForKey:@"pop"]];
+    NSString *conditions = [NSString stringWithFormat:@"%@ \t %@", cond, pop];
     
     NSString *icon_URL = [d valueForKey:@"icon_url"];
     imageHour.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];

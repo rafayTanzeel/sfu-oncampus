@@ -28,6 +28,23 @@ NSArray* array;
 }
 
 
+-(SFUWebListModel*)initWithPlist:(NSString*) plist
+{
+    //This is a user defined path in interface builder
+    //Take a look under the identity panel to see it.
+    @try{
+        NSString* path=[[NSBundle mainBundle]pathForResource:plist ofType:@"plist"];
+        array = [NSArray arrayWithContentsOfFile:path];
+    }
+    @catch (NSException* e)
+    {
+        
+    }
+    
+    
+    return self;
+}
+
 
 -(NSString*) urlStringForIndex:(NSUInteger)idx
 {

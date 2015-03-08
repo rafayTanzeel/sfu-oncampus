@@ -14,7 +14,7 @@
 -(NSString*) titleStringForIndex:(NSUInteger)idx;
 -(NSString*) urlStringForIndex:(NSUInteger)idx;
 -(NSString*) imageNameForIndex:(NSUInteger) idx;
-
+-(SFUWebListModel*)initWithPlist:(NSString*) plist;
 @property NSString* path;
 
 

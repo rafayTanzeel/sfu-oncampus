@@ -1,6 +1,6 @@
 //
 //  SFUCardCell.m
-//  test
+//  OnCampus
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
@@ -64,7 +64,7 @@
     
     NSString *cond = [NSString stringWithFormat:@"%@", [d objectForKey:@"condition"]];
     NSString *pop  = [NSString stringWithFormat:@"precip: %@%%", [d objectForKey:@"pop"]];
-    NSString *conditions = [NSString stringWithFormat:@"%@ \t %@", cond, pop];
+    NSString *conditions = [NSString stringWithFormat:@"%@    %@",cond, pop];
     
     NSString *icon_URL = [d valueForKey:@"icon_url"];
     imageHour.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];

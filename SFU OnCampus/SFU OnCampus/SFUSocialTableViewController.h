@@ -7,7 +7,10 @@
 //
 
 #import "DetailViewController.h"
+#import "SFUWebListModel.h"
 
-@interface SFUSocialTableViewController : DetailViewController
-
+@interface SFUSocialTableViewController : UITableViewController
+@property IBOutlet SFUWebListModel* model;
+@property (strong, nonatomic) IBOutlet NSObject *otherModel;
+@property BOOL displayInApp;
 @end

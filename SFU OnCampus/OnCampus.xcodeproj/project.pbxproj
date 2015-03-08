@@ -179,6 +179,7 @@
 				F808D8201A95CFA90006FC17 /* LaunchScreen.xib */,
 				F808D80E1A95CFA90006FC17 /* Supporting Files */,
 				F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */,
+				F1149C3A1AABC3A10030BE47 /* SFUSocialServiceURLs.plist */,
 			);
 			path = "SFU OnCampus";
 			sourceTree = "<group>";
@@ -331,6 +332,7 @@
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
 				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
 				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
+				F1149C3B1AABC3A20030BE47 /* SFUSocialServiceURLs.plist in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
 				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,

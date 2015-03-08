@@ -52,7 +52,7 @@ NSArray *forecastDay;
     }
     else{
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
-      //  NSLog(@"%@", currentObservation);
+        NSLog(@"%@", currentObservation);
     }
 }
 
@@ -81,14 +81,14 @@ NSArray *forecastDay;
     }
     else{
         simpleForecast = [[forecastDictionary objectForKey:@"forecast"] objectForKey:@"simpleforecast"];
-        NSLog(@"%@", simpleForecast);
+        //NSLog(@"%@", simpleForecast);
         
     }
     forecastDay = [simpleForecast objectForKey:@"forecastday"];
     
     for (NSDictionary *d in forecastDay) {
-        NSLog (@"---------------------\n");
-        NSLog (@"%@\n", [d description]);
+        //NSLog (@"---------------------\n");
+        //NSLog (@"%@\n", [d description]);
     }
 }
 
@@ -140,14 +140,14 @@ NSArray *forecastDay;
     cell.location.text = @"SFU Burnaby";
     
     // Current conditions description
-    NSString *condition = [currentObservation valueForKey:@"icon"];
+    NSString *condition = [currentObservation valueForKey:@"weather"];
     cell.weatherDescription.text = condition;
     
     // Current wind and Precipitation
     NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
     NSInteger windInt = [wind integerValue];
     NSNumber *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
-    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h - precip %@mm",(long)windInt,precipitation];
+    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
     cell.windAndPrecip.text = pw;
     
     // Large temperature icon and string

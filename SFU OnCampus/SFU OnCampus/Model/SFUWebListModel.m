@@ -28,7 +28,7 @@ NSArray* array;
 }
 
 
--(SFUWebListModel*)initWithPlist:(NSString*) plist
+-(void)initWithPlist:(NSString*) plist
 {
     //This is a user defined path in interface builder
     //Take a look under the identity panel to see it.
@@ -41,8 +41,6 @@ NSArray* array;
         
     }
     
-    
-    return self;
 }
 
 

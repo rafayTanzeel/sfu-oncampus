@@ -37,6 +37,10 @@
 		04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
 		35DB33B51AAC08B200A3B42D /* SFUSocialServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */; };
+		5D010CD21AAD5F16005CC0D2 /* SFUFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */; };
+		5D010CD51AAD6039005CC0D2 /* SFUFacebookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CD41AAD6039005CC0D2 /* SFUFacebookModel.m */; };
+		5D010CD81AAD6607005CC0D2 /* SFUTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CD71AAD6607005CC0D2 /* SFUTwitterController.m */; };
+		5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CDA1AAD6673005CC0D2 /* SFUTwitterModel.m */; };
 		5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5AC1AABBAFD000DBC1B /* email_icon.png */; };
 		5D11B5AF1AABBB31000DBC1B /* forum_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5AE1AABBB31000DBC1B /* forum_icon.png */; };
 		5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */; };
@@ -127,6 +131,14 @@
 		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
 		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
 		35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
+		5D010CD01AAD5F16005CC0D2 /* SFUFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUFacebookController.h; sourceTree = "<group>"; };
+		5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUFacebookController.m; sourceTree = "<group>"; };
+		5D010CD31AAD6039005CC0D2 /* SFUFacebookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUFacebookModel.h; sourceTree = "<group>"; };
+		5D010CD41AAD6039005CC0D2 /* SFUFacebookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUFacebookModel.m; sourceTree = "<group>"; };
+		5D010CD61AAD6607005CC0D2 /* SFUTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUTwitterController.h; sourceTree = "<group>"; };
+		5D010CD71AAD6607005CC0D2 /* SFUTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUTwitterController.m; sourceTree = "<group>"; };
+		5D010CD91AAD6673005CC0D2 /* SFUTwitterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUTwitterModel.h; sourceTree = "<group>"; };
+		5D010CDA1AAD6673005CC0D2 /* SFUTwitterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUTwitterModel.m; sourceTree = "<group>"; };
 		5D11B5AC1AABBAFD000DBC1B /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
 		5D11B5AE1AABBB31000DBC1B /* forum_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forum_icon.png; sourceTree = "<group>"; };
 		5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canvas_icon.png; sourceTree = "<group>"; };
@@ -278,6 +290,14 @@
 			isa = PBXGroup;
 			children = (
 				F8A28D291A994D5700CD5829 /* Main.storyboard */,
+				5D010CD91AAD6673005CC0D2 /* SFUTwitterModel.h */,
+				5D010CDA1AAD6673005CC0D2 /* SFUTwitterModel.m */,
+				5D010CD61AAD6607005CC0D2 /* SFUTwitterController.h */,
+				5D010CD71AAD6607005CC0D2 /* SFUTwitterController.m */,
+				5D010CD31AAD6039005CC0D2 /* SFUFacebookModel.h */,
+				5D010CD41AAD6039005CC0D2 /* SFUFacebookModel.m */,
+				5D010CD01AAD5F16005CC0D2 /* SFUFacebookController.h */,
+				5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */,
 				04335A8E1AABE929006444EF /* SFUHourlyViewController.h */,
 				04335A8F1AABE929006444EF /* SFUHourlyViewController.m */,
 				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
@@ -531,10 +551,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
+				5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */,
 				04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */,
 				F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */,
 				04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */,
 				F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */,
+				5D010CD51AAD6039005CC0D2 /* SFUFacebookModel.m in Sources */,
+				5D010CD81AAD6607005CC0D2 /* SFUTwitterController.m in Sources */,
 				F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */,
 				F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */,
 				040DC4F71AAD25C3003A713F /* SFUAnnouncementCell.m in Sources */,
@@ -542,6 +565,7 @@
 				F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */,
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
+				5D010CD21AAD5F16005CC0D2 /* SFUFacebookController.m in Sources */,
 				F808D81A1A95CFA90006FC17 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

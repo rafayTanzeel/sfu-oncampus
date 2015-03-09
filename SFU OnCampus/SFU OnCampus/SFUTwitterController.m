@@ -1,37 +1,24 @@
 //
-//  SFUSocialViewController.m
+//  SFUTwitterController.m
 //  OnCampus
 //
-//  Created by Rafay Tanzeel on 2015-02-26.
+//  Created by Ashwani Gaba on 2015-03-08.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import "SFUSocialTableViewController.h"
+#import "SFUTwitterController.h"
 #import "SFUWebListController.h"
-@interface SFUSocialTableViewController ()
+#import "SFUWebViewController.h"
 
-@end
+@implementation SFUTwitterController
 
-@implementation SFUSocialTableViewController
-/*
-NSString* serviceName = @"Facebook";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.model = [SFUWebListModel alloc];
-    [self.model initWithPlist:@"SFUSocialServiceURLs"];
+    
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)tableView:(id)table didSelectRowAtIndexPath:( NSIndexPath*)index
-{
-    serviceName = [self.model titleStringForIndex:index.row];
-    [self performSegueWithIdentifier:@"sugueSocialList" sender:self];
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -65,37 +52,47 @@ NSString* serviceName = @"Facebook";
     }
 }
 
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UIAlertView *messageAlert = [[UIAlertView alloc]
+//                                 initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//
+//    // Display Alert Message
+//    [messageAlert show];
+//
+//    //get url from model
+//
+//    if(!self.displayInApp)
+//    {
+//    // [UIApplication sharedApplication] openURL:<#(NSURL *)#>
+//    }else
+//    {
+//        // segue to web view with url
+//    }
+//
+//}
+- (void)setDetailItem:(id)newDetailItem {
+    
+}
+
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+ #pragma mark - Navigation
  
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-//if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-
-//NSString* URL=[self.model urlStringForIndex:indexPath.row];
-    SFUWebListController *controller = (SFUWebListController *)[[segue destinationViewController] topViewController];
-
-    [controller setModel:[SFUWebListModel alloc]];
-    //extend for each service case
-    if([serviceName isEqualToString:@"Facebook"])
-    {
-        [controller facebookList];
-    }
-    else
-    {
-      [controller twitterList];
-    }
-
-controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-controller.navigationItem.leftItemsSupplementBackButton = YES;
- 
-}*/
-
-
+    //if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSString* URL=[self.model urlStringForIndex:indexPath.row];
+    //NSDate *object = self.objects[indexPath.row];
+    SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
+    
+    [controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
+    
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
+    // }
+}
 
 
 

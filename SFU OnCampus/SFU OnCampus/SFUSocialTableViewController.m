@@ -7,15 +7,16 @@
 //
 
 #import "SFUSocialTableViewController.h"
-#import "SFUWebViewController.h"
+#import "SFUWebListController.h"
 @interface SFUSocialTableViewController ()
 
 @end
 
 @implementation SFUSocialTableViewController
-
+NSString* serviceName = @"Facebook";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.model = [SFUWebListModel alloc];
     [self.model initWithPlist:@"SFUSocialServiceURLs"];
     // Do any additional setup after loading the view.
 }
@@ -25,7 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)tableView:(id)table didSelectRowAtIndexPath:( NSIndexPath*)index
+{
+    serviceName = [self.model titleStringForIndex:index.row];
+    [self performSegueWithIdentifier:@"sugueSocialList" sender:self];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -68,11 +73,21 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 //if ([[segue identifier] isEqualToString:@"showDetail"]) {
-NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-NSString* URL=[self.model urlStringForIndex:indexPath.row];
-    SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
-    
-    [controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
+//NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+//NSString* URL=[self.model urlStringForIndex:indexPath.row];
+    SFUWebListController *controller = (SFUWebListController *)[[segue destinationViewController] topViewController];
+
+    [controller setModel:[SFUWebListModel alloc]];
+    //extend for each service case
+    if([serviceName isEqualToString:@"Facebook"])
+    {
+        [controller facebookList];
+    }
+    else
+    {
+      [controller twitterList];
+    }
 
 controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
 controller.navigationItem.leftItemsSupplementBackButton = YES;

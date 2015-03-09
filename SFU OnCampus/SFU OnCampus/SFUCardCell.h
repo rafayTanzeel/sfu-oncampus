@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * Custom UITableViewCell Class that is used to display the weather for the SFUWeatherViewController Class.
+ */
 @interface SFUCardCell : UITableViewCell
 
 // Sets image for weather

@@ -8,6 +8,7 @@
 
 #import "SFUCardCell.h"
 
+
 @implementation SFUCardCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

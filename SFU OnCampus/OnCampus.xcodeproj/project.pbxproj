@@ -30,6 +30,7 @@
 		040DC4F21AACFCAF003A713F /* sunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 040DC4DB1AACFCAF003A713F /* sunny.png */; };
 		040DC4F31AACFCAF003A713F /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 040DC4DC1AACFCAF003A713F /* unknown.png */; };
 		040DC4F41AACFCAF003A713F /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = 040DC4DD1AACFCAF003A713F /* wind.png */; };
+		040DC4F71AAD25C3003A713F /* SFUAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */; };
 		04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* SFUHourlyViewController.m */; };
 		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
 		04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */; };
@@ -114,6 +115,8 @@
 		040DC4DB1AACFCAF003A713F /* sunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunny.png; sourceTree = "<group>"; };
 		040DC4DC1AACFCAF003A713F /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
 		040DC4DD1AACFCAF003A713F /* wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind.png; sourceTree = "<group>"; };
+		040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUAnnouncementCell.h; sourceTree = "<group>"; };
+		040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUAnnouncementCell.m; sourceTree = "<group>"; };
 		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyViewController.h; sourceTree = "<group>"; };
 		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyViewController.m; sourceTree = "<group>"; };
 		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */,
 				04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */,
 				04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */,
+				040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */,
+				040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */,
 				04715A2F1A9FEBDA004F242B /* weatherIcons.plist */,
 				04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */,
 				04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */,
@@ -532,6 +537,7 @@
 				F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */,
 				F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */,
 				F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */,
+				040DC4F71AAD25C3003A713F /* SFUAnnouncementCell.m in Sources */,
 				F84ED38A1A9EDF0E008AD45B /* SFUWebListModel.m in Sources */,
 				F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */,
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,

@@ -74,12 +74,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *hourlyForecastButton;
 
 //----------------------------------
-// ANNOUNCEMENTS
-//----------------------------------
-@property (weak, nonatomic) IBOutlet UILabel *AnnouncementsTitle;
-@property (weak, nonatomic) IBOutlet UILabel *AnnouncementsBody;
-
-//----------------------------------
 // HOURLY FORECAST VIEW
 //----------------------------------
 

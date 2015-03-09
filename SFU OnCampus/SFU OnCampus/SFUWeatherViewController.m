@@ -8,6 +8,7 @@
 
 #import "SFUWeatherViewController.h"
 #import "SFUCardCell.h"
+#import "SFUAnnouncementCell.h"
 
 @interface SFUWeatherViewController ()
 
@@ -124,72 +125,94 @@ NSArray *forecastDay;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
+    // index of current row
+    int tableIndex = [indexPath indexAtPosition:[indexPath length] - 1];
     
-    // Configure the cell...
-    if (cell == nil) {
-        cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
+    //-----------------------------
+    // Main weather module
+    //-----------------------------
+    if (tableIndex == 0) {
+        
+        SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
+        
+        // Configure the cell...
+        if (cell == nil) {
+            cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
+        }
+        
+        cell.location.text = @"SFU Burnaby";
+        
+        // Current conditions description
+        NSString *condition = [currentObservation valueForKey:@"weather"];
+        cell.weatherDescription.text = condition;
+        
+        // Current wind and Precipitation
+        NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
+        NSInteger windInt = [wind integerValue];
+        NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
+        if ([precipitation isEqualToString:@"--"]) {
+            precipitation = @"0";
+        }
+        NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
+        cell.windAndPrecip.text = pw;
+        
+        // Large temperature icon and string
+        NSString *tempString = [currentObservation valueForKey:@"temp_c"];
+        NSInteger temp = [tempString integerValue];
+        cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
+        
+        [cell updateImage:cell.weatherIcon current:condition];
+        
+        if ([condition isEqualToString:@"Mostly Cloudy"]) {
+            cell.weatherIcon.image = [UIImage imageNamed:@"mostly_cloudy_d.png"];
+        }
+        
+        // Day One Lables
+        NSDictionary *zero = [forecastDay objectAtIndex:0];
+        [cell updateForecastLabels:cell.dayOne labelHigh:cell.dayOneHigh labelLow:cell.dayOneLow image:cell.iconDayOne withDictionary:zero];
+        
+        // Day Two Labels
+        NSDictionary *one = [forecastDay objectAtIndex:1];
+        [cell updateForecastLabels:cell.dayTwo labelHigh:cell.dayTwoHigh labelLow:cell.dayTwoLow image:cell.iconDayTwo withDictionary:one];
+        
+        // Day Three Labels
+        NSDictionary *two = [forecastDay objectAtIndex:2];
+        [cell updateForecastLabels:cell.dayThree labelHigh:cell.dayThreeHigh labelLow:cell.dayThreeLow image:cell.iconDayThree withDictionary:two];
+        
+        // Day Four Labels
+        NSDictionary *three = [forecastDay objectAtIndex:3];
+        [cell updateForecastLabels:cell.dayFour labelHigh:cell.dayFourHigh labelLow:cell.dayFourLow image:cell.iconDayFour withDictionary:three];
+        
+        // Day Five Labels
+        NSDictionary *four = [forecastDay objectAtIndex:4];
+        [cell updateForecastLabels:cell.dayFive labelHigh:cell.dayFiveHigh labelLow:cell.dayFiveLow image:cell.iconDayFive withDictionary:four];
+        
+        return cell;
     }
     
-    cell.location.text = @"SFU Burnaby";
-    
-    // Current conditions description
-    NSString *condition = [currentObservation valueForKey:@"weather"];
-    cell.weatherDescription.text = condition;
-    
-    // Current wind and Precipitation
-    NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
-    NSInteger windInt = [wind integerValue];
-    NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
-    if ([precipitation isEqualToString:@"--"]) {
-        precipitation = @"0";
-    }
-    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
-    cell.windAndPrecip.text = pw;
-    
-    // Large temperature icon and string
-    NSString *tempString = [currentObservation valueForKey:@"temp_c"];
-    NSInteger temp = [tempString integerValue];
-    cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
-    
-    [cell updateImage:cell.weatherIcon current:condition];
-    
-    if ([condition isEqualToString:@"Mostly Cloudy"]) {
-        cell.weatherIcon.image = [UIImage imageNamed:@"mostly_cloudy_d.png"];
-    }
-    
-    // Day One Lables
-    NSDictionary *zero = [forecastDay objectAtIndex:0];
-    [cell updateForecastLabels:cell.dayOne labelHigh:cell.dayOneHigh labelLow:cell.dayOneLow image:cell.iconDayOne withDictionary:zero];
-    
-    // Day Two Labels
-    NSDictionary *one = [forecastDay objectAtIndex:1];
-    [cell updateForecastLabels:cell.dayTwo labelHigh:cell.dayTwoHigh labelLow:cell.dayTwoLow image:cell.iconDayTwo withDictionary:one];
-    
-    // Day Three Labels
-    NSDictionary *two = [forecastDay objectAtIndex:2];
-    [cell updateForecastLabels:cell.dayThree labelHigh:cell.dayThreeHigh labelLow:cell.dayThreeLow image:cell.iconDayThree withDictionary:two];
-    
-    // Day Four Labels
-    NSDictionary *three = [forecastDay objectAtIndex:3];
-    [cell updateForecastLabels:cell.dayFour labelHigh:cell.dayFourHigh labelLow:cell.dayFourLow image:cell.iconDayFour withDictionary:three];
-    
-    // Day Five Labels
-    NSDictionary *four = [forecastDay objectAtIndex:4];
-    [cell updateForecastLabels:cell.dayFive labelHigh:cell.dayFiveHigh labelLow:cell.dayFiveLow image:cell.iconDayFive withDictionary:four];
-    
+    //-----------------------------
     // Announcements
-    cell.AnnouncementsTitle.text = @"Announcements";
-    cell.AnnouncementsBody.text = @"It is currently 6°C on campus with clear skies. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
-Please drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
+    //-----------------------------
+    else {
+        
+        SFUAnnouncementCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUAnnouncementCell"];
+        
+        // Announcements
+        cell.AnnouncementsTitle.text = @"Announcements";
+        cell.AnnouncementsBody.text = @"It is currently 6°C on campus with clear skies. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
+        Please drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
         This report will be updated as conditions change.";
-    return cell;
+        
+        return cell;
+        
+    }
+    
 }
 
 /*

@@ -12,4 +12,9 @@
 
 @property BOOL displayInApp;
 @property IBOutlet SFUWebListModel* model;
+
+-(void)facebookList;
+-(void)twitterList;
+
+-(void)setModel:(SFUWebListModel*)model;
 @end

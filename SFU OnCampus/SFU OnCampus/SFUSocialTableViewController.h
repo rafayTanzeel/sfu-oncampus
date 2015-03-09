@@ -10,7 +10,7 @@
 #import "SFUWebListModel.h"
 
 @interface SFUSocialTableViewController : UITableViewController
-@property IBOutlet SFUWebListModel* model;
+@property (strong, nonatomic) SFUWebListModel* model;
 @property (strong, nonatomic) IBOutlet NSObject *otherModel;
 @property BOOL displayInApp;
 @end

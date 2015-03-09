@@ -10,6 +10,11 @@
 #import "SFUWebViewController.h"
 @implementation SFUWebListController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.
+}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -19,6 +24,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //    return self.objects.count;
     return [self.model sizeOfArray];
+}
+
+-(void)facebookList
+{
+    self.model = [SFUWebListModel alloc];
+    [self.model initWithPlist:@"SFUFacebookURLs"];
+}
+-(void)twitterList
+{
+    self.model = [SFUWebListModel alloc];
+    [self.model initWithPlist:@"SFUTwitterURLs"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,6 +82,7 @@
 - (void)setDetailItem:(id)newDetailItem {
     
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //if ([[segue identifier] isEqualToString:@"showDetail"]) {

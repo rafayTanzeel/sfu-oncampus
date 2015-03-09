@@ -158,8 +158,7 @@ NSArray *forecastDay;
     NSInteger temp = [tempString integerValue];
     cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
     
-    NSString *icon_URL = [currentObservation valueForKey:@"icon_url"];
-    cell.weatherIcon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
+    [cell updateImage:cell.weatherIcon current:condition];
     
     if ([condition isEqualToString:@"Mostly Cloudy"]) {
         cell.weatherIcon.image = [UIImage imageNamed:@"mostly_cloudy_d.png"];

@@ -136,6 +136,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DCM-zS-gHA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="LhD-Ht-4J3" kind="relationship" relationship="rootViewController" id="wHr-8Q-Jge"/>
@@ -673,7 +677,9 @@
                             <outlet property="delegate" destination="03b-bX-8R1" id="IHI-p8-qhs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Social" id="7Jt-uX-zK7"/>
+                    <navigationItem key="navigationItem" title="Social" id="7Jt-uX-zK7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gM1-5e-nbq"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="otherModel" destination="I1h-Ld-5Xa" id="Q6o-y4-IHw"/>
                     </connections>
@@ -735,6 +741,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Njh-uQ-uSl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Rvs-zT-wZ6" kind="relationship" relationship="rootViewController" id="t3o-rQ-iml"/>
@@ -2012,7 +2022,7 @@
         <image name="food-99072_640.png" width="696" height="696"/>
         <image name="map.png" width="1280" height="1280"/>
         <image name="networking.png" width="719" height="800"/>
-        <image name="news.png" width="1280" height="798"/>
+        <image name="news.png" width="1280" height="1280"/>
         <image name="sfu points.png" width="1280" height="1280"/>
         <image name="student services.png" width="1280" height="1280"/>
         <image name="twitter_icon.png" width="128" height="128"/>

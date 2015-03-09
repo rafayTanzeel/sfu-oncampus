@@ -65,7 +65,7 @@ NSString* serviceName = @"Facebook";
     }
 }
 
-/*
+*/
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -77,23 +77,14 @@ NSString* serviceName = @"Facebook";
 //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
 //NSString* URL=[self.model urlStringForIndex:indexPath.row];
-    SFUWebListController *controller = (SFUWebListController *)[[segue destinationViewController] topViewController];
+    UIViewController *controller = (UIViewController *)[[segue destinationViewController] topViewController];
 
-    [controller setModel:[SFUWebListModel alloc]];
-    //extend for each service case
-    if([serviceName isEqualToString:@"Facebook"])
-    {
-        [controller facebookList];
-    }
-    else
-    {
-      [controller twitterList];
-    }
+
 
 controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
 controller.navigationItem.leftItemsSupplementBackButton = YES;
  
-}*/
+}
 
 
 

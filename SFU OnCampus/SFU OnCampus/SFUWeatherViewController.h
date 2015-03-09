@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * Custom TableViewController used to display weather, and to display announcements from http://www.sfu.ca/security/sfuroadconditions/
+ */
 @interface SFUWeatherViewController : UITableViewController
 - (IBAction)getCurrentWeather:(id)sender;
 

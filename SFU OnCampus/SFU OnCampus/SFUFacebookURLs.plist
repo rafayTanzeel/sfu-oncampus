@@ -20,14 +20,6 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFU Surrey&apos;s Campus</string>
-		<key>url</key>
-		<string>https://m.facebook.com/SFUSurrey</string>
-		<key>image</key>
-		<string>sfu-fb-icon.jpg</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>SFU Clan</string>
 		<key>url</key>
 		<string>https://m.facebook.com/sfuclan</string>

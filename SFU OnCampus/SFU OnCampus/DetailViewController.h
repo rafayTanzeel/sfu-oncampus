@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ This is a placeholder for unimplemented
+ */
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;

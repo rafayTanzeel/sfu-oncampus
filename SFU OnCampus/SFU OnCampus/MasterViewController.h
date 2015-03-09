@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+///This was provided in the template, it is the main menu.
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController

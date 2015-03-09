@@ -206,8 +206,8 @@ NSArray *forecastDay;
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
         cell.AnnouncementsBody.text = @"It is currently 6°C on campus with clear skies. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
-        Please drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
-        This report will be updated as conditions change.";
+        \n\nPlease drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
+        \n\nThis report will be updated as conditions change.";
         
         return cell;
         

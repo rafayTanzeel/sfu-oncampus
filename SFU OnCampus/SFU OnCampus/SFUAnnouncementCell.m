@@ -26,18 +26,18 @@
 
 -(void)cardSetup
 {
-    [self.cardView setAlpha:1];
-    self.cardView.layer.masksToBounds = NO;
+    [self.announcementView setAlpha:1];
+    self.announcementView.layer.masksToBounds = NO;
     
     // Round the corners
-    self.cardView.layer.cornerRadius = 1;
-    self.cardView.layer.shadowOffset = CGSizeMake(-.2f, .2f); //%%% this shadow will hang slightly down and to the right
-    self.cardView.layer.shadowRadius = 1; //%%% I prefer thinner, subtler shadows, but you can play with this
-    self.cardView.layer.shadowOpacity = 2; //%%% same thing with this, subtle is better for me
+    self.announcementView.layer.cornerRadius = 1;
+    self.announcementView.layer.shadowOffset = CGSizeMake(-.2f, .2f); //%%% this shadow will hang slightly down and to the right
+    self.announcementView.layer.shadowRadius = 1; //%%% I prefer thinner, subtler shadows, but you can play with this
+    self.announcementView.layer.shadowOpacity = 2; //%%% same thing with this, subtle is better for me
     
     //%%% This is a little hard to explain, but basically, it lowers the performance required to build shadows.  If you don't use this, it will lag
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.cardView.bounds];
-    self.cardView.layer.shadowPath = path.CGPath;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.announcementView.bounds];
+    self.announcementView.layer.shadowPath = path.CGPath;
     
     self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% I prefer choosing colors programmatically than on the storyboard
 }

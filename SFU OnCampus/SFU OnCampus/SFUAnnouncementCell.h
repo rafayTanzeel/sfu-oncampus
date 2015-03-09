@@ -10,6 +10,9 @@
 
 @interface SFUAnnouncementCell : UITableViewCell
 
+// UI View
+@property (weak, nonatomic) IBOutlet UIView *announcementView;
+
 //----------------------------------
 // ANNOUNCEMENTS
 //----------------------------------

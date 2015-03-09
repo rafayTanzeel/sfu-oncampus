@@ -636,7 +636,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon-60" id="kl2-pg-nKN">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="facebook_icon.png" id="kl2-pg-nKN">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -656,7 +656,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon-60" id="SjQ-Cl-eIy">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="twitter_icon.png" id="SjQ-Cl-eIy">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -2008,12 +2008,14 @@
         <image name="Journal_Icon.png" width="415" height="369"/>
         <image name="LogoBlock.jpg" width="651" height="486"/>
         <image name="bus.png" width="1280" height="1280"/>
+        <image name="facebook_icon.png" width="128" height="128"/>
         <image name="food-99072_640.png" width="696" height="696"/>
         <image name="map.png" width="1280" height="1280"/>
         <image name="networking.png" width="719" height="800"/>
         <image name="news.png" width="1280" height="798"/>
         <image name="sfu points.png" width="1280" height="1280"/>
         <image name="student services.png" width="1280" height="1280"/>
+        <image name="twitter_icon.png" width="128" height="128"/>
         <image name="weather icon.png" width="415" height="369"/>
         <image name="youtube.png" width="1280" height="1280"/>
     </resources>

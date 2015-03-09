@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>SFU Official</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu</string>
+		<key>image</key>
+		<string>sfu-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Bookstore</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfubookstores</string>
+		<key>image</key>
+		<string>sfubook-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Co-op</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu_coop</string>
+		<key>image</key>
+		<string>sfucoop-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU OLC</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu_olc</string>
+		<key>image</key>
+		<string>sfuolc-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Applied Sciences</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/fas_sfu</string>
+		<key>image</key>
+		<string>sfuapplied-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Health Sciences</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu_fhs</string>
+		<key>image</key>
+		<string>sfuhealth-tw-icon.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Science</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu_science</string>
+		<key>image</key>
+		<string>sfuscience-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Beedie</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfubeedie</string>
+		<key>image</key>
+		<string>sfubeedie-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Surrey</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfusurrey</string>
+		<key>image</key>
+		<string>sfusurrey-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Public Square</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfupublicsquare</string>
+		<key>image</key>
+		<string>sfupublic-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Residence</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfuresidence</string>
+		<key>image</key>
+		<string>sfuresidence-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Student Central</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfucentral</string>
+		<key>image</key>
+		<string>sfustudent-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Recreation</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfurecreation</string>
+		<key>image</key>
+		<string>sfurec-tw-icon.jpg</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU IT Services</string>
+		<key>url</key>
+		<string>https://mobile.twitter.com/sfu_it</string>
+		<key>image</key>
+		<string>sfuit-tw-icon.jpg</string>
+	</dict>
+</array>
+</plist>

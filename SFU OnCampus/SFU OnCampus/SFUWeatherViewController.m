@@ -38,7 +38,26 @@ NSArray *forecastDay;
     // Prepare the URL that we'll get the weather info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/conditions/q/Canada/Burnaby.json"];
     //Get URL page into NSData Object
-    NSData *currentWeatherData = [NSData dataWithContentsOfURL:url];
+    NSData *currentWeatherData =nil;
+    
+    @try {
+        currentWeatherData= [NSData dataWithContentsOfURL:url];
+    }
+    @catch (NSException *exception) {
+       
+    }
+    @finally {
+        
+    }
+    if(currentWeatherData == nil)
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+    
+    
+    
     
     //Read JSON and convert to object
     NSError *error;
@@ -75,6 +94,12 @@ NSArray *forecastDay;
     {
         error = nil;
     }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+    
     NSMutableDictionary *forecastDictionary = [NSJSONSerialization JSONObjectWithData:forecastWeatherData options:kNilOptions error:&error];
     
     if (error != nil) {
@@ -205,7 +230,7 @@ NSArray *forecastDay;
         
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
-        cell.AnnouncementsBody.text = @"It is currently 6°C on campus with clear skies. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
+        cell.AnnouncementsBody.text = @"It is currently 12°C on campus with few clouds in the sky. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
         \n\nPlease drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
         \n\nThis report will be updated as conditions change.";
         

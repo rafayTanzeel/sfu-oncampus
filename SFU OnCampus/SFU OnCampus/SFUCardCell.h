@@ -1,6 +1,7 @@
 //
 //  SFUCardCell.h
 //  OnCampus
+//	Team fiveOfTen
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
@@ -10,19 +11,67 @@
 
 /**
  * Custom UITableViewCell Class that is used to display the weather for the SFUWeatherViewController Class.
+ *
+ * @author Kevin Grant
+ * @version 1.0
  */
 @interface SFUCardCell : UITableViewCell
 
-// Sets image for weather
+/**
+ * Sets the weather icons for the current weather and for the hourly forecast.
+ * Uses the description of the current weather provided by the Wunderground weather API to determine
+ * which icon to use.
+ *
+ * @param weatherImage		the image view of which the icon will be set
+ * @param currentWeather	string description of the current weather
+ */
 - (void)updateImage:(UIImageView*) weatherImage current:(NSString*) currentWeather;
 
-// Sets weather images for five day forecast
+/**
+ * Sets the weather icons for the five day forecast.
+ * Uses the description of the weather icon provided by the Wunderground weather API to determine
+ * which icon to use.
+ *
+ * @param weatherImage	the image view of which the icon will be set
+ * @param icons			string description of the current weather
+ */
 - (void)updateForecastImage:(UIImageView*) weatherImage current:(NSString*) icon;
 
-// Updates the labels for five day forecast
+/**
+ * Sets the labels for the five day forecast.
+ * Uses a dictionary returned by the Wunderground weather API to determine 
+ * which values should be used. All parameters shall be representative of the 
+ * same forecast day (e.g. all representing the second day).
+ * <p>
+ * The five day forecast includes the name of the day, the high and low temperatures, and an icon
+ * representing the weather for each of the next five days. To determine the icon to be used,
+ * the function calls the {@link #updateForecastImage() updateForecastImage} method.
+ *
+ * @param dayLabel		label representing the name of the day
+ * @param highLabel		label representing the temperature high for the day
+ * @param lowLabel		label representing the temperature low for the day
+ * @param imageDay		image view of which the icon for the weather will be set
+ * @param d 			dictionary containing the information used to set the labels and image
+ */
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;
 
-// Updates labels for the hourly forecast
+/**
+ * Sets the labels for the hourly forecast.
+ * Uses a dictionary returned by the Wunderground weather API to determine 
+ * which values should be used. All parameters shall be representative of the 
+ * same forecast hour (e.g. all representing the second hour).
+ * <p>
+ * The hourly forecast includes the hour in 12-hour time (formatted "8:00 PM"), the temperature, a
+ * description of the weather conditions, the possibility of precipitation (pop),
+ * and an icon representing the weather for each of the next 12 hours. To determine the icon to be 
+ * used, the function calls the {@link #updateImage() updateImage} method.
+ *
+ * @param hourLabel		label representing the hour
+ * @param tempLabel		label representing the temperature for the hour
+ * @param imageHour		image view of which the icon for the weather will be set
+ * @param condLabel		label representing the description of the weather and the pop for the hour
+ * @param d 			dictionary containing the information used to set the labels and image
+ */
 - (void)updateHourlyLables:(UILabel*) hourLabel labelTemp:(UILabel*) tempLabel image:(UIImageView*) imageHour cond:(UILabel*) condLabel withDictionary:(NSDictionary*) d;
 
 // UI View
@@ -135,7 +184,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *tempHourTen;
 @property (weak, nonatomic) IBOutlet UILabel *tempHourEleven;
 @property (weak, nonatomic) IBOutlet UILabel *tempHourTwelve;
-
-
 
 @end

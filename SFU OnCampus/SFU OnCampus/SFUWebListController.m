@@ -26,16 +26,6 @@
     return [self.model sizeOfArray];
 }
 
--(void)facebookList
-{
-    self.model = [SFUWebListModel alloc];
-    [self.model initWithPlist:@"SFUFacebookURLs"];
-}
--(void)twitterList
-{
-    self.model = [SFUWebListModel alloc];
-    [self.model initWithPlist:@"SFUTwitterURLs"];
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2" forIndexPath:indexPath];

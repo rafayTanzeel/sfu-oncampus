@@ -13,11 +13,9 @@
 @interface SFUTwitterController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet SFUTwitterModel *model;
--(NSInteger)sizeOfArray;
--(NSString*) titleStringForIndex:(NSUInteger)idx;
--(NSString*) urlStringForIndex:(NSUInteger)idx;
--(NSString*) imageNameForIndex:(NSUInteger) idx;
--(void)initWithPlist:(NSString*) plist;
+
+
+
 @property NSString* path;
 
 @end

@@ -24,6 +24,7 @@ NSArray* array;
     {
         
     }
+    [self sortOnKey:@"title"];
     
     
     return self;
@@ -43,6 +44,11 @@ NSArray* array;
         
     }
     
+}
+
+-(void)sortOnKey: (NSString*)sortKey
+{
+    [array sortedArrayUsingDescriptors:[NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:sortKey ascending:YES],nil]];
 }
 
 

@@ -15,6 +15,7 @@
 -(NSString*) urlStringForIndex:(NSUInteger)idx;
 -(NSString*) imageNameForIndex:(NSUInteger) idx;
 -(void)initWithPlist:(NSString*) plist;
+-(void)sortOnKey: (NSString*)sortKey;
 @property NSString* path;
 
 @end

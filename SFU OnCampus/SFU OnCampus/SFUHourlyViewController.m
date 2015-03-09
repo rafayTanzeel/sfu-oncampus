@@ -1,9 +1,12 @@
 //
 //  SFUHourlyViewController.m
 //  OnCampus
+//  Team fiveOfTen
 //
 //  Created by Kevin Grant on 2015-03-07.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
+//
+//  Known Issue: temperature values to not align well on ipad.
 //
 
 #import "SFUHourlyViewController.h"
@@ -15,6 +18,7 @@
 
 @implementation SFUHourlyViewController
 
+// Global array used to store JSON data from weather API
 NSArray *hourlyWeather;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -26,13 +30,14 @@ NSArray *hourlyWeather;
     return self;
 }
 
-//-----------------------
-// GET HOURLY WEATHER
-//-----------------------
--(IBAction)getHourlyWeather:(id)sender {
+/**
+ * Gets the hourly weather data from the Wunderground Weather API.
+ */
+ -(IBAction)getHourlyWeather:(id)sender {
     
     // Prepare the URL that we'll get the weather info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/hourly/q/Canada/Burnaby.json"];
+   
     //Get URL page into NSData Object
     NSData *hourlyWeatherData = [NSData dataWithContentsOfURL:url];
     
@@ -49,7 +54,7 @@ NSArray *hourlyWeather;
     }
     else{
         hourlyWeather = [hourlyDictionary objectForKey:@"hourly_forecast"];
-        NSLog(@"%@", hourlyWeather);
+        // NSLog(@"%@", hourlyWeather);  // used for debugging
     }
 }
 
@@ -59,7 +64,8 @@ NSArray *hourlyWeather;
 
     self.tableView.separatorColor = [UIColor clearColor];
     
-    self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% This is so if you overscroll, the color is still gray
+    // Colour remains grey if user overscrolls
+    self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; 
    
     [self getHourlyWeather:self];
 }
@@ -72,22 +78,25 @@ NSArray *hourlyWeather;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+   
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+    
     // Return the number of rows in the section.
     return 1;
 }
 
+/**
+ * Loads the table view cell. 
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
     
-    // Configure the cell...
+    // Configure the cell
     if (cell == nil) {
         cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
     }

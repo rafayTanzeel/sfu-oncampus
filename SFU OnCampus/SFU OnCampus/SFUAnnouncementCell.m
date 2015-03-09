@@ -1,6 +1,7 @@
 //
 //  SFUAnnouncementCell.m
 //  OnCampus
+//  Team fiveOfTen
 //
 //  Created by Kevin Grant on 2015-03-08.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
@@ -24,21 +25,23 @@
     [self cardSetup];
 }
 
+// Set up the aesthetics of the cell
 -(void)cardSetup
 {
     [self.announcementView setAlpha:1];
     self.announcementView.layer.masksToBounds = NO;
     
-    // Round the corners
+    // Round the corners, and give it a shadow
     self.announcementView.layer.cornerRadius = 1;
-    self.announcementView.layer.shadowOffset = CGSizeMake(-.2f, .2f); //%%% this shadow will hang slightly down and to the right
-    self.announcementView.layer.shadowRadius = 1; //%%% I prefer thinner, subtler shadows, but you can play with this
-    self.announcementView.layer.shadowOpacity = 2; //%%% same thing with this, subtle is better for me
+    self.announcementView.layer.shadowOffset = CGSizeMake(-.2f, .2f); 
+    self.announcementView.layer.shadowRadius = 1; 
+    self.announcementView.layer.shadowOpacity = 2; 
     
-    //%%% This is a little hard to explain, but basically, it lowers the performance required to build shadows.  If you don't use this, it will lag
+    // Lowers the performance required to build shadows
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.announcementView.bounds];
     self.announcementView.layer.shadowPath = path.CGPath;
     
+    // Set the background colour
     self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% I prefer choosing colors programmatically than on the storyboard
 }
 

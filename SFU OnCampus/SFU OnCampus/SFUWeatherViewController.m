@@ -1,9 +1,15 @@
 //
 //  SFUWeatherViewController.m
 //  OnCampus
+//	Team fiveOfTen
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
+//
+//	Known bug: announcement cell does not align properly. However, this is
+// 			   a storyboard alignment issue, not an implementation issue.
+//
+//  To implement: Actually HTML parsing for the SFUAnnouncementCell.
 //
 
 #import "SFUWeatherViewController.h"
@@ -16,6 +22,7 @@
 
 @implementation SFUWeatherViewController
 
+// Global dictionary and array used for storing JSON data
 NSMutableDictionary *currentObservation;
 NSArray *forecastDay;
 
@@ -30,13 +37,16 @@ NSArray *forecastDay;
 
 #pragma mark get weather data
 
-//------------------------------
-// GET CURRENT WEATHER
-//------------------------------
+/**
+ * Gets the current weather data from the Wunderground Weather API.
+ * If it cannot retrieve any data, a pop up is displayed to the user
+ * informing them of the error.
+ */
 -(IBAction)getCurrentWeather:(id)sender {
     
     // Prepare the URL that we'll get the weather info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/conditions/q/Canada/Burnaby.json"];
+   
     //Get URL page into NSData Object
     NSData *currentWeatherData =nil;
     
@@ -51,14 +61,12 @@ NSArray *forecastDay;
     }
     if(currentWeatherData == nil)
     {
+    	// Display the error pop up
         [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
-    
-    
-    
-    
+       
     //Read JSON and convert to object
     NSError *error;
     if(currentWeatherData != nil)
@@ -68,25 +76,28 @@ NSArray *forecastDay;
     NSMutableDictionary *currentDictionary = [NSJSONSerialization JSONObjectWithData:currentWeatherData options:kNilOptions error:&error];
 
     if (error != nil) {
-        // NSLog(@"%@", [error localizedDescription]);
+        NSLog(@"%@", [error localizedDescription]);
     }
     else{
+    	// store the data into the global currentObservation dictionary
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
-         NSLog(@"%@", currentObservation);
     }
 }
 
-//------------------------------
-// GET FORECAST WEATHER
-//------------------------------
+/**
+ * Gets the five day forecast weather data from the Wunderground Weather API.
+ * If it cannot retrieve any data, a pop up is displayed to the user
+ * informing them of the error.
+ */
 -(IBAction)getForecastWeather:(id)sender {
     
     // Prepare the URL that we'll get the country info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/forecast10day/q/Canada/Burnaby.json"];
+   
     //Get URL page into NSData Object
     NSData *forecastWeatherData = [NSData dataWithContentsOfURL:url];
-    //Read JSON and convert to object
-    
+ 
+    //Read JSON and convert to object   
     NSMutableDictionary *simpleForecast;
     
     NSError *error;
@@ -95,6 +106,7 @@ NSArray *forecastDay;
         error = nil;
     }
     else {
+    	// Display the error pop up
         [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
@@ -107,15 +119,10 @@ NSArray *forecastDay;
     }
     else{
         simpleForecast = [[forecastDictionary objectForKey:@"forecast"] objectForKey:@"simpleforecast"];
-        //NSLog(@"%@", simpleForecast);
-        
     }
+
+	// Store the data in the forecastDay global array
     forecastDay = [simpleForecast objectForKey:@"forecastday"];
-    
-    for (NSDictionary *d in forecastDay) {
-        //NSLog (@"---------------------\n");
-        //NSLog (@"%@\n", [d description]);
-    }
 }
 
 
@@ -126,7 +133,8 @@ NSArray *forecastDay;
     
     self.tableView.separatorColor = [UIColor clearColor];
     
-    self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% This is so if you overscroll, the color is still gray
+    // If user overscrolls, colour is still grey
+    self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; 
     
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
@@ -153,7 +161,10 @@ NSArray *forecastDay;
     return 2;
 }
 
-
+/**
+ * Loads the table view cells. If it is the first cell in the view, it loads an SFUCardCell. If not,
+ * it loads an SFUAnnouncementCell.
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // index of current row
@@ -166,11 +177,12 @@ NSArray *forecastDay;
         
         SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
         
-        // Configure the cell...
+        // Configure the cell
         if (cell == nil) {
             cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
         }
         
+        // Set weather location
         cell.location.text = @"SFU Burnaby";
         
         // Current conditions description
@@ -193,10 +205,6 @@ NSArray *forecastDay;
         cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
         
         [cell updateImage:cell.weatherIcon current:condition];
-        
-        if ([condition isEqualToString:@"Mostly Cloudy"]) {
-            cell.weatherIcon.image = [UIImage imageNamed:@"mostly_cloudy_d.png"];
-        }
         
         // Day One Lables
         NSDictionary *zero = [forecastDay objectAtIndex:0];
@@ -230,6 +238,8 @@ NSArray *forecastDay;
         
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
+
+        // To be updated to actual html. this is just to show the view behaves correctly
         cell.AnnouncementsBody.text = @"It is currently 12°C on campus with few clouds in the sky. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
         \n\nPlease drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
         \n\nThis report will be updated as conditions change.";

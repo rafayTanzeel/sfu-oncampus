@@ -1,6 +1,7 @@
 //
 //  SFUCardCell.m
 //  OnCampus
+//  Team fiveOfTen
 //
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
@@ -25,22 +26,24 @@
     [self cardSetup];
 }
 
+// Sets up the aesthetics of the cell
 -(void)cardSetup
 {
     [self.cardView setAlpha:1];
     self.cardView.layer.masksToBounds = NO;
     
-    // Round the corners
+    // Round the corners, and give it a shadow
     self.cardView.layer.cornerRadius = 1;
-    self.cardView.layer.shadowOffset = CGSizeMake(-.2f, .2f); //%%% this shadow will hang slightly down and to the right
-    self.cardView.layer.shadowRadius = 1; //%%% I prefer thinner, subtler shadows, but you can play with this
-    self.cardView.layer.shadowOpacity = 2; //%%% same thing with this, subtle is better for me
+    self.cardView.layer.shadowOffset = CGSizeMake(-.2f, .2f); 
+    self.cardView.layer.shadowRadius = 1; 
+    self.cardView.layer.shadowOpacity = 2; 
     
-    //%%% This is a little hard to explain, but basically, it lowers the performance required to build shadows.  If you don't use this, it will lag
+    // Lowers the performance required to build shadows.
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.cardView.bounds];
     self.cardView.layer.shadowPath = path.CGPath;
     
-    self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; //%%% I prefer choosing colors programmatically than on the storyboard
+    // Set the background colour
+    self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; 
 }
 
 // Get the correct image for the weather from the local folder
@@ -72,7 +75,10 @@
     }
     
     NSInteger i;
-    
+
+
+    // If the first word of the description is 'Light' or 'Heavy', the index is set to one so
+    // we can check starting at the second word.
     if([weatherArray[0] isEqualToString:@"Light"] || [weatherArray[0] isEqualToString:@"Heavy"]) {
         i = 1;
     }
@@ -139,14 +145,15 @@
 // Updates Labels for five day forecast
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary: (NSDictionary *) d
 {
+    // Strings representing high and low temperatures
     NSString *high = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"high"] objectForKey:@"celsius"]];
     NSString *low = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"low"] objectForKey:@"celsius"]];
     
-    NSString *icon = [d valueForKey:@"icon"];
-    //imageDay.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
-    
+    // Get and set icon
+    NSString *icon = [d valueForKey:@"icon"];    
     [self updateForecastImage:imageDay current:icon];
     
+    // Set day, high, and low labels
     dayLabel.text = [[d objectForKey:@"date"] objectForKey:@"weekday_short"];
     highLabel.text = high;
     lowLabel.text = low;
@@ -155,18 +162,19 @@
 // Update labels for hourly forecast
 - (void)updateHourlyLables:(UILabel*) hourLabel labelTemp:(UILabel*) tempLabel image:(UIImageView*) imageHour cond:(UILabel*) condLabel withDictionary:(NSDictionary*) d
 {
+    // Strings representing current hour and temperature
     NSString *hour = [NSString stringWithFormat:@"%@",[[d objectForKey:@"FCTTIME"] objectForKey:@"civil"]];
     NSString *temp = [NSString stringWithFormat:@"%@°",[[d objectForKey:@"temp"] objectForKey:@"metric"]];
     
+    // Strings represening description of current weather and pop
     NSString *cond = [NSString stringWithFormat:@"%@", [d objectForKey:@"condition"]];
     NSString *pop  = [NSString stringWithFormat:@"precip: %@%%", [d objectForKey:@"pop"]];
     NSString *conditions = [NSString stringWithFormat:@"%@    %@",cond, pop];
     
-    //NSString *icon_URL = [d valueForKey:@"icon_url"];
-    //imageHour.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:icon_URL]]];
-    
+    // Update the weather icon    
     [self updateImage:imageHour current:cond];
     
+    // Set the hour, temperature, and conditions label
     hourLabel.text = hour;
     tempLabel.text = temp;
     condLabel.text = conditions;

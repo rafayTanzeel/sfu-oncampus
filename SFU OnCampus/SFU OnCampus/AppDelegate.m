@@ -1,6 +1,7 @@
 //
 //  AppDelegate.m
 //  SFU OnCampus
+//  Team fiveOfTen
 //
 //  Created by Abram Wiebe on 2015-02-19.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
@@ -61,7 +62,13 @@
     }
 }
 
+/**
+ * Downloads JSON data from a given URL. Displays an error message upon failure.
+ *
+ * @param url   the url to be used to download the data from
+ */
 +(void)downloadDataFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSData *))completionHandler{
+    
     // Instantiate a session configuration object.
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     

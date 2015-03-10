@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>963DD5E4-6FC3-4E6B-ACDF-750DC8148518</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScanBarCodes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9AFC17FE39C156957944C0579CD1E66182B68577</key>
+		<string>https://github.com/nikhilgaba/sfu-oncampus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScanBarCodes/ScanBarCodes.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9AFC17FE39C156957944C0579CD1E66182B68577</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nikhilgaba/sfu-oncampus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9AFC17FE39C156957944C0579CD1E66182B68577</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9AFC17FE39C156957944C0579CD1E66182B68577</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sfu-oncampus</string>
+		</dict>
+	</array>
+</dict>
+</plist>

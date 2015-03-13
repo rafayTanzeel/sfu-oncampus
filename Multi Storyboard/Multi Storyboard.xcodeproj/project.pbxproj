@@ -22,6 +22,8 @@
 		F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FB4801AACE31F004E8ADC /* Weather.storyboard */; };
 		F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */; };
 		F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */; };
+		F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EC344F1AB2C4C000E80555 /* Map.storyboard */; };
+		F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableViewController.m; sourceTree = "<group>"; };
 		F89FB4851AACE4A4004E8ADC /* SFUHourlyForecastTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyForecastTableCell.h; sourceTree = "<group>"; };
 		F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
+		F8EC344F1AB2C4C000E80555 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		F8EC34511AB2C7F400E80555 /* SFUMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapViewController.h; sourceTree = "<group>"; };
+		F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 				F89FB4591AAC533B004E8ADC /* LaunchScreen.xib */,
 				F89FB44A1AAC533B004E8ADC /* Supporting Files */,
 				F89FB4741AAC5580004E8ADC /* Social.storyboard */,
+				F8EC344F1AB2C4C000E80555 /* Map.storyboard */,
+				F8EC34511AB2C7F400E80555 /* SFUMapViewController.h */,
+				F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */,
 				F89FB4801AACE31F004E8ADC /* Weather.storyboard */,
 				F89FB4851AACE4A4004E8ADC /* SFUHourlyForecastTableCell.h */,
 				F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */,
@@ -233,6 +241,7 @@
 			files = (
 				F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */,
 				F89FB47D1AAC5B75004E8ADC /* storyboardlist.plist in Resources */,
+				F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
 				F89FB45B1AAC533B004E8ADC /* LaunchScreen.xib in Resources */,
@@ -259,6 +268,7 @@
 				F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */,
 				F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */,
 				F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */,
+				F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,
 				F89FB4781AAC56FD004E8ADC /* SFUStoryboardListTableViewController.m in Sources */,
@@ -454,6 +464,7 @@
 				F89FB46C1AAC533C004E8ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F89FB46D1AAC533C004E8ADC /* Build configuration list for PBXNativeTarget "Multi StoryboardTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +473,7 @@
 				F89FB46F1AAC533C004E8ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

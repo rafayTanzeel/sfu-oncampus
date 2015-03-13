@@ -22,8 +22,15 @@
 		F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89FB4801AACE31F004E8ADC /* Weather.storyboard */; };
 		F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */; };
 		F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */; };
+		F8E0DD8C1AB32DAD001B8840 /* SFULocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E0DD8B1AB32DAD001B8840 /* SFULocation.m */; };
+		F8EB4B871AB2DD0300616182 /* buildingData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8EB4B861AB2DD0300616182 /* buildingData.plist */; };
+		F8EB4BBA1AB2E2D400616182 /* SFUMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB4BB91AB2E2D400616182 /* SFUMapModel.m */; };
+		F8EB4BBD1AB2EE5D00616182 /* SFUMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB4BBC1AB2EE5D00616182 /* SFUMapAnnotation.m */; };
 		F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EC344F1AB2C4C000E80555 /* Map.storyboard */; };
 		F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */; };
+		F8EC34551AB2CE8F00E80555 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34541AB2CE8F00E80555 /* MapKit.framework */; };
+		F8EC34571AB2CE9500E80555 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34561AB2CE9500E80555 /* CoreLocation.framework */; };
+		F8EC34591AB2D26000E80555 /* SFU_2013_10cm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +69,19 @@
 		F89FB4831AACE474004E8ADC /* SFUHourlyForecastTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableViewController.m; sourceTree = "<group>"; };
 		F89FB4851AACE4A4004E8ADC /* SFUHourlyForecastTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyForecastTableCell.h; sourceTree = "<group>"; };
 		F89FB4861AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
+		F8E0DD8A1AB32DAD001B8840 /* SFULocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULocation.h; sourceTree = "<group>"; };
+		F8E0DD8B1AB32DAD001B8840 /* SFULocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULocation.m; sourceTree = "<group>"; };
+		F8EB4B861AB2DD0300616182 /* buildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildingData.plist; sourceTree = "<group>"; };
+		F8EB4BB81AB2E2D400616182 /* SFUMapModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapModel.h; sourceTree = "<group>"; };
+		F8EB4BB91AB2E2D400616182 /* SFUMapModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapModel.m; sourceTree = "<group>"; };
+		F8EB4BBB1AB2EE5D00616182 /* SFUMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapAnnotation.h; sourceTree = "<group>"; };
+		F8EB4BBC1AB2EE5D00616182 /* SFUMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapAnnotation.m; sourceTree = "<group>"; };
 		F8EC344F1AB2C4C000E80555 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		F8EC34511AB2C7F400E80555 /* SFUMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapViewController.h; sourceTree = "<group>"; };
 		F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapViewController.m; sourceTree = "<group>"; };
+		F8EC34541AB2CE8F00E80555 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F8EC34561AB2CE9500E80555 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFU_2013_10cm.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EC34571AB2CE9500E80555 /* CoreLocation.framework in Frameworks */,
+				F8EC34551AB2CE8F00E80555 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +107,8 @@
 		F89FB43E1AAC533B004E8ADC = {
 			isa = PBXGroup;
 			children = (
+				F8EC34561AB2CE9500E80555 /* CoreLocation.framework */,
+				F8EC34541AB2CE8F00E80555 /* MapKit.framework */,
 				F89FB4491AAC533B004E8ADC /* Multi Storyboard */,
 				F89FB4631AAC533C004E8ADC /* Multi StoryboardTests */,
 				F89FB4481AAC533B004E8ADC /* Products */,
@@ -108,6 +129,7 @@
 			children = (
 				F89FB44E1AAC533B004E8ADC /* AppDelegate.h */,
 				F89FB44F1AAC533B004E8ADC /* AppDelegate.m */,
+				F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */,
 				F89FB4511AAC533B004E8ADC /* ViewController.h */,
 				F89FB4521AAC533B004E8ADC /* ViewController.m */,
 				F89FB4541AAC533B004E8ADC /* Main.storyboard */,
@@ -121,6 +143,13 @@
 				F89FB44A1AAC533B004E8ADC /* Supporting Files */,
 				F89FB4741AAC5580004E8ADC /* Social.storyboard */,
 				F8EC344F1AB2C4C000E80555 /* Map.storyboard */,
+				F8EB4B861AB2DD0300616182 /* buildingData.plist */,
+				F8EB4BB81AB2E2D400616182 /* SFUMapModel.h */,
+				F8EB4BB91AB2E2D400616182 /* SFUMapModel.m */,
+				F8E0DD8A1AB32DAD001B8840 /* SFULocation.h */,
+				F8E0DD8B1AB32DAD001B8840 /* SFULocation.m */,
+				F8EB4BBB1AB2EE5D00616182 /* SFUMapAnnotation.h */,
+				F8EB4BBC1AB2EE5D00616182 /* SFUMapAnnotation.m */,
 				F8EC34511AB2C7F400E80555 /* SFUMapViewController.h */,
 				F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */,
 				F89FB4801AACE31F004E8ADC /* Weather.storyboard */,
@@ -244,8 +273,10 @@
 				F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
+				F8EC34591AB2D26000E80555 /* SFU_2013_10cm.jpg in Resources */,
 				F89FB45B1AAC533B004E8ADC /* LaunchScreen.xib in Resources */,
 				F89FB4581AAC533B004E8ADC /* Images.xcassets in Resources */,
+				F8EB4B871AB2DD0300616182 /* buildingData.plist in Resources */,
 				F89FB4751AAC5580004E8ADC /* Social.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,11 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E0DD8C1AB32DAD001B8840 /* SFULocation.m in Sources */,
+				F8EB4BBD1AB2EE5D00616182 /* SFUMapAnnotation.m in Sources */,
 				F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */,
 				F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */,
 				F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */,
 				F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */,
 				F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */,
+				F8EB4BBA1AB2E2D400616182 /* SFUMapModel.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,
 				F89FB4781AAC56FD004E8ADC /* SFUStoryboardListTableViewController.m in Sources */,

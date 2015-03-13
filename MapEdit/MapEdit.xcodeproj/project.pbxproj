@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8EB4B981AB2DF7D00616182 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB4B971AB2DF7D00616182 /* AppDelegate.m */; };
+		F8EB4B9A1AB2DF7D00616182 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB4B991AB2DF7D00616182 /* main.m */; };
+		F8EB4B9C1AB2DF7D00616182 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8EB4B9B1AB2DF7D00616182 /* Images.xcassets */; };
+		F8EB4B9F1AB2DF7D00616182 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EB4B9D1AB2DF7D00616182 /* MainMenu.xib */; };
+		F8EB4BAB1AB2DF7D00616182 /* MapEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB4BAA1AB2DF7D00616182 /* MapEditTests.m */; };
+		F8EB4BB51AB2E0ED00616182 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EB4BB41AB2E0ED00616182 /* MapKit.framework */; };
+		F8EB4BB71AB2E0F500616182 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EB4BB61AB2E0F500616182 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8EB4BA51AB2DF7D00616182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8EB4B891AB2DF7D00616182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8EB4B901AB2DF7D00616182;
+			remoteInfo = MapEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8EB4B911AB2DF7D00616182 /* MapEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8EB4B951AB2DF7D00616182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8EB4B961AB2DF7D00616182 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8EB4B971AB2DF7D00616182 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8EB4B991AB2DF7D00616182 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8EB4B9B1AB2DF7D00616182 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F8EB4B9E1AB2DF7D00616182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F8EB4BA41AB2DF7D00616182 /* MapEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8EB4BA91AB2DF7D00616182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8EB4BAA1AB2DF7D00616182 /* MapEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapEditTests.m; sourceTree = "<group>"; };
+		F8EB4BB41AB2E0ED00616182 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F8EB4BB61AB2E0F500616182 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8EB4B8E1AB2DF7D00616182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EB4BB71AB2E0F500616182 /* CoreLocation.framework in Frameworks */,
+				F8EB4BB51AB2E0ED00616182 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8EB4BA11AB2DF7D00616182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8EB4B881AB2DF7D00616182 = {
+			isa = PBXGroup;
+			children = (
+				F8EB4BB61AB2E0F500616182 /* CoreLocation.framework */,
+				F8EB4BB41AB2E0ED00616182 /* MapKit.framework */,
+				F8EB4B931AB2DF7D00616182 /* MapEdit */,
+				F8EB4BA71AB2DF7D00616182 /* MapEditTests */,
+				F8EB4B921AB2DF7D00616182 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8EB4B921AB2DF7D00616182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB4B911AB2DF7D00616182 /* MapEdit.app */,
+				F8EB4BA41AB2DF7D00616182 /* MapEditTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8EB4B931AB2DF7D00616182 /* MapEdit */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB4B961AB2DF7D00616182 /* AppDelegate.h */,
+				F8EB4B971AB2DF7D00616182 /* AppDelegate.m */,
+				F8EB4B9B1AB2DF7D00616182 /* Images.xcassets */,
+				F8EB4B9D1AB2DF7D00616182 /* MainMenu.xib */,
+				F8EB4B941AB2DF7D00616182 /* Supporting Files */,
+			);
+			path = MapEdit;
+			sourceTree = "<group>";
+		};
+		F8EB4B941AB2DF7D00616182 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB4B951AB2DF7D00616182 /* Info.plist */,
+				F8EB4B991AB2DF7D00616182 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8EB4BA71AB2DF7D00616182 /* MapEditTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB4BAA1AB2DF7D00616182 /* MapEditTests.m */,
+				F8EB4BA81AB2DF7D00616182 /* Supporting Files */,
+			);
+			path = MapEditTests;
+			sourceTree = "<group>";
+		};
+		F8EB4BA81AB2DF7D00616182 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB4BA91AB2DF7D00616182 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8EB4B901AB2DF7D00616182 /* MapEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8EB4BAE1AB2DF7D00616182 /* Build configuration list for PBXNativeTarget "MapEdit" */;
+			buildPhases = (
+				F8EB4B8D1AB2DF7D00616182 /* Sources */,
+				F8EB4B8E1AB2DF7D00616182 /* Frameworks */,
+				F8EB4B8F1AB2DF7D00616182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapEdit;
+			productName = MapEdit;
+			productReference = F8EB4B911AB2DF7D00616182 /* MapEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8EB4BA31AB2DF7D00616182 /* MapEditTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8EB4BB11AB2DF7D00616182 /* Build configuration list for PBXNativeTarget "MapEditTests" */;
+			buildPhases = (
+				F8EB4BA01AB2DF7D00616182 /* Sources */,
+				F8EB4BA11AB2DF7D00616182 /* Frameworks */,
+				F8EB4BA21AB2DF7D00616182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8EB4BA61AB2DF7D00616182 /* PBXTargetDependency */,
+			);
+			name = MapEditTests;
+			productName = MapEditTests;
+			productReference = F8EB4BA41AB2DF7D00616182 /* MapEditTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8EB4B891AB2DF7D00616182 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Simon Fraser University";
+				TargetAttributes = {
+					F8EB4B901AB2DF7D00616182 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F8EB4BA31AB2DF7D00616182 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F8EB4B901AB2DF7D00616182;
+					};
+				};
+			};
+			buildConfigurationList = F8EB4B8C1AB2DF7D00616182 /* Build configuration list for PBXProject "MapEdit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8EB4B881AB2DF7D00616182;
+			productRefGroup = F8EB4B921AB2DF7D00616182 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8EB4B901AB2DF7D00616182 /* MapEdit */,
+				F8EB4BA31AB2DF7D00616182 /* MapEditTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8EB4B8F1AB2DF7D00616182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EB4B9C1AB2DF7D00616182 /* Images.xcassets in Resources */,
+				F8EB4B9F1AB2DF7D00616182 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8EB4BA21AB2DF7D00616182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8EB4B8D1AB2DF7D00616182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EB4B9A1AB2DF7D00616182 /* main.m in Sources */,
+				F8EB4B981AB2DF7D00616182 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8EB4BA01AB2DF7D00616182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EB4BAB1AB2DF7D00616182 /* MapEditTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8EB4BA61AB2DF7D00616182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8EB4B901AB2DF7D00616182 /* MapEdit */;
+			targetProxy = F8EB4BA51AB2DF7D00616182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8EB4B9D1AB2DF7D00616182 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8EB4B9E1AB2DF7D00616182 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8EB4BAC1AB2DF7D00616182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8EB4BAD1AB2DF7D00616182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F8EB4BAF1AB2DF7D00616182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MapEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8EB4BB01AB2DF7D00616182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MapEdit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8EB4BB21AB2DF7D00616182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MapEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapEdit.app/Contents/MacOS/MapEdit";
+			};
+			name = Debug;
+		};
+		F8EB4BB31AB2DF7D00616182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MapEditTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapEdit.app/Contents/MacOS/MapEdit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8EB4B8C1AB2DF7D00616182 /* Build configuration list for PBXProject "MapEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8EB4BAC1AB2DF7D00616182 /* Debug */,
+				F8EB4BAD1AB2DF7D00616182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8EB4BAE1AB2DF7D00616182 /* Build configuration list for PBXNativeTarget "MapEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8EB4BAF1AB2DF7D00616182 /* Debug */,
+				F8EB4BB01AB2DF7D00616182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8EB4BB11AB2DF7D00616182 /* Build configuration list for PBXNativeTarget "MapEditTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8EB4BB21AB2DF7D00616182 /* Debug */,
+				F8EB4BB31AB2DF7D00616182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8EB4B891AB2DF7D00616182 /* Project object */;
+}

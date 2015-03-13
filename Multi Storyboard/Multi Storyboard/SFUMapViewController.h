@@ -12,7 +12,7 @@
 @import CoreLocation;
 @import MapKit;
 
-@interface SFUMapViewController : UIViewController <UITextFieldDelegate>
+@interface SFUMapViewController : UIViewController <UITextFieldDelegate,CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)captureRegion:(id)sender;
 - (IBAction)findDestination:(id)sender;
@@ -28,5 +28,8 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)overlay;
 
 - (void)textFieldDidEndEditing:(UITextField *)textField;
+
+///Call to set the shortcode of the currently selected field, the controller will decide which field is selected.
+-(void)composeShortcode:(NSString*)code;
 
 @end

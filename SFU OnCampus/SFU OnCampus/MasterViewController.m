@@ -114,7 +114,9 @@
     }
     // }
 }
-
+- (IBAction)unwindToMasterViewController:(UIStoryboardSegue *)segue {
+    //nothing goes here
+}
 #pragma mark - Table View
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

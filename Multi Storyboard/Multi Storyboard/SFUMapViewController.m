@@ -13,16 +13,17 @@
 @end
 
 @implementation SFUMapViewController 
-
+CLLocationManager* locationManager;
 - (void)viewDidLoad {
     self.model = [SFUMapModel new];
     [super viewDidLoad];
     NSLog(@"loaded");
     MKCoordinateSpan span = {0.00525,0.00525};
-    CLLocationManager* locationManager = [CLLocationManager new] ;
+    locationManager = [CLLocationManager new] ;
+    locationManager.delegate = self;
     [locationManager requestAlwaysAuthorization];
     
-    self.mapView.showsUserLocation = YES;
+    
     
     CLGeocoder* geocoder = [CLGeocoder new];
     [geocoder geocodeAddressString:@"Simon Fraser University"
@@ -37,6 +38,12 @@
                      }
                  }];
     
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +64,7 @@
 - (IBAction)captureRegion:(id)sender
 {
     NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.regionNameTextField.text,self.mapView.region.span.longitudeDelta,self.mapView.region.span.latitudeDelta,self.mapView.region.center.longitude,self.mapView.region.center.latitude);
+    [self.regionNameTextField resignFirstResponder];
 
 }
 -(void)reportNullRegion
@@ -197,6 +205,10 @@
     CGPoint p= [sender locationInView:self.mapView];
     CLLocationCoordinate2D l = [self.mapView convertPoint:p toCoordinateFromView:self.mapView];
     NSLog(@"Held point %f %f \n",l.longitude,l.latitude);
+}
+
+- (IBAction)unwindToSFUMapViewController:(UIStoryboardSegue *)segue {
+    //nothing goes here
 }
 
 

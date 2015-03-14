@@ -28,6 +28,14 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>Student Feedback</string>
+		<key>url</key>
+		<string>https://docs.google.com/forms/d/1N6am2DL08W_3EDhzdSBWVFBRg9MOuetXzLvedwnEPpI/viewform?usp=send_form</string>
+		<key>image</key>
+		<string>email_icon.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>talkSFU</string>
 		<key>url</key>
 		<string>http://talksfu.ca</string>

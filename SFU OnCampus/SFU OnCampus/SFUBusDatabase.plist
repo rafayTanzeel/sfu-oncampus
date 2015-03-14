@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>buses</key>
+	<dict>
+		<key>135</key>
+		<string>Burrard</string>
+		<key>N35</key>
+		<string>Burrard Night Bus</string>
+		<key>144</key>
+		<string>Production</string>
+		<key>145</key>
+		<string>Metrotown</string>
+	</dict>
+	<key>loop</key>
+	<array>
+		<dict>
+			<key>displayName</key>
+			<string>Upper Loop (Cornerstone, Blusson, ASB, Strand)</string>
+			<key>stops</key>
+			<dict>
+				<key>51861</key>
+				<array>
+					<string>145</string>
+				</array>
+				<key>52807</key>
+				<array>
+					<string>144</string>
+				</array>
+				<key>53096</key>
+				<array>
+					<string>135</string>
+					<string>N35</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>displayName</key>
+			<string>Lower Loop (Transportation Centre)</string>
+			<key>stops</key>
+			<dict/>
+		</dict>
+	</array>
+</dict>
+</plist>

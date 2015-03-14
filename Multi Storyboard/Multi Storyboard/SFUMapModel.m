@@ -63,6 +63,16 @@ NSDictionary* d;
 }
 
 /**
+ List the applicable sfu points of interest in the given region
+ \todo implement
+ */
+-(NSArray*)pointsOfInterestInRegion:(MKCoordinateRegion)r
+{
+    //todo implement, just returns an empty array.
+    return [NSArray new];
+}
+
+/**
  Returns an alphabetically ordered list of SFULocation .
  */
 //-(NSArray*)alphabeticalList{}

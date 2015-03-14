@@ -12,7 +12,8 @@
 
 @end
 
-@implementation SFUMapViewController 
+@implementation SFUMapViewController
+
 CLLocationManager* locationManager;
 - (void)viewDidLoad {
     self.model = [SFUMapModel new];

@@ -26,5 +26,11 @@
 		<key>path</key>
 		<string>Map</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>QRScan</string>
+		<key>path</key>
+		<string>QRScan</string>
+	</dict>
 </array>
 </plist>

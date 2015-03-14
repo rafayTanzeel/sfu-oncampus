@@ -104,5 +104,8 @@ SFUStoryboardListModel* model;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
 }
+- (IBAction)unwindToSFUStoryboardListTableViewController:(UIStoryboardSegue *)segue {
+    //nothing goes here
+}
 
 @end

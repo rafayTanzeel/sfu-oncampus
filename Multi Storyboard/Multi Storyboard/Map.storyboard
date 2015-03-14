@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qjo-nc-Zxb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9NT-DQ-ay3" kind="showDetail" id="mCL-ld-17t"/>
+                                    <segue destination="9NT-DQ-ay3" kind="show" id="mCL-ld-17t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9h-0p-9ij">
@@ -38,7 +40,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="byQ-GO-xn6" kind="showDetail" id="SWT-67-p2f"/>
+                                    <segue destination="byQ-GO-xn6" kind="show" id="SWT-67-p2f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,18 +198,32 @@
                                             <segue destination="Yds-d3-vH1" kind="show" id="CJb-4q-BMj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhd-rr-plL">
+                                        <rect key="frame" x="71" y="87" width="426" height="38"/>
+                                        <state key="normal" title="Find">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findDestination:" destination="Uf5-0l-v9h" eventType="touchUpInside" id="URy-K9-ZsH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="2ch-mD-3Rv" firstAttribute="leading" secondItem="fhd-rr-plL" secondAttribute="trailing" constant="9" id="0nc-dD-v0g"/>
                                     <constraint firstItem="2hm-sF-wN2" firstAttribute="trailing" secondItem="DLf-6d-4yV" secondAttribute="trailing" id="4vp-zO-JY7"/>
+                                    <constraint firstItem="fhd-rr-plL" firstAttribute="centerX" secondItem="DLf-6d-4yV" secondAttribute="centerX" id="53J-vB-zqW"/>
                                     <constraint firstAttribute="trailing" secondItem="2ch-mD-3Rv" secondAttribute="trailing" constant="16" id="8RG-Wk-qqF"/>
                                     <constraint firstItem="ka1-Vs-Mby" firstAttribute="centerY" secondItem="2hm-sF-wN2" secondAttribute="centerY" id="Agn-zQ-g13"/>
                                     <constraint firstItem="Zmb-NS-fUf" firstAttribute="leading" secondItem="DeY-mX-OCU" secondAttribute="trailing" constant="8" id="Chr-Et-0tf"/>
+                                    <constraint firstItem="fhd-rr-plL" firstAttribute="firstBaseline" secondItem="2ch-mD-3Rv" secondAttribute="baseline" id="Dfg-gl-N8h"/>
                                     <constraint firstItem="Zmb-NS-fUf" firstAttribute="baseline" secondItem="B8Y-Jm-Rzh" secondAttribute="baseline" id="Img-rI-Vao"/>
                                     <constraint firstItem="B8Y-Jm-Rzh" firstAttribute="top" secondItem="2hm-sF-wN2" secondAttribute="bottom" constant="8" symbolic="YES" id="LaU-RC-arM"/>
                                     <constraint firstItem="B8Y-Jm-Rzh" firstAttribute="leading" secondItem="Xt3-9g-1xG" secondAttribute="leading" constant="8" id="Pbe-5B-3gJ"/>
+                                    <constraint firstItem="DLf-6d-4yV" firstAttribute="top" secondItem="fhd-rr-plL" secondAttribute="bottom" constant="6" id="Sfw-gz-4xs"/>
                                     <constraint firstItem="DeY-mX-OCU" firstAttribute="centerY" secondItem="B8Y-Jm-Rzh" secondAttribute="centerY" id="UGn-z1-saL"/>
+                                    <constraint firstItem="fhd-rr-plL" firstAttribute="baseline" secondItem="2ch-mD-3Rv" secondAttribute="firstBaseline" id="Xud-mZ-tBJ"/>
                                     <constraint firstItem="QvU-0V-mB6" firstAttribute="leading" secondItem="ka1-Vs-Mby" secondAttribute="trailing" constant="8" id="gGH-qu-Rm3"/>
                                     <constraint firstItem="2hm-sF-wN2" firstAttribute="leading" secondItem="DLf-6d-4yV" secondAttribute="leading" id="hjd-ot-JHm"/>
                                     <constraint firstAttribute="trailing" secondItem="2hm-sF-wN2" secondAttribute="trailing" constant="8" id="iiu-5J-Amt"/>
@@ -226,10 +242,10 @@
                                     <outletCollection property="gestureRecognizers" destination="7Co-Yc-JmW" appends="YES" id="IXL-yd-XLm"/>
                                 </connections>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbs-7H-jZp" userLabel="Show Search Help">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbs-7H-jZp" userLabel="Show Search Help">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Down Here to Show Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYu-vd-DT1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Swipe Down Here to Show Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYu-vd-DT1">
                                         <rect key="frame" x="8" y="3" width="584" height="15"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,33 +265,17 @@
                                     <outletCollection property="gestureRecognizers" destination="wJf-eO-OTD" appends="YES" id="bxC-C7-VA5"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhd-rr-plL">
-                                <rect key="frame" x="87" y="87" width="426" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="bnU-4j-8zu"/>
-                                </constraints>
-                                <state key="normal" title="Find">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="findDestination:" destination="Uf5-0l-v9h" eventType="touchUpInside" id="URy-K9-ZsH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xt3-9g-1xG" firstAttribute="centerX" secondItem="5sm-7k-xXy" secondAttribute="centerX" id="0fc-M0-l1J"/>
-                            <constraint firstItem="fhd-rr-plL" firstAttribute="top" secondItem="sbs-7H-jZp" secondAttribute="bottom" constant="65" id="6l7-Sm-XV1"/>
                             <constraint firstItem="Xt3-9g-1xG" firstAttribute="top" secondItem="RPQ-FU-EPq" secondAttribute="top" id="FaK-wb-7zW"/>
                             <constraint firstAttribute="trailing" secondItem="s4D-1J-grt" secondAttribute="trailing" constant="143" id="Kg6-uw-2ts"/>
                             <constraint firstItem="sbs-7H-jZp" firstAttribute="leading" secondItem="RPQ-FU-EPq" secondAttribute="leadingMargin" constant="-16" id="MZb-ye-ZmH"/>
-                            <constraint firstItem="fhd-rr-plL" firstAttribute="centerX" secondItem="sbs-7H-jZp" secondAttribute="centerX" id="NMF-eK-UiZ"/>
-                            <constraint firstItem="fhd-rr-plL" firstAttribute="leading" secondItem="RPQ-FU-EPq" secondAttribute="leadingMargin" constant="71" id="Nx0-d0-hcy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="5sm-7k-xXy" secondAttribute="bottom" constant="-64" id="QvV-EP-KZz"/>
                             <constraint firstItem="s4D-1J-grt" firstAttribute="leading" secondItem="RPQ-FU-EPq" secondAttribute="leading" constant="157" id="R57-bg-3mH"/>
                             <constraint firstItem="5sm-7k-xXy" firstAttribute="leading" secondItem="RPQ-FU-EPq" secondAttribute="leading" id="Vqf-BC-lRQ"/>
                             <constraint firstAttribute="trailing" secondItem="5sm-7k-xXy" secondAttribute="trailing" id="WnM-Bl-2To"/>
-                            <constraint firstItem="fhd-rr-plL" firstAttribute="top" secondItem="RPQ-FU-EPq" secondAttribute="top" constant="87" id="Ypk-kt-uLx"/>
                             <constraint firstItem="Xt3-9g-1xG" firstAttribute="leading" secondItem="RPQ-FU-EPq" secondAttribute="leadingMargin" id="atr-lw-yOq"/>
                             <constraint firstAttribute="bottom" secondItem="s4D-1J-grt" secondAttribute="bottom" constant="20" symbolic="YES" id="dmK-gY-kdY"/>
                             <constraint firstAttribute="centerX" secondItem="sbs-7H-jZp" secondAttribute="centerX" id="oVB-6X-T3z"/>
@@ -387,7 +387,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-aT-rl5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SFU_2013_10cm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-aT-rl5">
                                 <rect key="frame" x="16" y="75" width="256" height="214"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description unavailable for this item." translatesAutoresizingMaskIntoConstraints="NO" id="NEb-oY-jX5">
@@ -480,7 +480,6 @@
         <!--Browse-->
         <scene sceneID="T6w-ha-VQk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="80G-6k-IV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vce-uV-oeh" customClass="SFUBuildingListViewControllerTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yuc-UB-DRm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
@@ -524,6 +523,7 @@
                         <outlet property="searchDisplayController" destination="sID-fu-EyK" id="gTt-mM-N2l"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80G-6k-IV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="sID-fu-EyK">
                     <connections>
                         <outlet property="delegate" destination="vce-uV-oeh" id="YDp-D5-G0W"/>
@@ -539,8 +539,6 @@
         <!--Root View Controller-->
         <scene sceneID="NbZ-eY-tom">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FSk-sS-hPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zM4-7S-bYu" userLabel="Exit" sceneMemberID="exit"/>
                 <tableViewController id="OH2-fJ-qrc" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GzE-9A-OvV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
@@ -636,6 +634,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="imY-sI-d8s"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSk-sS-hPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zM4-7S-bYu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6350" y="367"/>
         </scene>
@@ -745,7 +745,7 @@
         <image name="SFU_2013_10cm.jpg" width="1795" height="898"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LLR-AK-VyV"/>
+        <segue reference="CJb-4q-BMj"/>
         <segue reference="ypw-RI-g6W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9AFC17FE39C156957944C0579CD1E66182B68577</key>
-		<string>https://github.com/nikhilgaba/sfu-oncampus.git</string>
+		<string>https://bitbucket.org/20151cmpt_275/2015-1-cmpt_275_team_10.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ScanBarCodes/ScanBarCodes.xcodeproj</string>
+	<string>Example Code/ScanBarCodes/ScanBarCodes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9AFC17FE39C156957944C0579CD1E66182B68577</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/nikhilgaba/sfu-oncampus.git</string>
+	<string>https://bitbucket.org/20151cmpt_275/2015-1-cmpt_275_team_10.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

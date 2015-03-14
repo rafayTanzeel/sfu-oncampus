@@ -11,6 +11,7 @@
 		F82440901AB354EB006D5C8B /* QRScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F824408F1AB354EA006D5C8B /* QRScan.storyboard */; };
 		F82440951AB356F3006D5C8B /* SFUQRCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */; };
 		F82440981AB367CD006D5C8B /* SFUMapPOI.m in Sources */ = {isa = PBXBuildFile; fileRef = F82440971AB367CD006D5C8B /* SFUMapPOI.m */; };
+		F824409A1AB3DA9B006D5C8B /* buildingDataCapture.txt in Resources */ = {isa = PBXBuildFile; fileRef = F82440991AB3DA9B006D5C8B /* buildingDataCapture.txt */; };
 		F89FB44D1AAC533B004E8ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB44C1AAC533B004E8ADC /* main.m */; };
 		F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB44F1AAC533B004E8ADC /* AppDelegate.m */; };
 		F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4521AAC533B004E8ADC /* ViewController.m */; };
@@ -57,6 +58,7 @@
 		F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUQRCaptureViewController.m; path = "Multi Storyboard/SFUQRCaptureViewController.m"; sourceTree = "<group>"; };
 		F82440961AB367CD006D5C8B /* SFUMapPOI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapPOI.h; sourceTree = "<group>"; };
 		F82440971AB367CD006D5C8B /* SFUMapPOI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapPOI.m; sourceTree = "<group>"; };
+		F82440991AB3DA9B006D5C8B /* buildingDataCapture.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = buildingDataCapture.txt; sourceTree = "<group>"; };
 		F89FB4471AAC533B004E8ADC /* Multi Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89FB44B1AAC533B004E8ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F89FB44C1AAC533B004E8ADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				F8E0DD8D1AB33930001B8840 /* SFUBuildingListViewControllerTableViewController.h */,
 				F8E0DD8E1AB33930001B8840 /* SFUBuildingListViewControllerTableViewController.m */,
 				F8EB4B861AB2DD0300616182 /* buildingData.plist */,
+				F82440991AB3DA9B006D5C8B /* buildingDataCapture.txt */,
 				F8EB4BB81AB2E2D400616182 /* SFUMapModel.h */,
 				F8EB4BB91AB2E2D400616182 /* SFUMapModel.m */,
 				F8E0DD8A1AB32DAD001B8840 /* SFULocation.h */,
@@ -314,6 +317,7 @@
 				F8EC34591AB2D26000E80555 /* SFU_2013_10cm.jpg in Resources */,
 				F89FB45B1AAC533B004E8ADC /* LaunchScreen.xib in Resources */,
 				F89FB4581AAC533B004E8ADC /* Images.xcassets in Resources */,
+				F824409A1AB3DA9B006D5C8B /* buildingDataCapture.txt in Resources */,
 				F8EB4B871AB2DD0300616182 /* buildingData.plist in Resources */,
 				F89FB4751AAC5580004E8ADC /* Social.storyboard in Resources */,
 			);

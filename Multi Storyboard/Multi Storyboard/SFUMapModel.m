@@ -77,4 +77,12 @@ NSDictionary* d;
  */
 //-(NSArray*)alphabeticalList{}
 
+/**
+ \todo implement
+ */
+-(NSString*)shortcodeOfClosestPointTo:(CLLocationCoordinate2D)p
+{
+    return @"AQ";
+}
+
 @end

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1610,17 +1609,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfE-wv-0ET">
                                             <rect key="frame" x="8" y="8" width="584" height="184"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-FO-ERN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-FO-ERN">
                                                     <rect key="frame" x="8" y="8" width="158" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="158" id="Q4E-0w-0uF"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-k9-C84">
-                                                    <rect key="frame" x="8" y="20" width="568" height="142"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-k9-C84">
+                                                    <rect key="frame" x="8" y="45" width="568" height="117"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -1628,23 +1624,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="UfE-wv-0ET" secondAttribute="leadingMargin" id="3U0-dW-Vig"/>
-                                                <constraint firstItem="Lq7-FO-ERN" firstAttribute="leading" secondItem="UBm-k9-C84" secondAttribute="leading" id="3cV-b6-QMa"/>
-                                                <constraint firstItem="Lq7-FO-ERN" firstAttribute="top" secondItem="UfE-wv-0ET" secondAttribute="topMargin" id="CD9-xR-FyA"/>
-                                                <constraint firstAttribute="bottom" secondItem="UBm-k9-C84" secondAttribute="bottom" constant="22" id="GXY-GX-XYV"/>
-                                                <constraint firstAttribute="trailing" secondItem="UBm-k9-C84" secondAttribute="trailing" constant="8" id="J52-de-w1H"/>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="trailing" secondItem="UfE-wv-0ET" secondAttribute="trailingMargin" id="Nlo-gn-2nv"/>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="top" secondItem="UfE-wv-0ET" secondAttribute="top" constant="20" id="NpG-ag-pEV"/>
-                                                <constraint firstItem="Lq7-FO-ERN" firstAttribute="baseline" secondItem="UBm-k9-C84" secondAttribute="firstBaseline" id="ez2-bA-Kps"/>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="UfE-wv-0ET" secondAttribute="leading" constant="8" id="wGd-v5-zEa"/>
+                                                <constraint firstAttribute="trailing" secondItem="UBm-k9-C84" secondAttribute="trailing" constant="8" id="JSK-K2-CS5"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="UfE-wv-0ET" secondAttribute="leading" constant="8" id="Xxs-5j-zed"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="top" secondItem="Lq7-FO-ERN" secondAttribute="bottom" constant="8" id="rME-Ak-1B6"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="leading" secondItem="zrU-DR-rNq" secondAttribute="leadingMargin" id="4Eb-A1-4X0"/>
-                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="trailing" secondItem="zrU-DR-rNq" secondAttribute="trailingMargin" id="Hc3-1P-XCi"/>
-                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="top" secondItem="zrU-DR-rNq" secondAttribute="topMargin" id="iPC-dw-Iz0"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="UfE-wv-0ET" secondAttribute="bottom" constant="-1" id="uya-xW-bGG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UfE-wv-0ET" secondAttribute="bottom" constant="-1" id="Mr0-uY-haw"/>
+                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="top" secondItem="zrU-DR-rNq" secondAttribute="topMargin" id="TT7-QA-VuP"/>
+                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="trailing" secondItem="zrU-DR-rNq" secondAttribute="trailingMargin" id="eeK-ry-UP3"/>
+                                        <constraint firstItem="UfE-wv-0ET" firstAttribute="leading" secondItem="zrU-DR-rNq" secondAttribute="leadingMargin" id="oi6-Vu-Qat"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>

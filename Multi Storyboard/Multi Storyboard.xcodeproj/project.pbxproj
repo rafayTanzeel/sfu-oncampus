@@ -124,9 +124,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049F817E1AB4D57D00D84F4D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		F89FB43E1AAC533B004E8ADC = {
 			isa = PBXGroup;
 			children = (
+				049F817E1AB4D57D00D84F4D /* New Group */,
 				F82440931AB356F3006D5C8B /* SFUQRCaptureViewController.h */,
 				F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */,
 				F824408F1AB354EA006D5C8B /* QRScan.storyboard */,

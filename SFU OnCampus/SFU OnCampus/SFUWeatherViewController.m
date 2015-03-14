@@ -46,7 +46,7 @@ NSArray *forecastDay;
     
     // Prepare the URL that we'll get the weather info data from.
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/conditions/q/Canada/Burnaby.json"];
-   
+    
     //Get URL page into NSData Object
     NSData *currentWeatherData =nil;
     
@@ -54,19 +54,19 @@ NSArray *forecastDay;
         currentWeatherData= [NSData dataWithContentsOfURL:url];
     }
     @catch (NSException *exception) {
-       
+        
     }
     @finally {
         
     }
     if(currentWeatherData == nil)
     {
-    	// Display the error pop up
+        // Display the error pop up
         [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
-       
+    
     //Read JSON and convert to object
     NSError *error;
     if(currentWeatherData != nil)
@@ -74,15 +74,16 @@ NSArray *forecastDay;
         error = nil;
     }
     NSMutableDictionary *currentDictionary = [NSJSONSerialization JSONObjectWithData:currentWeatherData options:kNilOptions error:&error];
-
+    
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
     else{
-    	// store the data into the global currentObservation dictionary
+        // store the data into the global currentObservation dictionary
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
     }
 }
+
 
 /**
  * Gets the five day forecast weather data from the Wunderground Weather API.

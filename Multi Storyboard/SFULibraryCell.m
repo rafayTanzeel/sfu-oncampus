@@ -44,6 +44,31 @@
     self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1];
 }
 
+- (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d
+{
+#warning finish this for progress bar
+    // Set the location name
+    location.text = name;
+    
+    // Get computers available
+    NSDictionary *locationKeys = [d valueForKey:@"locations"];
+    NSString *numberAvailable = [locationKeys valueForKey:value];
+    NSDictionary *totals = [d valueForKey:@"totals"];
+    NSString *numberTotal = [totals valueForKey:value];
+    
+    NSInteger integerAvailable = [numberTotal integerValue] - [numberAvailable integerValue];
+    
+    // Set computers available
+    available.text = numberAvailable;
+    inUse.text = [NSString stringWithFormat:@"%ld", (long)integerAvailable];
+    
+    // Calulate progress
+    float progress = [numberAvailable floatValue] / [numberTotal floatValue];
+    
+    [progressView setProgress:progress];
+    
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }

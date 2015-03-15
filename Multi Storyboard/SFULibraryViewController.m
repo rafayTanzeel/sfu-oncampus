@@ -20,9 +20,8 @@ NSDictionary *burnabyHours;
 NSDictionary *surreyHours;
 NSDictionary *vancouverHours;
 
-// Global dictionaries used for determining computer availability
-NSDictionary *computersAvailable;
-NSDictionary *computerTotals;
+// Global dictionary used for determining computer availability
+NSDictionary *computers;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -119,15 +118,74 @@ NSDictionary *computerTotals;
     {
         error = nil;
     }
-    NSDictionary *computers = [NSJSONSerialization JSONObjectWithData:computerAvailability options:kNilOptions error:&error];
+    computers = [NSJSONSerialization JSONObjectWithData:computerAvailability options:kNilOptions error:&error];
     
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
     else{
-        computersAvailable = [computers valueForKey:@"locations"];
-        computerTotals = [computers valueForKey:@"totals"];
+        NSLog(@"%@", computers);
     }
+}
+
+/**
+ * Gets the transit info
+ */
+-(IBAction)getTransitJSON:(id)sender {
+    
+    // Prepare the URL
+    NSURL *url = [NSURL URLWithString:@"http://api.translink.ca/rttiapi/v1/stops/60980/estimates?apikey=hwnVuhVaVWlOp48qZvNY&routeNo=050"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url      cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20.0f];
+
+    
+    [request setHTTPMethod:@"GET"];
+    
+    [request addValue:@"application/JSON" forHTTPHeaderField:@"content-type"];
+    
+    
+    //Get URL page into NSData Object
+    NSURLResponse *response = NULL;
+    NSError *error = NULL;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSDictionary *transit = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+    NSLog(@"hello\n");
+    NSLog(@"url to send request= %@\n",url);
+    NSLog(@"%@",transit);
+    NSLog(@"\n\n");
+    /*
+    @try {
+        transitData = [NSData dataWithContentsOfURL:url];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+    if(transitData == nil)
+    {
+        // Display the error pop up
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+    
+    //Read JSON and convert to object
+    NSError *error;
+    if(transitData != nil)
+    {
+        error = nil;
+    }
+    NSArray *transit = [NSJSONSerialization JSONObjectWithData:transitData options:kNilOptions error:&error];
+    
+    if (error != nil) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else{
+        NSLog(@"%@", transit);
+
+    }
+     */
 }
 
 
@@ -142,6 +200,7 @@ NSDictionary *computerTotals;
     
     [self getLibraryHours:self];
     [self getComputerAvailability:self];
+    [self getTransitJSON:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,11 +237,33 @@ NSDictionary *computerTotals;
         NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
         cell.hours.text = hours;
         
-        // Computer availability label
+        // Computer availability label, available label, in use label
         cell.availabilityLabel.text = @"Computer Availability";
+        cell.available.text = @"available";
+        
         
         // Computer availability for each location
         
+        // 6th floor
+        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"6th floor" locationValue:@"ben-6-pc" progressBar:cell.progressOne withDictionary:computers];
+        
+        // 5th floor
+        [cell updateComputerAvaiability:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo locationName:@"5th floor" locationValue:@"ben-5-pc" progressBar:cell.progressTwo withDictionary:computers];
+        
+        // 4th floor
+        [cell updateComputerAvaiability:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree locationName:@"4th floor" locationValue:@"ben-4-4009-pc" progressBar:cell.progressThree withDictionary:computers];
+        
+        // 3rd floor east PCs
+        [cell updateComputerAvaiability:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour locationName:@"3rd floor East - PCs" locationValue:@"ben-3-e-pc" progressBar:cell.progressFour withDictionary:computers];
+        
+        // 3rd floor east Macs
+        [cell updateComputerAvaiability:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive locationName:@"3rd floor East - Macs" locationValue:@"ben-3-e-mac" progressBar:cell.progressFive withDictionary:computers];
+        
+        // 3rd floor west
+        [cell updateComputerAvaiability:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix locationName:@"3rd floor West" locationValue:@"ben-3-w-pc" progressBar:cell.progressSix withDictionary:computers];
+        
+        // 2nd floor
+        [cell updateComputerAvaiability:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven locationName:@"2nd floor" locationValue:@"ben-2-2105-pc" progressBar:cell.progressSeven withDictionary:computers];
         
         
         return cell;

@@ -10,6 +10,9 @@
 
 @interface SFULibraryCell : UITableViewCell
 
+// Update information for the computer availability of each location
+- (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d;
+
 // UI View
 @property (weak, nonatomic) IBOutlet UIView *libraryView;
 
@@ -19,8 +22,11 @@
 // Library Hours
 @property (weak, nonatomic) IBOutlet UILabel *hours;
 
-// Computer Availability Label
+// Computer Availability Labels
 @property (weak, nonatomic) IBOutlet UILabel *availabilityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *available;
+
+
 
 // Location Names
 @property (weak, nonatomic) IBOutlet UILabel *locationOne;

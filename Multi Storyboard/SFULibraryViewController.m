@@ -22,6 +22,7 @@ NSDictionary *vancouverHours;
 
 // Global dictionary used for determining computer availability
 NSDictionary *computers;
+NSDictionary *laptops;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -128,6 +129,50 @@ NSDictionary *computers;
     }
 }
 
+/*
+ * Gets the laptop availability
+
+-(IBAction)getLaptopAvailability:(id)sender {
+    
+    // Prepare the URL
+    NSURL *url = [NSURL URLWithString:@"http://api.lib.sfu.ca/hours/summary"];
+    
+    //Get URL page into NSData Object
+    NSData *laptopAvailability = nil;
+    
+    @try {
+        laptopAvailability = [NSData dataWithContentsOfURL:url];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+    if(laptopAvailability == nil)
+    {
+        // Display the error pop up
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Data cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+
+    //Read JSON and convert to object
+    NSError *error;
+    if(laptopAvailability != nil)
+    {
+        error = nil;
+    }
+    laptops = [NSJSONSerialization JSONObjectWithData:laptopAvailability options:kNilOptions error:&error];
+    
+    if (error != nil) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else{
+        NSLog(@"%@", laptops);
+    }
+}
+    */
 /**
  * Gets the transit info
  */
@@ -217,14 +262,18 @@ NSDictionary *computers;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // BURNABY
     if (indexPath.row == 0) {
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+        return cell;
+    }
+    // BURNABY
+    if (indexPath.row == 1) {
         
         SFULibraryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFULibraryCell"];
         
@@ -241,6 +290,16 @@ NSDictionary *computers;
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
         
+        // Library Status
+        NSNumber *status = [burnabyHours valueForKey:@"in_range"];
+        if ([status integerValue] == 1) {
+            cell.libraryStatus.text = @"OPEN";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
+        }
+        else {
+            cell.libraryStatus.text = @"CLOSED";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
+        }
         
         // Computer availability for each location
         
@@ -265,12 +324,15 @@ NSDictionary *computers;
         // 2nd floor
         [cell updateComputerAvaiability:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven locationName:@"2nd floor" locationValue:@"ben-2-2105-pc" progressBar:cell.progressSeven withDictionary:computers];
         
+        // Laptops
+        [cell updateComputerAvaiability:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight locationName:@"Laptops" locationValue:@"ben-checkout-laptops" progressBar:cell.progressEight withDictionary:computers];
+        
         
         return cell;
     }
     
     // SURREY
-    if (indexPath.row == 1) {
+    if (indexPath.row == 2) {
         
         SFULibraryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFULibraryCell"];
         
@@ -287,6 +349,16 @@ NSDictionary *computers;
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
         
+        // Library Status
+        NSNumber *status = [surreyHours valueForKey:@"in_range"];
+        if ([status integerValue] == 1) {
+            cell.libraryStatus.text = @"OPEN";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
+        }
+        else {
+            cell.libraryStatus.text = @"CLOSED";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
+        }
         
         // Computer availability for each location
         
@@ -330,11 +402,21 @@ NSDictionary *computers;
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
         
+        // Library Status
+        NSNumber *status = [vancouverHours valueForKey:@"in_range"];
+        if ([status integerValue] == 1) {
+            cell.libraryStatus.text = @"OPEN";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
+        }
+        else {
+            cell.libraryStatus.text = @"CLOSED";
+            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
+        }
         
         // Computer availability for each location
         
         // PCs
-        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Assignment Computers" locationValue:@"bel-pc" progressBar:cell.progressOne withDictionary:computers];
+        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Library Computers" locationValue:@"bel-pc" progressBar:cell.progressOne withDictionary:computers];
         
         // Empty the rest of the values
         [cell emptyComputerLabels:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo progressBar:cell.progressTwo];
@@ -359,13 +441,16 @@ NSDictionary *computers;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row == 0) {
-        return 345;
+        return 40;
     }
-    else if (indexPath.row == 1) {
-        return 205;
+    if(indexPath.row == 1) {
+        return 348;
+    }
+    else if (indexPath.row == 2) {
+        return 208;
     }
     else {
-        return 180;
+        return 183;
     }
 }
 

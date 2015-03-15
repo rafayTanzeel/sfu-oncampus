@@ -70,7 +70,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 }
 -(void)reportNullRegion
 {
-    [[[UIAlertView alloc] initWithTitle:@"Sorry" message:@"It looks like the place you're looking for doesn't exist. If you manually entered the code, try clicking the blue arrows to automatically get a destionation name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Sorry" message:@"It looks like the place you're looking for doesn't exist. If you manually entered the code, try clicking the arrows to automatically get a destionation name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
 }
 
 -(void)clearAllPins
@@ -212,6 +212,41 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     //nothing goes here
 }
 
+
+
+-(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    //Experimenting with autocompletion
+//    if(range.length ==0) // was singe character indertion,deletio or edit
+//    {
+//        if(textField.text.length <3)
+//        {
+//            //Trying to suggest before 3 characters significantly increases the number of suggestions
+//            return YES;
+//        }
+//        NSString* suggestion = [self.model suggestionForPrefix:textField.text];
+//        if(suggestion !=nil)
+//        {
+//            
+//        NSUInteger delta = suggestion.length - textField.text.length;
+//            //fromhttps://developer.sinnerschrader-mobile.com/setting-text-selection-and-cursor-position-in-uitextfields/455/
+//            NSRange r = NSMakeRange(range.location, delta);
+//            UITextPosition *from = [textField positionFromPosition:[textField beginningOfDocument] offset:r.location];
+//            UITextPosition *to = [textField positionFromPosition:from offset:-r.length];
+//            textField.text = suggestion;
+//            [textField setSelectedTextRange:[textField textRangeFromPosition:from toPosition:to]];
+//            
+//            
+//            
+//
+//            //  [sender setSelectedTextRange:newRange];
+//            return NO;
+//        }
+//        
+//    }
+    //NSLog(@"shouldchangeCharsInRange:[%d,%d],\"%@\"",range.location,range.length,string);
+    return YES;
+}
 
 
 @end

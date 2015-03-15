@@ -11,4 +11,5 @@
 @import CoreLocation;
 @interface SFUMapModel : NSObject
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
+-(NSString*)suggestionForPrefix:(NSString*)p;
 @end

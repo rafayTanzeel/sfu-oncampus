@@ -11,6 +11,11 @@
 @implementation SFUMapModel
 NSDictionary* d;
 
+typedef enum SFUMapModelResulutionStatus
+{
+   FULL,PARTIAL,NONE
+}SFUMapModelResulutionStatus;
+
 -(SFUMapModel*)init
 {
     NSBundle* b =[NSBundle mainBundle];
@@ -36,6 +41,33 @@ NSDictionary* d;
         return @"Untitled, please report to SFU";
     }
     
+}
+
+-(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResulutionStatus*)status
+{
+    if(status != nil)
+    {
+        *status= NONE;
+    }
+    
+    s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    s = [s uppercaseString];
+    NSArray* a = [s componentsSeparatedByString:@"-"];
+    NSString* building = [a objectAtIndex:0];
+    NSString* roomPart = [a objectAtIndex:1];
+    a=[roomPart componentsSeparatedByString:@"."] ;
+    NSString* room = [a objectAtIndex:0];
+    NSString* partition = [a objectAtIndex:1];
+    
+    NSMutableDictionary* d = [NSMutableDictionary new];
+    
+    return [self regionForBuilding:building inRoom:room andPartition:partition];
+}
+
+-(MKCoordinateRegion)regionForBuilding:(NSString*)bldg inRoom:(NSString*)room andPartition:(NSString*)part
+{
+    MKCoordinateRegion r;
+    return r;
 }
 
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s
@@ -83,6 +115,15 @@ NSDictionary* d;
 -(NSString*)shortcodeOfClosestPointTo:(CLLocationCoordinate2D)p
 {
     return @"AQ";
+}
+
+-(NSString*)suggestionForPrefix:(NSString*)p
+{
+    if([p hasPrefix:@"Aca"] )
+    {
+        return @"Academic Quadrangle";
+    }
+    return nil;
 }
 
 @end

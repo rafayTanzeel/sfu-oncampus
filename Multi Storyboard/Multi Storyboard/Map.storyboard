@@ -136,7 +136,7 @@
                                             <outlet property="delegate" destination="Uf5-0l-v9h" id="bcf-D0-ahh"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-sF-wN2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start (e.g. AQ-3146.2) or click the arrow to the right." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hm-sF-wN2">
                                         <rect key="frame" x="8" y="11" width="552" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next"/>
@@ -679,10 +679,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="1068"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Scroller View Controller-->
         <scene sceneID="ewY-Fd-Tim">
             <objects>
-                <viewController id="9hf-Nd-Xs2" sceneMemberID="viewController">
+                <viewController id="9hf-Nd-Xs2" customClass="SFUImageScrollerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SHq-17-Hfe"/>
                         <viewControllerLayoutGuide type="bottom" id="2CZ-cN-TTS"/>
@@ -691,33 +691,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.10000000000000001" maximumZoomScale="5" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Nae-yH-TTV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="360"/>
                                 <subviews>
-                                    <view autoresizesSubviews="NO" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-Js-YnO">
-                                        <rect key="frame" x="0.0" y="0.0" width="876" height="600"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SFU_2013_10cm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zLM-kK-DHj">
-                                        <rect key="frame" x="-45" y="0.0" width="690" height="600"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
+                                        <rect key="frame" x="2" y="0.0" width="2048" height="2072"/>
                                     </imageView>
-                                    <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSE-Vw-feA">
-                                        <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                        <color key="backgroundColor" red="1" green="0.19211906934306569" blue="1" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="9hf-Nd-Xs2" id="Bhc-S5-B1L"/>
+                                </connections>
                             </scrollView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAm-SH-Chg">
+                                <rect key="frame" x="0.0" y="434" width="602" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Floor Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtu-Nn-DDb">
+                                        <rect key="frame" x="403" y="32" width="106" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Gu-XoM">
+                                        <rect key="frame" x="0.0" y="-4" width="320" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9hf-Nd-Xs2" id="8YN-TM-z2H"/>
+                                            <outlet property="delegate" destination="9hf-Nd-Xs2" id="Vsp-99-KDw"/>
+                                        </connections>
+                                    </pickerView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="GMJ-fI-55w">
+                                        <rect key="frame" x="409" y="84" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="floorChanged:" destination="9hf-Nd-Xs2" eventType="valueChanged" id="MNs-l4-Mbm"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="tPn-Gu-XoM" firstAttribute="top" secondItem="Wtu-Nn-DDb" secondAttribute="bottom" constant="-77" id="WiD-HC-InH"/>
+                                    <constraint firstItem="GMJ-fI-55w" firstAttribute="centerX" secondItem="Wtu-Nn-DDb" secondAttribute="centerX" id="hra-gF-xcd"/>
+                                    <constraint firstAttribute="height" constant="166" id="mdP-tb-Qbq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wtu-Nn-DDb" secondAttribute="trailing" constant="93" id="zu9-Sw-U36"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cy9-BY-lp3" firstAttribute="top" secondItem="SHq-17-Hfe" secondAttribute="bottom" id="JdZ-5I-JvB"/>
+                            <constraint firstItem="KAm-SH-Chg" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leadingMargin" constant="-16" id="QjI-Mw-oPJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cy9-BY-lp3" secondAttribute="trailing" constant="-16" id="V5Q-dh-r3H"/>
+                            <constraint firstItem="2CZ-cN-TTS" firstAttribute="top" secondItem="KAm-SH-Chg" secondAttribute="bottom" id="cba-Wf-nmU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KAm-SH-Chg" secondAttribute="trailing" constant="-18" id="jyH-gn-wmx"/>
+                            <constraint firstItem="cy9-BY-lp3" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leadingMargin" constant="-16" id="vm4-hg-1lK"/>
+                            <constraint firstItem="KAm-SH-Chg" firstAttribute="top" secondItem="cy9-BY-lp3" secondAttribute="bottom" constant="10" id="zil-ZY-iZw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cM2-Np-Tmj"/>
+                    <connections>
+                        <outlet property="floorNumberLabel" destination="Wtu-Nn-DDb" id="zvm-PZ-dA6"/>
+                        <outlet property="floorNumberStepper" destination="GMJ-fI-55w" id="Jbv-25-AT8"/>
+                        <outlet property="imageView" destination="1iI-98-cV7" id="z2D-vD-UZj"/>
+                        <outlet property="scrollView" destination="cy9-BY-lp3" id="dqm-si-9kR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqd-Rt-c7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="1068"/>
+            <point key="canvasLocation" x="2153" y="1083"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg" width="2048" height="2072"/>
         <image name="SFU_2013_10cm.jpg" width="1795" height="898"/>
     </resources>
     <inferredMetricsTieBreakers>

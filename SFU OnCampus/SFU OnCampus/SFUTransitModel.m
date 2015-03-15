@@ -11,12 +11,12 @@
 @implementation SFUTransitModel
 
 NSArray* array;
--(SFUTransitModel*)init
+-(SFUTransitModel*)initWithPlist: (NSString*) plistName
 {
     //This is a user defined path in interface builder
     //Take a look under the identity panel to see it.
     @try{
-        NSString* path=[[NSBundle mainBundle]pathForResource:@"SFUTransitUpperLoop" ofType:@"plist"];
+        NSString* path=[[NSBundle mainBundle]pathForResource:plistName ofType:@"plist"];
         array = [NSArray arrayWithContentsOfFile:path];
     }
     @catch (NSException* e)

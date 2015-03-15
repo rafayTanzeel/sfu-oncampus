@@ -1,18 +1,24 @@
 //
-//  SFUUpperLoopController.m
+//  SFULowerLoopController.m
 //  OnCampus
 //
 //  Created by Nikhil Gaba on 2015-03-14.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import "SFUUpperLoopController.h"
+#import "SFULowerLoopController.h"
 
-@implementation SFUUpperLoopController
+@interface SFULowerLoopController ()
+
+@end
+
+@implementation SFULowerLoopController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.model=[[SFUTransitModel alloc] initWithPlist:@"SFUTransitUpperLoop"];
+    
+    self.model=[[SFUTransitModel alloc] initWithPlist:@"SFUTransitLowerLoop"];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -62,7 +68,7 @@
 //
 //    if(!self.displayInApp)
 //    {
-//    // [UIApplication sharedApplication] openURL:<#(NSURL *)#>
+//    // [UIApplication sharedApplication] openURL:(NSURL *)
 //    }else
 //    {
 //        // segue to web view with url
@@ -79,8 +85,8 @@
     //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     //NSString* URL=[self.model urlStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
-    SFUTransitDisplayViewController *controller = (SFUTransitDisplayViewController *)[segue destinationViewController];
-    controller.BusPath = [self.tableView indexPathForSelectedRow];
+   SFUTransitDisplayViewController *controller = (SFUTransitDisplayViewController *)[segue destinationViewController];
+   controller.BusPath = [self.tableView indexPathForSelectedRow];
     
     //self.tableView indexPathForSelectedR
     

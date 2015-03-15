@@ -10,10 +10,13 @@
 
 @interface SFUTransitModel : NSObject
 
+
+
 -(NSInteger)sizeOfArray;
 -(NSString*) titleStringForIndex:(NSUInteger)idx;
 -(NSString*) stopStringForIndex:(NSUInteger)idx;
 -(NSString*) routeStringForIndex:(NSUInteger) idx;
+-(SFUTransitModel*)initWithPlist:(NSString*) plistName;
 @property NSString* path;
 
 

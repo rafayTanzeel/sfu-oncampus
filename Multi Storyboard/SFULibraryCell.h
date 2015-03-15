@@ -13,6 +13,9 @@
 // Update information for the computer availability of each location
 - (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d;
 
+// Empty text that is not needed
+-(void)emptyComputerLabels:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location progressBar:(UIProgressView*) progressView;
+
 // UI View
 @property (weak, nonatomic) IBOutlet UIView *libraryView;
 

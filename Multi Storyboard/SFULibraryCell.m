@@ -46,7 +46,6 @@
 
 - (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d
 {
-#warning finish this for progress bar
     // Set the location name
     location.text = name;
     
@@ -67,6 +66,17 @@
     
     [progressView setProgress:progress];
     
+}
+
+-(void)emptyComputerLabels:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location progressBar:(UIProgressView*) progressView
+{
+    available.text = @"";
+    inUse.text = @"";
+    location.text = @"";
+
+    [progressView setProgressTintColor:[UIColor clearColor]];
+    [progressView setTrackTintColor:[UIColor clearColor]];
+
 }
 
 - (void)awakeFromNib {

@@ -217,7 +217,7 @@ NSDictionary *computers;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 3;
 }
 
 
@@ -273,6 +273,42 @@ NSDictionary *computers;
     if (indexPath.row == 1) {
         
         SFULibraryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFULibraryCell"];
+        
+        // Set library name
+        cell.libraryName.text = @"SFU Surrey";
+        
+        // Library Hours
+        NSString *open = [surreyHours valueForKey:@"open_time"];
+        NSString *close = [surreyHours valueForKey:@"close_time"];
+        NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
+        cell.hours.text = hours;
+        
+        // Computer availability label, available label, in use label
+        cell.availabilityLabel.text = @"Computer Availability";
+        cell.available.text = @"available";
+        
+        
+        // Computer availability for each location
+        
+        // PCs
+        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Library PCs" locationValue:@"surrey-lib" progressBar:cell.progressOne withDictionary:computers];
+        
+        // Macs
+        [cell updateComputerAvaiability:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo locationName:@"Library Macs" locationValue:@"surrey-lib-mac" progressBar:cell.progressTwo withDictionary:computers];
+        
+        // Empty the rest of the values
+        [cell emptyComputerLabels:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree progressBar:cell.progressThree];
+        
+        [cell emptyComputerLabels:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour progressBar:cell.progressFour];
+        
+        [cell emptyComputerLabels:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive progressBar:cell.progressFive];
+        
+        [cell emptyComputerLabels:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix progressBar:cell.progressSix];
+        
+        [cell emptyComputerLabels:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven progressBar:cell.progressSeven];
+        
+        [cell emptyComputerLabels:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight progressBar:cell.progressEight];
+        
         return cell;
     }
     
@@ -280,10 +316,58 @@ NSDictionary *computers;
     else {
         
         SFULibraryCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFULibraryCell"];
+        
+        // Set library name
+        cell.libraryName.text = @"SFU Harbour Center";
+        
+        // Library Hours
+        NSString *open = [vancouverHours valueForKey:@"open_time"];
+        NSString *close = [vancouverHours valueForKey:@"close_time"];
+        NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
+        cell.hours.text = hours;
+        
+        // Computer availability label, available label, in use label
+        cell.availabilityLabel.text = @"Computer Availability";
+        cell.available.text = @"available";
+        
+        
+        // Computer availability for each location
+        
+        // PCs
+        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Assignment Computers" locationValue:@"bel-pc" progressBar:cell.progressOne withDictionary:computers];
+        
+        // Empty the rest of the values
+        [cell emptyComputerLabels:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo progressBar:cell.progressTwo];
+        
+        [cell emptyComputerLabels:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree progressBar:cell.progressThree];
+        
+        [cell emptyComputerLabels:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour progressBar:cell.progressFour];
+        
+        [cell emptyComputerLabels:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive progressBar:cell.progressFive];
+        
+        [cell emptyComputerLabels:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix progressBar:cell.progressSix];
+        
+        [cell emptyComputerLabels:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven progressBar:cell.progressSeven];
+        
+        [cell emptyComputerLabels:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight progressBar:cell.progressEight];
+        
         return cell;
     }
+    
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0) {
+        return 345;
+    }
+    else if (indexPath.row == 1) {
+        return 205;
+    }
+    else {
+        return 180;
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

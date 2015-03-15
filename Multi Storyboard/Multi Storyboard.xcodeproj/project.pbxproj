@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049F81801AB4D76600D84F4D /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049F817F1AB4D76600D84F4D /* Library.storyboard */; };
+		049F81831AB4D83100D84F4D /* SFULibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F81821AB4D83100D84F4D /* SFULibraryViewController.m */; };
+		049F81861AB4D8AA00D84F4D /* SFULibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F81851AB4D8AA00D84F4D /* SFULibraryCell.m */; };
 		F824408E1AB35438006D5C8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F824408D1AB35438006D5C8B /* AVFoundation.framework */; };
 		F82440901AB354EB006D5C8B /* QRScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F824408F1AB354EA006D5C8B /* QRScan.storyboard */; };
 		F82440951AB356F3006D5C8B /* SFUQRCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */; };
@@ -51,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049F817F1AB4D76600D84F4D /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		049F81811AB4D83100D84F4D /* SFULibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryViewController.h; sourceTree = "<group>"; };
+		049F81821AB4D83100D84F4D /* SFULibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryViewController.m; sourceTree = "<group>"; };
+		049F81841AB4D8AA00D84F4D /* SFULibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryCell.h; sourceTree = "<group>"; };
+		049F81851AB4D8AA00D84F4D /* SFULibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryCell.m; sourceTree = "<group>"; };
 		F824408B1AB353EE006D5C8B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F824408D1AB35438006D5C8B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F824408F1AB354EA006D5C8B /* QRScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRScan.storyboard; path = "Multi Storyboard/QRScan.storyboard"; sourceTree = "<group>"; };
@@ -124,17 +132,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		049F817E1AB4D57D00D84F4D /* New Group */ = {
+		049F817E1AB4D57D00D84F4D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				049F817F1AB4D76600D84F4D /* Library.storyboard */,
+				049F81811AB4D83100D84F4D /* SFULibraryViewController.h */,
+				049F81821AB4D83100D84F4D /* SFULibraryViewController.m */,
+				049F81841AB4D8AA00D84F4D /* SFULibraryCell.h */,
+				049F81851AB4D8AA00D84F4D /* SFULibraryCell.m */,
 			);
-			name = "New Group";
+			name = Library;
 			sourceTree = "<group>";
 		};
 		F89FB43E1AAC533B004E8ADC = {
 			isa = PBXGroup;
 			children = (
-				049F817E1AB4D57D00D84F4D /* New Group */,
+				049F817E1AB4D57D00D84F4D /* Library */,
 				F82440931AB356F3006D5C8B /* SFUQRCaptureViewController.h */,
 				F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */,
 				F824408F1AB354EA006D5C8B /* QRScan.storyboard */,
@@ -326,6 +339,7 @@
 				F89FB45B1AAC533B004E8ADC /* LaunchScreen.xib in Resources */,
 				F89FB4581AAC533B004E8ADC /* Images.xcassets in Resources */,
 				F824409A1AB3DA9B006D5C8B /* buildingDataCapture.txt in Resources */,
+				049F81801AB4D76600D84F4D /* Library.storyboard in Resources */,
 				F8EB4B871AB2DD0300616182 /* buildingData.plist in Resources */,
 				F89FB4751AAC5580004E8ADC /* Social.storyboard in Resources */,
 			);
@@ -351,9 +365,11 @@
 				F89FB4871AACE4A4004E8ADC /* SFUHourlyForecastTableCell.m in Sources */,
 				F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */,
 				F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */,
+				049F81831AB4D83100D84F4D /* SFULibraryViewController.m in Sources */,
 				F89FB4841AACE474004E8ADC /* SFUHourlyForecastTableViewController.m in Sources */,
 				F8E0DD921AB33E6D001B8840 /* SFUShortCodeComposerViewController.m in Sources */,
 				F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */,
+				049F81861AB4D8AA00D84F4D /* SFULibraryCell.m in Sources */,
 				F8EB4BBA1AB2E2D400616182 /* SFUMapModel.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,

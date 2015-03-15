@@ -827,6 +827,9 @@
                         <outlet property="nextBusLabel" destination="Qb8-sJ-sHX" id="ms8-GN-0g1"/>
                         <outlet property="nextBusTime" destination="zdI-IC-7vh" id="zFD-Oz-Ywj"/>
                         <outlet property="upcomingBuses" destination="nTk-oN-I4a" id="n9F-a1-iKz"/>
+                        <outlet property="upcomingDeltaTime" destination="OAC-T5-AKZ" id="27R-Hw-DDb"/>
+                        <outlet property="upcomingTableView" destination="vph-FI-jd1" id="hgG-Ph-T98"/>
+                        <outlet property="upcomingTime" destination="cFz-lz-g9z" id="lI8-CG-lTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzt-zH-0XT" userLabel="First Responder" sceneMemberID="firstResponder"/>

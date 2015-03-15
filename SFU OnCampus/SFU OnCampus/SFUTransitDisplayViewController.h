@@ -15,5 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 
+@property (weak, nonatomic) IBOutlet UILabel *upcomingTime;
+@property (weak, nonatomic) IBOutlet UILabel *upcomingDeltaTime;
+@property (weak, nonatomic) IBOutlet UITableView *upcomingTableView;
 
 @end

@@ -447,10 +447,10 @@ NSDictionary *laptops;
         return 348;
     }
     else if (indexPath.row == 2) {
-        return 208;
+        return 212;
     }
     else {
-        return 183;
+        return 187;
     }
 }
 

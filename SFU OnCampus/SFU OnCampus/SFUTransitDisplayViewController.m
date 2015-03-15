@@ -38,7 +38,8 @@ SFUTransitEstimateDocumentElement state = DOCUMENT;
     
     [self debugAPI];
 
-    
+    //Use this to properly formate date and time,(ege is the system using 24-h time?
+    NSDateFormatter* f = [NSDateFormatter new];
     
     
 

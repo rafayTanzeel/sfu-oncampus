@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SFUImageMapsModel.h"
 
 @interface SFUImageScrollerViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

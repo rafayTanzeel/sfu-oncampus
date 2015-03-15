@@ -379,7 +379,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SFU_2013_10cm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-aT-rl5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burnaby_Campus.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-aT-rl5">
                                 <rect key="frame" x="16" y="75" width="256" height="214"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description unavailable for this item." translatesAutoresizingMaskIntoConstraints="NO" id="NEb-oY-jX5">
@@ -694,7 +694,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
                                 <rect key="frame" x="0.0" y="64" width="600" height="360"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
                                         <rect key="frame" x="2" y="0.0" width="2048" height="2072"/>
                                     </imageView>
                                 </subviews>
@@ -759,8 +759,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg" width="2048" height="2072"/>
-        <image name="SFU_2013_10cm.jpg" width="1795" height="898"/>
+        <image name="AQ3000.jpg" width="2048" height="2072"/>
+        <image name="Burnaby_Campus.jpg" width="1795" height="898"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RI2-F6-wKG"/>

@@ -16,7 +16,9 @@
 		F82440981AB367CD006D5C8B /* SFUMapPOI.m in Sources */ = {isa = PBXBuildFile; fileRef = F82440971AB367CD006D5C8B /* SFUMapPOI.m */; };
 		F824409A1AB3DA9B006D5C8B /* buildingDataCapture.txt in Resources */ = {isa = PBXBuildFile; fileRef = F82440991AB3DA9B006D5C8B /* buildingDataCapture.txt */; };
 		F83A8C971AB59FA6007F134F /* SFUImageScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83A8C961AB59FA6007F134F /* SFUImageScrollerViewController.m */; };
-		F83A8C991AB5A44C007F134F /* Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F83A8C981AB5A44C007F134F /* Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg */; };
+		F895803F1AB5B7D000D749DC /* floorplans.plist in Resources */ = {isa = PBXBuildFile; fileRef = F895803E1AB5B7D000D749DC /* floorplans.plist */; };
+		F89580421AB5B9F100D749DC /* SFUImageMapsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89580411AB5B9F100D749DC /* SFUImageMapsModel.m */; };
+		F89580441AB5C10700D749DC /* AQ3000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F89580431AB5C10700D749DC /* AQ3000.jpg */; };
 		F89FB44D1AAC533B004E8ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB44C1AAC533B004E8ADC /* main.m */; };
 		F89FB4501AAC533B004E8ADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB44F1AAC533B004E8ADC /* AppDelegate.m */; };
 		F89FB4531AAC533B004E8ADC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89FB4521AAC533B004E8ADC /* ViewController.m */; };
@@ -42,7 +44,7 @@
 		F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */; };
 		F8EC34551AB2CE8F00E80555 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34541AB2CE8F00E80555 /* MapKit.framework */; };
 		F8EC34571AB2CE9500E80555 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34561AB2CE9500E80555 /* CoreLocation.framework */; };
-		F8EC34591AB2D26000E80555 /* SFU_2013_10cm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */; };
+		F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,10 @@
 		F82440991AB3DA9B006D5C8B /* buildingDataCapture.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = buildingDataCapture.txt; sourceTree = "<group>"; };
 		F83A8C951AB59FA6007F134F /* SFUImageScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUImageScrollerViewController.h; sourceTree = "<group>"; };
 		F83A8C961AB59FA6007F134F /* SFUImageScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUImageScrollerViewController.m; sourceTree = "<group>"; };
-		F83A8C981AB5A44C007F134F /* Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg"; path = "../../../../../../Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg"; sourceTree = "<group>"; };
+		F895803E1AB5B7D000D749DC /* floorplans.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = floorplans.plist; sourceTree = "<group>"; };
+		F89580401AB5B9F100D749DC /* SFUImageMapsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUImageMapsModel.h; sourceTree = "<group>"; };
+		F89580411AB5B9F100D749DC /* SFUImageMapsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUImageMapsModel.m; sourceTree = "<group>"; };
+		F89580431AB5C10700D749DC /* AQ3000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AQ3000.jpg; sourceTree = "<group>"; };
 		F89FB4471AAC533B004E8ADC /* Multi Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89FB44B1AAC533B004E8ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F89FB44C1AAC533B004E8ADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,7 +118,7 @@
 		F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapViewController.m; sourceTree = "<group>"; };
 		F8EC34541AB2CE8F00E80555 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F8EC34561AB2CE9500E80555 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFU_2013_10cm.jpg; sourceTree = "<group>"; };
+		F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burnaby_Campus.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,15 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		F89580451AB5C3B000D749DC /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */,
+				F89580431AB5C10700D749DC /* AQ3000.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F89FB43E1AAC533B004E8ADC = {
 			isa = PBXGroup;
 			children = (
@@ -180,10 +194,10 @@
 			children = (
 				F89FB44E1AAC533B004E8ADC /* AppDelegate.h */,
 				F89FB44F1AAC533B004E8ADC /* AppDelegate.m */,
-				F8EC34581AB2D26000E80555 /* SFU_2013_10cm.jpg */,
 				F89FB4511AAC533B004E8ADC /* ViewController.h */,
 				F89FB4521AAC533B004E8ADC /* ViewController.m */,
 				F89FB4541AAC533B004E8ADC /* Main.storyboard */,
+				F89580451AB5C3B000D749DC /* images */,
 				F89FB4761AAC56FD004E8ADC /* SFUStoryboardListTableViewController.h */,
 				F89FB4771AAC56FD004E8ADC /* SFUStoryboardListTableViewController.m */,
 				F89FB47C1AAC5B75004E8ADC /* storyboardlist.plist */,
@@ -234,7 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				F8EC344F1AB2C4C000E80555 /* Map.storyboard */,
-				F83A8C981AB5A44C007F134F /* Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg */,
+				F89580401AB5B9F100D749DC /* SFUImageMapsModel.h */,
+				F89580411AB5B9F100D749DC /* SFUImageMapsModel.m */,
+				F895803E1AB5B7D000D749DC /* floorplans.plist */,
 				F83A8C951AB59FA6007F134F /* SFUImageScrollerViewController.h */,
 				F83A8C961AB59FA6007F134F /* SFUImageScrollerViewController.m */,
 				F8E0DD901AB33E6D001B8840 /* SFUShortCodeComposerViewController.h */,
@@ -340,11 +356,12 @@
 				F82440901AB354EB006D5C8B /* QRScan.storyboard in Resources */,
 				F89FB4811AACE31F004E8ADC /* Weather.storyboard in Resources */,
 				F89FB47D1AAC5B75004E8ADC /* storyboardlist.plist in Resources */,
+				F89580441AB5C10700D749DC /* AQ3000.jpg in Resources */,
 				F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
-				F83A8C991AB5A44C007F134F /* Academic Quadrangle 3000 Level Keyplan-Layout1 Low.jpg in Resources */,
+				F895803F1AB5B7D000D749DC /* floorplans.plist in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
-				F8EC34591AB2D26000E80555 /* SFU_2013_10cm.jpg in Resources */,
+				F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */,
 				F89FB45B1AAC533B004E8ADC /* LaunchScreen.xib in Resources */,
 				F89FB4581AAC533B004E8ADC /* Images.xcassets in Resources */,
 				F824409A1AB3DA9B006D5C8B /* buildingDataCapture.txt in Resources */,
@@ -379,6 +396,7 @@
 				F8E0DD921AB33E6D001B8840 /* SFUShortCodeComposerViewController.m in Sources */,
 				F8EC34531AB2C7F500E80555 /* SFUMapViewController.m in Sources */,
 				049F81861AB4D8AA00D84F4D /* SFULibraryCell.m in Sources */,
+				F89580421AB5B9F100D749DC /* SFUImageMapsModel.m in Sources */,
 				F8EB4BBA1AB2E2D400616182 /* SFUMapModel.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,

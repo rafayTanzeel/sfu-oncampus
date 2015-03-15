@@ -233,13 +233,13 @@
                                                     <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mXv-lB-ncr" userLabel="Progress View6">
-                                                    <rect key="frame" x="179" y="239" width="368" height="2"/>
+                                                    <rect key="frame" x="179" y="238" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s19-cW-NpK" userLabel="Progress View7">
-                                                    <rect key="frame" x="179" y="262" width="368" height="2"/>
+                                                    <rect key="frame" x="179" y="260" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -347,7 +347,7 @@
                                                 <constraint firstItem="ugl-Gv-rkN" firstAttribute="leading" secondItem="tEp-ME-Tp5" secondAttribute="leading" id="VJm-qp-crm"/>
                                                 <constraint firstItem="mMV-IB-oid" firstAttribute="top" secondItem="Fba-dq-qMi" secondAttribute="bottom" constant="21" id="VPx-pC-77p"/>
                                                 <constraint firstItem="9vh-lt-yAU" firstAttribute="trailing" secondItem="vkb-ak-uch" secondAttribute="trailing" id="VRZ-LW-Iit"/>
-                                                <constraint firstItem="s19-cW-NpK" firstAttribute="top" secondItem="mXv-lB-ncr" secondAttribute="bottom" constant="21" id="VzP-eZ-IiA"/>
+                                                <constraint firstItem="s19-cW-NpK" firstAttribute="top" secondItem="mXv-lB-ncr" secondAttribute="bottom" constant="20" id="VzP-eZ-IiA"/>
                                                 <constraint firstItem="tEp-ME-Tp5" firstAttribute="leading" secondItem="sxs-Ae-Vcy" secondAttribute="trailing" constant="8" symbolic="YES" id="W3E-Do-7qd"/>
                                                 <constraint firstItem="Ala-JX-aHz" firstAttribute="leading" secondItem="0A6-PG-Umq" secondAttribute="leading" id="WW8-pQ-duD"/>
                                                 <constraint firstItem="VVM-PS-1AZ" firstAttribute="top" secondItem="ysC-C4-Wsg" secondAttribute="bottom" constant="8" symbolic="YES" id="WZ7-ac-jgG"/>
@@ -361,7 +361,7 @@
                                                 <constraint firstItem="Fba-dq-qMi" firstAttribute="leading" secondItem="pXF-qS-7j7" secondAttribute="trailing" constant="8" symbolic="YES" id="XmR-o7-t1T"/>
                                                 <constraint firstItem="ysC-C4-Wsg" firstAttribute="baseline" secondItem="00Q-3d-NmL" secondAttribute="baseline" id="XoR-mk-vL6"/>
                                                 <constraint firstItem="SIn-CF-lgW" firstAttribute="leading" secondItem="yvH-QN-YIF" secondAttribute="leading" id="Y32-8P-YXo"/>
-                                                <constraint firstItem="mXv-lB-ncr" firstAttribute="top" secondItem="mMV-IB-oid" secondAttribute="bottom" constant="21" id="Yyq-ar-18c"/>
+                                                <constraint firstItem="mXv-lB-ncr" firstAttribute="top" secondItem="mMV-IB-oid" secondAttribute="bottom" constant="20" id="Yyq-ar-18c"/>
                                                 <constraint firstItem="9vh-lt-yAU" firstAttribute="leading" secondItem="VbS-bS-CqM" secondAttribute="leading" id="ZKm-Ue-zdZ"/>
                                                 <constraint firstItem="Ala-JX-aHz" firstAttribute="trailing" secondItem="0A6-PG-Umq" secondAttribute="trailing" id="ZNS-Vt-ADz"/>
                                                 <constraint firstItem="AnI-1h-EQO" firstAttribute="trailing" secondItem="s19-cW-NpK" secondAttribute="trailing" id="Zoo-gG-viR"/>

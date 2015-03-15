@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.model=[[SFUTransitModel alloc] initWithPlist:@"SFUTransitUpperLoop"];
     // Do any additional setup after loading the view.
 }
 
@@ -33,6 +33,7 @@
     //    NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = [self.model titleStringForIndex:indexPath.row];
     return cell;
+    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,7 +79,11 @@
     //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     //NSString* URL=[self.model urlStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
-    //SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
+    SFUTransitDisplayViewController *controller = (SFUTransitDisplayViewController *)[segue destinationViewController];
+    controller.BusPath = [self.tableView indexPathForSelectedRow];
+    
+    //self.tableView indexPathForSelectedR
+    
     
     //[controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
     

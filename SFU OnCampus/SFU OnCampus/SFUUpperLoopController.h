@@ -10,12 +10,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SFUTransitModel.h"
-
+#import "SFUTransitDisplayViewController.h"
 
 @interface SFUUpperLoopController : UITableViewController
 
 @property BOOL displayInApp;
-
+@property (weak, nonatomic) NSIndexPath *loopPath;
 @property IBOutlet SFUTransitModel* model;
 
 ///Do not use currently

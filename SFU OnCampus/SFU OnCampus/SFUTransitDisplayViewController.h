@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SFUTransitModel.h"
-@interface SFUTransitDisplayViewController : UITableViewController <NSXMLParserDelegate>
+@interface SFUTransitDisplayViewController :UIViewController <NSXMLParserDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (weak, atomic) NSIndexPath *BusPath;
 @property (strong, nonatomic) IBOutlet SFUTransitModel *model;
 
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 
-@property (weak, nonatomic) IBOutlet UILabel *upcomingTime;
-@property (weak, nonatomic) IBOutlet UILabel *upcomingDeltaTime;
+
 @property (weak, nonatomic) IBOutlet UITableView *upcomingTableView;
 
 @end

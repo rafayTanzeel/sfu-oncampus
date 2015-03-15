@@ -29,6 +29,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *availabilityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *available;
 
+// Open or closed
+@property (weak, nonatomic) IBOutlet UILabel *libraryStatus;
+
+
 
 
 // Location Names
@@ -70,6 +74,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *usedSix;
 @property (weak, nonatomic) IBOutlet UILabel *usedSeven;
 @property (weak, nonatomic) IBOutlet UILabel *usedEight;
+
+// Library Catalogue Button
+//@property (weak, nonatomic) IBOutlet UIButton *catalogueButton;
+
 
 
 

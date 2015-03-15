@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SFUTransitModel.h"
-@interface SFUTransitDisplayViewController : UIViewController
+@interface SFUTransitDisplayViewController : UIViewController <NSXMLParserDelegate>
 @property (weak, atomic) NSIndexPath *BusPath;
 @property (strong, nonatomic) IBOutlet SFUTransitModel *model;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusLabel;

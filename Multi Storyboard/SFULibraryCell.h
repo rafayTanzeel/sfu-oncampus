@@ -8,12 +8,39 @@
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ * Custom UITableViewCell Class that is used to display library information for the SFULibraryViewController Class.
+ *
+ * @author Kevin Grant
+ * @version 1.0
+ */
 @interface SFULibraryCell : UITableViewCell
 
-// Update information for the computer availability of each location
+ /**
+ * Updates information for the computer availability for each location of each library
+ * Uses SFU Library API to determine availability.
+ *
+ * @param available		label representing the number of computers available for a certain location
+ * @param inUse			label representing the number of computers in use for a certain location
+ * @param location 		label representing the location's name to be set
+ * @param name 			name of the location to be set as the location's name
+ * @param value 		the name for the location as returned by the API
+ * @param progressView	the progress bar representing the number of computers available
+ * @param d 			dictionary returned by API containing all the computer information
+ */
 - (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d;
 
-// Empty text that is not needed
+ /**
+ * Sets any text that is not needed for a library to empty and sets the progress bars to a clear colour.
+ * The SFULibraryCell was built to have enough information for all locations of SFU Burnaby; SFU Surrey and SFU Vancouver
+ * do not require as much information. So to hide these excess labels, they are made invisibile.
+ *
+ * @param available		label representing the number of computers available for a certain location
+ * @param inUse			label representing the number of computers in use for a certain location
+ * @param location 		label representing the location's name to be set
+ * @param progressView	the progress bar representing the number of computers available
+ */
 -(void)emptyComputerLabels:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location progressBar:(UIProgressView*) progressView;
 
 // UI View

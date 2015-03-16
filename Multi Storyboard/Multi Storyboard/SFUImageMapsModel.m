@@ -8,8 +8,16 @@
 
 #import "SFUImageMapsModel.h"
 
+@interface SFUImageMapsModel()
+{
+    @private
+    NSArray* a;
+}
+
+@end
+
 @implementation SFUImageMapsModel
-NSArray* a;
+
 
 -(SFUImageMapsModel*)init
 {

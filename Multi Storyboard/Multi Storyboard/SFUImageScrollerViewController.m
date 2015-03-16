@@ -9,17 +9,21 @@
 #import "SFUImageScrollerViewController.h"
 
 @interface SFUImageScrollerViewController ()
-
+{
+@private
+SFUImageMapsModel* _model;
+NSArray* floorNames;
+NSUInteger floorIndex;
+NSUInteger buildingIndex;
+}
 @end
 
 @implementation SFUImageScrollerViewController
-NSUInteger floorIndex=0;
-NSUInteger buildingIndex=0;
-SFUImageMapsModel* _model;
-NSArray* floorNames;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    floorIndex =buildingIndex =0;
     [self updateFloorLabel];// Do any additional setup after loading the view.
     _model = [SFUImageMapsModel new];
     NSString*imgPath = [_model nameOfImageForBuildingAtIndex:0 onFloorWithIndex:0];
@@ -50,12 +54,19 @@ NSArray* floorNames;
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
+    if(component == 0)
+    {
     return [_model nameOfBuildingAtIndex:row];
-    return @"AQ (Academic Quadrangle";
+    }
+    else
+    {
+        return [_model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:floorIndex];
+    }
+//return @"AQ (Academic Quadrangle";
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView

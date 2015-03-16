@@ -14,5 +14,5 @@
 -(NSUInteger)numberOfBuildings;
 -(NSString*)nameOfImageForBuildingAtIndex:(NSUInteger)i onFloorWithIndex:(NSUInteger)j;
 -(NSUInteger)floorCountForBuldingWithIndex:(NSUInteger)i;
-
+-(NSString*)nameOfFloorInBuildingWithIndex:(NSUInteger)i onFloorWithIndex:(NSUInteger)j;
 @end

@@ -64,6 +64,7 @@
     // Calulate progress
     float progress = [numberAvailable floatValue] / [numberTotal floatValue];
     
+    // Set progress
     [progressView setProgress:progress];
     
 }

@@ -13,7 +13,8 @@
 @end
 
 @implementation SFUImageScrollerViewController
-NSUInteger floorIndex;
+NSUInteger floorIndex=0;
+NSUInteger buildingIndex=0;
 SFUImageMapsModel* _model;
 NSArray* floorNames;
 - (void)viewDidLoad {
@@ -35,11 +36,14 @@ NSArray* floorNames;
 }
 -(void)updateFloorLabel
 {
+    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
         self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
 }
 - (IBAction)floorChanged:(UIStepper *)sender
 {
     [self updateFloorLabel];
+    NSString*imgPath = [_model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:self.floorNumberStepper.value];
+    [self setScrollImage:[UIImage imageNamed:imgPath]];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
@@ -74,6 +78,7 @@ numberOfRowsInComponent:(NSInteger)component
     //set stepper to floors count
     //set prefered floor if applicable
         [self updateFloorLabel];
+    buildingIndex=row;
 }
 
 /*

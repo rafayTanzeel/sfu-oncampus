@@ -32,15 +32,28 @@ NSArray* a;
 
 -(NSString*)nameOfImageForBuildingAtIndex:(NSUInteger)i onFloorWithIndex:(NSUInteger)j
 {
+    @try{
     NSDictionary* d = [a objectAtIndex:i];
     NSArray* ps = [d objectForKey:@"pages"];
-    return [[ps objectAtIndex:j] objectForKey:@"image"];
+    NSDictionary* p = [ps objectAtIndex:j];
+    if(p == nil)return nil;
+    return [p objectForKey:@"image"];
+    }@catch(NSException* e)
+    {
+        return nil;
+    }
 }
 -(NSString*)nameOfFloorInBuildingWithIndex:(NSUInteger)i onFloorWithIndex:(NSUInteger)j
 {
     NSDictionary* d = [a objectAtIndex:i];
     NSArray* ps = [d objectForKey:@"pages"];
     return [[ps objectAtIndex:j] objectForKey:@"name"];
+}
+-(NSUInteger)floorCountForBuldingWithIndex:(NSUInteger)i
+{
+    NSDictionary* d = [a objectAtIndex:i];
+    NSArray* ps = [d objectForKey:@"pages"];
+    return [ps count];
 }
 
 

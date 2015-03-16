@@ -42,5 +42,13 @@
 		<key>image</key>
 		<string>forum_icon.png</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Miss your bus? Help us improve transit.</string>
+		<key>url</key>
+		<string>http://www.sfu.ca/busstop.html</string>
+		<key>image</key>
+		<string>forum_icon.png</string>
+	</dict>
 </array>
 </plist>

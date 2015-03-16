@@ -140,7 +140,6 @@ NSDictionary *laptops;
     
     [self getLibraryHours:self];
     [self getComputerAvailability:self];
-    [self getTransitJSON:self];
 }
 
 - (void)didReceiveMemoryWarning {

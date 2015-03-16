@@ -47,7 +47,7 @@
 }
 
 // Get the correct image for the weather from the local folder
-// Used for the main weather and the hourly weather
+// Used for the main weather
 - (void)updateImage:(UIImageView*) weatherImage current:(NSString*) currentWeather
 {
     // Create an array; each element is one word from the currentWeather string
@@ -73,9 +73,8 @@
     else if ([currentWeather isEqualToString:(@"Partial Fog")] || [currentWeather isEqualToString:(@"Shallow Fog")] || [currentWeather isEqualToString:(@"Patches of Fog")] || [currentWeather isEqualToString:(@"Fog")]) {
         weatherImage.image = [UIImage imageNamed:@"fog_dn.png"];
     }
-    
-    NSInteger i;
 
+    NSInteger i;
 
     // If the first word of the description is 'Light' or 'Heavy', the index is set to one so
     // we can check starting at the second word.
@@ -110,7 +109,7 @@
     
 }
 
-// Update image for the five day forecast
+// Update image for the five day forecast and hourly forecast
 - (void)updateForecastImage:(UIImageView*) weatherImage current:(NSString*) icon
 {
     if([icon isEqualToString:@"chanceflurries"] || [icon isEqualToString:@"chancesleet"] || [icon isEqualToString:@"chancesnow"] || [icon isEqualToString:@"flurries"] || [icon isEqualToString:@"sleet"] || [icon isEqualToString:@"snow"]) {
@@ -139,6 +138,9 @@
     }
     else if([icon isEqualToString:@"mostlysunny"] || [icon isEqualToString:@"partlycloudy"]) {
         weatherImage.image = [UIImage imageNamed:@"mostly_sunny.png"];
+    }
+    else {
+        weatherImage.image = [UIImage imageNamed:@"unknown.png"];
     }
 }
 
@@ -172,7 +174,8 @@
     NSString *conditions = [NSString stringWithFormat:@"%@    %@",cond, pop];
     
     // Update the weather icon    
-    [self updateImage:imageHour current:cond];
+    NSString *icon = [NSString stringWithFormat:@"%@", [d objectForKey:@"icon"]]; 
+    [self updateForecastImage:imageHour current:icon];
     
     // Set the hour, temperature, and conditions label
     hourLabel.text = hour;

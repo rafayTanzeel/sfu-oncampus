@@ -64,7 +64,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 
 - (IBAction)captureRegion:(id)sender
 {
-    NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.regionNameTextField.text,self.mapView.region.span.longitudeDelta,self.mapView.region.span.latitudeDelta,self.mapView.region.center.longitude,self.mapView.region.center.latitude);
+    NSLog(@"%@\nspan\n{\n%f\n,\n%f\n},\ncentre{\n%f\n,\n%f\n}\n\n",self.regionNameTextField.text,self.mapView.region.span.longitudeDelta,self.mapView.region.span.latitudeDelta,self.mapView.region.center.longitude,self.mapView.region.center.latitude);
     [self.regionNameTextField resignFirstResponder];
 
 }
@@ -129,7 +129,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         ///Zoom to and draw destination
         r = [self.model regionForShortCode:dest];
         //[self.mapView setRegion:r animated:YES];
-        NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
+        printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
         SFUMapAnnotation* b = [SFUMapAnnotation new];
         b.coordinate = r.center;
         b.isDestination =YES;

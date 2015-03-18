@@ -23,23 +23,23 @@
 				<real>49.278845</real>
 			</dict>
 		</dict>
-		<key>AAB - TODO</key>
+		<key>AAB</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Alcan Aquatics Research Building</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.917355</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.275996</real>
 			</dict>
 		</dict>
 		<key>BEE</key>
@@ -49,7 +49,7 @@
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>00.002432</real>
+				<real>0.002432</real>
 				<key>y</key>
 				<real>0.002551</real>
 			</dict>
@@ -118,42 +118,42 @@
 				<real>49.278845</real>
 			</dict>
 		</dict>
-		<key>Dis1 todo</key>
+		<key>DIS1</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Discovery 1</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002782</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.002919</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.912086</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.273387</real>
 			</dict>
 		</dict>
-		<key>Dis2 todo </key>
+		<key>DIS2</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Discovery 2</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002004</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.002103</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.912494</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.274369</real>
 			</dict>
 		</dict>
 		<key>FS todo</key>
@@ -220,7 +220,7 @@
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.003110</real>
+				<real>0.00311</real>
 				<key>y</key>
 				<real>0.003262</real>
 			</dict>
@@ -270,7 +270,6 @@
 				<real>49.280001</real>
 			</dict>
 		</dict>
-		
 		<key>SCB todo</key>
 		<dict>
 			<key>displayName</key>

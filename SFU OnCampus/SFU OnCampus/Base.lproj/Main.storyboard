@@ -1906,27 +1906,27 @@
                                 <color key="backgroundColor" red="0.90493376358695654" green="0.90493376358695654" blue="0.90493376358695654" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="cardView" destination="WEd-B1-cEN" id="K8r-CY-3HO"/>
-                                    <outlet property="dayFive" destination="QwH-2D-EmZ" id="9nJ-B0-pJ7"/>
-                                    <outlet property="dayFiveHigh" destination="keu-Nl-H3b" id="Nar-JQ-Tpx"/>
-                                    <outlet property="dayFiveLow" destination="eZj-Z2-GWj" id="RGu-zs-kjq"/>
+                                    <outlet property="dayFive" destination="QwH-2D-EmZ" id="3gl-Ps-Gvd"/>
+                                    <outlet property="dayFiveHigh" destination="keu-Nl-H3b" id="21i-Cf-62u"/>
+                                    <outlet property="dayFiveLow" destination="eZj-Z2-GWj" id="7Sq-r0-Ggg"/>
                                     <outlet property="dayFour" destination="RIP-lX-KQZ" id="t7z-2q-BuY"/>
-                                    <outlet property="dayFourHigh" destination="o6m-mL-bd3" id="7r8-YC-uwq"/>
-                                    <outlet property="dayFourLow" destination="c1G-uQ-DlQ" id="plk-YN-bTU"/>
-                                    <outlet property="dayOne" destination="Ztn-fT-Xwc" id="XaM-ch-hdV"/>
-                                    <outlet property="dayOneHigh" destination="wcP-MG-YaJ" id="MPV-cR-6Sj"/>
-                                    <outlet property="dayOneLow" destination="MAY-Gi-4C2" id="fmg-86-T3f"/>
-                                    <outlet property="dayThree" destination="QIx-Q5-w7f" id="fKf-eq-Kqq"/>
-                                    <outlet property="dayThreeHigh" destination="Mt8-h0-zz8" id="qLT-ob-sZ9"/>
-                                    <outlet property="dayThreeLow" destination="TNE-Fh-Nv8" id="lPl-Fz-QcA"/>
-                                    <outlet property="dayTwo" destination="Uff-sZ-Rdf" id="1gI-xf-U8h"/>
-                                    <outlet property="dayTwoHigh" destination="zvF-ao-Nqp" id="eYd-jD-jjz"/>
-                                    <outlet property="dayTwoLow" destination="THt-1N-ChD" id="ZxO-NZ-Ft4"/>
+                                    <outlet property="dayFourHigh" destination="o6m-mL-bd3" id="Caw-Cj-g9j"/>
+                                    <outlet property="dayFourLow" destination="c1G-uQ-DlQ" id="3mm-43-82k"/>
+                                    <outlet property="dayOne" destination="Ztn-fT-Xwc" id="QNe-3V-cvM"/>
+                                    <outlet property="dayOneHigh" destination="wcP-MG-YaJ" id="hHF-Bz-S5a"/>
+                                    <outlet property="dayOneLow" destination="MAY-Gi-4C2" id="hgJ-XU-1ze"/>
+                                    <outlet property="dayThree" destination="QIx-Q5-w7f" id="z2o-Gd-iqp"/>
+                                    <outlet property="dayThreeHigh" destination="Mt8-h0-zz8" id="jAp-tA-kv7"/>
+                                    <outlet property="dayThreeLow" destination="TNE-Fh-Nv8" id="6Mh-I0-jvV"/>
+                                    <outlet property="dayTwo" destination="Uff-sZ-Rdf" id="FLa-jC-fpS"/>
+                                    <outlet property="dayTwoHigh" destination="zvF-ao-Nqp" id="n6S-Bh-Xf4"/>
+                                    <outlet property="dayTwoLow" destination="THt-1N-ChD" id="fsX-Fp-Xah"/>
                                     <outlet property="hourlyForecastButton" destination="rHz-Z6-Pvg" id="cXW-Zg-wzv"/>
-                                    <outlet property="iconDayFive" destination="Ovi-98-Pzm" id="hGV-dC-Yuv"/>
-                                    <outlet property="iconDayFour" destination="sVB-iq-cfL" id="dj8-zH-DMZ"/>
-                                    <outlet property="iconDayOne" destination="oXw-eJ-3Om" id="1dN-Cn-AlS"/>
-                                    <outlet property="iconDayThree" destination="Jfc-KW-Pin" id="ubJ-T2-WPl"/>
-                                    <outlet property="iconDayTwo" destination="wgM-Uh-v0M" id="MGp-VS-gr7"/>
+                                    <outlet property="iconDayFive" destination="Ovi-98-Pzm" id="yqo-TA-9vM"/>
+                                    <outlet property="iconDayFour" destination="sVB-iq-cfL" id="8GT-sC-uTf"/>
+                                    <outlet property="iconDayOne" destination="oXw-eJ-3Om" id="k9C-9f-eaW"/>
+                                    <outlet property="iconDayThree" destination="Jfc-KW-Pin" id="4mg-Jd-SH8"/>
+                                    <outlet property="iconDayTwo" destination="wgM-Uh-v0M" id="yBH-pC-BwH"/>
                                     <outlet property="location" destination="7HA-z2-jYE" id="tZ0-KK-2eg"/>
                                     <outlet property="temperature" destination="Wqh-lc-0Cp" id="ZAF-53-yyo"/>
                                     <outlet property="weatherDescription" destination="3Fm-Tn-SvE" id="b3z-Wf-3IF"/>
@@ -1943,13 +1943,17 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfE-wv-0ET">
                                             <rect key="frame" x="8" y="8" width="584" height="184"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-FO-ERN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq7-FO-ERN">
                                                     <rect key="frame" x="8" y="8" width="158" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="NGG-c9-OTF"/>
+                                                        <constraint firstAttribute="width" constant="158" id="YAA-1O-vMr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-k9-C84">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-k9-C84">
                                                     <rect key="frame" x="8" y="45" width="568" height="117"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1958,9 +1962,11 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="UBm-k9-C84" secondAttribute="trailing" constant="8" id="JSK-K2-CS5"/>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="UfE-wv-0ET" secondAttribute="leading" constant="8" id="Xxs-5j-zed"/>
-                                                <constraint firstItem="UBm-k9-C84" firstAttribute="top" secondItem="Lq7-FO-ERN" secondAttribute="bottom" constant="8" id="rME-Ak-1B6"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="Lq7-FO-ERN" secondAttribute="leading" id="0id-pY-vjO"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="leading" secondItem="UfE-wv-0ET" secondAttribute="leadingMargin" id="Azs-yJ-klj"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="trailing" secondItem="UfE-wv-0ET" secondAttribute="trailingMargin" id="RDZ-Zh-MFY"/>
+                                                <constraint firstItem="UBm-k9-C84" firstAttribute="top" secondItem="Lq7-FO-ERN" secondAttribute="bottom" constant="8" symbolic="YES" id="TMy-6K-LLe"/>
+                                                <constraint firstItem="Lq7-FO-ERN" firstAttribute="top" secondItem="UfE-wv-0ET" secondAttribute="topMargin" id="cCm-oi-Oir"/>
                                             </constraints>
                                         </view>
                                     </subviews>

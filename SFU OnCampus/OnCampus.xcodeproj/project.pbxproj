@@ -31,6 +31,10 @@
 		040DC4F31AACFCAF003A713F /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 040DC4DC1AACFCAF003A713F /* unknown.png */; };
 		040DC4F41AACFCAF003A713F /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = 040DC4DD1AACFCAF003A713F /* wind.png */; };
 		040DC4F71AAD25C3003A713F /* SFUAnnouncementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */; };
+		041F51F01ABA188F005E53E9 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F51EB1ABA188F005E53E9 /* TFHpple.m */; };
+		041F51F11ABA188F005E53E9 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F51ED1ABA188F005E53E9 /* TFHppleElement.m */; };
+		041F51F21ABA188F005E53E9 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F51EF1ABA188F005E53E9 /* XPathQuery.m */; };
+		041F51F41ABA198B005E53E9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 041F51F31ABA198B005E53E9 /* libxml2.dylib */; };
 		04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* SFUHourlyViewController.m */; };
 		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
 		04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */; };
@@ -156,15 +160,22 @@
 		040DC4DB1AACFCAF003A713F /* sunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunny.png; sourceTree = "<group>"; };
 		040DC4DC1AACFCAF003A713F /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
 		040DC4DD1AACFCAF003A713F /* wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind.png; sourceTree = "<group>"; };
-		040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUAnnouncementCell.h; sourceTree = "<group>"; };
-		040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUAnnouncementCell.m; sourceTree = "<group>"; };
-		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUHourlyViewController.h; sourceTree = "<group>"; };
-		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyViewController.m; sourceTree = "<group>"; };
+		040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUAnnouncementCell.h; path = "SFU OnCampus/SFUAnnouncementCell.h"; sourceTree = "<group>"; };
+		040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUAnnouncementCell.m; path = "SFU OnCampus/SFUAnnouncementCell.m"; sourceTree = "<group>"; };
+		041F51EA1ABA188F005E53E9 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		041F51EB1ABA188F005E53E9 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		041F51EC1ABA188F005E53E9 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		041F51ED1ABA188F005E53E9 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		041F51EE1ABA188F005E53E9 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		041F51EF1ABA188F005E53E9 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		041F51F31ABA198B005E53E9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUHourlyViewController.h; path = "SFU OnCampus/SFUHourlyViewController.h"; sourceTree = "<group>"; };
+		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUHourlyViewController.m; path = "SFU OnCampus/SFUHourlyViewController.m"; sourceTree = "<group>"; };
 		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
-		04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWeatherViewController.m; sourceTree = "<group>"; };
-		04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWeatherViewController.h; sourceTree = "<group>"; };
-		04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUCardCell.h; sourceTree = "<group>"; };
-		04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUCardCell.m; sourceTree = "<group>"; };
+		04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUWeatherViewController.m; path = "SFU OnCampus/SFUWeatherViewController.m"; sourceTree = "<group>"; };
+		04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUWeatherViewController.h; path = "SFU OnCampus/SFUWeatherViewController.h"; sourceTree = "<group>"; };
+		04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUCardCell.h; path = "SFU OnCampus/SFUCardCell.h"; sourceTree = "<group>"; };
+		04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUCardCell.m; path = "SFU OnCampus/SFUCardCell.m"; sourceTree = "<group>"; };
 		350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUSocialTableViewController.h; sourceTree = "<group>"; };
 		350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUSocialTableViewController.m; sourceTree = "<group>"; };
 		35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
@@ -278,6 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F51F41ABA198B005E53E9 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +331,34 @@
 				040DC4DD1AACFCAF003A713F /* wind.png */,
 			);
 			path = Google_Now_600x600;
+			sourceTree = "<group>";
+		};
+		041F51E81ABA17E9005E53E9 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				04335A8E1AABE929006444EF /* SFUHourlyViewController.h */,
+				04335A8F1AABE929006444EF /* SFUHourlyViewController.m */,
+				04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */,
+				04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */,
+				040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */,
+				040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */,
+				04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */,
+				04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		041F51E91ABA1852005E53E9 /* Hpple (HTML Parsing) */ = {
+			isa = PBXGroup;
+			children = (
+				041F51EA1ABA188F005E53E9 /* TFHpple.h */,
+				041F51EB1ABA188F005E53E9 /* TFHpple.m */,
+				041F51EC1ABA188F005E53E9 /* TFHppleElement.h */,
+				041F51ED1ABA188F005E53E9 /* TFHppleElement.m */,
+				041F51EE1ABA188F005E53E9 /* XPathQuery.h */,
+				041F51EF1ABA188F005E53E9 /* XPathQuery.m */,
+			);
+			name = "Hpple (HTML Parsing)";
 			sourceTree = "<group>";
 		};
 		5D010CEE1AAD6BA8005CC0D2 /* ICONS */ = {
@@ -399,6 +439,9 @@
 		F808D8021A95CFA90006FC17 = {
 			isa = PBXGroup;
 			children = (
+				041F51F31ABA198B005E53E9 /* libxml2.dylib */,
+				041F51E91ABA1852005E53E9 /* Hpple (HTML Parsing) */,
+				041F51E81ABA17E9005E53E9 /* Weather */,
 				F1517B241AB52A9400863E16 /* Transit */,
 				F877014F1AA00513001FE1FE /* images */,
 				F808D80D1A95CFA90006FC17 /* SFU OnCampus */,
@@ -428,8 +471,6 @@
 				5D010CD41AAD6039005CC0D2 /* SFUFacebookModel.m */,
 				5D010CD01AAD5F16005CC0D2 /* SFUFacebookController.h */,
 				5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */,
-				04335A8E1AABE929006444EF /* SFUHourlyViewController.h */,
-				04335A8F1AABE929006444EF /* SFUHourlyViewController.m */,
 				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
 				F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */,
 				350BB6301A9FBB26005D8EE4 /* SFUSocialTableViewController.h */,
@@ -440,13 +481,7 @@
 				F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */,
 				F84ED3881A9EDF0E008AD45B /* SFUWebListModel.h */,
 				F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */,
-				04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */,
-				04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */,
-				040DC4F51AAD25C3003A713F /* SFUAnnouncementCell.h */,
-				040DC4F61AAD25C3003A713F /* SFUAnnouncementCell.m */,
 				04715A2F1A9FEBDA004F242B /* weatherIcons.plist */,
-				04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */,
-				04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
 				F808D8131A95CFA90006FC17 /* AppDelegate.m */,
 				F808D8151A95CFA90006FC17 /* MasterViewController.h */,
@@ -720,7 +755,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F51F11ABA188F005E53E9 /* TFHppleElement.m in Sources */,
 				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
+				041F51F21ABA188F005E53E9 /* XPathQuery.m in Sources */,
 				5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */,
 				F1517B231AB5276000863E16 /* SFUTransitTableViewController.m in Sources */,
 				04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */,
@@ -738,6 +775,7 @@
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
 				F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
+				041F51F01ABA188F005E53E9 /* TFHpple.m in Sources */,
 				F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */,
 				5D010CD21AAD5F16005CC0D2 /* SFUFacebookController.m in Sources */,
 				F808D81A1A95CFA90006FC17 /* DetailViewController.m in Sources */,
@@ -818,6 +856,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -854,6 +897,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

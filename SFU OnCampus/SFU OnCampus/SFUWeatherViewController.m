@@ -6,15 +6,13 @@
 //  Created by Kevin Grant on 2/25/15.
 //  Copyright (c) 2015 Kevin Grant. All rights reserved.
 //
-//	Known bug: announcement cell does not align properly. However, this is
-// 			   a storyboard alignment issue, not an implementation issue.
-//
-//  To implement: Actually HTML parsing for the SFUAnnouncementCell.
-//
 
 #import "SFUWeatherViewController.h"
 #import "SFUCardCell.h"
 #import "SFUAnnouncementCell.h"
+
+// HTML Parsing
+#import "TFHpple.h"
 
 @interface SFUWeatherViewController ()
 
@@ -25,6 +23,10 @@
 // Global dictionary and array used for storing JSON data
 NSMutableDictionary *currentObservation;
 NSArray *forecastDay;
+
+// Strings for the announcement
+NSString *announcementOne;
+NSString *announcementTwo;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -126,6 +128,33 @@ NSArray *forecastDay;
     forecastDay = [simpleForecast objectForKey:@"forecastday"];
 }
 
+/**
+ * Gets the announcement from the SFU Road Report page.
+ */
+-(IBAction)getAnnouncement:(id)sender {
+    
+    // Get the HTML data from the road report page
+    NSURL *url = [NSURL URLWithString:@"http://www.sfu.ca/security/sfuroadconditions/"];
+    NSData *HtmlData = [NSData dataWithContentsOfURL:url];
+    
+    // Set up parser
+    TFHpple *parser = [TFHpple hppleWithHTMLData:HtmlData];
+    
+    // Create queries and create arrays which hold the Hpple objects
+    NSString *queryStringOne = @"//section[@class='announcements']/div/p";
+    NSString *queryStringTwo = @"//section[@class='announcements']/div/div/div/p";
+    NSArray *nodesOne = [parser searchWithXPathQuery:queryStringOne];
+    NSArray *nodesTwo = [parser searchWithXPathQuery:queryStringTwo];
+    
+    // store the returned data in global strings
+    for (TFHppleElement *element in nodesOne) {
+        announcementOne = [[element firstChild] content];
+    }
+    for (TFHppleElement *element in nodesTwo) {
+        announcementTwo = [[element firstChild] content];
+    }
+}
+
 
 
 - (void)viewDidLoad
@@ -139,6 +168,7 @@ NSArray *forecastDay;
     
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
+    [self getAnnouncement:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -169,12 +199,12 @@ NSArray *forecastDay;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // index of current row
-    int tableIndex = [indexPath indexAtPosition:[indexPath length] - 1];
+    // int tableIndex = [indexPath indexAtPosition:[indexPath length] - 1];
     
     //-----------------------------
     // Main weather module
     //-----------------------------
-    if (tableIndex == 0) {
+    if (indexPath.row == 0) {
         
         SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
         
@@ -240,15 +270,13 @@ NSArray *forecastDay;
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
 
-        // To be updated to actual html. this is just to show the view behaves correctly
-        cell.AnnouncementsBody.text = @"It is currently 12°C on campus with few clouds in the sky. Roadways, parking lots and walkways are dry. Driving conditions and visibility are good.\
-        \n\nPlease drive with caution and watch for any areas that are currently under construction, as well as any road closures on campus.\
-        \n\nThis report will be updated as conditions change.";
+        NSString *willUpdate = @"This report will be updated as conditions change.";
+        NSString *announce = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", announcementOne, announcementTwo, willUpdate];
+        
+        cell.AnnouncementsBody.text = announce;
         
         return cell;
-        
     }
-    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ @deprecated Replaced By SFUStoryboardList
+ */
 ///This was provided in the template, it is the main menu.
 @class DetailViewController;
 

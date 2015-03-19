@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywB-oV-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4339.5" y="-2186"/>
+            <point key="canvasLocation" x="2427" y="-1652"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="824-d6-OQQ">
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha2-pR-CGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5016" y="-2180"/>
+            <point key="canvasLocation" x="3288" y="-1652"/>
         </scene>
         <!--Student Services-->
         <scene sceneID="utE-HF-9Pm">
@@ -136,7 +136,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2953.5" y="-2180"/>
+            <point key="canvasLocation" x="1601" y="-1652"/>
         </scene>
     </scenes>
     <resources>

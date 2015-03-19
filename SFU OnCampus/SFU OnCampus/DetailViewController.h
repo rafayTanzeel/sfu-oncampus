@@ -10,6 +10,7 @@
 
 /**
  This is a placeholder for unimplemented
+ @note do not include in shipped products.
  */
 @interface DetailViewController : UIViewController
 

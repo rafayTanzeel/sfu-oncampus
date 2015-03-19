@@ -14,7 +14,7 @@
 
 @implementation SFUSocialTableViewController
 /*
-NSString* serviceName = @"Facebook";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.model = [SFUWebListModel alloc];
@@ -77,7 +77,7 @@ NSString* serviceName = @"Facebook";
 //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
 //NSString* URL=[self.model urlStringForIndex:indexPath.row];
-    UIViewController *controller = (UIViewController *)[[segue destinationViewController] topViewController];
+    UIViewController *controller = (UIViewController *)[segue destinationViewController];
 
 
 

@@ -64,6 +64,7 @@
 
 /**
  * Downloads JSON data from a given URL. Displays an error message upon failure.
+ * \hack this i an artifact of example code, move it to a proper class.
  *
  * @param url   the url to be used to download the data from
  */
@@ -102,6 +103,10 @@
     [task resume];
 }
 
+/**
+ GNDN
+ \todo Implement
+ */
 -(void)persistCookies
 {
     NSData *cookiesdata = [[NSUserDefaults standardUserDefaults] objectForKey:@"MySavedCookies"];

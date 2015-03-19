@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController title="SFU Facebook" id="LhD-Ht-4J3" customClass="SFUFacebookController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cHK-dh-eot">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Xlk-at-zxH" kind="showDetail" id="o0B-ml-VMf"/>
+                                    <segue destination="Xlk-at-zxH" kind="show" id="o0B-ml-VMf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,27 +47,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC1-Go-eld" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="eb9-37-YiR" customClass="SFUFacebookModel"/>
             </objects>
-            <point key="canvasLocation" x="4198" y="-3268"/>
-        </scene>
-        <!--FacebookNav-->
-        <scene sceneID="KDI-Th-6eX">
-            <objects>
-                <navigationController id="NHR-SE-FGn" userLabel="FacebookNav" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DCM-zS-gHA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="LhD-Ht-4J3" kind="relationship" relationship="rootViewController" id="wHr-8Q-Jge"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="geb-bP-b8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3382" y="-3268"/>
+            <point key="canvasLocation" x="3262" y="-3444"/>
         </scene>
         <!--Web Navigation-->
         <scene sceneID="NiM-ux-Fbv">
@@ -88,7 +68,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywB-oV-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4339.5" y="-2186"/>
+            <point key="canvasLocation" x="4247" y="-3076"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="824-d6-OQQ">
@@ -151,13 +131,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ha2-pR-CGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5016" y="-2180"/>
+            <point key="canvasLocation" x="5004" y="-3076"/>
         </scene>
         <!--Social Table-->
         <scene sceneID="ADa-Op-jIN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6NL-Tc-saR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="I1h-Ld-5Xa"/>
                 <tableViewController title="Social Table" id="03b-bX-8R1" customClass="SFUSocialTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="op6-TW-E7s">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
@@ -183,7 +161,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="NHR-SE-FGn" kind="showDetail" id="RHD-ld-aZz"/>
+                                            <segue destination="LhD-Ht-4J3" kind="show" id="HMG-pN-d0o"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="2uj-R2-oc0" imageView="SjQ-Cl-eIy" style="IBUITableViewCellStyleDefault" id="BHP-Wy-BcU" userLabel="Cell2">
@@ -203,7 +181,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="nh4-TO-IQQ" kind="showDetail" id="ohr-zo-dtA"/>
+                                            <segue destination="Rvs-zT-wZ6" kind="show" id="45u-Gx-GPz"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -221,6 +199,8 @@
                         <outlet property="otherModel" destination="I1h-Ld-5Xa" id="Q6o-y4-IHw"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NL-Tc-saR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="I1h-Ld-5Xa"/>
             </objects>
             <point key="canvasLocation" x="2238" y="-3076"/>
         </scene>
@@ -229,7 +209,7 @@
             <objects>
                 <tableViewController title="SFU Twitter" id="Rvs-zT-wZ6" customClass="SFUTwitterController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r3S-xN-Cur">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -250,7 +230,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Xlk-at-zxH" kind="showDetail" id="Rjm-b5-Gox"/>
+                                    <segue destination="Xlk-at-zxH" kind="show" id="Rjm-b5-Gox"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -267,27 +247,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3g7-k6-pWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="ZXB-HY-E1T" customClass="SFUTwitterModel"/>
             </objects>
-            <point key="canvasLocation" x="3414" y="-4340"/>
-        </scene>
-        <!--SFU Twitter Nav-->
-        <scene sceneID="UUY-Bf-ZGH">
-            <objects>
-                <navigationController title="SFU Twitter Nav" id="nh4-TO-IQQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Njh-uQ-uSl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Rvs-zT-wZ6" kind="relationship" relationship="rootViewController" id="t3o-rQ-iml"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ajw-9c-Dmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2598" y="-4340"/>
+            <point key="canvasLocation" x="3270" y="-2712"/>
         </scene>
     </scenes>
     <resources>
@@ -296,7 +256,7 @@
         <image name="twitter_icon.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o0B-ml-VMf"/>
+        <segue reference="Rjm-b5-Gox"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

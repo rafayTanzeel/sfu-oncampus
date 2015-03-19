@@ -45,6 +45,8 @@
 		F8EC34551AB2CE8F00E80555 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34541AB2CE8F00E80555 /* MapKit.framework */; };
 		F8EC34571AB2CE9500E80555 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EC34561AB2CE9500E80555 /* CoreLocation.framework */; };
 		F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */; };
+		F8FA38211ABA5486001D3F93 /* SFUMapHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA38201ABA5486001D3F93 /* SFUMapHelpViewController.m */; };
+		F8FA38231ABA5658001D3F93 /* MapHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = F8FA38221ABA5658001D3F93 /* MapHelp.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,9 @@
 		F8EC34541AB2CE8F00E80555 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F8EC34561AB2CE9500E80555 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burnaby_Campus.jpg; sourceTree = "<group>"; };
+		F8FA381F1ABA5486001D3F93 /* SFUMapHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapHelpViewController.h; sourceTree = "<group>"; };
+		F8FA38201ABA5486001D3F93 /* SFUMapHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapHelpViewController.m; sourceTree = "<group>"; };
+		F8FA38221ABA5658001D3F93 /* MapHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = MapHelp.html; path = MapHelp/MapHelp.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				F8EC344F1AB2C4C000E80555 /* Map.storyboard */,
+				F8FA38221ABA5658001D3F93 /* MapHelp.html */,
 				F89580401AB5B9F100D749DC /* SFUImageMapsModel.h */,
 				F89580411AB5B9F100D749DC /* SFUImageMapsModel.m */,
 				F895803E1AB5B7D000D749DC /* floorplans.plist */,
@@ -269,6 +275,8 @@
 				F8EC34521AB2C7F500E80555 /* SFUMapViewController.m */,
 				F82440961AB367CD006D5C8B /* SFUMapPOI.h */,
 				F82440971AB367CD006D5C8B /* SFUMapPOI.m */,
+				F8FA381F1ABA5486001D3F93 /* SFUMapHelpViewController.h */,
+				F8FA38201ABA5486001D3F93 /* SFUMapHelpViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 				F89580441AB5C10700D749DC /* AQ3000.jpg in Resources */,
 				F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
+				F8FA38231ABA5658001D3F93 /* MapHelp.html in Resources */,
 				F895803F1AB5B7D000D749DC /* floorplans.plist in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
 				F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */,
@@ -398,6 +407,7 @@
 				049F81861AB4D8AA00D84F4D /* SFULibraryCell.m in Sources */,
 				F89580421AB5B9F100D749DC /* SFUImageMapsModel.m in Sources */,
 				F8EB4BBA1AB2E2D400616182 /* SFUMapModel.m in Sources */,
+				F8FA38211ABA5486001D3F93 /* SFUMapHelpViewController.m in Sources */,
 				F89FB47B1AAC5770004E8ADC /* SFUStoryboardListModel.m in Sources */,
 				F89FB44D1AAC533B004E8ADC /* main.m in Sources */,
 				F83A8C971AB59FA6007F134F /* SFUImageScrollerViewController.m in Sources */,

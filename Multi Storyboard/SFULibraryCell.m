@@ -71,9 +71,28 @@
         progress = 0.0;
     }
     
+    const float intensityShift =0.9;
+    
+    //cause progress to make the bars converge on yellow
+    float r = 2*(1.0- progress);
+    float g = 2.0*progress;
+    
+    
+    //The blue portion makes up 1/3 of the color space
+    float b = 1/3.0f;
+    
+    //Make the colors not so bright(especially good for yellow
+    r*=intensityShift;
+    g*=intensityShift;
+    
+    
+    //actually set the color
+    UIColor* c  = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+    [progressView setProgressTintColor: c];
     
     // Set progress
     [progressView setProgress:progress];
+    
     
 }
 

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="03b-bX-8R1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--SFU Facebook-->
+        <scene sceneID="0hF-eh-4go">
+            <objects>
+                <tableViewController title="SFU Facebook" id="LhD-Ht-4J3" customClass="SFUFacebookController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cHK-dh-eot">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell2" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="kEk-tj-YfJ" imageView="D4I-mR-owq" style="IBUITableViewCellStyleDefault" id="5fL-Im-uM9">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5fL-Im-uM9" id="Kgm-vV-JYk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kEk-tj-YfJ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon" id="D4I-mR-owq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xlk-at-zxH" kind="showDetail" id="o0B-ml-VMf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LhD-Ht-4J3" id="IyX-71-KBv"/>
+                            <outlet property="delegate" destination="LhD-Ht-4J3" id="P5Y-Oi-s8Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SFU Facebook" id="X3W-fv-X29"/>
+                    <connections>
+                        <outlet property="model" destination="eb9-37-YiR" id="0rE-SG-wtj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZC1-Go-eld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="eb9-37-YiR" customClass="SFUFacebookModel"/>
+            </objects>
+            <point key="canvasLocation" x="4198" y="-3268"/>
+        </scene>
+        <!--FacebookNav-->
+        <scene sceneID="KDI-Th-6eX">
+            <objects>
+                <navigationController id="NHR-SE-FGn" userLabel="FacebookNav" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DCM-zS-gHA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LhD-Ht-4J3" kind="relationship" relationship="rootViewController" id="wHr-8Q-Jge"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geb-bP-b8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3382" y="-3268"/>
+        </scene>
+        <!--Web Navigation-->
+        <scene sceneID="NiM-ux-Fbv">
+            <objects>
+                <navigationController title="Web Navigation" id="Xlk-at-zxH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RAX-h1-t47">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tYm-vM-u2C" kind="relationship" relationship="rootViewController" id="dIH-ZD-xO7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywB-oV-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4339.5" y="-2186"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="824-d6-OQQ">
+            <objects>
+                <viewController id="tYm-vM-u2C" userLabel="Web View Controller" customClass="SFUWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eC-LY-bpP"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDH-6i-KPE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hca-7J-tnx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-Kv-5E2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tYm-vM-u2C" id="gux-0Z-SXf"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-Za-FPg">
+                                <rect key="frame" x="0.0" y="497" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="Zzc-gE-FrY"/>
+                                    <barButtonItem systemItem="rewind" id="F9x-5e-YZg">
+                                        <connections>
+                                            <action selector="goBack" destination="B6C-Kv-5E2" id="mD5-0h-jgZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="9wB-3i-gb4"/>
+                                    <barButtonItem systemItem="fastForward" id="p51-Ea-arZ">
+                                        <connections>
+                                            <action selector="goForward" destination="B6C-Kv-5E2" id="65h-tw-QjX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="top" secondItem="hca-7J-tnx" secondAttribute="top" id="FpE-dL-D7r"/>
+                            <constraint firstItem="ibh-Za-FPg" firstAttribute="top" secondItem="B6C-Kv-5E2" secondAttribute="bottom" id="fbD-pL-pYQ"/>
+                            <constraint firstAttribute="trailing" secondItem="B6C-Kv-5E2" secondAttribute="trailing" id="g99-LG-5Uf"/>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="bottom" secondItem="rDH-6i-KPE" secondAttribute="top" constant="-39" id="ndj-g9-n2Y"/>
+                            <constraint firstItem="ibh-Za-FPg" firstAttribute="trailing" secondItem="B6C-Kv-5E2" secondAttribute="trailing" id="sJX-hq-5a9"/>
+                            <constraint firstItem="ibh-Za-FPg" firstAttribute="leading" secondItem="B6C-Kv-5E2" secondAttribute="leading" id="uWx-iP-fNm"/>
+                            <constraint firstItem="B6C-Kv-5E2" firstAttribute="leading" secondItem="hca-7J-tnx" secondAttribute="leading" id="vdj-Wy-FZO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loading" id="sde-Aq-G0e"/>
+                    <connections>
+                        <outlet property="backButton" destination="F9x-5e-YZg" id="1SQ-96-LQQ"/>
+                        <outlet property="forwardButton" destination="p51-Ea-arZ" id="lFw-J7-1pj"/>
+                        <outlet property="webView" destination="B6C-Kv-5E2" id="iXN-xE-uj6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ha2-pR-CGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5016" y="-2180"/>
+        </scene>
+        <!--Social Table-->
+        <scene sceneID="ADa-Op-jIN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NL-Tc-saR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="I1h-Ld-5Xa"/>
+                <tableViewController title="Social Table" id="03b-bX-8R1" customClass="SFUSocialTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="op6-TW-E7s">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="OcW-Cm-4OL">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="3j6-7H-sbJ" imageView="kl2-pg-nKN" style="IBUITableViewCellStyleDefault" id="ZnJ-NA-sUB" userLabel="Cell2">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZnJ-NA-sUB" id="TK9-ZE-H98">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3j6-7H-sbJ">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="facebook_icon.png" id="kl2-pg-nKN">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NHR-SE-FGn" kind="showDetail" id="RHD-ld-aZz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="2uj-R2-oc0" imageView="SjQ-Cl-eIy" style="IBUITableViewCellStyleDefault" id="BHP-Wy-BcU" userLabel="Cell2">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BHP-Wy-BcU" id="8Kz-MQ-tKK">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2uj-R2-oc0">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="twitter_icon.png" id="SjQ-Cl-eIy">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nh4-TO-IQQ" kind="showDetail" id="ohr-zo-dtA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="03b-bX-8R1" id="YcF-wQ-mKC"/>
+                            <outlet property="delegate" destination="03b-bX-8R1" id="IHI-p8-qhs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Social" id="7Jt-uX-zK7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gM1-5e-nbq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="otherModel" destination="I1h-Ld-5Xa" id="Q6o-y4-IHw"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2238" y="-3076"/>
+        </scene>
+        <!--SFU Twitter-->
+        <scene sceneID="7Tf-H9-KAk">
+            <objects>
+                <tableViewController title="SFU Twitter" id="Rvs-zT-wZ6" customClass="SFUTwitterController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r3S-xN-Cur">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="a9A-cA-Ox1" imageView="sd4-nV-YqU" style="IBUITableViewCellStyleDefault" id="0rj-dp-yHI">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rj-dp-yHI" id="lUx-EW-WUo">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a9A-cA-Ox1">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon" id="sd4-nV-YqU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xlk-at-zxH" kind="showDetail" id="Rjm-b5-Gox"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rvs-zT-wZ6" id="QHP-zT-XgN"/>
+                            <outlet property="delegate" destination="Rvs-zT-wZ6" id="VNb-VX-XeS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SFU Twitter" id="RFA-at-DBK"/>
+                    <connections>
+                        <outlet property="model" destination="ZXB-HY-E1T" id="jyX-cB-syj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3g7-k6-pWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ZXB-HY-E1T" customClass="SFUTwitterModel"/>
+            </objects>
+            <point key="canvasLocation" x="3414" y="-4340"/>
+        </scene>
+        <!--SFU Twitter Nav-->
+        <scene sceneID="UUY-Bf-ZGH">
+            <objects>
+                <navigationController title="SFU Twitter Nav" id="nh4-TO-IQQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Njh-uQ-uSl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rvs-zT-wZ6" kind="relationship" relationship="rootViewController" id="t3o-rQ-iml"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajw-9c-Dmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2598" y="-4340"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="57" height="57"/>
+        <image name="facebook_icon.png" width="128" height="128"/>
+        <image name="twitter_icon.png" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="o0B-ml-VMf"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
+</document>

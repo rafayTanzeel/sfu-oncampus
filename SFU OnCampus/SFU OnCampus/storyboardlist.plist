@@ -7,44 +7,66 @@
 		<string>Library</string>
 		<key>path</key>
 		<string>Library</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Weather</string>
-		<key>path</key>
-		<string>Weather</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>News</string>
-		<key>path</key>
-		<string>News</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Social</string>
-		<key>path</key>
-		<string>Social</string>
+        <key>image</key>
+        <string>journal.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Map</string>
 		<key>path</key>
 		<string>Map</string>
+        <key>image</key>
+        <string>map.png</string>
 	</dict>
-	<dict>
-		<key>title</key>
-		<string>QRScan</string>
-		<key>path</key>
-		<string>QRScan</string>
-	</dict>
+    
+    <dict>
+        <key>title</key>
+        <string>News</string>
+        <key>path</key>
+        <string>News</string>
+        <key>image</key>
+        <string>news.png</string>
+    </dict>
+	
 	<dict>
 		<key>title</key>
 		<string>Social</string>
 		<key>path</key>
 		<string>Social</string>
-		<key>img</key>
-		<string>networking</string>
+		<key>image</key>
+		<string>networking.png</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Student Services</string>
+		<key>path</key>
+		<string>Student Services</string>
+		<key>image</key>
+		<string>student_services.png</string>
+	</dict>
+    <dict>
+        <key>title</key>
+        <string>Transit</string>
+        <key>path</key>
+        <string>Transit</string>
+        <key>image</key>
+        <string>bus.png</string>
+    </dict>
+    <dict>
+        <key>title</key>
+        <string>Weather</string>
+        <key>path</key>
+        <string>Weather</string>
+        <key>image</key>
+        <string>weather.png</string>
+    </dict>
+    <dict>
+        <key>title</key>
+        <string>SFU Points</string>
+        <key>path</key>
+        <string>Loyalty</string>
+        <key>image</key>
+        <string>credit.png</string>
+    </dict>
 </array>
 </plist>

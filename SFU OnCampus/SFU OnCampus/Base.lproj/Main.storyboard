@@ -104,6 +104,7 @@
         <scene sceneID="XMl-EQ-7S8">
             <objects>
                 <splitViewController id="GtR-VR-XzP" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <segue destination="4Sj-YX-8aj" kind="relationship" relationship="masterViewController" id="mzg-tU-9hI"/>
                         <segue destination="SdC-01-Yrf" kind="relationship" relationship="detailViewController" id="BVZ-qy-7Cl"/>

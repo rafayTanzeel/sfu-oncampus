@@ -50,9 +50,9 @@
 		5D010CE71AAD6A4A005CC0D2 /* networking.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CDE1AAD6A4A005CC0D2 /* networking.png */; };
 		5D010CE81AAD6A4A005CC0D2 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CDF1AAD6A4A005CC0D2 /* news.png */; };
 		5D010CE91AAD6A4A005CC0D2 /* news.psd in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE01AAD6A4A005CC0D2 /* news.psd */; };
-		5D010CEA1AAD6A4A005CC0D2 /* sfu points.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE11AAD6A4A005CC0D2 /* sfu points.png */; };
-		5D010CEB1AAD6A4A005CC0D2 /* student services.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE21AAD6A4A005CC0D2 /* student services.png */; };
-		5D010CEC1AAD6A4A005CC0D2 /* weather icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE31AAD6A4A005CC0D2 /* weather icon.png */; };
+		5D010CEA1AAD6A4A005CC0D2 /* credit.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE11AAD6A4A005CC0D2 /* credit.png */; };
+		5D010CEB1AAD6A4A005CC0D2 /* student_services.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE21AAD6A4A005CC0D2 /* student_services.png */; };
+		5D010CEC1AAD6A4A005CC0D2 /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE31AAD6A4A005CC0D2 /* weather.png */; };
 		5D010CED1AAD6A4A005CC0D2 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CE41AAD6A4A005CC0D2 /* youtube.png */; };
 		5D010D001AAD6BA8005CC0D2 /* facebook_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CEF1AAD6BA8005CC0D2 /* facebook_icon.png */; };
 		5D010D011AAD6BA8005CC0D2 /* sfu-tw-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D010CF01AAD6BA8005CC0D2 /* sfu-tw-icon.jpg */; };
@@ -77,7 +77,7 @@
 		5D11B5B81AABE232000DBC1B /* 1373715942.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B31AABE232000DBC1B /* 1373715942.png */; };
 		5D11B5B91AABE232000DBC1B /* bus-43990_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B41AABE232000DBC1B /* bus-43990_1280.png */; };
 		5D11B5BA1AABE232000DBC1B /* clapboard-311208_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B51AABE232000DBC1B /* clapboard-311208_1280.png */; };
-		5D11B5BB1AABE232000DBC1B /* Journal_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B61AABE232000DBC1B /* Journal_Icon.png */; };
+		5D11B5BB1AABE232000DBC1B /* journal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B61AABE232000DBC1B /* journal.png */; };
 		5D11B5BC1AABE232000DBC1B /* news-97862_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B71AABE232000DBC1B /* news-97862_1280.png */; };
 		5DDC257A1AAD041900243DB4 /* SFUFacebookURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25791AAD041900243DB4 /* SFUFacebookURLs.plist */; };
 		5DDC257C1AAD048400243DB4 /* sfu-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC257B1AAD048400243DB4 /* sfu-fb-icon.jpg */; };
@@ -202,9 +202,9 @@
 		5D010CDE1AAD6A4A005CC0D2 /* networking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = networking.png; sourceTree = "<group>"; };
 		5D010CDF1AAD6A4A005CC0D2 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		5D010CE01AAD6A4A005CC0D2 /* news.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = news.psd; sourceTree = "<group>"; };
-		5D010CE11AAD6A4A005CC0D2 /* sfu points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sfu points.png"; sourceTree = "<group>"; };
-		5D010CE21AAD6A4A005CC0D2 /* student services.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "student services.png"; sourceTree = "<group>"; };
-		5D010CE31AAD6A4A005CC0D2 /* weather icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather icon.png"; sourceTree = "<group>"; };
+		5D010CE11AAD6A4A005CC0D2 /* credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit.png; sourceTree = "<group>"; };
+		5D010CE21AAD6A4A005CC0D2 /* student_services.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student_services.png; sourceTree = "<group>"; };
+		5D010CE31AAD6A4A005CC0D2 /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
 		5D010CE41AAD6A4A005CC0D2 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		5D010CEF1AAD6BA8005CC0D2 /* facebook_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon.png; sourceTree = "<group>"; };
 		5D010CF01AAD6BA8005CC0D2 /* sfu-tw-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfu-tw-icon.jpg"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		5D11B5B31AABE232000DBC1B /* 1373715942.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1373715942.png; sourceTree = "<group>"; };
 		5D11B5B41AABE232000DBC1B /* bus-43990_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-43990_1280.png"; sourceTree = "<group>"; };
 		5D11B5B51AABE232000DBC1B /* clapboard-311208_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clapboard-311208_1280.png"; sourceTree = "<group>"; };
-		5D11B5B61AABE232000DBC1B /* Journal_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Journal_Icon.png; sourceTree = "<group>"; };
+		5D11B5B61AABE232000DBC1B /* journal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = journal.png; sourceTree = "<group>"; };
 		5D11B5B71AABE232000DBC1B /* news-97862_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news-97862_1280.png"; sourceTree = "<group>"; };
 		5DDC25791AAD041900243DB4 /* SFUFacebookURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUFacebookURLs.plist; sourceTree = "<group>"; };
 		5DDC257B1AAD048400243DB4 /* sfu-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfu-fb-icon.jpg"; sourceTree = "<group>"; };
@@ -417,9 +417,9 @@
 				5D010CDE1AAD6A4A005CC0D2 /* networking.png */,
 				5D010CDF1AAD6A4A005CC0D2 /* news.png */,
 				5D010CE01AAD6A4A005CC0D2 /* news.psd */,
-				5D010CE11AAD6A4A005CC0D2 /* sfu points.png */,
-				5D010CE21AAD6A4A005CC0D2 /* student services.png */,
-				5D010CE31AAD6A4A005CC0D2 /* weather icon.png */,
+				5D010CE11AAD6A4A005CC0D2 /* credit.png */,
+				5D010CE21AAD6A4A005CC0D2 /* student_services.png */,
+				5D010CE31AAD6A4A005CC0D2 /* weather.png */,
 				5D010CE41AAD6A4A005CC0D2 /* youtube.png */,
 				5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */,
 				5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */,
@@ -436,7 +436,7 @@
 				5D11B5B31AABE232000DBC1B /* 1373715942.png */,
 				5D11B5B41AABE232000DBC1B /* bus-43990_1280.png */,
 				5D11B5B51AABE232000DBC1B /* clapboard-311208_1280.png */,
-				5D11B5B61AABE232000DBC1B /* Journal_Icon.png */,
+				5D11B5B61AABE232000DBC1B /* journal.png */,
 				5D11B5B71AABE232000DBC1B /* news-97862_1280.png */,
 				5DDC257B1AAD048400243DB4 /* sfu-fb-icon.jpg */,
 			);
@@ -718,7 +718,7 @@
 				5D010CED1AAD6A4A005CC0D2 /* youtube.png in Resources */,
 				040DC4EB1AACFCAF003A713F /* mostly_clear.png in Resources */,
 				04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */,
-				5D010CEC1AAD6A4A005CC0D2 /* weather icon.png in Resources */,
+				5D010CEC1AAD6A4A005CC0D2 /* weather.png in Resources */,
 				F83872131ABA8B37003CF26E /* storyboardlist.plist in Resources */,
 				5DDC258E1AAD0B2500243DB4 /* sfuscience-fb-icon.jpg in Resources */,
 				F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */,
@@ -728,7 +728,7 @@
 				5DDC257A1AAD041900243DB4 /* SFUFacebookURLs.plist in Resources */,
 				5D010CE51AAD6A4A005CC0D2 /* bus.png in Resources */,
 				F1517B2F1AB5380500863E16 /* SFUTransitScienceRd.plist in Resources */,
-				5D010CEA1AAD6A4A005CC0D2 /* sfu points.png in Resources */,
+				5D010CEA1AAD6A4A005CC0D2 /* credit.png in Resources */,
 				5D010D0B1AAD6BA8005CC0D2 /* sfuresidence-tw-icon.jpg in Resources */,
 				5D11B5AF1AABBB31000DBC1B /* forum_icon.png in Resources */,
 				040DC4EE1AACFCAF003A713F /* mostly_sunny.png in Resources */,
@@ -737,7 +737,7 @@
 				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
 				5DDC25861AAD099700243DB4 /* sfuenglish-fb-icon.jpg in Resources */,
 				5D010CE71AAD6A4A005CC0D2 /* networking.png in Resources */,
-				5D010CEB1AAD6A4A005CC0D2 /* student services.png in Resources */,
+				5D010CEB1AAD6A4A005CC0D2 /* student_services.png in Resources */,
 				5D010D051AAD6BA8005CC0D2 /* sfucoop-tw-icon.jpg in Resources */,
 				5D010D0C1AAD6BA8005CC0D2 /* sfuscience-tw-icon.jpg in Resources */,
 				5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */,
@@ -758,7 +758,7 @@
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
 				040DC4E91AACFCAF003A713F /* mist_d.png in Resources */,
 				040DC4EA1AACFCAF003A713F /* mist_n.png in Resources */,
-				5D11B5BB1AABE232000DBC1B /* Journal_Icon.png in Resources */,
+				5D11B5BB1AABE232000DBC1B /* journal.png in Resources */,
 				5DDC25921AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg in Resources */,
 				040DC4ED1AACFCAF003A713F /* mostly_cloudy_n.png in Resources */,
 				040DC4EF1AACFCAF003A713F /* rain_dn.png in Resources */,

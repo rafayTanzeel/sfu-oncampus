@@ -134,7 +134,6 @@
 		F81D7EDD1ABAD504004AC1E5 /* MapHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */; };
 		F83871F91ABA856F003CF26E /* Loyalty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871F71ABA856F003CF26E /* Loyalty.storyboard */; };
 		F83871FC1ABA8587003CF26E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871FA1ABA8587003CF26E /* Weather.storyboard */; };
-		F83871FF1ABA8607003CF26E /* Main(old).storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871FD1ABA8607003CF26E /* Main(old).storyboard */; };
 		F83872021ABA8642003CF26E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83872001ABA8642003CF26E /* Social.storyboard */; };
 		F83872051ABA8712003CF26E /* Student Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83872031ABA8712003CF26E /* Student Services.storyboard */; };
 		F83872081ABA8799003CF26E /* Transit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83872061ABA8799003CF26E /* Transit.storyboard */; };
@@ -844,7 +843,6 @@
 				040DC4F31AACFCAF003A713F /* unknown.png in Resources */,
 				5D010D031AAD6BA8005CC0D2 /* sfubeedie-tw-icon.jpg in Resources */,
 				5D010CE81AAD6A4A005CC0D2 /* news.png in Resources */,
-				F83871FF1ABA8607003CF26E /* Main(old).storyboard in Resources */,
 				040DC4E11AACFCAF003A713F /* chanceofsnow_n.png in Resources */,
 				5D010CED1AAD6A4A005CC0D2 /* youtube.png in Resources */,
 				040DC4EB1AACFCAF003A713F /* mostly_clear.png in Resources */,

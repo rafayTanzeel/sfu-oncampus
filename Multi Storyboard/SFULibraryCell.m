@@ -72,7 +72,7 @@
     }
     
     const float intensityShift =0.9;
-    const float redShift = .1; // cause red to occur faster, so it's not just orange until it's so small it isn't visible.
+    const float redShift = .05; // cause red to occur faster, so it's not just orange until it's so small it isn't visible.
     
     //cause progress to make the bars converge on yellow
     float r = 2*(1.0- progress +redShift);

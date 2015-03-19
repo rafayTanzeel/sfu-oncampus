@@ -76,7 +76,7 @@
     
     //cause progress to make the bars converge on yellow
     float r = 2*(1.0- progress +redShift);
-    float g = 2.0*(progress -redShift);
+    float g = 2.5*(progress -redShift);
     
     
     //The blue portion makes up 1/3 of the color space

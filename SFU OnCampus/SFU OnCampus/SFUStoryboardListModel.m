@@ -61,5 +61,17 @@
     return [d objectForKey:@"viewid"];
 }
 
+-(id)parameterForIndex:(NSUInteger)idx
+{
+    NSDictionary* d = [array objectAtIndex:idx];
+    return [d objectForKey:@"param"];
+}
+
+-(NSString*)selectorForIndex:(NSUInteger)idx;
+{
+    NSDictionary* d = [array objectAtIndex:idx];
+    return [d objectForKey:@"sel"];
+}
+
 
 @end

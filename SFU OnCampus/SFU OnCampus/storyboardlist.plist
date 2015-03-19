@@ -7,27 +7,25 @@
 		<string>Library</string>
 		<key>path</key>
 		<string>Library</string>
-        <key>image</key>
-        <string>journal.png</string>
+		<key>image</key>
+		<string>journal.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>Map</string>
 		<key>path</key>
 		<string>Map</string>
-        <key>image</key>
-        <string>map.png</string>
+		<key>image</key>
+		<string>map.png</string>
 	</dict>
-    
-    <dict>
-        <key>title</key>
-        <string>News</string>
-        <key>path</key>
-        <string>News</string>
-        <key>image</key>
-        <string>news.png</string>
-    </dict>
-	
+	<dict>
+		<key>title</key>
+		<string>News</string>
+		<key>path</key>
+		<string>News</string>
+		<key>image</key>
+		<string>news.png</string>
+	</dict>
 	<dict>
 		<key>title</key>
 		<string>Social</string>
@@ -44,30 +42,41 @@
 		<key>image</key>
 		<string>student_services.png</string>
 	</dict>
-    <dict>
-        <key>title</key>
-        <string>Transit</string>
-        <key>path</key>
-        <string>Transit</string>
-        <key>image</key>
-        <string>bus.png</string>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>Weather</string>
-        <key>path</key>
-        <string>Weather</string>
-        <key>image</key>
-        <string>weather.png</string>
-    </dict>
-    <dict>
-        <key>title</key>
-        <string>SFU Points</string>
-        <key>path</key>
-        <string>Loyalty</string>
-        <key>image</key>
-        <string>credit.png</string>
-    </dict>
-
+	<dict>
+		<key>title</key>
+		<string>Transit</string>
+		<key>path</key>
+		<string>Transit</string>
+		<key>image</key>
+		<string>bus.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Weather</string>
+		<key>path</key>
+		<string>Weather</string>
+		<key>image</key>
+		<string>weather.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Points</string>
+		<key>path</key>
+		<string>Loyalty</string>
+		<key>image</key>
+		<string>credit.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Dining Options</string>
+		<key>path</key>
+		<string>WebView</string>
+		<key>image</key>
+		<string>credit.png</string>
+		<key>sel</key>
+		<string>displayPageForURLString:</string>
+		<key>param</key>
+		<string>http://www.dineOnCampus.ca/SFU</string>
+	</dict>
 </array>
 </plist>

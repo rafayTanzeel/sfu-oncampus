@@ -184,6 +184,24 @@
                                             <segue destination="Rvs-zT-wZ6" kind="show" id="45u-Gx-GPz"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="IxP-6m-wj0" imageView="TC2-HD-udJ" style="IBUITableViewCellStyleDefault" id="cnj-Oc-Q2T">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cnj-Oc-Q2T" id="5hJ-MK-lmO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Youtube" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IxP-6m-wj0">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="appicon.jpg" id="TC2-HD-udJ">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -249,9 +267,52 @@
             </objects>
             <point key="canvasLocation" x="3270" y="-2712"/>
         </scene>
+        <!--SFU Yputube-->
+        <scene sceneID="ZcH-NV-J79">
+            <objects>
+                <tableViewController title="SFU Yputube" id="xEw-I5-HfL" customClass="SFUTwitterController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xOv-We-ROR">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="nRO-jX-KKX" imageView="63c-Ro-x1k" style="IBUITableViewCellStyleDefault" id="T5S-ub-VX6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T5S-ub-VX6" id="eUy-Oa-CQJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nRO-jX-KKX">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon" id="63c-Ro-x1k">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xEw-I5-HfL" id="QgL-RZ-fvE"/>
+                            <outlet property="delegate" destination="xEw-I5-HfL" id="wK2-rd-6na"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SFU Twitter" id="saG-r9-Ru0"/>
+                    <connections>
+                        <outlet property="model" destination="ZXB-HY-E1T" id="r0p-87-nck"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5c-AB-OJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wBc-iU-qMC" customClass="SFUTwitterModel"/>
+            </objects>
+            <point key="canvasLocation" x="3262" y="-2000"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Icon" width="57" height="57"/>
+        <image name="appicon.jpg" width="512" height="512"/>
         <image name="facebook_icon.png" width="128" height="128"/>
         <image name="twitter_icon.png" width="128" height="128"/>
     </resources>

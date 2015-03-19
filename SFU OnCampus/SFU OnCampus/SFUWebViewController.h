@@ -27,4 +27,5 @@
  @param showInApp ignored
  */
 -(void)displayPageForURL:(NSURL*)url inApp:(BOOL)showInApp;
+-(void)displayPageForURL:(NSURL*)url;
 @end

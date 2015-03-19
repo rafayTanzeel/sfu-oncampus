@@ -58,12 +58,22 @@
 //    self.defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
 }
 
+-(void)displayPageForURLString:(NSString*)url
+{
+    NSURL* lurl = [NSURL URLWithString:url];
+    [self displayPageForURL:lurl];
+}
+
+-(void)displayPageForURL:(NSURL*)url
+{
+    [self displayPageForURL:url inApp:YES];
+}
 -(void)displayPageForURL:(NSURL*)url inApp:(BOOL)showInApp
 {
     //Web view is not available at this point so store the url to be used until the view is acutally loaded
     NSLog(@"Should display request");
     self.startURL = url;
-    
+    [ self.webView loadRequest: [NSURLRequest requestWithURL:self.startURL]];
     
 }
 

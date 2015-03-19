@@ -132,6 +132,8 @@
 		F81D7ED91ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */; };
 		F81D7EDA1ABAD219004AC1E5 /* AQ3000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F81D7ECC1ABAD219004AC1E5 /* AQ3000.jpg */; };
 		F81D7EDD1ABAD504004AC1E5 /* MapHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */; };
+		F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */; };
+		F81D7EE41ABAEDDA004AC1E5 /* floorplans.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */; };
 		F83871F91ABA856F003CF26E /* Loyalty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871F71ABA856F003CF26E /* Loyalty.storyboard */; };
 		F83871FC1ABA8587003CF26E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871FA1ABA8587003CF26E /* Weather.storyboard */; };
 		F83872021ABA8642003CF26E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83872001ABA8642003CF26E /* Social.storyboard */; };
@@ -328,6 +330,8 @@
 		F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
 		F81D7ECC1ABAD219004AC1E5 /* AQ3000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AQ3000.jpg; sourceTree = "<group>"; };
 		F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MapHelp.html; sourceTree = "<group>"; };
+		F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildingData.plist; sourceTree = "<group>"; };
+		F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = floorplans.plist; sourceTree = "<group>"; };
 		F83871F81ABA856F003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Loyalty.storyboard"; sourceTree = "<group>"; };
 		F83871FB1ABA8587003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weather.storyboard; sourceTree = "<group>"; };
 		F83871FE1ABA8607003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main(old).storyboard"; sourceTree = "<group>"; };
@@ -660,6 +664,8 @@
 		F81D7EE01ABAD594004AC1E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */,
+				F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */,
 				F83872121ABA8B37003CF26E /* storyboardlist.plist */,
 				04715A2F1A9FEBDA004F242B /* weatherIcons.plist */,
 				5D010CFE1AAD6BA8005CC0D2 /* SFUTwitterURLs.plist */,
@@ -709,10 +715,10 @@
 		F83871F61ABA84EC003CF26E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F838720F1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.h */,
 				F838720C1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.m */,
 				F838720D1ABA8A2A003CF26E /* SFUStoryboardListModel.h */,
 				F838720E1ABA8A2A003CF26E /* SFUStoryboardListModel.m */,
-				F838720F1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.h */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
 				F808D8131A95CFA90006FC17 /* AppDelegate.m */,
 				F808D8151A95CFA90006FC17 /* MasterViewController.h */,
@@ -872,6 +878,7 @@
 				5D010D0C1AAD6BA8005CC0D2 /* sfuscience-tw-icon.jpg in Resources */,
 				5D11B5B11AABBBD0000DBC1B /* canvas_icon.png in Resources */,
 				040DC4E01AACFCAF003A713F /* chanceofsnow_d.png in Resources */,
+				F81D7EE41ABAEDDA004AC1E5 /* floorplans.plist in Resources */,
 				F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */,
 				F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */,
 				F83872021ABA8642003CF26E /* Social.storyboard in Resources */,
@@ -889,6 +896,7 @@
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
 				040DC4E91AACFCAF003A713F /* mist_d.png in Resources */,
 				040DC4EA1AACFCAF003A713F /* mist_n.png in Resources */,
+				F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */,
 				5D11B5BB1AABE232000DBC1B /* journal.png in Resources */,
 				5DDC25921AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg in Resources */,
 				040DC4ED1AACFCAF003A713F /* mostly_cloudy_n.png in Resources */,

@@ -108,7 +108,14 @@ SFUStoryboardListModel* model;
     [n setViewControllers:a];
     controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     controller.navigationItem.leftItemsSupplementBackButton = YES;
-
+    
+    SEL f = NSSelectorFromString([model selectorForIndex:indexPath.row]);
+    id param = [model parameterForIndex:indexPath.row];
+    
+    if([controller respondsToSelector:f])
+    {
+    [controller performSelector:f withObject:param];
+    }
   
 }
 - (void)setDetailItem:(id)newDetailItem {

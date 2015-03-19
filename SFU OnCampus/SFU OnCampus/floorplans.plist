@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>requiresLogin</key>
+		<false/>
+		<key>displayName</key>
+		<string>Burnaby Campus</string>
+		<key>pages</key>
+		<array>
+			<dict>
+				<key>image</key>
+				<string>Burnaby_Campus.jpg</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>requiresLogin</key>
+		<true/>
+		<key>displayName</key>
+		<string>AQ (Academic Quadrangle)</string>
+		<key>preferedPage</key>
+		<string>3000</string>
+		<key>pages</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>1000</string>
+				<key>image</key>
+				<string>AQ3000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>2000</string>
+				<key>image</key>
+				<string>AQ2000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>3000</string>
+				<key>image</key>
+				<string>AQ3000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>4000</string>
+				<key>image</key>
+				<string>AQ4000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>5000</string>
+				<key>image</key>
+				<string>AQ5000.jpg</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

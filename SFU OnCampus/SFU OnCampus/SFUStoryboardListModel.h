@@ -15,6 +15,10 @@
 -(NSString*) titleStringForIndex:(NSUInteger)idx;
 -(NSString*) imageNameForIndex:(NSUInteger) idx;
 -(NSString*) targetViewStringForIndex:(NSUInteger)idx;
+
+-(NSString*)selectorForIndex:(NSUInteger)idx;
+-(id)parameterForIndex:(NSUInteger)idx;
+
 -(void)initWithPlist:(NSString*) plist;
 
 @end

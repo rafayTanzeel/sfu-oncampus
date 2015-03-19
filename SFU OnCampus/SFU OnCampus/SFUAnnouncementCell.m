@@ -35,7 +35,7 @@
     self.announcementView.layer.cornerRadius = 1;
     self.announcementView.layer.shadowOffset = CGSizeMake(-.2f, .2f); 
     self.announcementView.layer.shadowRadius = 1; 
-    self.announcementView.layer.shadowOpacity = 2; 
+    self.announcementView.layer.shadowOpacity = 1;
     
     // Lowers the performance required to build shadows
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.announcementView.bounds];

@@ -182,26 +182,12 @@ NSDictionary *laptops;
         // Set library name
         cell.libraryName.text = @"SFU Burnaby";
         
-        // Library Hours
-        NSString *open = [burnabyHours valueForKey:@"open_time"];
-        NSString *close = [burnabyHours valueForKey:@"close_time"];
-        NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
-        cell.hours.text = hours;
+        // Library Hours, open status
+        [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:burnabyHours];
         
         // Computer availability label, available label, in use label
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
-        
-        // Library Status (open or closed)
-        NSNumber *status = [burnabyHours valueForKey:@"in_range"];
-        if ([status integerValue] == 1) {
-            cell.libraryStatus.text = @"OPEN";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
-        }
-        else {
-            cell.libraryStatus.text = @"CLOSED";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
-        }
         
         // Computer availability for each location
         
@@ -229,7 +215,6 @@ NSDictionary *laptops;
         // Laptops
         [cell updateComputerAvaiability:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight locationName:@"Laptops" locationValue:@"ben-checkout-laptops" progressBar:cell.progressEight withDictionary:computers];
         
-        
         return cell;
     }
     
@@ -243,27 +228,13 @@ NSDictionary *laptops;
         // Set library name
         cell.libraryName.text = @"SFU Surrey";
         
-        // Library Hours
-        NSString *open = [surreyHours valueForKey:@"open_time"];
-        NSString *close = [surreyHours valueForKey:@"close_time"];
-        NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
-        cell.hours.text = hours;
+        // Library Hours, open status
+        [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:surreyHours];
         
         // Computer availability label, available label, in use label
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
-        
-        // Library Status
-        NSNumber *status = [surreyHours valueForKey:@"in_range"];
-        if ([status integerValue] == 1) {
-            cell.libraryStatus.text = @"OPEN";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
-        }
-        else {
-            cell.libraryStatus.text = @"CLOSED";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
-        }
-        
+
         // Computer availability for each location
         
         // PCs
@@ -298,30 +269,15 @@ NSDictionary *laptops;
         // Set library name
         cell.libraryName.text = @"SFU Harbour Center";
         
-        // Library Hours
-        NSString *open = [vancouverHours valueForKey:@"open_time"];
-        NSString *close = [vancouverHours valueForKey:@"close_time"];
-        NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
-        cell.hours.text = hours;
+        // Library Hours, open status
+        [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:vancouverHours];
         
         // Computer availability label, available label, in use label
         cell.availabilityLabel.text = @"Computer Availability";
         cell.available.text = @"available";
         
-        // Library Status
-        NSNumber *status = [vancouverHours valueForKey:@"in_range"];
-        if ([status integerValue] == 1) {
-            cell.libraryStatus.text = @"OPEN";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
-        }
-        else {
-            cell.libraryStatus.text = @"CLOSED";
-            cell.libraryStatus.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
-        }
-        
         // Computer availability for each location
         
-        // PCs
         [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Library Computers" locationValue:@"bel-pc" progressBar:cell.progressOne withDictionary:computers];
         
         // Empty the rest of the values

@@ -17,7 +17,7 @@
  */
 @interface SFULibraryCell : UITableViewCell
 
- /**
+/**
  * Updates information for the computer availability for each location of each library
  * Uses SFU Library API to determine availability.
  *
@@ -31,7 +31,18 @@
  */
 - (void)updateComputerAvaiability:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location locationName: (NSString*) name locationValue:(NSString*) value progressBar:(UIProgressView*) progressView withDictionary:(NSDictionary*) d;
 
- /**
+/**
+ * Updates the library hours label and the library status label, and sets the status label
+ * to the correct colour - red if closed, green if open. Uses the "in_range" key returned
+ * by the API to determine if the library is open.
+ *
+ * @param hours         label representing the hours the library is open
+ * @param status		label representing the open / closed status of the library
+ * @param d 			dictionary returned by API containing all hours information
+ */
+-(void)updateLibraryStatusLabels:(UILabel*) hours status:(UILabel*) status withDictionary:(NSDictionary*) d;
+
+/**
  * Sets any text that is not needed for a library to empty and sets the progress bars to a clear colour.
  * The SFULibraryCell was built to have enough information for all locations of SFU Burnaby; SFU Surrey and SFU Vancouver
  * do not require as much information. So to hide these excess labels, they are made invisibile.

@@ -55,18 +55,46 @@
     NSDictionary *totals = [d valueForKey:@"totals"];
     NSString *numberTotal = [totals valueForKey:value];
     
-    NSInteger integerAvailable = [numberTotal integerValue] - [numberAvailable integerValue];
+    NSInteger numberInUse = [numberTotal integerValue] - [numberAvailable integerValue];
     
     // Set computers available
     available.text = numberAvailable;
-    inUse.text = [NSString stringWithFormat:@"%ld", (long)integerAvailable];
+    inUse.text = [NSString stringWithFormat:@"%ld", (long)numberInUse];
     
     // Calulate progress
-    float progress = [numberAvailable floatValue] / [numberTotal floatValue];
+    float progress;
+
+    if ([numberAvailable integerValue] != 0) {
+        progress = [numberAvailable floatValue] / [numberTotal floatValue];
+    }
+    else {
+        progress = 0.0;
+    }
+    
     
     // Set progress
     [progressView setProgress:progress];
     
+}
+
+-(void)updateLibraryStatusLabels:(UILabel*) hoursLabel status:(UILabel*) statusLabel withDictionary:(NSDictionary*) d
+{
+    // Library Hours
+    NSString *open = [d valueForKey:@"open_time"];
+    NSString *close = [d valueForKey:@"close_time"];
+    NSString *hours = [NSString stringWithFormat:@"%@ - %@", open, close];
+    hoursLabel.text = hours;
+    
+    // Library Status (open or closed)
+    NSNumber *status = [d valueForKey:@"in_range"];
+    if ([status integerValue] == 1) {
+        statusLabel.text = @"OPEN";
+        statusLabel.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
+    }
+    else {
+        statusLabel.text = @"CLOSED";
+        statusLabel.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
+    }
 }
 
 -(void)emptyComputerLabels:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location progressBar:(UIProgressView*) progressView

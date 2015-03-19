@@ -112,6 +112,7 @@
 		F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F808D81E1A95CFA90006FC17 /* Images.xcassets */; };
 		F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F808D8201A95CFA90006FC17 /* LaunchScreen.xib */; };
 		F808D82E1A95CFA90006FC17 /* SFU_OnCampusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */; };
+		F8189DD11ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8189DD01ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m */; };
 		F81D7EA61ABACB8E004AC1E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D7EA51ABACB8E004AC1E5 /* MapKit.framework */; };
 		F81D7EA81ABACBC3004AC1E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D7EA71ABACBC3004AC1E5 /* CoreLocation.framework */; };
 		F81D7EAC1ABACFF3004AC1E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D7EAB1ABACFF3004AC1E5 /* AVFoundation.framework */; };
@@ -297,6 +298,9 @@
 		F808D8271A95CFA90006FC17 /* SFU OnCampusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SFU OnCampusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D82C1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F808D82D1A95CFA90006FC17 /* SFU_OnCampusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFU_OnCampusTests.m; sourceTree = "<group>"; };
+		F8189DCF1ABB7E6E008A9A9D /* SFULoyaltyCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULoyaltyCardViewController.h; sourceTree = "<group>"; };
+		F8189DD01ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULoyaltyCardViewController.m; sourceTree = "<group>"; };
+		F8189DD21ABB801D008A9A9D /* SFUQRCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUQRCaptureDelegate.h; sourceTree = "<group>"; };
 		F81D7EA51ABACB8E004AC1E5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F81D7EA71ABACBC3004AC1E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F81D7EA91ABACBCB004AC1E5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -657,6 +661,9 @@
 				F81D7EC21ABAD219004AC1E5 /* SFUQRCaptureViewController.h */,
 				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
 				F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */,
+				F8189DCF1ABB7E6E008A9A9D /* SFULoyaltyCardViewController.h */,
+				F8189DD01ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m */,
+				F8189DD21ABB801D008A9A9D /* SFUQRCaptureDelegate.h */,
 			);
 			name = Loyalty;
 			sourceTree = "<group>";
@@ -979,6 +986,7 @@
 				04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */,
 				F81D7ED31ABAD219004AC1E5 /* SFUMapModel.m in Sources */,
 				F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */,
+				F8189DD11ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m in Sources */,
 				5D010CD51AAD6039005CC0D2 /* SFUFacebookModel.m in Sources */,
 				F81D7ECD1ABAD219004AC1E5 /* SFUBuildingListViewControllerTableViewController.m in Sources */,
 				5D010CD81AAD6607005CC0D2 /* SFUTwitterController.m in Sources */,

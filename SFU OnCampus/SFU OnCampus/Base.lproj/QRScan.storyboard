@@ -7,12 +7,12 @@
         <!--Capture View Controller-->
         <scene sceneID="dtx-hC-3AN">
             <objects>
-                <viewController id="UAL-8s-qyU" customClass="SFUQRCaptureViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UAL-8s-qyU" customClass="SFUQRCaptureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7wO-Qk-Sha"/>
                         <viewControllerLayoutGuide type="bottom" id="yEa-aO-baz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Eso-nr-vvp">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Eso-nr-vvp">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,6 +23,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="KVm-LQ-bMC"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>

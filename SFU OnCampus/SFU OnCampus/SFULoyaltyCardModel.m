@@ -10,4 +10,15 @@
 
 @implementation SFULoyaltyCardModel
 
+-(NSUInteger)redeemCode:(NSString*)code
+{
+    NSUInteger redeemedValue =0;
+    NSNumber* n = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSFUPointCardBalance"];
+    NSUInteger balance = [n unsignedIntegerValue];
+    balance += redeemedValue;
+    n= [NSNumber numberWithUnsignedInteger:balance];
+    [[NSUserDefaults standardUserDefaults] setObject:n forKey:@"kSFUPointCardBalance"];
+    return balance;
+}
+
 @end

@@ -15,18 +15,21 @@
 #import "TFHpple.h"
 
 @interface SFUWeatherViewController ()
+{
+    // Global dictionary and array used for storing JSON data
+    NSMutableDictionary *currentObservation;
+    NSArray *forecastDay;
+    
+    // Strings for the announcement
+    NSString *announcementOne;
+    NSString *announcementTwo;
+}
 
 @end
 
 @implementation SFUWeatherViewController
 
-// Global dictionary and array used for storing JSON data
-NSMutableDictionary *currentObservation;
-NSArray *forecastDay;
 
-// Strings for the announcement
-NSString *announcementOne;
-NSString *announcementTwo;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

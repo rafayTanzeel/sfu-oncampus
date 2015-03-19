@@ -174,7 +174,7 @@
             <objects>
                 <tableViewController id="j2P-Uz-gdP" customClass="SFULowerLoopController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yif-1J-s9p">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -192,7 +192,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XTn-Fx-6DX" kind="showDetail" id="m6W-aU-qYD"/>
+                                    <segue destination="XTn-Fx-6DX" kind="show" id="m6W-aU-qYD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -211,28 +211,12 @@
             </objects>
             <point key="canvasLocation" x="931" y="-4534"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VqY-VD-YST">
-            <objects>
-                <navigationController id="imy-q0-qMJ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qbl-cw-p3d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="j2P-Uz-gdP" kind="relationship" relationship="rootViewController" id="RtI-Lj-qb8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-Js-WQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-53" y="-4522"/>
-        </scene>
         <!--Upper Loop-->
         <scene sceneID="Ma5-UV-i8H">
             <objects>
                 <tableViewController id="z3E-Gg-e8l" customClass="SFUUpperLoopController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nO4-pA-mMF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -250,7 +234,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XTn-Fx-6DX" kind="showDetail" id="pNg-DC-Rqp"/>
+                                    <segue destination="XTn-Fx-6DX" kind="show" id="pNg-DC-Rqp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -268,22 +252,6 @@
                 <customObject id="GCh-Mw-bks" customClass="SFUTransitModel"/>
             </objects>
             <point key="canvasLocation" x="867" y="-3770"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xnj-mP-dWb">
-            <objects>
-                <navigationController id="oje-wD-ow6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="lHT-99-FBG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="z3E-Gg-e8l" kind="relationship" relationship="rootViewController" id="ml3-02-YEc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vLS-g9-oGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="47" y="-3770"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="HxD-7T-M0S">
@@ -337,7 +305,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oje-wD-ow6" kind="showDetail" identifier="UpperLoopSegue" id="gQH-T7-apR"/>
+                                            <segue destination="j2P-Uz-gdP" kind="show" id="Fea-Lp-9Eb"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="K8S-4q-4y8" style="IBUITableViewCellStyleDefault" id="7KM-cT-ggW">
@@ -354,7 +322,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="imy-q0-qMJ" kind="showDetail" identifier="LowerLoopSegue" id="J1T-7e-7yr"/>
+                                            <segue destination="z3E-Gg-e8l" kind="show" id="sAP-XC-Lvv"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cEI-u3-AUP" style="IBUITableViewCellStyleDefault" id="s2O-ko-CLa">

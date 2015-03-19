@@ -43,15 +43,24 @@ SFUStoryboardListModel* model;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //    return self.objects.count;
-    return [model sizeOfArray];
+    return [model sizeOfArray]+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if([model sizeOfArray] == indexPath.row)
+    {
+       return [tableView dequeueReusableCellWithIdentifier:@"LogoCell" forIndexPath:indexPath];
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     //    NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = [model titleStringForIndex:indexPath.row];
     cell.imageView.image=[UIImage imageNamed: [model imageNameForIndex:indexPath.row]];
+    
+    
+    
     return cell;
 }
 

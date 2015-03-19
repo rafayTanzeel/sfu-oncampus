@@ -8,9 +8,17 @@
 
 #import "SFUTransitModel.h"
 
+@interface SFUTransitModel()
+{
+    @private
+    NSArray* array;
+}
+
+@end
+
 @implementation SFUTransitModel
 
-NSArray* array;
+
 -(SFUTransitModel*)initWithPlist: (NSString*) plistName
 {
     //This is a user defined path in interface builder

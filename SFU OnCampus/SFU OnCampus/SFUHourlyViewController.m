@@ -13,13 +13,16 @@
 #import "SFUCardCell.h"
 
 @interface SFUHourlyViewController ()
-
+{
+    @private
+    // Global array used to store JSON data from weather API
+    NSArray *hourlyWeather;
+}
 @end
 
 @implementation SFUHourlyViewController
 
-// Global array used to store JSON data from weather API
-NSArray *hourlyWeather;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

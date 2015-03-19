@@ -47,6 +47,7 @@
 		F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8EC34581AB2D26000E80555 /* Burnaby_Campus.jpg */; };
 		F8FA38211ABA5486001D3F93 /* SFUMapHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA38201ABA5486001D3F93 /* SFUMapHelpViewController.m */; };
 		F8FA38231ABA5658001D3F93 /* MapHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = F8FA38221ABA5658001D3F93 /* MapHelp.html */; };
+		F8FA38261ABA635F001D3F93 /* SFUMapHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FA38251ABA635F001D3F93 /* SFUMapHistory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		F8FA381F1ABA5486001D3F93 /* SFUMapHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapHelpViewController.h; sourceTree = "<group>"; };
 		F8FA38201ABA5486001D3F93 /* SFUMapHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapHelpViewController.m; sourceTree = "<group>"; };
 		F8FA38221ABA5658001D3F93 /* MapHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = MapHelp.html; path = MapHelp/MapHelp.html; sourceTree = "<group>"; };
+		F8FA38241ABA635F001D3F93 /* SFUMapHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUMapHistory.h; sourceTree = "<group>"; };
+		F8FA38251ABA635F001D3F93 /* SFUMapHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUMapHistory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				F8EC344F1AB2C4C000E80555 /* Map.storyboard */,
+				F8FA38241ABA635F001D3F93 /* SFUMapHistory.h */,
+				F8FA38251ABA635F001D3F93 /* SFUMapHistory.m */,
 				F8FA38221ABA5658001D3F93 /* MapHelp.html */,
 				F89580401AB5B9F100D749DC /* SFUImageMapsModel.h */,
 				F89580411AB5B9F100D749DC /* SFUImageMapsModel.m */,
@@ -413,6 +418,7 @@
 				F83A8C971AB59FA6007F134F /* SFUImageScrollerViewController.m in Sources */,
 				F89FB4781AAC56FD004E8ADC /* SFUStoryboardListTableViewController.m in Sources */,
 				F8E0DD8F1AB33930001B8840 /* SFUBuildingListViewControllerTableViewController.m in Sources */,
+				F8FA38261ABA635F001D3F93 /* SFUMapHistory.m in Sources */,
 				F82440951AB356F3006D5C8B /* SFUQRCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

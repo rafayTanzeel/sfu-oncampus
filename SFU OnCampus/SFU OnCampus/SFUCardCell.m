@@ -36,7 +36,7 @@
     self.cardView.layer.cornerRadius = 1;
     self.cardView.layer.shadowOffset = CGSizeMake(-.2f, .2f); 
     self.cardView.layer.shadowRadius = 1; 
-    self.cardView.layer.shadowOpacity = 2; 
+    self.cardView.layer.shadowOpacity = 1;
     
     // Lowers the performance required to build shadows.
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.cardView.bounds];

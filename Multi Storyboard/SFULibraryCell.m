@@ -34,7 +34,7 @@
     self.libraryView.layer.cornerRadius = 1;
     self.libraryView.layer.shadowOffset = CGSizeMake(-.2f, .2f);
     self.libraryView.layer.shadowRadius = 1;
-    self.libraryView.layer.shadowOpacity = 2;
+    self.libraryView.layer.shadowOpacity = 1;
     
     // Lowers the performance required to build shadows.
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.libraryView.bounds];

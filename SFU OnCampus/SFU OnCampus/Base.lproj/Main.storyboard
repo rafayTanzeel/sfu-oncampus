@@ -1921,7 +1921,6 @@
                                     <outlet property="dayTwo" destination="Uff-sZ-Rdf" id="FLa-jC-fpS"/>
                                     <outlet property="dayTwoHigh" destination="zvF-ao-Nqp" id="n6S-Bh-Xf4"/>
                                     <outlet property="dayTwoLow" destination="THt-1N-ChD" id="fsX-Fp-Xah"/>
-                                    <outlet property="hourlyForecastButton" destination="rHz-Z6-Pvg" id="cXW-Zg-wzv"/>
                                     <outlet property="iconDayFive" destination="Ovi-98-Pzm" id="yqo-TA-9vM"/>
                                     <outlet property="iconDayFour" destination="sVB-iq-cfL" id="8GT-sC-uTf"/>
                                     <outlet property="iconDayOne" destination="oXw-eJ-3Om" id="k9C-9f-eaW"/>

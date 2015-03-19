@@ -129,6 +129,20 @@ NSDictionary *laptops;
     }
 }
 
+- (void)refresh:(id)sender
+{
+    NSLog(@"Refreshing");
+    
+    // Refresh the data
+    [self getLibraryHours:self];
+    [self getComputerAvailability:self];
+    [self.tableView reloadData];
+    
+    // End refreshing
+     [(UIRefreshControl *)sender endRefreshing];
+    
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -137,6 +151,15 @@ NSDictionary *laptops;
     
     // Colour remains grey if user overscrolls
     self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1];
+    
+    // Initialize the refresh control.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor colorWithRed:(166/255.f) green:(25/255.f) blue:(46/255.f) alpha:1.0f];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(refresh:)
+                  forControlEvents:UIControlEventValueChanged];
+
     
     [self getLibraryHours:self];
     [self getComputerAvailability:self];

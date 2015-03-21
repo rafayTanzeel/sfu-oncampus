@@ -37,6 +37,9 @@
 		041F51F41ABA198B005E53E9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 041F51F31ABA198B005E53E9 /* libxml2.dylib */; };
 		04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* SFUHourlyViewController.m */; };
 		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
+		04E997391ABE1588000669DF /* SFULibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E997361ABE1588000669DF /* SFULibraryCell.m */; };
+		04E9973A1ABE1588000669DF /* SFULibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E997381ABE1588000669DF /* SFULibraryViewController.m */; };
+		04E9973E1ABE1CAF000669DF /* SFUBookRoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */; };
 		04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
@@ -207,6 +210,12 @@
 		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUHourlyViewController.h; path = "SFU OnCampus/SFUHourlyViewController.h"; sourceTree = "<group>"; };
 		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUHourlyViewController.m; path = "SFU OnCampus/SFUHourlyViewController.m"; sourceTree = "<group>"; };
 		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
+		04E997351ABE1588000669DF /* SFULibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryCell.h; sourceTree = "<group>"; };
+		04E997361ABE1588000669DF /* SFULibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryCell.m; sourceTree = "<group>"; };
+		04E997371ABE1588000669DF /* SFULibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryViewController.h; sourceTree = "<group>"; };
+		04E997381ABE1588000669DF /* SFULibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryViewController.m; sourceTree = "<group>"; };
+		04E9973C1ABE1CAF000669DF /* SFUBookRoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUBookRoomButton.h; sourceTree = "<group>"; };
+		04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUBookRoomButton.m; sourceTree = "<group>"; };
 		04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUWeatherViewController.m; path = "SFU OnCampus/SFUWeatherViewController.m"; sourceTree = "<group>"; };
 		04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUWeatherViewController.h; path = "SFU OnCampus/SFUWeatherViewController.h"; sourceTree = "<group>"; };
 		04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUCardCell.h; path = "SFU OnCampus/SFUCardCell.h"; sourceTree = "<group>"; };
@@ -454,6 +463,20 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		04E9973B1ABE1590000669DF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8869FAF81ABE0776007A135E /* Library.storyboard */,
+				04E997351ABE1588000669DF /* SFULibraryCell.h */,
+				04E997361ABE1588000669DF /* SFULibraryCell.m */,
+				04E997371ABE1588000669DF /* SFULibraryViewController.h */,
+				04E997381ABE1588000669DF /* SFULibraryViewController.m */,
+				04E9973C1ABE1CAF000669DF /* SFUBookRoomButton.h */,
+				04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		5D010CEE1AAD6BA8005CC0D2 /* ICONS */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +574,7 @@
 		F808D80D1A95CFA90006FC17 /* SFU OnCampus */ = {
 			isa = PBXGroup;
 			children = (
+				04E9973B1ABE1590000669DF /* Library */,
 				F81D7EDF1ABAD577004AC1E5 /* Loyalty */,
 				F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */,
 				F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */,
@@ -731,7 +755,6 @@
 			children = (
 				F838720F1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.h */,
 				F838720C1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.m */,
-				8869FAF81ABE0776007A135E /* Library.storyboard */,
 				8869FAF61ABE05BC007A135E /* Login.storyboard */,
 				F838720D1ABA8A2A003CF26E /* SFUStoryboardListModel.h */,
 				F838720E1ABA8A2A003CF26E /* SFUStoryboardListModel.m */,
@@ -987,6 +1010,7 @@
 				041F51F11ABA188F005E53E9 /* TFHppleElement.m in Sources */,
 				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
 				F81D7ED11ABAD219004AC1E5 /* SFUImageScrollerViewController.m in Sources */,
+				04E9973E1ABE1CAF000669DF /* SFUBookRoomButton.m in Sources */,
 				041F51F21ABA188F005E53E9 /* XPathQuery.m in Sources */,
 				F81D7ECF1ABAD219004AC1E5 /* SFUMapHelpViewController.m in Sources */,
 				5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */,
@@ -1018,6 +1042,8 @@
 				F81D7ED61ABAD219004AC1E5 /* SFUShortCodeComposerViewController.m in Sources */,
 				F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
+				04E997391ABE1588000669DF /* SFULibraryCell.m in Sources */,
+				04E9973A1ABE1588000669DF /* SFULibraryViewController.m in Sources */,
 				041F51F01ABA188F005E53E9 /* TFHpple.m in Sources */,
 				F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */,
 				F81D7ECE1ABAD219004AC1E5 /* SFUMapHistory.m in Sources */,

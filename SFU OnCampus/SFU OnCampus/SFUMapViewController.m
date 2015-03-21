@@ -23,7 +23,9 @@ CLLocationManager* locationManager;
     locationManager = [CLLocationManager new] ;
     locationManager.delegate = self;
     [locationManager requestAlwaysAuthorization];
-    
+#ifndef DEBUG
+    self.debugView.hidden = YES;
+#endif
     
     
     CLGeocoder* geocoder = [CLGeocoder new];

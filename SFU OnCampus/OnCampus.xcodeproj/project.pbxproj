@@ -37,6 +37,10 @@
 		041F51F41ABA198B005E53E9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 041F51F31ABA198B005E53E9 /* libxml2.dylib */; };
 		04335A901AABE929006444EF /* SFUHourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335A8F1AABE929006444EF /* SFUHourlyViewController.m */; };
 		04715A301A9FEBDA004F242B /* weatherIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04715A2F1A9FEBDA004F242B /* weatherIcons.plist */; };
+		04E997391ABE1588000669DF /* SFULibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E997361ABE1588000669DF /* SFULibraryCell.m */; };
+		04E9973A1ABE1588000669DF /* SFULibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E997381ABE1588000669DF /* SFULibraryViewController.m */; };
+		04E9973E1ABE1CAF000669DF /* SFUBookRoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */; };
+		04E997441ABE25CF000669DF /* SFULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E997431ABE25CF000669DF /* SFULoginViewController.m */; };
 		04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */; };
 		04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EEBE221A9F9E44003E1DD3 /* SFUCardCell.m */; };
 		350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BB6311A9FBB26005D8EE4 /* SFUSocialTableViewController.m */; };
@@ -93,13 +97,15 @@
 		5DDC25901AAD0B8200243DB4 /* sfuresidence-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC258F1AAD0B8200243DB4 /* sfuresidence-fb-icon.jpg */; };
 		5DDC25921AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */; };
 		5DDC25941AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */; };
+		8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF21ABDFDBA007A135E /* News.storyboard */; };
+		8869FAF71ABE05BC007A135E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF61ABE05BC007A135E /* Login.storyboard */; };
+		8869FAF91ABE0776007A135E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF81ABE0776007A135E /* Library.storyboard */; };
 		F1517B131AB4E0AD00863E16 /* SFUTransitUpperLoop.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B121AB4E0AD00863E16 /* SFUTransitUpperLoop.plist */; };
 		F1517B181AB4E69A00863E16 /* SFUUpperLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B171AB4E69A00863E16 /* SFUUpperLoopController.m */; };
 		F1517B1B1AB4E86300863E16 /* SFUTransitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B1A1AB4E86300863E16 /* SFUTransitModel.m */; };
 		F1517B1D1AB4F20000863E16 /* SFUBusDatabase.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B1C1AB4F20000863E16 /* SFUBusDatabase.plist */; };
 		F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B1F1AB519B600863E16 /* SFUTransitDisplayViewController.m */; };
 		F1517B231AB5276000863E16 /* SFUTransitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */; };
-		F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */; };
 		F1517B2B1AB530A400863E16 /* SFUTransitLowerLoop.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2A1AB530A400863E16 /* SFUTransitLowerLoop.plist */; };
 		F1517B2D1AB537EA00863E16 /* SFUTransitTowerRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2C1AB537EA00863E16 /* SFUTransitTowerRd.plist */; };
 		F1517B2F1AB5380500863E16 /* SFUTransitScienceRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */; };
@@ -146,7 +152,7 @@
 		F83872131ABA8B37003CF26E /* storyboardlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = F83872121ABA8B37003CF26E /* storyboardlist.plist */; };
 		F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */; };
 		F8477E941A99626200152C83 /* SFUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8477E931A99626200152C83 /* SFUWebViewController.m */; };
-		F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3811A9EA4DA008AD45B /* food-99072_640.png */; };
+		F84ED3821A9EA4DA008AD45B /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3811A9EA4DA008AD45B /* food.png */; };
 		F84ED3851A9EAF01008AD45B /* LogoBlock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */; };
 		F84ED3871A9EBE05008AD45B /* appicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F84ED3861A9EBE05008AD45B /* appicon.jpg */; };
 		F84ED38A1A9EDF0E008AD45B /* SFUWebListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F84ED3891A9EDF0E008AD45B /* SFUWebListModel.m */; };
@@ -204,6 +210,14 @@
 		04335A8E1AABE929006444EF /* SFUHourlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUHourlyViewController.h; path = "SFU OnCampus/SFUHourlyViewController.h"; sourceTree = "<group>"; };
 		04335A8F1AABE929006444EF /* SFUHourlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUHourlyViewController.m; path = "SFU OnCampus/SFUHourlyViewController.m"; sourceTree = "<group>"; };
 		04715A2F1A9FEBDA004F242B /* weatherIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherIcons.plist; sourceTree = "<group>"; };
+		04E997351ABE1588000669DF /* SFULibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryCell.h; sourceTree = "<group>"; };
+		04E997361ABE1588000669DF /* SFULibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryCell.m; sourceTree = "<group>"; };
+		04E997371ABE1588000669DF /* SFULibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryViewController.h; sourceTree = "<group>"; };
+		04E997381ABE1588000669DF /* SFULibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryViewController.m; sourceTree = "<group>"; };
+		04E9973C1ABE1CAF000669DF /* SFUBookRoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUBookRoomButton.h; sourceTree = "<group>"; };
+		04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUBookRoomButton.m; sourceTree = "<group>"; };
+		04E997421ABE25CF000669DF /* SFULoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULoginViewController.h; sourceTree = "<group>"; };
+		04E997431ABE25CF000669DF /* SFULoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULoginViewController.m; sourceTree = "<group>"; };
 		04EEBE1E1A9F9E25003E1DD3 /* SFUWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUWeatherViewController.m; path = "SFU OnCampus/SFUWeatherViewController.m"; sourceTree = "<group>"; };
 		04EEBE201A9F9E44003E1DD3 /* SFUWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUWeatherViewController.h; path = "SFU OnCampus/SFUWeatherViewController.h"; sourceTree = "<group>"; };
 		04EEBE211A9F9E44003E1DD3 /* SFUCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUCardCell.h; path = "SFU OnCampus/SFUCardCell.h"; sourceTree = "<group>"; };
@@ -267,6 +281,9 @@
 		5DDC258F1AAD0B8200243DB4 /* sfuresidence-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfuresidence-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfuapplied-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfustudent-fb-icon.jpg"; sourceTree = "<group>"; };
+		8869FAF21ABDFDBA007A135E /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		8869FAF61ABE05BC007A135E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		8869FAF81ABE0776007A135E /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		F1517B121AB4E0AD00863E16 /* SFUTransitUpperLoop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitUpperLoop.plist; sourceTree = "<group>"; };
 		F1517B161AB4E69A00863E16 /* SFUUpperLoopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUUpperLoopController.h; path = "SFU OnCampus/SFUUpperLoopController.h"; sourceTree = "<group>"; };
 		F1517B171AB4E69A00863E16 /* SFUUpperLoopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUUpperLoopController.m; path = "SFU OnCampus/SFUUpperLoopController.m"; sourceTree = "<group>"; };
@@ -277,8 +294,6 @@
 		F1517B1F1AB519B600863E16 /* SFUTransitDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUTransitDisplayViewController.m; path = "SFU OnCampus/SFUTransitDisplayViewController.m"; sourceTree = "<group>"; };
 		F1517B211AB5276000863E16 /* SFUTransitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUTransitTableViewController.h; path = "SFU OnCampus/SFUTransitTableViewController.h"; sourceTree = "<group>"; };
 		F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUTransitTableViewController.m; path = "SFU OnCampus/SFUTransitTableViewController.m"; sourceTree = "<group>"; };
-		F1517B251AB52FAB00863E16 /* SFULowerLoopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFULowerLoopController.h; path = "SFU OnCampus/SFULowerLoopController.h"; sourceTree = "<group>"; };
-		F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFULowerLoopController.m; path = "SFU OnCampus/SFULowerLoopController.m"; sourceTree = "<group>"; };
 		F1517B2A1AB530A400863E16 /* SFUTransitLowerLoop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SFUTransitLowerLoop.plist; path = ../SFUTransitLowerLoop.plist; sourceTree = "<group>"; };
 		F1517B2C1AB537EA00863E16 /* SFUTransitTowerRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitTowerRd.plist; sourceTree = "<group>"; };
 		F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitScienceRd.plist; sourceTree = "<group>"; };
@@ -352,7 +367,7 @@
 		F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULoyaltyCardModel.m; sourceTree = "<group>"; };
 		F8477E921A99626200152C83 /* SFUWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebViewController.h; sourceTree = "<group>"; };
 		F8477E931A99626200152C83 /* SFUWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebViewController.m; sourceTree = "<group>"; };
-		F84ED3811A9EA4DA008AD45B /* food-99072_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food-99072_640.png"; sourceTree = "<group>"; };
+		F84ED3811A9EA4DA008AD45B /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LogoBlock.jpg; sourceTree = "<group>"; };
 		F84ED3861A9EBE05008AD45B /* appicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = appicon.jpg; sourceTree = "<group>"; };
 		F84ED3881A9EDF0E008AD45B /* SFUWebListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUWebListModel.h; path = Model/SFUWebListModel.h; sourceTree = "<group>"; };
@@ -448,6 +463,20 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		04E9973B1ABE1590000669DF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8869FAF81ABE0776007A135E /* Library.storyboard */,
+				04E997351ABE1588000669DF /* SFULibraryCell.h */,
+				04E997361ABE1588000669DF /* SFULibraryCell.m */,
+				04E997371ABE1588000669DF /* SFULibraryViewController.h */,
+				04E997381ABE1588000669DF /* SFULibraryViewController.m */,
+				04E9973C1ABE1CAF000669DF /* SFUBookRoomButton.h */,
+				04E9973D1ABE1CAF000669DF /* SFUBookRoomButton.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		5D010CEE1AAD6BA8005CC0D2 /* ICONS */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,8 +542,6 @@
 				F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */,
 				F1517B161AB4E69A00863E16 /* SFUUpperLoopController.h */,
 				F1517B171AB4E69A00863E16 /* SFUUpperLoopController.m */,
-				F1517B251AB52FAB00863E16 /* SFULowerLoopController.h */,
-				F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */,
 				F1517B191AB4E86300863E16 /* SFUTransitModel.h */,
 				F1517B1A1AB4E86300863E16 /* SFUTransitModel.m */,
 				F1517B1E1AB519B600863E16 /* SFUTransitDisplayViewController.h */,
@@ -545,6 +572,7 @@
 		F808D80D1A95CFA90006FC17 /* SFU OnCampus */ = {
 			isa = PBXGroup;
 			children = (
+				04E9973B1ABE1590000669DF /* Library */,
 				F81D7EDF1ABAD577004AC1E5 /* Loyalty */,
 				F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */,
 				F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */,
@@ -561,6 +589,7 @@
 				F8A28D291A994D5700CD5829 /* Main.storyboard */,
 				F81D7EE01ABAD594004AC1E5 /* Resources */,
 				F83871FD1ABA8607003CF26E /* Main(old).storyboard */,
+				8869FAF21ABDFDBA007A135E /* News.storyboard */,
 				F83872091ABA8840003CF26E /* WebView.storyboard */,
 				F83872061ABA8799003CF26E /* Transit.storyboard */,
 				F83872031ABA8712003CF26E /* Student Services.storyboard */,
@@ -724,6 +753,9 @@
 			children = (
 				F838720F1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.h */,
 				F838720C1ABA8A2A003CF26E /* SFUStoryboardListTableViewController.m */,
+				04E997421ABE25CF000669DF /* SFULoginViewController.h */,
+				04E997431ABE25CF000669DF /* SFULoginViewController.m */,
+				8869FAF61ABE05BC007A135E /* Login.storyboard */,
 				F838720D1ABA8A2A003CF26E /* SFUStoryboardListModel.h */,
 				F838720E1ABA8A2A003CF26E /* SFUStoryboardListModel.m */,
 				F808D8121A95CFA90006FC17 /* AppDelegate.h */,
@@ -739,7 +771,7 @@
 		F84ED3831A9EAE33008AD45B /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				F84ED3811A9EA4DA008AD45B /* food-99072_640.png */,
+				F84ED3811A9EA4DA008AD45B /* food.png */,
 				F84ED3841A9EAF01008AD45B /* LogoBlock.jpg */,
 				F84ED3861A9EBE05008AD45B /* appicon.jpg */,
 			);
@@ -898,9 +930,10 @@
 				F87701551AA00513001FE1FE /* CampusDiningMapwSbux-Large.jpg in Resources */,
 				5D010CE61AAD6A4A005CC0D2 /* map.png in Resources */,
 				F808D8221A95CFA90006FC17 /* LaunchScreen.xib in Resources */,
-				F84ED3821A9EA4DA008AD45B /* food-99072_640.png in Resources */,
+				F84ED3821A9EA4DA008AD45B /* food.png in Resources */,
 				F81D7EB21ABAD095004AC1E5 /* QRScan.storyboard in Resources */,
 				F808D81F1A95CFA90006FC17 /* Images.xcassets in Resources */,
+				8869FAF71ABE05BC007A135E /* Login.storyboard in Resources */,
 				040DC4E91AACFCAF003A713F /* mist_d.png in Resources */,
 				040DC4EA1AACFCAF003A713F /* mist_n.png in Resources */,
 				F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */,
@@ -908,6 +941,7 @@
 				5DDC25921AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg in Resources */,
 				040DC4ED1AACFCAF003A713F /* mostly_cloudy_n.png in Resources */,
 				040DC4EF1AACFCAF003A713F /* rain_dn.png in Resources */,
+				8869FAF91ABE0776007A135E /* Library.storyboard in Resources */,
 				5DDC257E1AAD05C300243DB4 /* sfusurrey-fb-icon.png in Resources */,
 				5D010D071AAD6BA8005CC0D2 /* sfuit-tw-icon.jpg in Resources */,
 				F83871FC1ABA8587003CF26E /* Weather.storyboard in Resources */,
@@ -918,6 +952,7 @@
 				5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */,
 				F81D7EDA1ABAD219004AC1E5 /* AQ3000.jpg in Resources */,
 				5D11B5BC1AABE232000DBC1B /* news-97862_1280.png in Resources */,
+				8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */,
 				F83872051ABA8712003CF26E /* Student Services.storyboard in Resources */,
 				040DC4F11AACFCAF003A713F /* storm_dn.png in Resources */,
 				5D010D0E1AAD6BA8005CC0D2 /* sfusurrey-tw-icon.jpg in Resources */,
@@ -975,6 +1010,7 @@
 				041F51F11ABA188F005E53E9 /* TFHppleElement.m in Sources */,
 				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
 				F81D7ED11ABAD219004AC1E5 /* SFUImageScrollerViewController.m in Sources */,
+				04E9973E1ABE1CAF000669DF /* SFUBookRoomButton.m in Sources */,
 				041F51F21ABA188F005E53E9 /* XPathQuery.m in Sources */,
 				F81D7ECF1ABAD219004AC1E5 /* SFUMapHelpViewController.m in Sources */,
 				5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */,
@@ -1000,12 +1036,14 @@
 				F81D7ED91ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m in Sources */,
 				F81D7ED21ABAD219004AC1E5 /* SFUImageMapsModel.m in Sources */,
 				F1517B1B1AB4E86300863E16 /* SFUTransitModel.m in Sources */,
+				04E997441ABE25CF000669DF /* SFULoginViewController.m in Sources */,
 				F83D759D1AA5A79000D82AF2 /* SFULoyaltyCardModel.m in Sources */,
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
 				F81D7ED71ABAD219004AC1E5 /* SFUMapAnnotation.m in Sources */,
 				F81D7ED61ABAD219004AC1E5 /* SFUShortCodeComposerViewController.m in Sources */,
-				F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
+				04E997391ABE1588000669DF /* SFULibraryCell.m in Sources */,
+				04E9973A1ABE1588000669DF /* SFULibraryViewController.m in Sources */,
 				041F51F01ABA188F005E53E9 /* TFHpple.m in Sources */,
 				F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */,
 				F81D7ECE1ABAD219004AC1E5 /* SFUMapHistory.m in Sources */,
@@ -1222,6 +1260,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SFU OnCampus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1235,6 +1274,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SFU OnCampus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

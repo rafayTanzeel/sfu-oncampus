@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.model=[[SFUTransitModel alloc] initWithPlist:@"SFUTransitUpperLoop"];
+    self.model=[[SFUTransitModel alloc] initWithPlist:self.loopName];
     // Do any additional setup after loading the view.
 }
 

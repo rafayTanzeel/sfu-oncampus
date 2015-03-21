@@ -13,44 +13,54 @@
 
 @end
 
-typedef enum SFUTransitEstimateDocumentElement
-{
-    SCHEDULE,DOCUMENT,LEAVE_TIME
-} SFUTransitEstimateDocumentElement;
-
-NSMutableArray*a;
+NSMutableArray*parsedData;
 
 @implementation SFUTransitDisplayViewController
-SFUTransitEstimateDocumentElement state = DOCUMENT;
--(void)debugAPI
-{
-    NSLog(@"Should parse");
-    NSURL* url = [NSURL URLWithString:@"http://api.translink.ca/rttiapi/v1/stops/51861/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&routeNo=145"];
-    NSXMLParser* p = [[NSXMLParser alloc] initWithContentsOfURL:url];
-    p.delegate =self;
-    [p parse];
-}
-
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSInteger BusIndex=[self.BusPath row];
-    
-    [self debugAPI];
 
     //Use this to properly formate date and time,(ege is the system using 24-h time?
     NSDateFormatter* f = [NSDateFormatter new];
-    a = [NSMutableArray new];
-   NSMutableDictionary* d = [NSMutableDictionary new];
-    [d setObject:@"12:00pm" forKey:@"time"];
-    [d setObject:@"1h" forKey:@"dtime"];
-    [a addObject:d];
-    NSMutableDictionary* d2 = [NSMutableDictionary new];
-    [d2 setObject:@"12:01pm" forKey:@"time"];
-    [d2 setObject:@"1h" forKey:@"dtime"];
-    [a addObject:d2];
+    parsedData = [NSMutableArray new];
+    
+   NSMutableDictionary* individualBus1 = [NSMutableDictionary new];
+    [individualBus1 setObject:@"12:00pm" forKey:@"time"];
+    [individualBus1 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus1];
+    
+    NSMutableDictionary* individualBus2 = [NSMutableDictionary new];
+    [individualBus2 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus2 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus2];
+    
+    NSMutableDictionary* individualBus3 = [NSMutableDictionary new];
+    [individualBus3 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus3 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus3];
+    
+    NSMutableDictionary* individualBus4 = [NSMutableDictionary new];
+    [individualBus4 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus4 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus4];
+    
+    NSMutableDictionary* individualBus5 = [NSMutableDictionary new];
+    [individualBus5 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus5 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus5];
+    
+    NSMutableDictionary* individualBus6 = [NSMutableDictionary new];
+    [individualBus6 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus6 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus6];
+    
+    NSMutableDictionary* individualBus7 = [NSMutableDictionary new];
+    [individualBus7 setObject:@"12:01pm" forKey:@"time"];
+    [individualBus7 setObject:@"1h" forKey:@"dtime"];
+    [parsedData addObject:individualBus7];
     
 
 }
@@ -58,68 +68,6 @@ SFUTransitEstimateDocumentElement state = DOCUMENT;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark parse delegate
-- (void)parser:(NSXMLParser *)parser
-didStartElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI
- qualifiedName:(NSString *)qualifiedName
-    attributes:(NSDictionary *)attributeDict
-{
-    NSLog(@"<%@>",elementName);
-    //NSLog(elementName);
-    if([elementName isEqualToString:@"Schedule"])
-    {
-        state=SCHEDULE;
-    }
-    
-    if(state == SCHEDULE)
-    {
-        if([@"ExpectedLeaveTime" isEqualToString:elementName])
-        {
-            state=LEAVE_TIME;
-        }
-    }
-
-
-}
-
-- (void)parser:(NSXMLParser *)parser
- didEndElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI
- qualifiedName:(NSString *)qName
-{
-    NSLog(@"</%@>",elementName);
-    if(state == SCHEDULE && [elementName isEqualToString: @"Schedule"])
-    {
-        NSLog(@"    </schedule>");
-    }
-//    switch(state)
-//    {
-//        case DOCUMENT:
-//            break;
-//        case SCHEDULE:
-//            state=DOCUMENT;
-//            break;
-//        case LEAVE_TIME:
-//            state=SCHEDULE;
-//            break;
-//    }
-}
-
-- (void)parser:(NSXMLParser *)parser
-foundCharacters:(NSString *)string
-{
-    if(state== LEAVE_TIME)
-    {
-        NSLog(@"Encountered leave time : %@",string);
-    }
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser
-{
-    //[self.upcomingTableView updateConstraints];
 }
 
 
@@ -136,10 +84,10 @@ foundCharacters:(NSString *)string
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSMutableDictionary* d = [a objectAtIndex:indexPath.row];
+    NSMutableDictionary* data = [parsedData objectAtIndex:indexPath.row];
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [d objectForKey:@"time"];
-    cell.detailTextLabel.text= [d objectForKey:@"dtime"];
+    cell.textLabel.text = [data objectForKey:@"time"];
+    cell.detailTextLabel.text= [data objectForKey:@"dtime"];
     return cell;
 }
 

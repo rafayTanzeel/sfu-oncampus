@@ -95,7 +95,35 @@
 
        // SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
         //controller.loopPath = [self.tableView indexPathForSelectedRow];
+    if ([[segue identifier] isEqualToString:@"upper"])
+    {
+        SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
+        controller.loopName=@"SFUTransitUpperLoop";
+    }
     
+    else if ([[segue identifier] isEqualToString:@"lower"])
+    {
+        SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
+        controller.loopName=@"SFUTransitLowerLoop";
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"tower"])
+    {
+        SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
+        controller.loopName=@"SFUTransitTowerRd";
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"science"])
+    {
+        SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
+        controller.loopName=@"SFUTransitScienceRd";
+    }
+    
+    else if ([[segue identifier] isEqualToString:@"residence"])
+    {
+        SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
+        controller.loopName=@"SFUTransitResidenceRd";
+    }
 
     
     // Get the new view controller using [segue destinationViewController].

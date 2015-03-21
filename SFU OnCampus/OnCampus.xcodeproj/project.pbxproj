@@ -106,7 +106,6 @@
 		F1517B1D1AB4F20000863E16 /* SFUBusDatabase.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B1C1AB4F20000863E16 /* SFUBusDatabase.plist */; };
 		F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B1F1AB519B600863E16 /* SFUTransitDisplayViewController.m */; };
 		F1517B231AB5276000863E16 /* SFUTransitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */; };
-		F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */; };
 		F1517B2B1AB530A400863E16 /* SFUTransitLowerLoop.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2A1AB530A400863E16 /* SFUTransitLowerLoop.plist */; };
 		F1517B2D1AB537EA00863E16 /* SFUTransitTowerRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2C1AB537EA00863E16 /* SFUTransitTowerRd.plist */; };
 		F1517B2F1AB5380500863E16 /* SFUTransitScienceRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */; };
@@ -295,8 +294,6 @@
 		F1517B1F1AB519B600863E16 /* SFUTransitDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUTransitDisplayViewController.m; path = "SFU OnCampus/SFUTransitDisplayViewController.m"; sourceTree = "<group>"; };
 		F1517B211AB5276000863E16 /* SFUTransitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUTransitTableViewController.h; path = "SFU OnCampus/SFUTransitTableViewController.h"; sourceTree = "<group>"; };
 		F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUTransitTableViewController.m; path = "SFU OnCampus/SFUTransitTableViewController.m"; sourceTree = "<group>"; };
-		F1517B251AB52FAB00863E16 /* SFULowerLoopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFULowerLoopController.h; path = "SFU OnCampus/SFULowerLoopController.h"; sourceTree = "<group>"; };
-		F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFULowerLoopController.m; path = "SFU OnCampus/SFULowerLoopController.m"; sourceTree = "<group>"; };
 		F1517B2A1AB530A400863E16 /* SFUTransitLowerLoop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SFUTransitLowerLoop.plist; path = ../SFUTransitLowerLoop.plist; sourceTree = "<group>"; };
 		F1517B2C1AB537EA00863E16 /* SFUTransitTowerRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitTowerRd.plist; sourceTree = "<group>"; };
 		F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitScienceRd.plist; sourceTree = "<group>"; };
@@ -545,8 +542,6 @@
 				F1517B221AB5276000863E16 /* SFUTransitTableViewController.m */,
 				F1517B161AB4E69A00863E16 /* SFUUpperLoopController.h */,
 				F1517B171AB4E69A00863E16 /* SFUUpperLoopController.m */,
-				F1517B251AB52FAB00863E16 /* SFULowerLoopController.h */,
-				F1517B261AB52FAB00863E16 /* SFULowerLoopController.m */,
 				F1517B191AB4E86300863E16 /* SFUTransitModel.h */,
 				F1517B1A1AB4E86300863E16 /* SFUTransitModel.m */,
 				F1517B1E1AB519B600863E16 /* SFUTransitDisplayViewController.h */,
@@ -1046,7 +1041,6 @@
 				F808D8111A95CFA90006FC17 /* main.m in Sources */,
 				F81D7ED71ABAD219004AC1E5 /* SFUMapAnnotation.m in Sources */,
 				F81D7ED61ABAD219004AC1E5 /* SFUShortCodeComposerViewController.m in Sources */,
-				F1517B271AB52FAB00863E16 /* SFULowerLoopController.m in Sources */,
 				350BB6321A9FBB26005D8EE4 /* SFUSocialTableViewController.m in Sources */,
 				04E997391ABE1588000669DF /* SFULibraryCell.m in Sources */,
 				04E9973A1ABE1588000669DF /* SFULibraryViewController.m in Sources */,

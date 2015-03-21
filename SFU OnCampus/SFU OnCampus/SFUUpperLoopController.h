@@ -16,6 +16,7 @@
 
 @property BOOL displayInApp;
 @property IBOutlet SFUTransitModel* model;
+@property (strong, atomic) NSString *loopName;
 
 
 

@@ -94,7 +94,6 @@
 		5DDC25921AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */; };
 		5DDC25941AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */; };
 		8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF21ABDFDBA007A135E /* News.storyboard */; };
-		8869FAF51ABDFF18007A135E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF41ABDFF18007A135E /* Weather.storyboard */; };
 		8869FAF71ABE05BC007A135E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF61ABE05BC007A135E /* Login.storyboard */; };
 		8869FAF91ABE0776007A135E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF81ABE0776007A135E /* Library.storyboard */; };
 		F1517B131AB4E0AD00863E16 /* SFUTransitUpperLoop.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B121AB4E0AD00863E16 /* SFUTransitUpperLoop.plist */; };
@@ -272,7 +271,6 @@
 		5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfuapplied-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfustudent-fb-icon.jpg"; sourceTree = "<group>"; };
 		8869FAF21ABDFDBA007A135E /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
-		8869FAF41ABDFF18007A135E /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		8869FAF61ABE05BC007A135E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8869FAF81ABE0776007A135E /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		F1517B121AB4E0AD00863E16 /* SFUTransitUpperLoop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitUpperLoop.plist; sourceTree = "<group>"; };
@@ -570,7 +568,6 @@
 				F81D7EE01ABAD594004AC1E5 /* Resources */,
 				F83871FD1ABA8607003CF26E /* Main(old).storyboard */,
 				8869FAF21ABDFDBA007A135E /* News.storyboard */,
-				8869FAF41ABDFF18007A135E /* Weather.storyboard */,
 				F83872091ABA8840003CF26E /* WebView.storyboard */,
 				F83872061ABA8799003CF26E /* Transit.storyboard */,
 				F83872031ABA8712003CF26E /* Student Services.storyboard */,
@@ -934,7 +931,6 @@
 				5D11B5BC1AABE232000DBC1B /* news-97862_1280.png in Resources */,
 				8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */,
 				F83872051ABA8712003CF26E /* Student Services.storyboard in Resources */,
-				8869FAF51ABDFF18007A135E /* Weather.storyboard in Resources */,
 				040DC4F11AACFCAF003A713F /* storm_dn.png in Resources */,
 				5D010D0E1AAD6BA8005CC0D2 /* sfusurrey-tw-icon.jpg in Resources */,
 				040DC4DE1AACFCAF003A713F /* chanceofrain_d.png in Resources */,

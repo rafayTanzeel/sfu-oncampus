@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GtR-VR-XzP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GtR-VR-XzP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main Menu-->
@@ -28,43 +28,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LogoCell" rowHeight="327" id="8rf-4F-urZ">
+                            <tableViewCell autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LogoCell" rowHeight="350" id="8rf-4F-urZ">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="8rf-4F-urZ" id="Y1P-Bl-PDr">
+                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="8rf-4F-urZ" id="Y1P-Bl-PDr">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K1-Sl-hNQ">
-                                            <rect key="frame" x="8" y="8" width="584" height="300"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBlock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9zq-3M-eOk">
-                                                    <rect key="frame" x="8" y="0.0" width="568" height="290"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ©2015 Simon Fraiser University" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIZ-54-61f">
-                                                    <rect key="frame" x="195" y="285" width="195" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="9zq-3M-eOk" secondAttribute="trailing" constant="8" id="7x6-vw-YhG"/>
-                                                <constraint firstAttribute="centerX" secondItem="ZIZ-54-61f" secondAttribute="centerX" id="BS9-Jv-IiW"/>
-                                                <constraint firstAttribute="height" constant="300" id="Opb-w3-G1o"/>
-                                                <constraint firstItem="9zq-3M-eOk" firstAttribute="top" secondItem="6K1-Sl-hNQ" secondAttribute="top" id="WVM-Lq-8U4"/>
-                                                <constraint firstItem="9zq-3M-eOk" firstAttribute="leading" secondItem="6K1-Sl-hNQ" secondAttribute="leading" constant="8" id="hqf-wd-69q"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZIZ-54-61f" secondAttribute="bottom" constant="-1" id="k6w-Md-y2N"/>
-                                                <constraint firstAttribute="bottom" secondItem="9zq-3M-eOk" secondAttribute="bottom" constant="10" id="xeN-0i-bjy"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="6K1-Sl-hNQ" firstAttribute="trailing" secondItem="Y1P-Bl-PDr" secondAttribute="trailingMargin" id="h9f-OB-cj0"/>
-                                        <constraint firstItem="6K1-Sl-hNQ" firstAttribute="leading" secondItem="Y1P-Bl-PDr" secondAttribute="leadingMargin" id="hfQ-cm-hXS"/>
-                                        <constraint firstItem="6K1-Sl-hNQ" firstAttribute="top" secondItem="Y1P-Bl-PDr" secondAttribute="topMargin" id="msF-4F-IH2"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="6K1-Sl-hNQ" secondAttribute="bottom" constant="10" id="qJW-qS-y9W"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
@@ -83,7 +51,7 @@
         <!--Main Mnu-->
         <scene sceneID="gc6-FM-8eb">
             <objects>
-                <viewController title="Main Mnu" id="Y8Y-wb-6my" sceneMemberID="viewController">
+                <viewController title="Main Mnu" id="Y8Y-wb-6my" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qmC-IL-O1g"/>
                         <viewControllerLayoutGuide type="bottom" id="XZe-W1-cqc"/>
@@ -156,8 +124,5 @@
             <point key="canvasLocation" x="618" y="-528"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LogoBlock.jpg" width="651" height="486"/>
-    </resources>
     <color key="tintColor" white="0.82419023719999995" alpha="1" colorSpace="calibratedWhite"/>
 </document>

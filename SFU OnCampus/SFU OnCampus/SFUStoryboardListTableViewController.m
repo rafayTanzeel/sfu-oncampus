@@ -18,7 +18,11 @@ SFUStoryboardListModel* model;
 
 @implementation SFUStoryboardListTableViewController
 
-
+-(void)loginSelected
+{
+    UIStoryboard* s = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    [self transitionStoryboardWithName:s performingSelector:nil withParameter:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     model = [SFUStoryboardListModel new];
@@ -26,6 +30,8 @@ SFUStoryboardListModel* model;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    UIBarButtonItem* navItem = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(loginSelected)];
+    self.navigationItem.rightBarButtonItem = navItem;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -78,14 +84,8 @@ SFUStoryboardListModel* model;
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)transitionStoryboardWithName:(UIStoryboard*)secondStoryBoard performingSelector:(SEL)f withParameter:(id)param
 {
-    NSString* URL=[model storyboardStringForIndex:[self.tableView indexPathForSelectedRow].row];
-    
-    self.targetViewIdentifier=[model targetViewStringForIndex:[self.tableView indexPathForSelectedRow].row];
-    //NSDate *object = self.objects[indexPath.row];
-    
-    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:URL bundle:nil];
     UIViewController *controller = nil;
     
     if(self.targetViewIdentifier == nil)
@@ -102,29 +102,60 @@ SFUStoryboardListModel* model;
         NSLog(@"SFUStorboardListController:: Error: Could not transition, no target view with given identifier");
         return;
     }
-     NSArray* a = [NSArray arrayWithObjects:controller, nil];
-    //[self.navigationController setViewControllers:a];
-    UINavigationController* n = [self.splitViewController.viewControllers objectAtIndex:1];
-    [n setViewControllers:a];
-    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-    controller.navigationItem.leftItemsSupplementBackButton = YES;
     
-    SEL f = NSSelectorFromString([model selectorForIndex:indexPath.row]);
-    id param = [model parameterForIndex:indexPath.row];
+    //[self.navigationController setViewControllers:a];
+    ///TODO split into seperate function
+    @try{
+        //since the main menu is on another navigation controller, we don't need to push it, instead the first view controller of the detail view is the selected item
+        NSArray* a = [NSArray arrayWithObjects:controller, nil];
+        //On an ipad, use the 2nd view controller in the split
+        UINavigationController* n = [self.splitViewController.viewControllers objectAtIndex:1];
+        [n setViewControllers:a];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }@catch (NSException* e)
+    {
+        NSArray* a = [NSArray arrayWithObjects:self, nil];// get self into an array, so we can pop back to main menu
+        //On iPhone or any device where the split view is not used, use the 0th element (ie the same view as the menu)
+        UINavigationController* n = [self.splitViewController.viewControllers objectAtIndex:0];
+        [n setViewControllers:a];
+        [n pushViewController:controller animated:YES];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
+    
+    
     
     if([controller respondsToSelector:f])
     {
-    [controller performSelector:f withObject:param];
+        [controller performSelector:f withObject:param];
     }
+    
+    [self splitViewController ];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString* URL=[model storyboardStringForIndex:[self.tableView indexPathForSelectedRow].row];
+    
+    self.targetViewIdentifier=[model targetViewStringForIndex:[self.tableView indexPathForSelectedRow].row];
+    //NSDate *object = self.objects[indexPath.row];
+    
+    UIStoryboard *secondStoryBoard = [UIStoryboard storyboardWithName:URL bundle:nil];
+    SEL f = NSSelectorFromString([model selectorForIndex:indexPath.row]);
+    id param = [model parameterForIndex:indexPath.row];
+    [self transitionStoryboardWithName:secondStoryBoard performingSelector:f withParameter:param];
   
 }
 - (void)setDetailItem:(id)newDetailItem {
     
 }
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
+    
 }
 - (IBAction)unwindToSFUStoryboardListTableViewController:(UIStoryboardSegue *)segue {
     //nothing goes here

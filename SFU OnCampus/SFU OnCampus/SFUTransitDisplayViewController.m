@@ -84,10 +84,10 @@ NSMutableArray*parsedData;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSMutableDictionary* d = [a objectAtIndex:indexPath.row];
+    NSMutableDictionary* data = [parsedData objectAtIndex:indexPath.row];
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [d objectForKey:@"time"];
-    cell.detailTextLabel.text= [d objectForKey:@"dtime"];
+    cell.textLabel.text = [data objectForKey:@"time"];
+    cell.detailTextLabel.text= [data objectForKey:@"dtime"];
     return cell;
 }
 

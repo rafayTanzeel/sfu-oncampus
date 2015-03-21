@@ -169,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-4057"/>
         </scene>
-        <!--Upper Loop-->
+        <!--Upper Loop Controller-->
         <scene sceneID="Ma5-UV-i8H">
             <objects>
                 <tableViewController id="z3E-Gg-e8l" customClass="SFUUpperLoopController" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                             <outlet property="delegate" destination="z3E-Gg-e8l" id="1xC-IG-Mtb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Upper Loop" id="bUH-eJ-nd4"/>
+                    <navigationItem key="navigationItem" id="bUH-eJ-nd4"/>
                     <connections>
                         <outlet property="model" destination="GCh-Mw-bks" id="ug0-Vp-bhI"/>
                     </connections>

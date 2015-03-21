@@ -81,6 +81,7 @@
     //NSDate *object = self.objects[indexPath.row];
     SFUTransitDisplayViewController *controller = (SFUTransitDisplayViewController *)[segue destinationViewController];
     controller.BusPath = [self.tableView indexPathForSelectedRow];
+    controller.loopName=self.loopName;
     
     //self.tableView indexPathForSelectedR
     

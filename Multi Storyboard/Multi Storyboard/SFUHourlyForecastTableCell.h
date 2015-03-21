@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *condImage;
 @property (strong, nonatomic) IBOutlet UILabel *conditions;
 @property (strong, nonatomic) IBOutlet UILabel *temperature;
-
+/**rafay was here*/
 
 @end

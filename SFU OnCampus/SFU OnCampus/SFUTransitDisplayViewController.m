@@ -95,15 +95,31 @@
         
             // Convert string to date object
             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            NSString *stringFromDate;
+            if ([leaveTime length]>7)
+            {
+                [dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+                dateTime = [dateFormat dateFromString:leaveTime];
+                [dateFormat setDateFormat:@"hh:mma"];
+                stringFromDate =[dateFormat stringFromDate:dateTime];
+                dateTime=[dateFormat dateFromString: stringFromDate];
+            }
+            else
+            {
+                [dateFormat setDateFormat:@"hh:mma"];
+                dateTime = [dateFormat dateFromString:leaveTime];
+                stringFromDate = [dateFormat stringFromDate:dateTime];
+            }
             //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
             //dateTime = [dateFormat dateFromString:leaveTime];
-            [dateFormat setDateFormat:@"hh:mma"];
-            dateTime = [dateFormat dateFromString:leaveTime];
-            NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
+            //[dateFormat setDateFormat:@"hh:mma"];
+            //dateTime = [dateFormat dateFromString:leaveTime];
+            //NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
             
             NSDate *today=[NSDate date];
             NSString *todayString=[dateFormat stringFromDate:today];
             NSDate *todayTime=[dateFormat dateFromString:todayString];
+            //NSDate *test=[dateFormat dateFromString:@"10:00PM"];
         
         
             NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
@@ -112,12 +128,14 @@
             if (mins<0)
             {
                 mins=mins*(-1);
+                mins=1440.0-mins;
+                
             }
             
             if (mins>120.0)
             {
                 double hours=(long long) (mins/60.0);
-                deltatime=[NSString stringWithFormat:@"Approx %.0f hrs",hours];
+                deltatime=[NSString stringWithFormat:@"Over %.0f h",hours];
             }
             else
             {

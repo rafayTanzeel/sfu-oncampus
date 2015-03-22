@@ -55,6 +55,12 @@
                                     <segue destination="8zU-0u-tbM" kind="show" id="KMC-g0-l1w"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoB-OL-Gx4">
+                                <rect key="frame" x="77" y="262" width="447" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,13 +68,17 @@
                             <constraint firstItem="X0V-Xc-B3t" firstAttribute="leading" secondItem="tSv-Rt-nQL" secondAttribute="leadingMargin" constant="27" id="AMc-2y-JpN"/>
                             <constraint firstItem="hE8-rR-PG9" firstAttribute="top" secondItem="X0V-Xc-B3t" secondAttribute="bottom" constant="53" id="Fme-wb-AkY"/>
                             <constraint firstItem="1SH-GK-6aF" firstAttribute="top" secondItem="pUt-ak-ah4" secondAttribute="bottom" constant="85" id="Hnt-og-6if"/>
+                            <constraint firstItem="IoB-OL-Gx4" firstAttribute="trailing" secondItem="hE8-rR-PG9" secondAttribute="trailing" id="I8m-NL-yWq"/>
                             <constraint firstItem="hE8-rR-PG9" firstAttribute="leading" secondItem="tSv-Rt-nQL" secondAttribute="leadingMargin" constant="61" id="K7K-oX-YPz"/>
+                            <constraint firstItem="hE8-rR-PG9" firstAttribute="top" secondItem="IoB-OL-Gx4" secondAttribute="bottom" constant="24" id="TfM-G2-e8z"/>
                             <constraint firstItem="X0V-Xc-B3t" firstAttribute="top" secondItem="1SH-GK-6aF" secondAttribute="bottom" constant="28" id="U8M-Qx-14N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hE8-rR-PG9" secondAttribute="trailing" constant="60" id="WvV-da-Vpx"/>
                             <constraint firstItem="1SH-GK-6aF" firstAttribute="leading" secondItem="tSv-Rt-nQL" secondAttribute="leadingMargin" constant="27" id="XC6-58-DHl"/>
                             <constraint firstAttribute="centerX" secondItem="X0V-Xc-B3t" secondAttribute="centerX" constant="-5.5" id="ebc-Do-1fs"/>
+                            <constraint firstItem="IoB-OL-Gx4" firstAttribute="leading" secondItem="hE8-rR-PG9" secondAttribute="leading" id="h9q-oz-1Lq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1SH-GK-6aF" secondAttribute="trailing" constant="16" id="iST-nG-uFT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X0V-Xc-B3t" secondAttribute="trailing" constant="16" id="r4p-KU-5N9"/>
+                            <constraint firstItem="IoB-OL-Gx4" firstAttribute="top" secondItem="X0V-Xc-B3t" secondAttribute="bottom" constant="8" symbolic="YES" id="tac-9y-khY"/>
                             <constraint firstItem="rDN-4G-TrY" firstAttribute="top" secondItem="hE8-rR-PG9" secondAttribute="bottom" constant="59" id="w6R-bW-pex"/>
                             <constraint firstAttribute="centerX" secondItem="1SH-GK-6aF" secondAttribute="centerX" constant="-5.5" id="x0g-DJ-Hyf"/>
                         </constraints>
@@ -83,6 +93,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pointsLabel" destination="X0V-Xc-B3t" id="Ffs-we-el8"/>
+                        <outlet property="statusLine" destination="IoB-OL-Gx4" id="Y5h-YL-5gC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f7-5U-YmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,11 +108,11 @@
                         <viewControllerLayoutGuide type="top" id="MsO-Bq-v0j"/>
                         <viewControllerLayoutGuide type="bottom" id="cl1-F8-y8n"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="qqh-nC-Eiz">
+                    <view key="view" contentMode="scaleToFill" id="qqh-nC-Eiz">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-Mp-1Jh">
+                            <view hidden="YES" autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-Mp-1Jh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

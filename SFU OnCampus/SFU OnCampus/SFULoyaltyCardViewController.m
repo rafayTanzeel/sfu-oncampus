@@ -29,6 +29,24 @@
 {
     NSLog(@"loyaty card view controll foudCodeWithStringRep: %@",s);
     //model redeem s
+    ///This is a dummy url, sfu will need to implement server.
+    NSString* user = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://www.burningthumb.com/API/SFU/loyalty.php?username=%@&token=%@&useget=1",user,s];
+    NSURL* url = [NSURL URLWithString:urlString];
+    NSError* e;
+    NSString* response = [[NSString alloc]initWithContentsOfURL:url encoding:NSASCIIStringEncoding error:&e];
+    NSMutableArray *lines = [[response componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
+    NSString* value = [lines objectAtIndex:0];
+    NSLog(@"redeem code value=%@",value);
+    NSInteger i = [value integerValue];
+    if(i <0)
+    {
+        self.statusLine.text = @"Bad code or no value";
+    }else
+    {
+        self.statusLine.text = [NSString stringWithFormat:@"Redeemed code for %@ points",value];
+    }
     //update label
 }
 

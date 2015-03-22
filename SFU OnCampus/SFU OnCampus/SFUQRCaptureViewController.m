@@ -56,7 +56,7 @@ NSMutableString* result;
     prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:session];
     prevLayer.frame = self.view.bounds;
     prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    prevLayer.autoreverses=YES;
+    prevLayer.autoreverses=NO;
     [self.view.layer addSublayer:prevLayer];
     
     [session startRunning];
@@ -72,7 +72,7 @@ NSMutableString* result;
 -(BOOL)shouldAutorotate
 {
     //orientation will become incorrect if autorotating
-    return NO;
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,6 +118,38 @@ NSMutableString* result;
 {
     return result;
 }
+
+/////Magically orient video capture
+/*
+http://stackoverflow.com/questions/21258372/avcapturevideopreviewlayer-landscape-orientation
+ */
+
+- (void)viewWillLayoutSubviews {
+    prevLayer.frame = self.view.bounds;
+    if (prevLayer.connection.supportsVideoOrientation) {
+        prevLayer.connection.videoOrientation = [self interfaceOrientationToVideoOrientation:[UIApplication sharedApplication].statusBarOrientation];
+    }
+}
+
+
+- (AVCaptureVideoOrientation)interfaceOrientationToVideoOrientation:(UIInterfaceOrientation)orientation {
+    switch (orientation) {
+        case UIInterfaceOrientationPortrait:
+            return AVCaptureVideoOrientationPortrait;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return AVCaptureVideoOrientationPortraitUpsideDown;
+        case UIInterfaceOrientationLandscapeLeft:
+            return AVCaptureVideoOrientationLandscapeLeft;
+        case UIInterfaceOrientationLandscapeRight:
+            return AVCaptureVideoOrientationLandscapeRight;
+        default:
+            break;
+    }
+    NSLog(@"Warning - Didn't recognise interface orientation (%d)",orientation);
+    return AVCaptureVideoOrientationPortrait;
+}
+
+///End magic
 
 /*
  #pragma mark - Navigation

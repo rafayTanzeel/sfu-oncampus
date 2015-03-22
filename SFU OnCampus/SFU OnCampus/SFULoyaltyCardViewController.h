@@ -12,6 +12,7 @@
 @interface SFULoyaltyCardViewController : UIViewController <SFUQRCaptureDelegate>
 - (IBAction)scanCode:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *pointsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *statusLine;
 
 -(IBAction)unwindToSFULoyaltyCardViewController:(UIStoryboardSegue *)segue ;
 

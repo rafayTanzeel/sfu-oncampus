@@ -32,7 +32,7 @@
 		<key>url</key>
 		<string>https://docs.google.com/forms/d/1N6am2DL08W_3EDhzdSBWVFBRg9MOuetXzLvedwnEPpI/viewform?usp=send_form</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>journal.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -44,11 +44,11 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Miss your bus? Help us improve transit.</string>
+		<string>Missed Your Bus?</string>
 		<key>url</key>
 		<string>http://www.sfu.ca/busstop.html</string>
 		<key>image</key>
-		<string>forum_icon.png</string>
+		<string>bus.png</string>
 	</dict>
 </array>
 </plist>

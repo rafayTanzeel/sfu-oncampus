@@ -102,7 +102,7 @@ NSMutableString* result;
         {
             NSLog(@"Detected\n%@\n",detectionString);
             [result setString:detectionString];
-            [self.navigationController popToRootViewControllerAnimated:TRUE];
+            [self.navigationController popViewControllerAnimated:TRUE];
             break;
         }
         else

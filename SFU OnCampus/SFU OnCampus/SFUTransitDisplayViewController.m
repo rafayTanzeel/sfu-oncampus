@@ -44,9 +44,7 @@
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&count=6&timeframe=1440&routeNo="];
-    
     apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
-    
     
     NSLog(apiURL);
     
@@ -72,25 +70,11 @@
 -(void) refreshData{
     times = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:apiURL];
-    @try {
-        parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-        [parser setDelegate:self];
-        [parser setShouldResolveExternalEntities:NO];
-        [parser parse];
-    }
-    @catch (NSException *exception) {
-        
-    }
-    @finally {
-        
-    }
-    if(parser == nil)
-    {
-        // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Bus Time cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        return;
-    }
+    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    [parser setDelegate:self];
+    [parser setShouldResolveExternalEntities:NO];
+    [parser parse];
+
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {

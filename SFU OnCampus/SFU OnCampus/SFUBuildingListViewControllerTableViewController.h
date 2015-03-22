@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SFUMapModel.h"
 @interface SFUBuildingListViewControllerTableViewController : UITableViewController
-
+    @property(nonatomic) SFUMapModel* model;
 @end

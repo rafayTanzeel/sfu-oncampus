@@ -549,7 +549,6 @@
 		B4C3A90D1ABE330F00D96A90 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				8869FAF21ABDFDBA007A135E /* News.storyboard */,
 				B4C3A9041ABE32F900D96A90 /* RSSMainTableViewController.h */,
 				B4C3A9051ABE32F900D96A90 /* RSSMainTableViewController.m */,
 				B4C3A9061ABE32F900D96A90 /* RSSModel.h */,
@@ -616,6 +615,7 @@
 				F83871FD1ABA8607003CF26E /* Main(old).storyboard */,
 				B4C3A90D1ABE330F00D96A90 /* News */,
 				F83872091ABA8840003CF26E /* WebView.storyboard */,
+				8869FAF21ABDFDBA007A135E /* News.storyboard */,
 				F83872061ABA8799003CF26E /* Transit.storyboard */,
 				F83872031ABA8712003CF26E /* Student Services.storyboard */,
 				F83872001ABA8642003CF26E /* Social.storyboard */,

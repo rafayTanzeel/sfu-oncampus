@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lKl-a3-T1l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lKl-a3-T1l">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -134,7 +134,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="None in 24 hrs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdI-IC-7vh">
-                                <rect key="frame" x="58" y="99" width="219" height="27"/>
+                                <rect key="frame" x="56" y="95" width="219" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -154,13 +154,22 @@
                                     <segue destination="tYm-vM-u2C" kind="show" id="HAP-z2-LKM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nec-Ip-eGY">
-                                <rect key="frame" x="426" y="99" width="134" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nec-Ip-eGY">
+                                <rect key="frame" x="414" y="95" width="134" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="Jcq-yU-il8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.70588237050000002" green="0.0" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIG-Hl-8jy">
+                                <rect key="frame" x="126" y="138" width="349" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Dst-qS-o3P"/>
+                                    <constraint firstAttribute="width" constant="161" id="KBK-me-NRm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -176,8 +185,10 @@
                             <constraint firstItem="nec-Ip-eGY" firstAttribute="top" secondItem="6yI-v4-I5d" secondAttribute="bottom" constant="79" id="Thw-M4-5Yg"/>
                             <constraint firstItem="nec-Ip-eGY" firstAttribute="centerY" secondItem="zdI-IC-7vh" secondAttribute="centerY" id="TxO-53-sPJ"/>
                             <constraint firstItem="3pa-Zb-K2m" firstAttribute="top" secondItem="M9c-UD-rS0" secondAttribute="bottom" constant="20" id="VGU-Hh-0kM"/>
+                            <constraint firstItem="nTk-oN-I4a" firstAttribute="top" secondItem="mIG-Hl-8jy" secondAttribute="bottom" constant="8" symbolic="YES" id="YcG-3x-gLm"/>
                             <constraint firstItem="M9c-UD-rS0" firstAttribute="leading" secondItem="pje-qc-r7m" secondAttribute="leadingMargin" id="edE-ZL-kEs"/>
                             <constraint firstItem="vph-FI-jd1" firstAttribute="trailing" secondItem="pje-qc-r7m" secondAttribute="trailingMargin" id="fCq-vR-vOB"/>
+                            <constraint firstItem="mIG-Hl-8jy" firstAttribute="leading" secondItem="nTk-oN-I4a" secondAttribute="leading" id="kfE-Lv-9q7"/>
                             <constraint firstItem="M9c-UD-rS0" firstAttribute="trailing" secondItem="pje-qc-r7m" secondAttribute="trailingMargin" id="riB-3W-rTy"/>
                         </constraints>
                     </view>
@@ -185,6 +196,7 @@
                         <outlet property="model" destination="qKq-U1-Bwh" id="Zap-mH-Qfa"/>
                         <outlet property="nextBusDeltaTime" destination="nec-Ip-eGY" id="9hi-Aa-XgW"/>
                         <outlet property="nextBusTime" destination="zdI-IC-7vh" id="zFD-Oz-Ywj"/>
+                        <outlet property="timer" destination="mIG-Hl-8jy" id="K2G-BE-cZX"/>
                         <outlet property="upcomingTableView" destination="vph-FI-jd1" id="hgG-Ph-T98"/>
                     </connections>
                 </viewController>

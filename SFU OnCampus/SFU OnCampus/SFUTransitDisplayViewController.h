@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SFUTransitModel.h"
-@interface SFUTransitDisplayViewController :UIViewController <NSXMLParserDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface SFUTransitDisplayViewController :UIViewController <NSXMLParserDelegate,UITableViewDataSource,UITableViewDelegate>{
+NSTimer *countDownTimer;
+float secondsCount;
+
+}
 @property (weak, atomic) NSIndexPath *BusPath;
 @property (strong, nonatomic) IBOutlet SFUTransitModel *model;
 
@@ -17,7 +21,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 
+@property (weak, nonatomic) IBOutlet UILabel *timer;
 
 @property (weak, nonatomic) IBOutlet UITableView *upcomingTableView;
 
+
+
+-(void) setTimer;
+-(void) timerRun;
 @end

@@ -11,4 +11,8 @@
 
 @interface SFUShortCodeComposerViewController : UITableViewController
 
+-(void)fillBuildingFieldWithString:(NSString*)s;
+@property (strong, nonatomic) IBOutlet UITextField *buildingCodeField;
+- (IBAction)doneButton:(id)sender;
+-(NSString*)composeShortcode;
 @end

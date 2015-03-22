@@ -13,5 +13,6 @@
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
 -(NSString*)suggestionForPrefix:(NSString*)p;
 -(NSArray*)listOfDomains;
+-(NSString*)shortCodeForDisplayName:(NSString*)s;
 @property BOOL shouldTrackHistory;
 @end

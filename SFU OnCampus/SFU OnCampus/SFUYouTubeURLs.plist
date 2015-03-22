@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>SFU Public Square</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCWL1J1pYbjw6V5SxoLJSQrA</string>
+		<key>image</key>
+		<string>SFU PublicSquareYouTube.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Simon Fraser University Continuing Studies</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCUi_6IJ8IgUAzI6JczJUVPA</string>
+		<key>image</key>
+		<string>Simon Fraser University Continuing Studies.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Recreation</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC86SDIiwX667fdNPHRHxVew</string>
+		<key>image</key>
+		<string>SFU Recreation.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>sfuresidence</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCnJaegGraeKcRt7389tYVLQ</string>
+		<key>image</key>
+		<string>sfuresidence.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Alumni</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UClVMgmOblyADevARDX5iOXg</string>
+		<key>image</key>
+		<string>SFU Alumni.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Student Services</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCAm_LUV1sEFA6gIbQ-fpkhQ</string>
+		<key>image</key>
+		<string>SFU Student Services.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Clan</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC59Z_S66SpC9B4ZfeM2bzVA</string>
+		<key>image</key>
+		<string>SFU Clan.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Beedie</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCTZ93pOyfPjglPHVv73ii5w</string>
+		<key>image</key>
+		<string>SFU Beedie.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Co-operative Education</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCd4ecg2XqqWdkaVsxfXIqkw</string>
+		<key>image</key>
+		<string>SFU Co-operative Education.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU School for the Contemporary Arts</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCHW95h3zL7uIF0jH1p9ih_Q</string>
+		<key>image</key>
+		<string>SFU School for the Contemporary Arts.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Teaching and Learning Centre</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCF4o4i0mchqvwE__44AVh-A</string>
+		<key>image</key>
+		<string>Teaching and Learning Centre.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Simon Fraser HCS</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCCeIJAdoY2iLoZ1nCO8umyA</string>
+		<key>image</key>
+		<string>Simon Fraser HCS.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU-TIPS Research Lab</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCgV8d2Xfk3UhbGsLyQ6FZZQ</string>
+		<key>image</key>
+		<string>SFU-TIPS Research Lab.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>EnactusSFU</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCk8HhhdYNPBCPPH_YOzm2Gw</string>
+		<key>image</key>
+		<string>EnactusSFU.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Sfu Pipe Band</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC05tL_ygDuJ5Vwq46gfYrtw</string>
+		<key>image</key>
+		<string>Sfu Pipe Band.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUmuseum</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC5ymL1_FSLNvxLvBJ2-xIGg</string>
+		<key>image</key>
+		<string>SFUmuseum.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUSurreyCampus</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCZEw5xXvdjGiMc6CewEyFjg</string>
+		<key>image</key>
+		<string>SFUSurreyCampus.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUMECS</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCrcSoqAq5syrHsngQktD8mg</string>
+		<key>image</key>
+		<string>SFUMECS.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Venture Connection</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC2IXe71aK_ShBjDv1XictLA</string>
+		<key>image</key>
+		<string>SFU Venture Connection.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Engaging Diaspora</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCE4W35KdNO33dANzty_BTxA</string>
+		<key>image</key>
+		<string>Engaging Diaspora.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUBigData</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCfzAWcwk9RrE2S3kRm1xaVw</string>
+		<key>image</key>
+		<string>SFUBigData.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUresearch</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCraG_cr-MiKgf5gxOyA-p4g</string>
+		<key>image</key>
+		<string>SFUresearch.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU International Services for Students</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC0NBJyYAvoj36iuja42juhg</string>
+		<key>image</key>
+		<string>SFU International Services for Students.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUSustain</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC1uyrh2eOIlkutZjzIe6Azw</string>
+		<key>image</key>
+		<string>SFUSustain.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFULibrary</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCR0jGMElxsOMutoU1TuntSg</string>
+		<key>image</key>
+		<string>SFULibrary.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU FASS</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCm80wv6bZxi05qjPDIa5ToQ</string>
+		<key>image</key>
+		<string>SFU FASS.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>FENV atSFU</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCSVVqrd4i1fQCGEnUcPV3kw</string>
+		<key>image</key>
+		<string>FENV atSFU.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>FENV atSFU</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC0NBJyYAvoj36iuja42juhg</string>
+		<key>image</key>
+		<string>FENV atSFU.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Biology at Simon Fraser</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCbL5kzVBocOz98DF2STnRkA</string>
+		<key>image</key>
+		<string>Biology at Simon Fraser.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUmath&apos;s channel</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCB_NUVTCUxUolqfElQbwlAQ</string>
+		<key>image</key>
+		<string>SFUmath&apos;s channel.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>COGSsfu</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCU--tszwVSYIwmdqgQoqIwg</string>
+		<key>image</key>
+		<string>COGSsfu.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU School of Public Policy</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCV9jSbJyRR5lxqo5cQp7I0Q</string>
+		<key>image</key>
+		<string>SFU School of Public Policy.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Inst. for the Humanities, SFU</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCDXzz-LjE0pHi6_aD1Kdixg</string>
+		<key>image</key>
+		<string>Inst. for the Humanities, SFU.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUEconomics</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC423YqN9PvuPDrUuCWXszhQ</string>
+		<key>image</key>
+		<string>SFUEconomics.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Faculty of Communication, Art and Technology</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCXg2WuwRqyy0Wrpff-n4gkA</string>
+		<key>image</key>
+		<string>Faculty of Communication, Art and Technology.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Education</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCL4fgdpXtwIYh6B4svMLuzw</string>
+		<key>image</key>
+		<string>SFU Education.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Applied Sciences</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCYiIkXJRfsaScIz4DgzW2DA</string>
+		<key>image</key>
+		<string>SFU Applied Sciences.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Computing Science Dual Degree Program</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCYmUs89f_odo0z7t4IpIrtQ</string>
+		<key>image</key>
+		<string>SFU Computing Science Dual Degree Program.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>French Educ</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCHdjuGWH0ndN_p2jfqafXGg</string>
+		<key>image</key>
+		<string>French Educ.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU History</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCjovwYJ237SlP75IFJ-yVKQ</string>
+		<key>image</key>
+		<string>SFU History.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>frcohort</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCXfEGD2C-dJS3_IQzILdbXw</string>
+		<key>image</key>
+		<string>frcohort.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFUDutchDesign</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC-2SWvLmclNmgwAImsNeYdg</string>
+		<key>image</key>
+		<string>SFUDutchDesign.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>BPK SFU</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCXXZ2s04fEcaWTPX47PEk2w</string>
+		<key>image</key>
+		<string>BPK SFU.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Centre for Dialogue</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCtSlohTqndb9txWvSG4YvnQ</string>
+		<key>image</key>
+		<string>SFU Centre for Dialogue.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>#SimonFraserUniversityPipeBand</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UC5Iti8U7Q2Og1B7nCew2ldw</string>
+		<key>image</key>
+		<string>#SimonFraserUniversityPipeBand.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>#SimonFraserUniversity</string>
+		<key>url</key>
+		<string>https://www.youtube.com/channel/UCLpUgcZAaHAFuL8hHaTmZnw</string>
+		<key>image</key>
+		<string>#SimonFraserUniversity.png</string>
+	</dict>
+</array>
+</plist>

@@ -19,12 +19,41 @@
     NSDate *dateTime;
     NSString *element;
     NSString *apiURL;
+    BOOL first;
+    BOOL ExceedTime;
 }
 
 @end
 
 
 @implementation SFUTransitDisplayViewController
+
+-(void) timerRun{
+    if(!ExceedTime){
+    secondsCount--;
+    int hours=secondsCount/3600;
+    int minutes=(secondsCount-(hours*3600))/60;
+    int second=secondsCount-(minutes*60)-(hours*3600);
+    NSString *timerOutput=[NSString stringWithFormat:@"%.2d:%.2d:%.2d",hours,minutes,second];
+    self.timer.text=timerOutput;
+    if(secondsCount<=0){
+        [countDownTimer invalidate];
+        countDownTimer=nil;
+    
+    }
+    }
+    else{
+        [self.timer setFont:[UIFont systemFontOfSize:30]];
+        NSString *timerOutput=[NSString stringWithFormat:@"TIME N/A"];
+        self.timer.text=timerOutput;
+    }
+}
+
+-(void) setTimer{
+    [[times objectAtIndex:0] objectForKey:@"deltatime"];
+    countDownTimer=[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerRun) userInfo:nil repeats:YES];
+}
+
 
 
 - (void)viewDidLoad {
@@ -34,6 +63,8 @@
     NSInteger BusIndex=[self.BusPath row];
     //NSLog([self.model stopStringForIndex:BusIndex]);
     //NSLog([self.model routeStringForIndex:BusIndex]);
+    first=NO;
+    ExceedTime=NO;
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&count=6&timeframe=1440&routeNo="];
@@ -46,6 +77,7 @@
     userInfo:nil
     repeats:YES];
     
+    [self setTimer];
     [self refreshData];
     
 
@@ -64,6 +96,7 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
+    first=NO;
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -93,25 +126,66 @@
         
         @try {
         
-        // Convert string to date object
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
-        //dateTime = [dateFormat dateFromString:leaveTime];
-        [dateFormat setDateFormat:@"hh:mma"];
-        dateTime = [dateFormat dateFromString:leaveTime];
+            // Convert string to date object
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            NSString *stringFromDate;
+            if ([leaveTime length]>7)
+            {
+                [dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+                dateTime = [dateFormat dateFromString:leaveTime];
+                [dateFormat setDateFormat:@"hh:mma"];
+                stringFromDate =[dateFormat stringFromDate:dateTime];
+                dateTime=[dateFormat dateFromString: stringFromDate];
+            }
+            else
+            {
+                [dateFormat setDateFormat:@"hh:mma"];
+                dateTime = [dateFormat dateFromString:leaveTime];
+                stringFromDate = [dateFormat stringFromDate:dateTime];
+            }
+            //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+            //dateTime = [dateFormat dateFromString:leaveTime];
+            //[dateFormat setDateFormat:@"hh:mma"];
+            //dateTime = [dateFormat dateFromString:leaveTime];
+            //NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
+            
+            NSDate *today=[NSDate date];
+            NSString *todayString=[dateFormat stringFromDate:today];
+            NSDate *todayTime=[dateFormat dateFromString:todayString];
+            //NSDate *test=[dateFormat dateFromString:@"10:00PM"];
         
-        NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
         
-        NSTimeInterval dtime=[dateTime timeIntervalSinceNow];
-        double dtimebysixty=dtime/60.0;
-        double mins=(long long)(dtimebysixty);
-        NSString *deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
+            NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
+            if(first==NO){
+                secondsCount=dtime;
+                first=YES;
+            }
+            double mins=(long long)(dtime/60.0);
+            NSString *deltatime;
+            if (mins<0)
+            {
+                mins=mins*(-1);
+                mins=1440.0-mins;
+                
+            }
+            
+            if (mins>120.0)
+            {
+                double hours=(long long) (mins/60.0);
+                deltatime=[NSString stringWithFormat:@"Over %.0f h",hours];
+                ExceedTime=YES;
+            }
+            else
+            {
+                deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
+ 
+            }
         
-        [item setObject:dateTime forKey:@"leavetime"];
-        [item setObject:stringFromDate forKey:@"stringtime"];
-        [item setObject:deltatime forKey:@"deltatime"];
+            [item setObject:dateTime forKey:@"leavetime"];
+            [item setObject:stringFromDate forKey:@"stringtime"];
+            [item setObject:deltatime forKey:@"deltatime"];
         
-        [times addObject:[item copy]];
+            [times addObject:[item copy]];
             
         }
         

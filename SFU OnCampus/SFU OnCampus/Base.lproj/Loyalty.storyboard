@@ -52,6 +52,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="scanCode:" destination="PF7-DZ-6aY" eventType="touchUpInside" id="auH-Gi-1U3"/>
+                                    <segue destination="8zU-0u-tbM" kind="show" id="KMC-g0-l1w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,6 +88,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f7-5U-YmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476" y="1032"/>
+        </scene>
+        <!--Capture View Controller-->
+        <scene sceneID="Wn4-30-8zg">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8zU-0u-tbM" customClass="SFUQRCaptureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MsO-Bq-v0j"/>
+                        <viewControllerLayoutGuide type="bottom" id="cl1-F8-y8n"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="qqh-nC-Eiz">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-Mp-1Jh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="yic-eR-CVC"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <segue destination="icq-Av-O0Y" kind="unwind" identifier="unwindToInput" unwindAction="unwindToSFULoyaltyCardViewController:" id="cV5-I8-26L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tam-sD-HII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="icq-Av-O0Y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2181" y="1032"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>

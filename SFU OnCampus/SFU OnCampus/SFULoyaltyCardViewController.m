@@ -27,6 +27,7 @@
 
 -(void)foundCodeWithStringRepresentation:(NSString*)s
 {
+    NSLog(@"loyaty card view controll foudCodeWithStringRep: %@",s);
     //model redeem s
     //update label
 }
@@ -41,8 +42,15 @@
 
 - (IBAction)scanCode:(id)sender
 {
-    SFUQRCaptureViewController* c = [[UIStoryboard storyboardWithName:@"QRScan" bundle:nil] instantiateInitialViewController];
-    c.delegate=self;
-    [self.navigationController pushViewController:c animated:YES];
+//    SFUQRCaptureViewController* c = [[UIStoryboard storyboardWithName:@"QRScan" bundle:nil] instantiateInitialViewController];
+//    c.delegate=self;
+//    [self.navigationController pushViewController:c animated:YES];
+}
+
+-(IBAction)unwindToSFULoyaltyCardViewController:(UIStoryboardSegue *)segue 
+{
+    SFUQRCaptureViewController* q = (SFUQRCaptureViewController*)[segue sourceViewController];
+    NSString *s = [q composeShortcode];
+    [self foundCodeWithStringRepresentation:s];
 }
 @end

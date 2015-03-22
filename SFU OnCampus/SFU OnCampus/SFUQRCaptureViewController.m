@@ -101,8 +101,8 @@ NSMutableString* result;
         if (detectionString != nil)
         {
             NSLog(@"Detected\n%@\n",detectionString);
-            [result setString:detectionString];
-            [self.navigationController popViewControllerAnimated:TRUE];
+            result=detectionString;
+            [self performSegueWithIdentifier:@"unwindToInput" sender:self];
             break;
         }
         else
@@ -112,6 +112,11 @@ NSMutableString* result;
         
         //_highlightView.frame = highlightViewRect;
     }
+}
+
+-(NSString*)composeShortcode
+{
+    return result;
 }
 
 /*

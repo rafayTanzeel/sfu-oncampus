@@ -11,5 +11,6 @@
 #import "SFUQRCaptureDelegate.h"
 @interface SFUQRCaptureViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 @property (nonatomic, assign) id< SFUQRCaptureDelegate > delegate;
+-(NSString*)composeShortcode;
 
 @end

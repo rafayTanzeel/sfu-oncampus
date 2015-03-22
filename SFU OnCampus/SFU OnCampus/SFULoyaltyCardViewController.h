@@ -13,4 +13,8 @@
 - (IBAction)scanCode:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *pointsLabel;
 
+-(IBAction)unwindToSFULoyaltyCardViewController:(UIStoryboardSegue *)segue ;
+
+    
+
 @end

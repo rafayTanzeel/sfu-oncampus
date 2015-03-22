@@ -1041,7 +1041,7 @@
 				TargetAttributes = {
 					F808D80A1A95CFA90006FC17 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = XM6475YHW9;
+						DevelopmentTeam = E56RCXEQ93;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -1050,6 +1050,7 @@
 					};
 					F808D8261A95CFA90006FC17 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E56RCXEQ93;
 						TestTargetID = F808D80A1A95CFA90006FC17;
 					};
 				};

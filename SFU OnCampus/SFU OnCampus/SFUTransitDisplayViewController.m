@@ -7,6 +7,7 @@
 //
 
 #import "SFUTransitDisplayViewController.h"
+#import "SFUWebViewController.h"
 
 
 @interface SFUTransitDisplayViewController (){
@@ -90,6 +91,7 @@
     
     if ([elementName isEqualToString:@"Schedule"]) {
         
+        @try {
         
         // Convert string to date object
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -109,6 +111,12 @@
         [item setObject:deltatime forKey:@"deltatime"];
         
         [times addObject:[item copy]];
+            
+        }
+        
+        @catch(NSException* e ){
+            //do nothing
+        }
         
     }
     
@@ -165,14 +173,23 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+ SFUWebViewController *controller = (SFUWebViewController *)[segue destinationViewController];
+ 
+ [controller displayPageForURL:[NSURL URLWithString:@"http://www.sfu.ca/busstop.html"] inApp:YES];
+ 
+ controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+ controller.navigationItem.leftItemsSupplementBackButton = YES;
+
+ 
 }
-*/
+
 
 @end

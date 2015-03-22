@@ -52,7 +52,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NSString* URL=[self.model urlStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
-    RSSTableViewController *controller = (RSSTableViewController *)[[segue destinationViewController] topViewController];
+    RSSTableViewController *controller = (RSSTableViewController *)[segue destinationViewController];
     controller.rssUrl=[[NSURL alloc] initWithString:URL];
 
 }

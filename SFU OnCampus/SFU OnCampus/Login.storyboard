@@ -81,6 +81,7 @@
                     <connections>
                         <outlet property="computingID" destination="BlV-FE-RF6" id="0eI-HU-33L"/>
                         <outlet property="password" destination="vVV-fb-1cr" id="lVB-0c-tt6"/>
+                        <outlet property="signinButton" destination="KdH-4E-uLt" id="1bE-E2-eJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfG-1A-JF5" userLabel="First Responder" sceneMemberID="firstResponder"/>

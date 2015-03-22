@@ -20,16 +20,14 @@
     NSMutableDictionary *currentObservation;
     NSArray *forecastDay;
     
-    // Strings for the announcement
+    // String and array for the announcement
     NSString *announcementOne;
-    NSString *announcementTwo;
+    NSMutableArray *announcementArray;
 }
 
 @end
 
 @implementation SFUWeatherViewController
-
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -145,16 +143,17 @@
     
     // Create queries and create arrays which hold the Hpple objects
     NSString *queryStringOne = @"//section[@class='announcements']/div/p";
-    NSString *queryStringTwo = @"//section[@class='announcements']/div/div/div/p";
     NSArray *nodesOne = [parser searchWithXPathQuery:queryStringOne];
-    NSArray *nodesTwo = [parser searchWithXPathQuery:queryStringTwo];
     
     // store the returned data in global strings
+    int i = 0;
     for (TFHppleElement *element in nodesOne) {
         announcementOne = [[element firstChild] content];
-    }
-    for (TFHppleElement *element in nodesTwo) {
-        announcementTwo = [[element firstChild] content];
+        [announcementArray replaceObjectAtIndex:i withObject:announcementOne];
+        NSLog(@"--------------------------------");
+        NSLog([announcementArray objectAtIndex:i]);
+        NSLog(@"--------------------------------");
+        i++;
     }
 }
 
@@ -173,6 +172,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    announcementArray = [NSMutableArray arrayWithObjects: @"1", @"2", @"3", @"4", nil];
     
     self.tableView.separatorColor = [UIColor clearColor];
     
@@ -291,8 +292,7 @@
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
 
-        NSString *willUpdate = @"This report will be updated as conditions change.";
-        NSString *announce = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", announcementOne, announcementTwo, willUpdate];
+        NSString *announce = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", [announcementArray objectAtIndex:0], [announcementArray objectAtIndex:1], [announcementArray objectAtIndex:2]];
         
         cell.AnnouncementsBody.text = announce;
         

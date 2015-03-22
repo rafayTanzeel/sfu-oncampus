@@ -12,6 +12,8 @@
 @property (weak, atomic) NSIndexPath *BusPath;
 @property (strong, nonatomic) IBOutlet SFUTransitModel *model;
 
+@property (strong, atomic) NSString *loopName;
+
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 

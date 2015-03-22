@@ -36,7 +36,7 @@
     //NSLog([self.model routeStringForIndex:BusIndex]);
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
-    NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&routeNo="];
+    NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&count=6&timeframe=1440&routeNo="];
     apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
     NSLog(apiURL);
     
@@ -95,9 +95,10 @@
         
         // Convert string to date object
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
-        dateTime = [dateFormat dateFromString:leaveTime];
+        //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+        //dateTime = [dateFormat dateFromString:leaveTime];
         [dateFormat setDateFormat:@"hh:mma"];
+        dateTime = [dateFormat dateFromString:leaveTime];
         
         NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
         

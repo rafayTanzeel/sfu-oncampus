@@ -4,14 +4,6 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>143 COQUITLAM STN</string>
-		<key>stop</key>
-		<string>52998</string>
-		<key>route</key>
-		<string>143</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>145 PRODUCTION STN</string>
 		<key>stop</key>
 		<string>59044</string>
@@ -25,6 +17,14 @@
 		<string>59044</string>
 		<key>route</key>
 		<string>144</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>143 COQUITLAM STN</string>
+		<key>stop</key>
+		<string>59044</string>
+		<key>route</key>
+		<string>143</string>
 	</dict>
 	<dict>
 		<key>title</key>

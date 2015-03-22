@@ -106,6 +106,7 @@
 		35D631701ABF760100CCEC8D /* search-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D631671ABF760100CCEC8D /* search-group.png */; };
 		35D631711ABF760100CCEC8D /* twitter-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D631681ABF760100CCEC8D /* twitter-512.png */; };
 		35D631721ABF760100CCEC8D /* youtube-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D631691ABF760100CCEC8D /* youtube-512.png */; };
+		35D631741ABF7CFA00CCEC8D /* 20-rss-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D631731ABF7CFA00CCEC8D /* 20-rss-512.png */; };
 		35DB33B51AAC08B200A3B42D /* SFUSocialServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */; };
 		5D010CD21AAD5F16005CC0D2 /* SFUFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */; };
 		5D010CD51AAD6039005CC0D2 /* SFUFacebookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D010CD41AAD6039005CC0D2 /* SFUFacebookModel.m */; };
@@ -354,6 +355,7 @@
 		35D631671ABF760100CCEC8D /* search-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-group.png"; path = "../search-group.png"; sourceTree = "<group>"; };
 		35D631681ABF760100CCEC8D /* twitter-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter-512.png"; path = "../twitter-512.png"; sourceTree = "<group>"; };
 		35D631691ABF760100CCEC8D /* youtube-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "youtube-512.png"; path = "../youtube-512.png"; sourceTree = "<group>"; };
+		35D631731ABF7CFA00CCEC8D /* 20-rss-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20-rss-512.png"; path = "SFU OnCampus/images/20-rss-512.png"; sourceTree = SOURCE_ROOT; };
 		35DB33B41AAC08B200A3B42D /* SFUSocialServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUSocialServiceURLs.plist; sourceTree = "<group>"; };
 		5D010CD01AAD5F16005CC0D2 /* SFUFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUFacebookController.h; sourceTree = "<group>"; };
 		5D010CD11AAD5F16005CC0D2 /* SFUFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUFacebookController.m; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 		5D11B5B21AABE232000DBC1B /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				35D631731ABF7CFA00CCEC8D /* 20-rss-512.png */,
 				35D631611ABF760100CCEC8D /* 700383-icon-14-trophy-one-512.png */,
 				35D631621ABF760100CCEC8D /* facebook-512.png */,
 				35D631631ABF760100CCEC8D /* group-512.png */,
@@ -1200,6 +1203,7 @@
 				040DC4E91AACFCAF003A713F /* mist_d.png in Resources */,
 				040DC4EA1AACFCAF003A713F /* mist_n.png in Resources */,
 				35BACF2C1ABEB4FB00035E05 /* SFU Student Services.jpg in Resources */,
+				35D631741ABF7CFA00CCEC8D /* 20-rss-512.png in Resources */,
 				F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */,
 				35BACF281ABEB4FB00035E05 /* SFU PublicSquareYouTube.png in Resources */,
 				5D11B5BB1AABE232000DBC1B /* journal.png in Resources */,

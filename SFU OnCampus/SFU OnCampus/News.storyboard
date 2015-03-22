@@ -75,7 +75,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="rss_circle_color-512.png" id="s24-Yf-NWb">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="20-rss-512.png" id="s24-Yf-NWb">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -161,7 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="20-rss-512.png" width="512" height="512"/>
         <image name="Icon-60" width="60" height="60"/>
-        <image name="rss_circle_color-512.png" width="512" height="512"/>
     </resources>
 </document>

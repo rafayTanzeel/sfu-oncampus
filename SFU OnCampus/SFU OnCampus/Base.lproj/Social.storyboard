@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="3270" y="-2712"/>
         </scene>
-        <!--SFU Youtube-->
+        <!--SFU YouTube-->
         <scene sceneID="ZcH-NV-J79">
             <objects>
-                <tableViewController title="SFU Youtube" id="xEw-I5-HfL" customClass="SFUYouTubeController" sceneMemberID="viewController">
+                <tableViewController title="SFU YouTube" id="xEw-I5-HfL" customClass="SFUYouTubeController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xOv-We-ROR">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,7 +302,7 @@
                             <outlet property="delegate" destination="xEw-I5-HfL" id="wK2-rd-6na"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SFU Twitter" id="saG-r9-Ru0"/>
+                    <navigationItem key="navigationItem" title="SFU YouTube" id="saG-r9-Ru0"/>
                     <connections>
                         <outlet property="model" destination="wBc-iU-qMC" id="izb-al-xB3"/>
                     </connections>

@@ -143,7 +143,7 @@ typedef enum SFUMapModelResulutionStatus
     {
         [self buildReverseIndex];
     }
-    return [[labelToShort keyEnumerator] allObjects];
+    return [[[labelToShort keyEnumerator] allObjects] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
 /**

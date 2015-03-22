@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.model=[[SFUTransitModel alloc] initWithPlist:self.loopName];
+    self.model=[[SFUTransitModel alloc] initWithPlist:self.loopName]; //initialize the model with plist
     // Do any additional setup after loading the view.
 }
 
@@ -23,7 +23,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //    return self.objects.count;
-    return [self.model sizeOfArray];
+    return [self.model sizeOfArray]; //number cells equals size of plist
 }
 
 
@@ -31,14 +31,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2" forIndexPath:indexPath];
     
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [self.model titleStringForIndex:indexPath.row];
+    cell.textLabel.text = [self.model titleStringForIndex:indexPath.row]; //set the text to the title string
     return cell;
     
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,8 +80,8 @@
     //NSString* URL=[self.model urlStringForIndex:indexPath.row];
     //NSDate *object = self.objects[indexPath.row];
     SFUTransitDisplayViewController *controller = (SFUTransitDisplayViewController *)[segue destinationViewController];
-    controller.BusPath = [self.tableView indexPathForSelectedRow];
-    controller.loopName=self.loopName;
+    controller.BusPath = [self.tableView indexPathForSelectedRow]; //send the bus number to the next scene
+    controller.loopName=self.loopName; //send the loopname to the next scene
     
     //self.tableView indexPathForSelectedR
     

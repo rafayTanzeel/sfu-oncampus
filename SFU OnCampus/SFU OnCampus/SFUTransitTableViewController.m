@@ -1,10 +1,13 @@
 //
 //  SFUTransitTableViewController.m
 //  OnCampus
+//  Group 10
+//  Nikhil Gaba, Abram Wiebe, Rafay Tanzeel, Kevin Grant, Sunny Chowdhury
 //
 //  Created by Nikhil Gaba on 2015-03-14.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
+//presently no known bugs
 
 #import "SFUTransitTableViewController.h"
 
@@ -53,13 +56,13 @@
 }
 */
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
-*/
+
 
 /*
 // Override to support editing the table view.
@@ -95,34 +98,38 @@
 
        // SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
         //controller.loopPath = [self.tableView indexPathForSelectedRow];
+    
+    //---------------------------------
+    //determines which bus loop to load
+    //---------------------------------
     if ([[segue identifier] isEqualToString:@"upper"])
     {
         SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
-        controller.loopName=@"SFUTransitUpperLoop";
+        controller.loopName=@"SFUTransitUpperLoop"; // sets name of populating plist
     }
     
     else if ([[segue identifier] isEqualToString:@"lower"])
     {
         SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
-        controller.loopName=@"SFUTransitLowerLoop";
+        controller.loopName=@"SFUTransitLowerLoop"; //sets name of populating plist
     }
     
     else if ([[segue identifier] isEqualToString:@"tower"])
     {
         SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
-        controller.loopName=@"SFUTransitTowerRd";
+        controller.loopName=@"SFUTransitTowerRd"; //sets name of populating plist
     }
     
     else if ([[segue identifier] isEqualToString:@"science"])
     {
         SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
-        controller.loopName=@"SFUTransitScienceRd";
+        controller.loopName=@"SFUTransitScienceRd"; //sets name of populating plist
     }
     
     else if ([[segue identifier] isEqualToString:@"residence"])
     {
         SFUUpperLoopController *controller = (SFUUpperLoopController *)[segue destinationViewController];
-        controller.loopName=@"SFUTransitResidenceRd";
+        controller.loopName=@"SFUTransitResidenceRd"; //sets name of populating plist
     }
 
     

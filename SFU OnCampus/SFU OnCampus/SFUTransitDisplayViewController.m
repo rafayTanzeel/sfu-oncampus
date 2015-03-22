@@ -123,6 +123,9 @@ NSMutableArray*parsedData;
         
         NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
         
+        //NSDate *today = [NSDate date];
+        NSTimeInterval dtime=[dateTime timeIntervalSinceNow];
+        
         [item setObject:dateTime forKey:@"leavetime"];
         [item setObject:stringFromDate forKey:@"stringtime"];
         
@@ -136,6 +139,8 @@ NSMutableArray*parsedData;
     
     
     [self.upcomingTableView reloadData];
+    self.nextBusTime.text=[[times objectAtIndex:0] objectForKey:@"stringtime"];
+    self.nextBusDeltaTime.text=[[times objectAtIndex:0] objectForKey:@"deltatime"];
     
 }
 
@@ -158,10 +163,9 @@ NSMutableArray*parsedData;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSMutableDictionary* data = [parsedData objectAtIndex:indexPath.row];
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [data objectForKey:@"time"];
-    cell.detailTextLabel.text= [data objectForKey:@"dtime"];
+    cell.textLabel.text = [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"stringtime"];
+    cell.detailTextLabel.text= [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"deltatime"];
     return cell;
 }
 

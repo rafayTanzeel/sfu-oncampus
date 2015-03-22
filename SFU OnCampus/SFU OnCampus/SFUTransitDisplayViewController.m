@@ -68,12 +68,12 @@
 }
 //logic that runs everytime the page refreshes
 -(void) refreshData{
-    times = [[NSMutableArray alloc] init];
-    NSURL *url = [NSURL URLWithString:apiURL];
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    times = [[NSMutableArray alloc] init]; //initializes array to hold parsed data
+    NSURL *url = [NSURL URLWithString:apiURL]; //initialize url with apiurl
+    parser = [[NSXMLParser alloc] initWithContentsOfURL:url]; //create parser object
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
-    [parser parse];
+    [parser parse]; //parse
 
 }
 

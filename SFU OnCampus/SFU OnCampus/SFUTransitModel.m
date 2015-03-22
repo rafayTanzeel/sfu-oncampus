@@ -11,7 +11,7 @@
 @interface SFUTransitModel()
 {
     @private
-    NSArray* array;
+    NSArray* array; //holds our plist
 }
 
 @end
@@ -24,6 +24,8 @@
     //This is a user defined path in interface builder
     //Take a look under the identity panel to see it.
     @try{
+        
+        //loads plist into array
         NSString* path=[[NSBundle mainBundle]pathForResource:plistName ofType:@"plist"];
         array = [NSArray arrayWithContentsOfFile:path];
     }

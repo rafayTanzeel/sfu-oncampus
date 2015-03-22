@@ -11,15 +11,15 @@
 
 
 @interface SFUTransitDisplayViewController (){
-
+    
     NSXMLParser *parser;
     NSMutableArray *times;
     NSMutableDictionary *item;
     NSMutableString *leaveTime;
+    NSMutableString *deltaTimeFromApi;
     NSDate *dateTime;
     NSString *element;
     NSString *apiURL;
-
 }
 
 @end
@@ -35,7 +35,6 @@
     NSInteger BusIndex=[self.BusPath row];
     //NSLog([self.model stopStringForIndex:BusIndex]);
     //NSLog([self.model routeStringForIndex:BusIndex]);
-
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&count=6&timeframe=1440&routeNo="];
@@ -43,20 +42,19 @@
     NSLog(apiURL);
     
     [NSTimer scheduledTimerWithTimeInterval:30.0
-    target:self
-    selector:@selector(refreshData)
-    userInfo:nil
-    repeats:YES];
+                                     target:self
+                                   selector:@selector(refreshData)
+                                   userInfo:nil
+                                    repeats:YES];
     
-
     [self refreshData];
     
-
-    
-   // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
     
     
-
+    // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
+    
+    
+    
 }
 
 -(void) refreshData{
@@ -67,7 +65,6 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
-
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -78,6 +75,7 @@
         
         item    = [[NSMutableDictionary alloc] init];
         leaveTime   = [[NSMutableString alloc] init];
+        deltaTimeFromApi =[[NSMutableString alloc] init];
         
     }
     
@@ -89,6 +87,10 @@
         [leaveTime appendString:string];
     }
     
+    if ([element isEqualToString:@"ExpectedCountdown"]){
+        [deltaTimeFromApi appendString:string];
+    }
+    
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
@@ -96,7 +98,7 @@
     if ([elementName isEqualToString:@"Schedule"]) {
         
         @try {
-        
+            
             // Convert string to date object
             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
             NSString *stringFromDate;
@@ -120,39 +122,38 @@
             //dateTime = [dateFormat dateFromString:leaveTime];
             //NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
             
-            NSDate *today=[NSDate date];
-            NSString *todayString=[dateFormat stringFromDate:today];
-            NSDate *todayTime=[dateFormat dateFromString:todayString];
+            //NSDate *today=[NSDate date];
+            //NSString *todayString=[dateFormat stringFromDate:today];
+            //NSDate *todayTime=[dateFormat dateFromString:todayString];
             //NSDate *test=[dateFormat dateFromString:@"10:00PM"];
-        
-        
-            NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
-
-            double mins=(long long)(dtime/60.0);
-            NSString *deltatime;
-            if (mins<0)
-            {
-                mins=mins*(-1);
-                mins=1440.0-mins;
-                
-            }
             
-            if (mins>120.0)
+            
+            //NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
+            //double mins=(long long)(dtime/60.0);
+            double dtime=[deltaTimeFromApi doubleValue];
+            NSString *deltatime;
+            /*if (mins<0)
+             {
+             mins=mins*(-1);
+             mins=1440.0-mins;
+             
+             }*/
+            
+            if (dtime>120.0)
             {
-                double hours=(long long) (mins/60.0);
+                double hours=(long long) (dtime/60.0);
                 deltatime=[NSString stringWithFormat:@"Over %.0f h",hours];
-
             }
             else
             {
-                deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
- 
+                deltatime=[NSString stringWithFormat:@"%.0f mins",dtime];
+                
             }
-        
+            
             [item setObject:dateTime forKey:@"leavetime"];
             [item setObject:stringFromDate forKey:@"stringtime"];
             [item setObject:deltatime forKey:@"deltatime"];
-        
+            
             [times addObject:[item copy]];
             
         }
@@ -223,15 +224,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
- 
- SFUWebViewController *controller = (SFUWebViewController *)[segue destinationViewController];
- 
- [controller displayPageForURL:[NSURL URLWithString:@"http://www.sfu.ca/busstop.html"] inApp:YES];
- 
- controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
- controller.navigationItem.leftItemsSupplementBackButton = YES;
-
- 
+    
+    SFUWebViewController *controller = (SFUWebViewController *)[segue destinationViewController];
+    
+    [controller displayPageForURL:[NSURL URLWithString:@"http://www.sfu.ca/busstop.html"] inApp:YES];
+    
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
+    
+    
 }
 
 

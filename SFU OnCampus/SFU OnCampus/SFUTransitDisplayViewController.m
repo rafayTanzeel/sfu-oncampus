@@ -93,25 +93,43 @@
         
         @try {
         
-        // Convert string to date object
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
-        //dateTime = [dateFormat dateFromString:leaveTime];
-        [dateFormat setDateFormat:@"hh:mma"];
-        dateTime = [dateFormat dateFromString:leaveTime];
+            // Convert string to date object
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            //[dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+            //dateTime = [dateFormat dateFromString:leaveTime];
+            [dateFormat setDateFormat:@"hh:mma"];
+            dateTime = [dateFormat dateFromString:leaveTime];
+            NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
+            
+            NSDate *today=[NSDate date];
+            NSString *todayString=[dateFormat stringFromDate:today];
+            NSDate *todayTime=[dateFormat dateFromString:todayString];
         
-        NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
         
-        NSTimeInterval dtime=[dateTime timeIntervalSinceNow];
-        double dtimebysixty=dtime/60.0;
-        double mins=(long long)(dtimebysixty);
-        NSString *deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
+            NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
+            double mins=(long long)(dtime/60.0);
+            NSString *deltatime;
+            if (mins<0)
+            {
+                mins=mins*(-1);
+            }
+            
+            if (mins>120.0)
+            {
+                double hours=(long long) (mins/60.0);
+                deltatime=[NSString stringWithFormat:@"Approx %.0f hrs",hours];
+            }
+            else
+            {
+                deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
+ 
+            }
         
-        [item setObject:dateTime forKey:@"leavetime"];
-        [item setObject:stringFromDate forKey:@"stringtime"];
-        [item setObject:deltatime forKey:@"deltatime"];
+            [item setObject:dateTime forKey:@"leavetime"];
+            [item setObject:stringFromDate forKey:@"stringtime"];
+            [item setObject:deltatime forKey:@"deltatime"];
         
-        [times addObject:[item copy]];
+            [times addObject:[item copy]];
             
         }
         

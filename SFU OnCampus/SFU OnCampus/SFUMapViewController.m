@@ -146,7 +146,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         [self.mapView addAnnotation: a];
         
         ///Zoom to and draw destination
-        r = [self.model regionForShortCode:dest];
+        r = [self.model regionForString:dest status:&status];
         //[self.mapView setRegion:r animated:YES];
         printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
         SFUMapAnnotation* b = [SFUMapAnnotation new];

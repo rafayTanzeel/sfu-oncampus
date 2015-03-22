@@ -68,7 +68,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywB-oV-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4247" y="-3076"/>
+            <point key="canvasLocation" x="4258" y="-2974"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="824-d6-OQQ">
@@ -201,6 +201,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xEw-I5-HfL" kind="show" id="kgq-No-5Lq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -267,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="3270" y="-2712"/>
         </scene>
-        <!--SFU Yputube-->
+        <!--SFU Youtube-->
         <scene sceneID="ZcH-NV-J79">
             <objects>
-                <tableViewController title="SFU Yputube" id="xEw-I5-HfL" customClass="SFUTwitterController" sceneMemberID="viewController">
+                <tableViewController title="SFU Youtube" id="xEw-I5-HfL" customClass="SFUYouTubeController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xOv-We-ROR">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,6 +295,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xlk-at-zxH" kind="show" id="jBA-el-dOn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -301,13 +307,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="SFU Twitter" id="saG-r9-Ru0"/>
                     <connections>
-                        <outlet property="model" destination="ZXB-HY-E1T" id="r0p-87-nck"/>
+                        <outlet property="model" destination="wBc-iU-qMC" id="izb-al-xB3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5c-AB-OJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="wBc-iU-qMC" customClass="SFUTwitterModel"/>
+                <customObject id="wBc-iU-qMC" customClass="SFUYouTubeModel"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="-2000"/>
+            <point key="canvasLocation" x="3198" y="-1901"/>
         </scene>
     </scenes>
     <resources>
@@ -317,7 +323,7 @@
         <image name="twitter_icon.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o0B-ml-VMf"/>
+        <segue reference="jBA-el-dOn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

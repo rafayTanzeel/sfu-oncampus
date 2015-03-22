@@ -46,7 +46,7 @@ NSMutableArray*parsedData;
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
     
-    NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
+   // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
     
     
     
@@ -92,7 +92,7 @@ NSMutableArray*parsedData;
     
     element = elementName;
     
-    if ([element isEqualToString:@"schedule"]) {
+    if ([element isEqualToString:@"Schedule"]) {
         
         item    = [[NSMutableDictionary alloc] init];
         leaveTime   = [[NSMutableString alloc] init];
@@ -103,7 +103,7 @@ NSMutableArray*parsedData;
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    if ([element isEqualToString:@"expectedleavetime"]) {
+    if ([element isEqualToString:@"ExpectedLeaveTime"]) {
         [leaveTime appendString:string];
     }
     
@@ -111,13 +111,19 @@ NSMutableArray*parsedData;
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
-    if ([elementName isEqualToString:@"schedule"]) {
+    if ([elementName isEqualToString:@"Schedule"]) {
         
         [item setObject:leaveTime forKey:@"leavetime"];
         
         [times addObject:[item copy]];
         
     }
+    
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
+    NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
+    //[self.tableView reloadData];
     
 }
 

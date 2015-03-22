@@ -12,5 +12,6 @@
 @interface SFUMapModel : NSObject
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
 -(NSString*)suggestionForPrefix:(NSString*)p;
+-(NSArray*)listOfDomains;
 @property BOOL shouldTrackHistory;
 @end

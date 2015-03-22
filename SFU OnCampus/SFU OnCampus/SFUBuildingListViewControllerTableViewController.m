@@ -10,13 +10,14 @@
 
 @interface SFUBuildingListViewControllerTableViewController ()
 
+
 @end
 
 @implementation SFUBuildingListViewControllerTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.model = [[SFUMapModel alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -40,13 +41,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return [[self.model listOfDomains] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    
+    NSArray* l = [self.model listOfDomains];
+    
+    cell.textLabel.text = [ l objectAtIndex:indexPath.row];
     // Configure the cell...
     
     return cell;

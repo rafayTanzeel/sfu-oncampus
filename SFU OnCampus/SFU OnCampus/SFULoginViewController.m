@@ -7,7 +7,7 @@
 //
 
 #import "SFULoginViewController.h"
-
+#import "SFUWebViewController.h"
 @interface SFULoginViewController ()
 
 @end
@@ -67,12 +67,10 @@
         }
         else {
             // computingID and password
-            NSString *post =[NSString stringWithFormat:@"computingID=%@&password=%@",[self.computingID text],[self.password text]];
+            NSString *post =[NSString stringWithFormat:@"username=%@&password=%@",[self.computingID text],[self.password text]];
             // NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"https://cas.sfu.ca/"];
-            
-            NSURL *responseURL = [NSURL URLWithString:@"https://canvas.sfu.ca"];
+            NSURL *url=[NSURL URLWithString:@"https://cas.sfu.ca/cgi-bin/WebObjects/cas.woa/wa/login"];
             
             // convert string to data
             NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
@@ -80,6 +78,7 @@
             // calculate length of post request
             NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
             
+            // Set up the request
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
             [request setHTTPMethod:@"POST"];
@@ -93,6 +92,7 @@
             NSHTTPURLResponse *response = nil;
             NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
             NSLog(@"Response code: %ld", (long)[response statusCode]);
+
             
             // Request OK
             if ([response statusCode] >= 200 && [response statusCode] < 300)
@@ -103,7 +103,7 @@
     
                 
                 NSArray* allCookies;
-                allCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:responseURL];
+                allCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
                 for (NSHTTPCookie *cookie in allCookies) {
                     NSLog(@"hello\n\n");
                     NSLog(@"%@",cookie);
@@ -150,4 +150,22 @@
     [alertView show];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+
+
+NSString* URL=@"https://cas.sfu.ca/cgi-bin/WebObjects/cas.woa/wa/login";
+
+//[self.feeds[indexPath.row] objectForKey:@"link"];
+
+
+
+SFUWebViewController *controller = (SFUWebViewController *)[segue destinationViewController];
+
+[controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
+
+controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+controller.navigationItem.leftItemsSupplementBackButton = YES;
+    
+}
 @end

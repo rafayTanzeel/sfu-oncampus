@@ -285,6 +285,7 @@
 		5DDC258F1AAD0B8200243DB4 /* sfuresidence-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfuresidence-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC25911AAD0BC700243DB4 /* sfuapplied-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfuapplied-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC25931AAD0BFF00243DB4 /* sfustudent-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfustudent-fb-icon.jpg"; sourceTree = "<group>"; };
+		5DFA70451ABE473500D4407D /* SFU OnCampus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SFU OnCampus.entitlements"; sourceTree = "<group>"; };
 		8869FAF21ABDFDBA007A135E /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		8869FAF61ABE05BC007A135E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8869FAF81ABE0776007A135E /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
@@ -596,6 +597,7 @@
 		F808D80D1A95CFA90006FC17 /* SFU OnCampus */ = {
 			isa = PBXGroup;
 			children = (
+				5DFA70451ABE473500D4407D /* SFU OnCampus.entitlements */,
 				04E9973B1ABE1590000669DF /* Library */,
 				F81D7EDF1ABAD577004AC1E5 /* Loyalty */,
 				F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */,
@@ -878,6 +880,11 @@
 					F808D80A1A95CFA90006FC17 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = XM6475YHW9;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					F808D8261A95CFA90006FC17 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1287,6 +1294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SFU OnCampus/SFU OnCampus.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SFU OnCampus/Info.plist";
@@ -1301,6 +1309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SFU OnCampus/SFU OnCampus.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SFU OnCampus/Info.plist";

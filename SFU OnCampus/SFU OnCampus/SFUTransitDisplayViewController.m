@@ -9,7 +9,14 @@
 #import "SFUTransitDisplayViewController.h"
 
 
-@interface SFUTransitDisplayViewController ()
+@interface SFUTransitDisplayViewController (){
+
+    NSXMLParser *parser;
+    NSMutableArray *times;
+    NSMutableDictionary *item;
+    NSMutableString *leaveTime;
+    NSString *element;
+}
 
 @end
 
@@ -29,6 +36,17 @@ NSMutableArray*parsedData;
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&routeNo="];
     NSString *apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
+    NSLog(apiURL);
+    
+    times = [[NSMutableArray alloc] init];
+    NSURL *url = [NSURL URLWithString:apiURL];
+    parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    
+    [parser setDelegate:self];
+    [parser setShouldResolveExternalEntities:NO];
+    [parser parse];
+    
+   // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
     
     
     
@@ -68,6 +86,45 @@ NSMutableArray*parsedData;
     [parsedData addObject:individualBus6];
     
 
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+    
+    element = elementName;
+    
+    if ([element isEqualToString:@"Schedule"]) {
+        
+        item    = [[NSMutableDictionary alloc] init];
+        leaveTime   = [[NSMutableString alloc] init];
+        
+    }
+    
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    
+    if ([element isEqualToString:@"ExpectedLeaveTime"]) {
+        [leaveTime appendString:string];
+    }
+    
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    
+    if ([elementName isEqualToString:@"Schedule"]) {
+        
+        [item setObject:leaveTime forKey:@"leavetime"];
+        
+        [times addObject:[item copy]];
+        
+    }
+    
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
+    NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
+    //[self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {

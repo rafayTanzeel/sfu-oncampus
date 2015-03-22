@@ -21,12 +21,8 @@ float secondsCount;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 @property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 
-@property (weak, nonatomic) IBOutlet UILabel *timer;
 
 @property (weak, nonatomic) IBOutlet UITableView *upcomingTableView;
 
 
-
--(void) setTimer;
--(void) timerRun;
 @end

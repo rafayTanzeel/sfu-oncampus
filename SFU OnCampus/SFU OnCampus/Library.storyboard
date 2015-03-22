@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xaw-9m-5Dd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xaw-9m-5Dd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -30,7 +30,7 @@
                                                         <constraint firstAttribute="width" constant="180" id="zfU-BL-wmd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t i m e - t i m e" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-QN-YIF">
@@ -45,7 +45,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="Xcs-XT-jTv"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location threeeeeeee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sX-6j-3De">
@@ -203,52 +203,52 @@
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l3G-jy-vEI" userLabel="Progress View1">
                                                     <rect key="frame" x="179" y="124" width="368" height="2"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ugl-Gv-rkN" userLabel="Progress View2">
                                                     <rect key="frame" x="179" y="147" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-ME-Tp5" userLabel="Progress View3">
                                                     <rect key="frame" x="179" y="170" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-dq-qMi" userLabel="Progress View4">
                                                     <rect key="frame" x="179" y="193" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mMV-IB-oid" userLabel="Progress View5">
                                                     <rect key="frame" x="179" y="216" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mXv-lB-ncr" userLabel="Progress View6">
                                                     <rect key="frame" x="179" y="238" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s19-cW-NpK" userLabel="Progress View7">
                                                     <rect key="frame" x="179" y="260" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AnI-1h-EQO" userLabel="Progress View8">
                                                     <rect key="frame" x="179" y="285" width="368" height="2"/>
                                                     <color key="tintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="progressTintColor" red="0.98513104839999999" green="0.64463530879999997" blue="0.1538989905" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                    <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in use" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-l3-WOq">
                                                     <rect key="frame" x="519" y="94" width="57" height="16"/>
@@ -265,7 +265,7 @@
                                                         <constraint firstAttribute="width" constant="75" id="9Sy-2Y-RmE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ1-kA-LrI" customClass="SFUBookRoomButton">

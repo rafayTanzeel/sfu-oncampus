@@ -20,6 +20,14 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>143 COQUITLAM STN</string>
+		<key>stop</key>
+		<string>51862</string>
+		<key>route</key>
+		<string>143</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>135 BURRARD STN</string>
 		<key>stop</key>
 		<string>51862</string>

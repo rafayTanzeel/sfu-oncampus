@@ -17,6 +17,7 @@
     NSMutableString *leaveTime;
     NSDate *dateTime;
     NSString *element;
+    NSString *apiURL;
 }
 
 @end
@@ -35,9 +36,26 @@
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&routeNo="];
-    NSString *apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
+    apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
     NSLog(apiURL);
     
+    [NSTimer scheduledTimerWithTimeInterval:30.0
+    target:self
+    selector:@selector(refreshData)
+    userInfo:nil
+    repeats:YES];
+    
+    [self refreshData];
+    
+
+    
+   // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
+    
+    
+
+}
+
+-(void) refreshData{
     times = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:apiURL];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -45,11 +63,6 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
-    
-   // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
-    
-    
-
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -104,11 +117,11 @@
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
     
-    [self.upcomingTableView reloadData];
     self.nextBusTime.text=[[times objectAtIndex:0] objectForKey:@"stringtime"];
     self.nextBusDeltaTime.text=[[times objectAtIndex:0] objectForKey:@"deltatime"];
     [self.upcomingTableView reloadData];
     [times removeObjectAtIndex:0];
+    [self.upcomingTableView reloadData];
     
 }
 

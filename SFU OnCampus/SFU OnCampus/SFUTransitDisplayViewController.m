@@ -15,6 +15,7 @@
     NSMutableArray *times;
     NSMutableDictionary *item;
     NSMutableString *leaveTime;
+    NSDate *dateTime;
     NSString *element;
 }
 
@@ -113,7 +114,17 @@ NSMutableArray*parsedData;
     
     if ([elementName isEqualToString:@"Schedule"]) {
         
-        [item setObject:leaveTime forKey:@"leavetime"];
+        
+        // Convert string to date object
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+        dateTime = [dateFormat dateFromString:leaveTime];
+        [dateFormat setDateFormat:@"hh:mma"];
+        
+        NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
+        
+        [item setObject:dateTime forKey:@"leavetime"];
+        [item setObject:stringFromDate forKey:@"stringtime"];
         
         [times addObject:[item copy]];
         
@@ -122,8 +133,9 @@ NSMutableArray*parsedData;
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
-    //[self.tableView reloadData];
+    
+    
+    [self.upcomingTableView reloadData];
     
 }
 

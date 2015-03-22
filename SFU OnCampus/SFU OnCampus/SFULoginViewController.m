@@ -14,8 +14,23 @@
 
 @implementation SFULoginViewController
 
+// Round the corners, and give it a shadow
+- (void)signinButtonProperties
+{
+    // Round the corners, and give it a shadow
+    self.signinButton.layer.cornerRadius = 5;
+    self.signinButton.layer.shadowOffset = CGSizeMake(-.2f, .2f);
+    self.signinButton.layer.shadowRadius = 5;
+    self.signinButton.layer.shadowOpacity = 0.3;
+    
+    // Lowers the performance required to build shadows.
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.signinButton.bounds];
+    self.signinButton.layer.shadowPath = path.CGPath;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self signinButtonProperties];
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +49,9 @@
 }
 */
 
-- (IBAction)signInToCAS:(id)sender {
+- (IBAction)signinButtonClicked:(id)sender
+{
+    
 }
+
 @end

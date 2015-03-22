@@ -21,7 +21,6 @@
 
 @end
 
-NSMutableArray*parsedData;
 
 @implementation SFUTransitDisplayViewController
 
@@ -49,42 +48,6 @@ NSMutableArray*parsedData;
     
    // NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
     
-    
-    
-
-    //Use this to properly formate date and time,(ege is the system using 24-h time?
-    NSDateFormatter* f = [NSDateFormatter new];
-    parsedData = [NSMutableArray new];
-    
-   NSMutableDictionary* individualBus1 = [NSMutableDictionary new];
-    [individualBus1 setObject:@"12:00pm" forKey:@"time"];
-    [individualBus1 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus1];
-    
-    NSMutableDictionary* individualBus2 = [NSMutableDictionary new];
-    [individualBus2 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus2 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus2];
-    
-    NSMutableDictionary* individualBus3 = [NSMutableDictionary new];
-    [individualBus3 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus3 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus3];
-    
-    NSMutableDictionary* individualBus4 = [NSMutableDictionary new];
-    [individualBus4 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus4 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus4];
-    
-    NSMutableDictionary* individualBus5 = [NSMutableDictionary new];
-    [individualBus5 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus5 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus5];
-    
-    NSMutableDictionary* individualBus6 = [NSMutableDictionary new];
-    [individualBus6 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus6 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus6];
     
 
 }
@@ -123,11 +86,14 @@ NSMutableArray*parsedData;
         
         NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
         
-        //NSDate *today = [NSDate date];
         NSTimeInterval dtime=[dateTime timeIntervalSinceNow];
+        double dtimebysixty=dtime/60.0;
+        double mins=(long long)(dtimebysixty);
+        NSString *deltatime=[NSString stringWithFormat:@"%.0f mins",mins];
         
         [item setObject:dateTime forKey:@"leavetime"];
         [item setObject:stringFromDate forKey:@"stringtime"];
+        [item setObject:deltatime forKey:@"deltatime"];
         
         [times addObject:[item copy]];
         
@@ -141,6 +107,8 @@ NSMutableArray*parsedData;
     [self.upcomingTableView reloadData];
     self.nextBusTime.text=[[times objectAtIndex:0] objectForKey:@"stringtime"];
     self.nextBusDeltaTime.text=[[times objectAtIndex:0] objectForKey:@"deltatime"];
+    [self.upcomingTableView reloadData];
+    [times removeObjectAtIndex:0];
     
 }
 
@@ -156,7 +124,7 @@ NSMutableArray*parsedData;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [times count];
 }
 
 
@@ -164,8 +132,8 @@ NSMutableArray*parsedData;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"stringtime"];
-    cell.detailTextLabel.text= [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"deltatime"];
+    cell.textLabel.text = [[times objectAtIndex:indexPath.row] objectForKey:@"stringtime"];
+    cell.detailTextLabel.text= [[times objectAtIndex:indexPath.row] objectForKey:@"deltatime"];
     return cell;
 }
 

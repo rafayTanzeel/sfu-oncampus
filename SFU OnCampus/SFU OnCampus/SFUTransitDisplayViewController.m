@@ -15,6 +15,7 @@
     NSMutableArray *times;
     NSMutableDictionary *item;
     NSMutableString *leaveTime;
+    NSDate *dateTime;
     NSString *element;
 }
 
@@ -113,7 +114,20 @@ NSMutableArray*parsedData;
     
     if ([elementName isEqualToString:@"Schedule"]) {
         
-        [item setObject:leaveTime forKey:@"leavetime"];
+        
+        // Convert string to date object
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"hh:mma yyyy-L-d"];
+        dateTime = [dateFormat dateFromString:leaveTime];
+        [dateFormat setDateFormat:@"hh:mma"];
+        
+        NSString *stringFromDate = [dateFormat stringFromDate:dateTime];
+        
+        //NSDate *today = [NSDate date];
+        NSTimeInterval dtime=[dateTime timeIntervalSinceNow];
+        
+        [item setObject:dateTime forKey:@"leavetime"];
+        [item setObject:stringFromDate forKey:@"stringtime"];
         
         [times addObject:[item copy]];
         
@@ -122,8 +136,11 @@ NSMutableArray*parsedData;
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    NSLog([[times objectAtIndex:0] objectForKey: @"leavetime"]);
-    //[self.tableView reloadData];
+    
+    
+    [self.upcomingTableView reloadData];
+    self.nextBusTime.text=[[times objectAtIndex:0] objectForKey:@"stringtime"];
+    self.nextBusDeltaTime.text=[[times objectAtIndex:0] objectForKey:@"deltatime"];
     
 }
 
@@ -146,10 +163,9 @@ NSMutableArray*parsedData;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSMutableDictionary* data = [parsedData objectAtIndex:indexPath.row];
     //    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [data objectForKey:@"time"];
-    cell.detailTextLabel.text= [data objectForKey:@"dtime"];
+    cell.textLabel.text = [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"stringtime"];
+    cell.detailTextLabel.text= [[times objectAtIndex:(indexPath.row+1)] objectForKey:@"deltatime"];
     return cell;
 }
 

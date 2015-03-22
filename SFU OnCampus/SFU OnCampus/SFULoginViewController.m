@@ -49,22 +49,35 @@
 }
 */
 
+/**
+ * Sends an HTTP Post request to https://cs.sfu.ca/ with the user's inputed computing ID and password.
+ * Checks if the user filled in both fields, and informs the user whether or not they were successfuly signed
+ * in.
+ */
 - (IBAction)signinButtonClicked:(id)sender {
     NSInteger success = 0;
     @try {
         
+        // If both fields were not filled in
         if([[self.computingID text] isEqualToString:@""] || [[self.password text] isEqualToString:@""] ) {
             
-            [self alertStatus:@"Please enter Email and Password" :@"Sign in Failed!" :0];
+            // display an alert
+            [self alertStatus:@"Please enter ID and Password" :@"Sign in Failed!" :0];
             
-        } else {
-            NSString *post =[NSString stringWithFormat:@"username=%@&password=%@",[self.computingID text],[self.password text]];
+        }
+        else {
+            // computingID and password
+            NSString *post =[NSString stringWithFormat:@"computingID=%@&password=%@",[self.computingID text],[self.password text]];
             // NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"https://cas.sfu.ca/cas/login?app=SFU+Connect&allow=sfu,zimbra&service=https%3A%2F%2Fconnect.sfu.ca%2Fzimbra%2Fpublic%2Fpreauth.jsp"];
+            NSURL *url=[NSURL URLWithString:@"https://cas.sfu.ca/"];
             
-            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+            NSURL *responseURL = [NSURL URLWithString:@"https://canvas.sfu.ca"];
             
+            // convert string to data
+            NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+            
+            // calculate length of post request
             NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
             
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -78,15 +91,27 @@
             
             NSError *error = [[NSError alloc] init];
             NSHTTPURLResponse *response = nil;
-            NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-            
+            NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
             NSLog(@"Response code: %ld", (long)[response statusCode]);
             
             // Request OK
             if ([response statusCode] >= 200 && [response statusCode] < 300)
             {
+                // Response Data
                 NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
                 NSLog(@"Response ==> %@", responseData);
+    
+                
+                NSArray* allCookies;
+                allCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:responseURL];
+                for (NSHTTPCookie *cookie in allCookies) {
+                    NSLog(@"hello\n\n");
+                    NSLog(@"%@",cookie);
+                    //if ([cookie.name isEqualToString:goodCookie]) {
+                        
+                    //}
+                }
+                
                 
                 NSError *error = nil;
       /*

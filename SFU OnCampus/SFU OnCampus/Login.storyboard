@@ -51,6 +51,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signinButtonClicked:" destination="dca-Ih-sUf" eventType="touchUpInside" id="2Pw-az-Axr"/>
+                                    <segue destination="1lW-2y-VEX" kind="show" id="rip-vE-Dbm"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-FE-RF6">
@@ -87,6 +88,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfG-1A-JF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="374" y="353"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="BsW-ld-UQ5">
+            <objects>
+                <viewController id="1lW-2y-VEX" userLabel="Web View Controller" customClass="SFUWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EU8-6v-eVY"/>
+                        <viewControllerLayoutGuide type="bottom" id="iOm-nL-li9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H4q-Pv-Shi">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sb-2j-2l2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="561"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1lW-2y-VEX" id="5qJ-Un-CqL"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edE-ix-Z7f">
+                                <rect key="frame" x="0.0" y="561" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="WA0-SN-i2Q"/>
+                                    <barButtonItem systemItem="rewind" id="sC6-Fc-6X7">
+                                        <connections>
+                                            <action selector="goBack" destination="6Sb-2j-2l2" id="aAK-lQ-TaA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="jnN-3U-0KM"/>
+                                    <barButtonItem systemItem="fastForward" id="XVf-nl-CEf">
+                                        <connections>
+                                            <action selector="goForward" destination="6Sb-2j-2l2" id="9Pv-oJ-P5A"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Sb-2j-2l2" secondAttribute="trailing" id="PFj-Ne-0F8"/>
+                            <constraint firstItem="edE-ix-Z7f" firstAttribute="leading" secondItem="6Sb-2j-2l2" secondAttribute="leading" id="Xws-vV-vpn"/>
+                            <constraint firstItem="edE-ix-Z7f" firstAttribute="top" secondItem="6Sb-2j-2l2" secondAttribute="bottom" id="cbv-kC-eQ5"/>
+                            <constraint firstItem="6Sb-2j-2l2" firstAttribute="top" secondItem="H4q-Pv-Shi" secondAttribute="top" id="jtg-6L-ff1"/>
+                            <constraint firstItem="6Sb-2j-2l2" firstAttribute="leading" secondItem="H4q-Pv-Shi" secondAttribute="leading" id="pPb-zB-qBd"/>
+                            <constraint firstItem="edE-ix-Z7f" firstAttribute="trailing" secondItem="6Sb-2j-2l2" secondAttribute="trailing" id="t9e-A3-hon"/>
+                            <constraint firstItem="6Sb-2j-2l2" firstAttribute="bottom" secondItem="iOm-nL-li9" secondAttribute="top" constant="-39" id="wKn-jt-g19"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loading" id="tHT-BW-C5H"/>
+                    <connections>
+                        <outlet property="backButton" destination="sC6-Fc-6X7" id="PuO-gg-BTo"/>
+                        <outlet property="forwardButton" destination="XVf-nl-CEf" id="j8x-wR-qzl"/>
+                        <outlet property="webView" destination="6Sb-2j-2l2" id="Wfg-RC-7to"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5L-CZ-Mz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="332"/>
         </scene>
     </scenes>
 </document>

@@ -10,7 +10,8 @@
 
 @interface SFUMapModel()
 {
-    @private
+    
+@private
     NSDictionary* d;
     NSDictionary* labelToShort;
 }
@@ -20,10 +21,7 @@
 @implementation SFUMapModel
 
 
-typedef enum SFUMapModelResulutionStatus
-{
-   FULL,PARTIAL,NONE
-}SFUMapModelResulutionStatus;
+
 
 -(SFUMapModel*)init
 {
@@ -53,7 +51,7 @@ typedef enum SFUMapModelResulutionStatus
     
 }
 
--(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResulutionStatus*)status
+-(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status
 {
     if(status != nil)
     {
@@ -64,19 +62,41 @@ typedef enum SFUMapModelResulutionStatus
     s = [s uppercaseString];
     NSArray* a = [s componentsSeparatedByString:@"-"];
     NSString* building = [a objectAtIndex:0];
-    NSString* roomPart = [a objectAtIndex:1];
-    a=[roomPart componentsSeparatedByString:@"."] ;
-    NSString* room = [a objectAtIndex:0];
-    NSString* partition = [a objectAtIndex:1];
+    NSString* roomPart,*room,*partition;
+    if([a count] == 2)
+    {
+        roomPart= [a objectAtIndex:1];
+        a=[roomPart componentsSeparatedByString:@"."] ;
+        room = [a objectAtIndex:0];
+        
+        if([a count]==2)
+        partition = [a objectAtIndex:1];
+    }
     
-    NSMutableDictionary* d = [NSMutableDictionary new];
     
-    return [self regionForBuilding:building inRoom:room andPartition:partition];
+    
+    return [self regionForBuilding:building inRoom:room andPartition:partition status:status];
 }
 
--(MKCoordinateRegion)regionForBuilding:(NSString*)bldg inRoom:(NSString*)room andPartition:(NSString*)part
+-(MKCoordinateRegion)regionForBuilding:(NSString*)bldg inRoom:(NSString*)room andPartition:(NSString*)part status:(SFUMapModelResolutionStatus*)status
 {
+    
+    *status = PARTIAL; //we don't have room to room resolution yet.
     MKCoordinateRegion r;
+    NSDictionary* b= [d objectForKey:bldg];
+    if(b == nil)
+    {
+        @throw ([NSException exceptionWithName:@"IllegalRegionException" reason:@"That region is not in the database" userInfo:nil]);
+    }
+    NSDictionary* span = [b objectForKey:@"span"];
+    NSDictionary* centre = [b objectForKey:@"centre"];
+    
+    r.center.latitude = [[centre objectForKey:@"y"]floatValue];
+    r.center.longitude = [[centre objectForKey:@"x"]floatValue];
+    
+    r.span.latitudeDelta = [[span objectForKey:@"y"]floatValue];
+    r.span.longitudeDelta = [[span objectForKey:@"x"]floatValue];
+    
     return r;
 }
 

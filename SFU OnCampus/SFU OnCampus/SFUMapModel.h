@@ -10,9 +10,18 @@
 @import MapKit;
 @import CoreLocation;
 @interface SFUMapModel : NSObject
+
+typedef enum SFUMapModelResolutionStatus
+{
+    FULL,PARTIAL,NONE
+}SFUMapModelResolutionStatus;
+
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
 -(NSString*)suggestionForPrefix:(NSString*)p;
 -(NSArray*)listOfDomains;
 -(NSString*)shortCodeForDisplayName:(NSString*)s;
+-(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status;
 @property BOOL shouldTrackHistory;
+
+
 @end

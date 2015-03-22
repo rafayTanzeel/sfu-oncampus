@@ -8,6 +8,7 @@
 
 #import "SFUMapViewController.h"
 #import "SFUShortCodeComposerViewController.h"
+#import "SFUMapModel.h"
 
 @interface SFUMapViewController ()
 {
@@ -134,8 +135,9 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     @try {
         //TODO, be smarter about where to zoom and draw based on the presenece of a source and dest
         
+        SFUMapModelResolutionStatus status;
         ///Zoom to and draw source
-        MKCoordinateRegion r = [self.model regionForShortCode:src];
+        MKCoordinateRegion r = [self.model regionForString:src status:&status];
         [self.mapView setRegion:r animated:YES];
         NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
         SFUMapAnnotation* a = [SFUMapAnnotation new];

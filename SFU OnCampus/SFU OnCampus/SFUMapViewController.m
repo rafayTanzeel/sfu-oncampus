@@ -7,8 +7,12 @@
 //
 
 #import "SFUMapViewController.h"
+#import "SFUShortCodeComposerViewController.h"
 
 @interface SFUMapViewController ()
+{
+    BOOL destinationFieldSelected;
+}
 
 @end
 
@@ -40,6 +44,14 @@ CLLocationManager* locationManager;
                          NSLog(@"%@",aPlacemark.location.description);
                      }
                  }];
+    
+    if(destinationFieldSelected)
+    {
+        self.destinationField.text=self.returnedString;
+    }else
+    {
+        self.sourceField.text=self.returnedString;
+    }
     
 }
 
@@ -211,7 +223,14 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 }
 
 - (IBAction)unwindToSFUMapViewController:(UIStoryboardSegue *)segue {
-    //nothing goes here
+    NSString* s = [segue.sourceViewController composeShortcode];
+    if(destinationFieldSelected)
+    {
+        self.destinationField.text=s;
+    }else
+    {
+        self.sourceField.text=s;
+    }
 }
 
 
@@ -248,6 +267,17 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 //    }
     //NSLog(@"shouldchangeCharsInRange:[%d,%d],\"%@\"",range.location,range.length,string);
     return YES;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+   if([segue.identifier isEqualToString:@"srcSegue"])
+   {
+       destinationFieldSelected = NO;
+   }else
+   {
+       destinationFieldSelected = YES;
+   }
 }
 
 

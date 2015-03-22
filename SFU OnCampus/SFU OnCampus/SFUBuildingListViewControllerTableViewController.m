@@ -7,9 +7,13 @@
 //
 
 #import "SFUBuildingListViewControllerTableViewController.h"
+#import "SFUShortCodeComposerViewController.h"
 
 @interface SFUBuildingListViewControllerTableViewController ()
-
+{
+    NSString* selectedShorcode;
+    NSArray* domainList;
+}
 
 @end
 
@@ -35,7 +39,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -49,9 +53,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     
-    NSArray* l = [self.model listOfDomains];
+    domainList = [self.model listOfDomains];
     
-    cell.textLabel.text = [ l objectAtIndex:indexPath.row];
+    cell.textLabel.text = [ domainList objectAtIndex:indexPath.row];
     // Configure the cell...
     
     return cell;
@@ -92,14 +96,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+    //Get the new view controller using
+    NSUInteger i =[self.tableView indexPathForSelectedRow].row;
+    NSString* key = [domainList objectAtIndex: i];
+    NSString* shortcode = [self.model shortCodeForDisplayName:key];
+    SFUShortCodeComposerViewController* c = (SFUShortCodeComposerViewController*)[segue destinationViewController];
+    [ c fillBuildingFieldWithString:shortcode];
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

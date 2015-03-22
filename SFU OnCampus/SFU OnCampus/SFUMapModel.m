@@ -143,7 +143,7 @@ typedef enum SFUMapModelResulutionStatus
     {
         [self buildReverseIndex];
     }
-    return [[labelToShort keyEnumerator] allObjects];
+    return [[[labelToShort keyEnumerator] allObjects] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
 /**
@@ -161,6 +161,11 @@ typedef enum SFUMapModelResulutionStatus
         [tmp setObject:key forKey:[info objectForKey:@"displayName"]];
     }
     labelToShort = tmp;
+}
+
+-(NSString*)shortCodeForDisplayName:(NSString*)s
+{
+    return [labelToShort objectForKey:s];
 }
 
 @end

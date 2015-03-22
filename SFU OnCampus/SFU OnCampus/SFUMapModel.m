@@ -8,8 +8,17 @@
 
 #import "SFUMapModel.h"
 
+@interface SFUMapModel()
+{
+    @private
+    NSDictionary* d;
+    NSDictionary* labelToShort;
+}
+
+@end
+
 @implementation SFUMapModel
-NSDictionary* d;
+
 
 typedef enum SFUMapModelResulutionStatus
 {
@@ -26,6 +35,7 @@ typedef enum SFUMapModelResulutionStatus
     {
         NSLog(@"Not file");
     }
+    labelToShort=nil;
     return self;
 }
 
@@ -117,6 +127,7 @@ typedef enum SFUMapModelResulutionStatus
     return @"AQ";
 }
 
+/**Todo*/
 -(NSString*)suggestionForPrefix:(NSString*)p
 {
     if([p hasPrefix:@"Aca"] )
@@ -124,6 +135,32 @@ typedef enum SFUMapModelResulutionStatus
         return @"Academic Quadrangle";
     }
     return nil;
+}
+
+-(NSArray*)listOfDomains
+{
+    if(labelToShort == nil)
+    {
+        [self buildReverseIndex];
+    }
+    return [[labelToShort keyEnumerator] allObjects];
+}
+
+/**
+ @note could get slow, convert to asyncoprtation if needed.
+ */
+-(void)buildReverseIndex
+{
+    //note convert
+    NSEnumerator *enumerator = [d keyEnumerator];
+    NSString* key;
+    NSMutableDictionary* tmp= [NSMutableDictionary new];
+    while((key = [enumerator nextObject]))
+    {
+        NSDictionary* info = [d objectForKey:key];
+        [tmp setObject:key forKey:[info objectForKey:@"displayName"]];
+    }
+    labelToShort = tmp;
 }
 
 @end

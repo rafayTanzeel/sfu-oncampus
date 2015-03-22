@@ -21,7 +21,17 @@ NSMutableArray*parsedData;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.model=[[SFUTransitModel alloc] initWithPlist:self.loopName];
     NSInteger BusIndex=[self.BusPath row];
+    //NSLog([self.model stopStringForIndex:BusIndex]);
+    //NSLog([self.model routeStringForIndex:BusIndex]);
+    NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
+    NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
+    NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&routeNo="];
+    NSString *apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
+    
+    
+    
 
     //Use this to properly formate date and time,(ege is the system using 24-h time?
     NSDateFormatter* f = [NSDateFormatter new];
@@ -57,11 +67,6 @@ NSMutableArray*parsedData;
     [individualBus6 setObject:@"1h" forKey:@"dtime"];
     [parsedData addObject:individualBus6];
     
-    NSMutableDictionary* individualBus7 = [NSMutableDictionary new];
-    [individualBus7 setObject:@"12:01pm" forKey:@"time"];
-    [individualBus7 setObject:@"1h" forKey:@"dtime"];
-    [parsedData addObject:individualBus7];
-    
 
 }
 
@@ -77,7 +82,7 @@ NSMutableArray*parsedData;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 5;
 }
 
 

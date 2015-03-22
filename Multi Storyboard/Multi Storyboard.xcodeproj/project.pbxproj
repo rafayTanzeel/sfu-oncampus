@@ -10,6 +10,7 @@
 		049F81801AB4D76600D84F4D /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049F817F1AB4D76600D84F4D /* Library.storyboard */; };
 		049F81831AB4D83100D84F4D /* SFULibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F81821AB4D83100D84F4D /* SFULibraryViewController.m */; };
 		049F81861AB4D8AA00D84F4D /* SFULibraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F81851AB4D8AA00D84F4D /* SFULibraryCell.m */; };
+		F8189DD41ABB8E91008A9A9D /* journal.png in Resources */ = {isa = PBXBuildFile; fileRef = F8189DD31ABB8E91008A9A9D /* journal.png */; };
 		F824408E1AB35438006D5C8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F824408D1AB35438006D5C8B /* AVFoundation.framework */; };
 		F82440901AB354EB006D5C8B /* QRScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F824408F1AB354EA006D5C8B /* QRScan.storyboard */; };
 		F82440951AB356F3006D5C8B /* SFUQRCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82440941AB356F3006D5C8B /* SFUQRCaptureViewController.m */; };
@@ -66,6 +67,7 @@
 		049F81821AB4D83100D84F4D /* SFULibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryViewController.m; sourceTree = "<group>"; };
 		049F81841AB4D8AA00D84F4D /* SFULibraryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFULibraryCell.h; sourceTree = "<group>"; };
 		049F81851AB4D8AA00D84F4D /* SFULibraryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFULibraryCell.m; sourceTree = "<group>"; };
+		F8189DD31ABB8E91008A9A9D /* journal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = journal.png; sourceTree = "<group>"; };
 		F824408B1AB353EE006D5C8B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F824408D1AB35438006D5C8B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F824408F1AB354EA006D5C8B /* QRScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRScan.storyboard; path = "Multi Storyboard/QRScan.storyboard"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				049F817F1AB4D76600D84F4D /* Library.storyboard */,
+				F8189DD31ABB8E91008A9A9D /* journal.png */,
 				049F81811AB4D83100D84F4D /* SFULibraryViewController.h */,
 				049F81821AB4D83100D84F4D /* SFULibraryViewController.m */,
 				049F81841AB4D8AA00D84F4D /* SFULibraryCell.h */,
@@ -373,6 +376,7 @@
 				F8EC34501AB2C4C000E80555 /* Map.storyboard in Resources */,
 				F89FB47F1AAC5F3D004E8ADC /* News.storyboard in Resources */,
 				F8FA38231ABA5658001D3F93 /* MapHelp.html in Resources */,
+				F8189DD41ABB8E91008A9A9D /* journal.png in Resources */,
 				F895803F1AB5B7D000D749DC /* floorplans.plist in Resources */,
 				F89FB4561AAC533B004E8ADC /* Main.storyboard in Resources */,
 				F8EC34591AB2D26000E80555 /* Burnaby_Campus.jpg in Resources */,

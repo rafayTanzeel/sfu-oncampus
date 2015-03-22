@@ -612,8 +612,10 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YQl-P3-6E6" id="fnX-Vo-Pgh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-38-1zO">
-                                                    <rect key="frame" x="277" y="7" width="37" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-38-1zO">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <color key="backgroundColor" red="0.82572992700000003" green="0.1243569167" blue="0.22881672680000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="tintColor" red="0.95482397080000003" green="0.97521364690000001" blue="0.98006290200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Done">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -623,8 +625,12 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="EgK-38-1zO" firstAttribute="leading" secondItem="fnX-Vo-Pgh" secondAttribute="leadingMargin" id="11i-QX-cyg"/>
                                                 <constraint firstAttribute="centerY" secondItem="EgK-38-1zO" secondAttribute="centerY" id="1qu-NT-Eo0"/>
+                                                <constraint firstItem="EgK-38-1zO" firstAttribute="top" secondItem="fnX-Vo-Pgh" secondAttribute="topMargin" id="D2d-fm-7cY"/>
                                                 <constraint firstAttribute="centerX" secondItem="EgK-38-1zO" secondAttribute="centerX" id="DpN-MP-FFR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EgK-38-1zO" secondAttribute="trailing" id="fQ1-XV-ApT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EgK-38-1zO" secondAttribute="bottom" id="foo-Bu-gOF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

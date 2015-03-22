@@ -27,6 +27,9 @@ CLLocationManager* locationManager;
     locationManager = [CLLocationManager new] ;
     locationManager.delegate = self;
     [locationManager requestAlwaysAuthorization];
+    
+    //prevent the menu from appearing when we swipt the left hand side of the screen.
+    self.splitViewController.presentsWithGesture = NO;
 #ifndef DEBUG
     self.debugView.hidden = YES;
 #endif
@@ -84,7 +87,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 }
 -(void)reportNullRegion
 {
-    [[[UIAlertView alloc] initWithTitle:@"Sorry" message:@"It looks like the place you're looking for doesn't exist. If you manually entered the code, try clicking the arrows to automatically get a destionation name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Sorry" message:@"It looks like one or more of the entered locations doesn't exist. If you manually entered the code, try clicking the arrows to the right of the fields, to automatically get a location name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
 }
 
 -(void)clearAllPins

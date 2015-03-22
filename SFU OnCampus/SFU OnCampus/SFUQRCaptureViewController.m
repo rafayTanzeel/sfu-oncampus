@@ -102,6 +102,8 @@ NSMutableString* result;
         {
             NSLog(@"Detected\n%@\n",detectionString);
             result=detectionString;
+            
+            [session stopRunning];
             [self performSegueWithIdentifier:@"unwindToInput" sender:self];
             break;
         }

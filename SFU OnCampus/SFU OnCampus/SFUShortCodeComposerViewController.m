@@ -9,6 +9,9 @@
 #import "SFUShortCodeComposerViewController.h"
 
 @interface SFUShortCodeComposerViewController ()
+{
+    NSString* bldg;
+}
 
 @end
 
@@ -16,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.buildingCodeField.text =bldg;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -29,19 +32,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,11 +86,23 @@
     if([segue.identifier isEqualToString:@"unwindToMap"])
     {
         SFUMapViewController* c = [segue destinationViewController];
-        [c composeShortcode:@""];
+        c.returnedString = bldg;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 
+-(void)fillBuildingFieldWithString:(NSString*)s
+{
+    bldg = s;
+}
 
+
+
+
+-(NSString*)composeShortcode
+{
+    //remeber to not include elements not specified, stop evaluating if partition but not room defined.
+    return bldg;
+}
 @end

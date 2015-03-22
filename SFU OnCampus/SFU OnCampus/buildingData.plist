@@ -501,7 +501,7 @@
 		<key>TASC1</key>
 		<dict>
 			<key>displayName</key>
-			<string>The Academic Science Complex (1)</string>
+			<string>Technology and Science Complex 1</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
@@ -520,7 +520,7 @@
 		<key>TASC2</key>
 		<dict>
 			<key>displayName</key>
-			<string>Technology &amp; Science Complex 2</string>
+			<string>Technology and Science Complex 2</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>

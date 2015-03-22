@@ -163,4 +163,9 @@ typedef enum SFUMapModelResulutionStatus
     labelToShort = tmp;
 }
 
+-(NSString*)shortCodeForDisplayName:(NSString*)s
+{
+    return [labelToShort objectForKey:s];
+}
+
 @end

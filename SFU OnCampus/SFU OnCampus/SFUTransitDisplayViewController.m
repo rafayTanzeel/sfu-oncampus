@@ -22,6 +22,7 @@
     NSDate *dateTime; //holds date from string
     NSString *element;
     NSString *apiURL; //holds url for api call
+    NSTimer* timer;
 }
 
 @end
@@ -51,7 +52,7 @@
     //-----------------------------------------------
     //refreshes the page every 30 seconds to update data
     //------------------------------------------------
-    [NSTimer scheduledTimerWithTimeInterval:30.0
+    timer = [NSTimer scheduledTimerWithTimeInterval:30.0
     target:self
     selector:@selector(refreshData)
     userInfo:nil
@@ -68,9 +69,37 @@
 }
 //logic that runs everytime the page refreshes
 -(void) refreshData{
-    times = [[NSMutableArray alloc] init]; //initializes array to hold parsed data
-    NSURL *url = [NSURL URLWithString:apiURL]; //initialize url with apiurl
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:url]; //create parser object
+    times = [[NSMutableArray alloc] init]; //initialize array that holds parsed data
+    NSURL *url = [NSURL URLWithString:apiURL]; //loads url with apiurl
+    
+    NSError *error;
+    
+    NSString *XML;
+    @try {
+        XML = [NSString stringWithContentsOfURL:url encoding:NSASCIIStringEncoding error:&error]; //gets XML from url
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
+    
+    //fails to get XML, report msg with UIAlertView
+    if(XML == nil)
+    {
+        [timer invalidate]; //fails to get XML invalidate timer
+        // Display the error pop up
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Bus Time cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
+    
+    
+    
+    
+    NSData *data = [XML dataUsingEncoding:NSUTF8StringEncoding]; //convert XML to data object
+    parser = [[NSXMLParser alloc] initWithData:data]; //initialize parser object using data
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse]; //parse

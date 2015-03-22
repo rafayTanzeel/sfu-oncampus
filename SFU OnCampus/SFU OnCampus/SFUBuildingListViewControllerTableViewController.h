@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SFUMapModel.h"
 @interface SFUBuildingListViewControllerTableViewController : UITableViewController
-    @property(nonatomic) SFUMapModel* model;
+
+typedef enum SFUNavigationListSet
+{
+    SFUNavigationListSetBuildings,SFUNavigationListSetPOI
+}SFUNavigationListSet;
+@property(nonatomic) SFUMapModel* model;
+@property SFUNavigationListSet navigationSet;
 @end

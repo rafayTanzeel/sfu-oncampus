@@ -410,7 +410,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o4S-BH-Q2W" id="IlD-mj-nuc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tvc-ce-R70">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Points Of Interest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tvc-ce-R70">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -419,7 +419,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vce-uV-oeh" kind="show" id="eEe-OK-3Wc"/>
+                                            <segue destination="vce-uV-oeh" kind="show" identifier="POISegue" id="oIn-Tx-Yb2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nTV-Cc-Swe" style="IBUITableViewCellStyleDefault" id="sCm-kA-8hg">
@@ -751,7 +751,7 @@
         <image name="AQ3000.jpg" width="2048" height="2072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eEe-OK-3Wc"/>
+        <segue reference="oIn-Tx-Yb2"/>
         <segue reference="IuL-vh-TlR"/>
     </inferredMetricsTieBreakers>
 </document>

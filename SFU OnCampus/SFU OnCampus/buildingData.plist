@@ -653,7 +653,7 @@
 		<key>WMC</key>
 		<dict>
 			<key>displayName</key>
-			<string>W.A.C. Benette Library</string>
+			<string>West Mall Centre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
@@ -689,6 +689,89 @@
 				<real>-122.915986</real>
 				<key>y</key>
 				<real>49.278901</real>
+			</dict>
+		</dict>
+	</dict>
+	<key>POI</key>
+	<dict>
+		<key>transit</key>
+		<dict/>
+		<key>food</key>
+		<dict/>
+		<key>STARBUCKS</key>
+		<dict>
+			<key>displayName</key>
+			<string>Starbucks Coffee</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.002012</real>
+				<key>y</key>
+				<real>0.00211</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.920971</real>
+				<key>y</key>
+				<real>49.279611</real>
+			</dict>
+		</dict>
+		<key>TIMHORTONS</key>
+		<dict>
+			<key>displayName</key>
+			<string>Tim Horton&apos;s Coffee</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.921781</real>
+				<key>y</key>
+				<real>49.279842</real>
+			</dict>
+		</dict>
+		<key>BUSLOW</key>
+		<dict>
+			<key>displayName</key>
+			<string>Lower Bus Loop (Transportation Centre)</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.920118</real>
+				<key>y</key>
+				<real>49.279777</real>
+			</dict>
+		</dict>
+		<key>BUSHiGH</key>
+		<dict>
+			<key>displayName</key>
+			<string>Upper Bus Loop (Cornerstone,Strand,Blusson)</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.912563</real>
+				<key>y</key>
+				<real>49.278557</real>
 			</dict>
 		</dict>
 	</dict>

@@ -61,61 +61,61 @@
 				<real>49.278845</real>
 			</dict>
 		</dict>
-		<key>CCC - TODO</key>
+		<key>CCC</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Child Care Centre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.924948</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.280898</real>
 			</dict>
 		</dict>
-		<key>DAC - TODO - 2</key>
+		<key>DAC</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Diamond Alumni Centre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002123</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.002227</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.916586</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.280983</real>
 			</dict>
 		</dict>
-		<key>DH todo</key>
+		<key>DH</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Dining Hall</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.924622</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.27987</real>
 			</dict>
 		</dict>
 		<key>DIS1</key>
@@ -156,61 +156,61 @@
 				<real>49.274369</real>
 			</dict>
 		</dict>
-		<key>FS todo</key>
+		<key>FS</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Facilities Services</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.004023</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.004221</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.912996</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.275663</real>
 			</dict>
 		</dict>
-		<key>GH todo</key>
+		<key>GH</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Greenhouses</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.915911</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.276151</real>
 			</dict>
 		</dict>
-		<key>HC todo</key>
+		<key>HC</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Halpern Centre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.917605</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.279607</real>
 			</dict>
 		</dict>
 		<key>LDC</key>
@@ -270,213 +270,213 @@
 				<real>49.280001</real>
 			</dict>
 		</dict>
-		<key>SCB todo</key>
+		<key>SCB</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Shrum Science Centre - Biology</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001013</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001062</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.916816</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.27789</real>
 			</dict>
 		</dict>
-		<key>SCC todo</key>
+		<key>SCC</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Shrum Science Centre - Chemistry</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.002012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.00211</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.917622</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.277953</real>
 			</dict>
 		</dict>
-		<key>SCK todo</key>
+		<key>SCK</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Shrum Science Centre - Kinesiology</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.004023</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.004221</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.915117</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.27769</real>
 			</dict>
 		</dict>
-		<key>SCP todo</key>
+		<key>SCP</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Shrum Centre Physics</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001519</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001593</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.915245</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.277606</real>
 			</dict>
 		</dict>
-		<key>SECB todo</key>
+		<key>SECB</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>South East Classroom Block</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.004023</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.004221</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.912583</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.276984</real>
 			</dict>
 		</dict>
-		<key>SSB todo</key>
+		<key>SSB</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>South Sciences Building</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.00525</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.005508</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.917879</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.277199</real>
 			</dict>
 		</dict>
-		<key>SRA todo</key>
+		<key>SRA</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Science Research Annex</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001012</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001062</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.915288</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.275868</real>
 			</dict>
 		</dict>
-		<key>SHA todo</key>
+		<key>SHA</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Strand Hall Annex (Formerly East Campus Trailers)</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.00103</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001081</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.914228</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.278288</real>
 			</dict>
 		</dict>
-		<key>T3 todo</key>
+		<key>T3</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>T3 - Archeaology Trailer</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001065</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001117</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.917075</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.276443</real>
 			</dict>
 		</dict>
-		<key>TC todo</key>
+		<key>TC</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>Transportation Centre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001181</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001239</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.920214</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.279368</real>
 			</dict>
 		</dict>
-		<key>TH todo</key>
+		<key>TH</key>
 		<dict>
 			<key>displayName</key>
-			<string>Academic Quadrangle</string>
+			<string>University Theatre</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.002668</real>
+				<real>0.001013</real>
 				<key>y</key>
-				<real>0.002799</real>
+				<real>0.001062</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.916496</real>
+				<real>-122.919228</real>
 				<key>y</key>
-				<real>49.278845</real>
+				<real>49.278692</real>
 			</dict>
 		</dict>
 		<key>ASB</key>
@@ -517,23 +517,23 @@
 				<real>49.276731</real>
 			</dict>
 		</dict>
-		<key>TASC2 todo</key>
+		<key>TASC2</key>
 		<dict>
 			<key>displayName</key>
-			<string>The Academic Science Complex (1)</string>
+			<string>Technology &amp; Science Complex 2</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>
-				<real>0.001737</real>
+				<real>0.001064</real>
 				<key>y</key>
-				<real>0.001822</real>
+				<real>0.001117</real>
 			</dict>
 			<key>centre</key>
 			<dict>
 				<key>x</key>
-				<real>-122.91423</real>
+				<real>-122.916072</real>
 				<key>y</key>
-				<real>49.276731</real>
+				<real>49.277034</real>
 			</dict>
 		</dict>
 		<key>EDB</key>

@@ -42,5 +42,13 @@
 		<key>image</key>
 		<string>email_icon.png</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>SFU Event Calendar</string>
+		<key>url</key>
+		<string>https://events.sfu.ca/rss/calendar_id/2.xml</string>
+		<key>image</key>
+		<string>email_icon.png</string>
+	</dict>
 </array>
 </plist>

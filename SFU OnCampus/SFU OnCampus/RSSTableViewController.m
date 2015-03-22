@@ -229,15 +229,12 @@
 
     
     NSString* URL=[self.feeds[indexPath.row] objectForKey:@"link"];
-    URL=@"http://www.sfu.ca/sfunews/people.feed";
-    NSLog(@"Here it is: %@",URL);
-    
     
     //[self.feeds[indexPath.row] objectForKey:@"link"];
     
     
     
-    SFUWebViewController *controller = (SFUWebViewController *)[[segue destinationViewController] topViewController];
+    SFUWebViewController *controller = (SFUWebViewController *)[segue destinationViewController];
     
     [controller displayPageForURL:[NSURL URLWithString:URL] inApp:YES];
     

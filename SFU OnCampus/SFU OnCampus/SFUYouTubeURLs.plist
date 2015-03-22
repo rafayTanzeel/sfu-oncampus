@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>sfuresidence</string>
+		<string>SFU Residence</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCnJaegGraeKcRt7389tYVLQ</string>
 		<key>image</key>
@@ -116,7 +116,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Sfu Pipe Band</string>
+		<string>SFU Pipe Band</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC05tL_ygDuJ5Vwq46gfYrtw</string>
 		<key>image</key>
@@ -124,7 +124,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUmuseum</string>
+		<string>SFU Museum</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC5ymL1_FSLNvxLvBJ2-xIGg</string>
 		<key>image</key>
@@ -132,7 +132,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUSurreyCampus</string>
+		<string>SFU Surrey Campus</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCZEw5xXvdjGiMc6CewEyFjg</string>
 		<key>image</key>
@@ -140,7 +140,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUMECS</string>
+		<string>SFU MECS</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCrcSoqAq5syrHsngQktD8mg</string>
 		<key>image</key>
@@ -164,7 +164,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUBigData</string>
+		<string>SFU Big Data</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCfzAWcwk9RrE2S3kRm1xaVw</string>
 		<key>image</key>
@@ -172,7 +172,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUresearch</string>
+		<string>SFU Research</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCraG_cr-MiKgf5gxOyA-p4g</string>
 		<key>image</key>
@@ -188,7 +188,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUSustain</string>
+		<string>SFU Sustain</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC1uyrh2eOIlkutZjzIe6Azw</string>
 		<key>image</key>
@@ -196,7 +196,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFULibrary</string>
+		<string>SFU Library</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCR0jGMElxsOMutoU1TuntSg</string>
 		<key>image</key>
@@ -220,14 +220,6 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>FENV atSFU</string>
-		<key>url</key>
-		<string>https://www.youtube.com/channel/UC0NBJyYAvoj36iuja42juhg</string>
-		<key>image</key>
-		<string>FENV atSFU.png</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>Biology at Simon Fraser</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCbL5kzVBocOz98DF2STnRkA</string>
@@ -236,7 +228,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUmath&apos;s channel</string>
+		<string>SFU Math&apos;s channel</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCB_NUVTCUxUolqfElQbwlAQ</string>
 		<key>image</key>
@@ -268,7 +260,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUEconomics</string>
+		<string>SFU Economics</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC423YqN9PvuPDrUuCWXszhQ</string>
 		<key>image</key>
@@ -324,7 +316,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>frcohort</string>
+		<string>SFU FCP</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCXfEGD2C-dJS3_IQzILdbXw</string>
 		<key>image</key>
@@ -332,7 +324,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFUDutchDesign</string>
+		<string>SFU Dutch Design</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC-2SWvLmclNmgwAImsNeYdg</string>
 		<key>image</key>
@@ -356,7 +348,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>#SimonFraserUniversityPipeBand</string>
+		<string> Simon Fraser University PipeBand</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UC5Iti8U7Q2Og1B7nCew2ldw</string>
 		<key>image</key>
@@ -364,7 +356,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>#SimonFraserUniversity</string>
+		<string>SimonFraserUniversity</string>
 		<key>url</key>
 		<string>https://www.youtube.com/channel/UCLpUgcZAaHAFuL8hHaTmZnw</string>
 		<key>image</key>

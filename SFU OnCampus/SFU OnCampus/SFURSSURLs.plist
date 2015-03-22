@@ -8,7 +8,7 @@
 		<key>url</key>
 		<string>http://www.sfu.ca/content/sfu/sfunews/people/jcr:content/main_content/list.feed</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>internt_web_technology-13-512.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -16,7 +16,7 @@
 		<key>url</key>
 		<string>http://www.sfu.ca/content/sfu/sfunews/sports/jcr:content/main_content/list.feed</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>700383-icon-14-trophy-one-512.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -24,7 +24,7 @@
 		<key>url</key>
 		<string>http://www.sfu.ca/content/sfu/sfunews/research/jcr:content/main_content/list.feed</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>search-group.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -32,7 +32,7 @@
 		<key>url</key>
 		<string>http://www.sfu.ca/content/sfu/sfunews/community/jcr:content/main_content/list.feed</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>group-512.png</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -40,7 +40,7 @@
 		<key>url</key>
 		<string>http://www.sfu.ca/content/sfu/sfunews/research/jcr:content/main_content/list.feed</string>
 		<key>image</key>
-		<string>email_icon.png</string>
+		<string>internt_web_technology-05-512.png</string>
 	</dict>
 </array>
 </plist>

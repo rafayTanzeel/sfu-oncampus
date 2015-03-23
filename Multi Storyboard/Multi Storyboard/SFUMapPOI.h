@@ -12,6 +12,7 @@
 /**
  An abstract container representing an important feature of an SFU map.
  Supplements existing points of interest provided by apple maps.  Not currently used.
+ */
 @interface SFUMapPOI : NSObject
  typedef enum SFUPOIType
 {

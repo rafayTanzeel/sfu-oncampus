@@ -31,7 +31,6 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 
-///Call to set the shortcode of the currently selected field, the controller will decide which field is selected.
--(void)composeShortcode:(NSString*)code;
+
 
 @end

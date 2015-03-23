@@ -192,6 +192,26 @@ NSDictionary *laptops;
 }
 
 /**
+ * Sets the height for each cell in the view.
+ */
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 1) {
+        return 348;
+    }
+    else if (indexPath.row == 2) {
+        return 212;
+    }
+    else if (indexPath.row == 3) {
+        return 187;
+    }
+    else {
+        return 40;
+    }
+}
+
+/**
  * Loads the table view cell. 
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -341,24 +361,7 @@ NSDictionary *laptops;
     
 }
 
-/**
- * Sets the height for each cell in the view.
- */
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(indexPath.row == 0) {
-        return 40;
-    }
-    if(indexPath.row == 1) {
-        return 348;
-    }
-    else if (indexPath.row == 2) {
-        return 212;
-    }
-    else {
-        return 187;
-    }
-}
+
 
 /**
  * Action displaying the mobile site of the SFU Library catalogue

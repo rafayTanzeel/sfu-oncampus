@@ -53,26 +53,25 @@
     
     // Get computers available
     NSDictionary *locationKeys = [d valueForKey:@"locations"];
-    NSString *numberAvailable = [locationKeys valueForKey:value];
+    NSNumber *numberAvailable = [locationKeys valueForKey:value];
+    
+    // Get totals
     NSDictionary *totals = [d valueForKey:@"totals"];
-    NSString *numberTotal = [totals valueForKey:value];
+    NSNumber *numberTotal = [totals valueForKey:value];
     
-    NSInteger numberInUse = [numberTotal integerValue] - [numberAvailable integerValue];
+    // Get number in use
+    NSInteger integerInUse = [numberTotal integerValue] - [numberAvailable integerValue];
     
+    // store number available as int value
+    NSInteger integerAvailable = [numberAvailable intValue];
+
     // Set computers available
-    available.text = numberAvailable;
-    inUse.text = [NSString stringWithFormat:@"%ld", (long)numberInUse];
+    available.text = [NSString stringWithFormat:@"%ld", (long)integerAvailable];
+    inUse.text = [NSString stringWithFormat:@"%ld", (long)integerInUse];
     
     // Calculate progress
-    float progress;
+    float progress = [numberAvailable floatValue] / [numberTotal floatValue];
 
-    if ([numberAvailable integerValue] != 0) {
-        progress = [numberAvailable floatValue] / [numberTotal floatValue];
-    }
-    else {
-        progress = 0.0;
-    }
-    
     //-------------------------------------------------------------------
     // CALCULATE PROGRESS BAR COLOUR
     // the progress bar colour shifts from red to green.

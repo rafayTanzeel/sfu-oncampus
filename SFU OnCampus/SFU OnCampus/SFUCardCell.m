@@ -182,6 +182,8 @@
     tempLabel.text = temp;
     condLabel.text = conditions;
     
+    [condLabel setFont:[UIFont systemFontOfSize:10] ];
+    
 }
 
 - (void)awakeFromNib

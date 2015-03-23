@@ -178,6 +178,7 @@
 		F1517B2F1AB5380500863E16 /* SFUTransitScienceRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */; };
 		F1517B311AB5382D00863E16 /* SFUTransitResidenceRd.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1517B301AB5382D00863E16 /* SFUTransitResidenceRd.plist */; };
 		F19EEA721A9D591600E89A09 /* SFUStudentServiceURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */; };
+		F806CDCD1ABFFFB50034BF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F806CDCB1ABFFFB50034BF7D /* Main.storyboard */; };
 		F808D8111A95CFA90006FC17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8101A95CFA90006FC17 /* main.m */; };
 		F808D8141A95CFA90006FC17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8131A95CFA90006FC17 /* AppDelegate.m */; };
 		F808D8171A95CFA90006FC17 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F808D8161A95CFA90006FC17 /* MasterViewController.m */; };
@@ -227,7 +228,6 @@
 		F87701561AA00513001FE1FE /* SFU_2013_10cm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */; };
 		F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */; };
 		F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */; };
-		F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A28D291A994D5700CD5829 /* Main.storyboard */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 /* End PBXBuildFile section */
 
@@ -439,6 +439,7 @@
 		F1517B2E1AB5380500863E16 /* SFUTransitScienceRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitScienceRd.plist; sourceTree = "<group>"; };
 		F1517B301AB5382D00863E16 /* SFUTransitResidenceRd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUTransitResidenceRd.plist; sourceTree = "<group>"; };
 		F19EEA711A9D591600E89A09 /* SFUStudentServiceURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUStudentServiceURLs.plist; sourceTree = "<group>"; };
+		F806CDCC1ABFFFB50034BF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		F808D80B1A95CFA90006FC17 /* SFU OnCampus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SFU OnCampus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F808D80F1A95CFA90006FC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F808D8101A95CFA90006FC17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -516,7 +517,6 @@
 		F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFU_2013_10cm.jpg; sourceTree = "<group>"; };
 		F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sfu_accessibility_map_2010_colour.pdf; sourceTree = "<group>"; };
 		F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sfu_new_campus_map_2k14_50x34(AUG).pdf"; sourceTree = "<group>"; };
-		F8A28D2A1A994D5700CD5829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -774,6 +774,7 @@
 		F808D8021A95CFA90006FC17 = {
 			isa = PBXGroup;
 			children = (
+				F806CDCB1ABFFFB50034BF7D /* Main.storyboard */,
 				F808D80D1A95CFA90006FC17 /* SFU OnCampus */,
 				F808D82A1A95CFA90006FC17 /* SFU OnCampusTests */,
 				F808D80C1A95CFA90006FC17 /* Products */,
@@ -807,7 +808,6 @@
 				041F51E81ABA17E9005E53E9 /* Weather */,
 				F1517B241AB52A9400863E16 /* Transit */,
 				F877014F1AA00513001FE1FE /* images */,
-				F8A28D291A994D5700CD5829 /* Main.storyboard */,
 				F81D7EE01ABAD594004AC1E5 /* Resources */,
 				F83871FD1ABA8607003CF26E /* Main(old).storyboard */,
 				B4C3A90D1ABE330F00D96A90 /* News */,
@@ -1125,6 +1125,7 @@
 				040DC4F31AACFCAF003A713F /* unknown.png in Resources */,
 				5D010D031AAD6BA8005CC0D2 /* sfubeedie-tw-icon.jpg in Resources */,
 				5D010CE81AAD6A4A005CC0D2 /* news.png in Resources */,
+				F806CDCD1ABFFFB50034BF7D /* Main.storyboard in Resources */,
 				35BACF2F1ABEB4FB00035E05 /* SFUBigData.png in Resources */,
 				040DC4E11AACFCAF003A713F /* chanceofsnow_n.png in Resources */,
 				35D631601ABF707E00CCEC8D /* facebook-128.png in Resources */,
@@ -1158,7 +1159,6 @@
 				5D010D081AAD6BA8005CC0D2 /* sfuolc-tw-icon.jpg in Resources */,
 				5DDC25801AAD06E300243DB4 /* sfuclan-fb-icon.jpg in Resources */,
 				35BACF3B1ABEB4FB00035E05 /* Simon Fraser HCS.jpg in Resources */,
-				F8A28D2B1A994D5700CD5829 /* Main.storyboard in Resources */,
 				5DDC25861AAD099700243DB4 /* sfuenglish-fb-icon.jpg in Resources */,
 				35BACF1F1ABEB4FB00035E05 /* SFU Centre for Dialogue.png in Resources */,
 				5D010CE71AAD6A4A005CC0D2 /* networking.png in Resources */,
@@ -1374,6 +1374,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F806CDCB1ABFFFB50034BF7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F806CDCC1ABFFFB50034BF7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		F808D8201A95CFA90006FC17 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1453,15 +1461,6 @@
 				F838720A1ABA8840003CF26E /* Base */,
 			);
 			name = WebView.storyboard;
-			sourceTree = "<group>";
-		};
-		F8A28D291A994D5700CD5829 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8A28D2A1A994D5700CD5829 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

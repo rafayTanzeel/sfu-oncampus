@@ -1,10 +1,15 @@
 //
-//  SFUYouTubeModel.h
+//  SFUTransitTableViewController.h
 //  OnCampus
-//
-//  Created by Sunny Chowdhury on 2015-03-21.
+//  Group 10
+//  Nikhil Gaba, Abram Wiebe, Rafay Tanzeel, Kevin Grant, Sunny Chowdhury
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
+// Changelog: https://github.com/nikhilgaba/sfu-oncampus
+//
+//
+//
+// Presently no known bugs
 
 #import <Foundation/Foundation.h>
 

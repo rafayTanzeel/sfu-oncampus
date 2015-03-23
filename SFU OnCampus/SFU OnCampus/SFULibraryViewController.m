@@ -21,7 +21,7 @@ NSDictionary *burnabyHours;
 NSDictionary *surreyHours;
 NSDictionary *vancouverHours;
 
-// Global dictionary used for determining computer availability
+// Global dictionaries used for determining computer availability
 NSDictionary *computers;
 NSDictionary *laptops;
 
@@ -75,7 +75,8 @@ NSDictionary *laptops;
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    else{
+    else {
+        // Store the hours information in appropriate dictionaries
         burnabyHours = [hoursArray objectAtIndex:0];
         surreyHours = [hoursArray objectAtIndex:1];
         vancouverHours = [hoursArray objectAtIndex:2];
@@ -120,6 +121,8 @@ NSDictionary *laptops;
     {
         error = nil;
     }
+
+    // Store the data in the computers dictionary 
     computers = [NSJSONSerialization JSONObjectWithData:computerAvailability options:kNilOptions error:&error];
     
     if (error != nil) {
@@ -130,6 +133,9 @@ NSDictionary *laptops;
     }
 }
 
+/**
+ * This function is run when the user pulls down to refresh the data on the page.
+ */
 - (void)refresh:(id)sender
 {
     NSLog(@"Refreshing");
@@ -155,6 +161,8 @@ NSDictionary *laptops;
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
+
+    // Set background to SFU red and tint to white 
     self.refreshControl.backgroundColor = [UIColor colorWithRed:(166/255.f) green:(25/255.f) blue:(46/255.f) alpha:1.0f];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
@@ -370,7 +378,8 @@ NSDictionary *laptops;
 }
 
 /**
- * Action displaying the mobile site to book study room
+ * Action displaying the mobile site to book study room 
+ * uses different URL for each library
  */
 - (IBAction)displayBookStudyRoom:(id)sender {
     

@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="Xur-JR-Nl3" detailTextLabel="ZQO-dv-v0V" imageView="s24-Yf-NWb" style="IBUITableViewCellStyleSubtitle" id="mHD-MY-6OT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="Xur-JR-Nl3" detailTextLabel="ZQO-dv-v0V" imageView="s24-Yf-NWb" style="IBUITableViewCellStyleSubtitle" id="mHD-MY-6OT">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mHD-MY-6OT" id="t1F-5G-q43">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -75,7 +75,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Icon-72" id="s24-Yf-NWb">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="20-rss-512.png" id="s24-Yf-NWb">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -161,7 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="20-rss-512.png" width="512" height="512"/>
         <image name="Icon-60" width="60" height="60"/>
-        <image name="Icon-72" width="72" height="72"/>
     </resources>
 </document>

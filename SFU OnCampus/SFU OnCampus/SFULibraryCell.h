@@ -1,6 +1,8 @@
 //
 //  SFULibraryCell.h
-//  Multi Storyboard
+//  OnCampus
+//  Group 10
+//  Nikhil Gaba, Abram Wiebe, Rafay Tanzeel, Kevin Grant, Sunny Chowdhury
 //
 //  Created by Kevin Grant on 2015-03-14.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
@@ -80,7 +82,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationSeven;
 @property (weak, nonatomic) IBOutlet UILabel *locationEight;
 
-// Computers Available
+// Computers Available at each location
 @property (weak, nonatomic) IBOutlet UILabel *availableOne;
 @property (weak, nonatomic) IBOutlet UILabel *availableTwo;
 @property (weak, nonatomic) IBOutlet UILabel *availableThree;
@@ -90,7 +92,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *availableSeven;
 @property (weak, nonatomic) IBOutlet UILabel *availableEight;
 
-// Progress Bars
+// Progress Bars for each location
 @property (weak, nonatomic) IBOutlet UIProgressView *progressOne;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressTwo;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressThree;
@@ -100,7 +102,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressSeven;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressEight;
 
-// Computers in use
+// Computers in use at each location
 @property (weak, nonatomic) IBOutlet UILabel *usedOne;
 @property (weak, nonatomic) IBOutlet UILabel *usedTwo;
 @property (weak, nonatomic) IBOutlet UILabel *usedThree;
@@ -111,10 +113,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *usedEight;
 @property (weak, nonatomic) IBOutlet SFUBookRoomButton *bookRoomButton;
 
-
-// URL for book study room
+// URL for book study room for each library
 @property (nonatomic) NSString *URL;
-
-
 
 @end

@@ -20,21 +20,14 @@
     // Do any additional setup after loading the view.
 }
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //    return self.objects.count;
-    return [self.model sizeOfArray];
+    return [self.model sizeOfArray]; //creates number of rows specified in SocialUrls plist
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Gives each cell it's respective image and text
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    //    NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = [self.model titleStringForIndex:indexPath.row];
     cell.imageView.image=[UIImage imageNamed: [self.model imageNameForIndex:indexPath.row]];
     return cell;
@@ -42,19 +35,13 @@
 
 
 
-/*
+
  #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- */
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //if ([[segue identifier] isEqualToString:@"showDetail"]) {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {//Seguges and shows all the links of the selected cell
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NSString* URL=[self.model urlStringForIndex:indexPath.row];
-    //NSDate *object = self.objects[indexPath.row];
     RSSTableViewController *controller = (RSSTableViewController *)[segue destinationViewController];
     controller.rssUrl=[[NSURL alloc] initWithString:URL];
-
 }
 
 

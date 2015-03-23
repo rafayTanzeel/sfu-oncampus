@@ -10,22 +10,4 @@
 
 @implementation SFUMapHistory
 
--(NSUInteger)getAbsoluteFrequencyOfShortcode:(NSString*)s
-{
-    
-}
--(NSArray*)getTopShortCodesWithLimit:(NSUInteger)i
-{
-    
-}
-
--(NSUInteger)incrementFrequencyOfShortcode:(NSString*)s
-{
-    
-}
--(void)clearHistory
-{
-    
-}
-
 @end

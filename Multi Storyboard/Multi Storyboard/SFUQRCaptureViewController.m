@@ -97,7 +97,7 @@ NSMutableString* result;
                 break;
             }
         }
-        //found a QR code
+        
         if (detectionString != nil)
         {
             NSLog(@"Detected\n%@\n",detectionString);

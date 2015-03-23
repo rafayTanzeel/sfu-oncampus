@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 @import MapKit;
 @import CoreLocation;
-
-/**
- Stores necessary information regarding locations descriptions , names and shortcodes of buildings and in the future rooms.
- */
 @interface SFUMapModel : NSObject
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
 -(NSString*)suggestionForPrefix:(NSString*)p;

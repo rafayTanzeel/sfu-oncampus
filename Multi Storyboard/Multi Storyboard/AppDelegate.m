@@ -44,7 +44,7 @@
 
 /**
  * Downloads JSON data from a given URL. Displays an error message upon failure.
- * \bug this doesn't belong here, but it doesn't cause the software to be defective.
+ *
  * @param url   the url to be used to download the data from
  */
 +(void)downloadDataFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSData *))completionHandler{

@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SFUMapViewController.h"
 
-/**
- Uses user input, as well all programatically set values to return a shortcode for use by map.
- */
 @interface SFUShortCodeComposerViewController : UITableViewController
 
 @end

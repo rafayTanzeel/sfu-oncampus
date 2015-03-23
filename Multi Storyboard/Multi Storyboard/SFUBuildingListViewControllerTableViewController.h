@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- Lists buildings on campus, and associates a shortcode to them when unwinding to map.
- */
 @interface SFUBuildingListViewControllerTableViewController : UITableViewController
 
 @end

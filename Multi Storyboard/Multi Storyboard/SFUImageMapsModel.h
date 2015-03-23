@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- Retrieves metadata for maps that are represented using a static image, such as interiors.
- */
 @interface SFUImageMapsModel : NSObject
 
 -(NSString*)nameOfBuildingAtIndex:(NSUInteger)i;

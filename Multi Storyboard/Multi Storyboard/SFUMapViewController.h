@@ -12,9 +12,6 @@
 @import CoreLocation;
 @import MapKit;
 
-/**
- Draws custom overlays, annotations, and draws a given region using the values of search view.  Manages all behaviour of the man view of the map module.
- */
 @interface SFUMapViewController : UIViewController <UITextFieldDelegate,CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)captureRegion:(id)sender;

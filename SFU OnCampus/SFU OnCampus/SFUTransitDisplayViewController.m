@@ -22,7 +22,6 @@
     NSDate *dateTime; //holds date from string
     NSString *element;
     NSString *apiURL;
-    NSTimer* timer;
 }
 
 @end
@@ -170,15 +169,15 @@
             //NSDate *test=[dateFormat dateFromString:@"10:00PM"];
         
         
-//            NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
-//            double mins=(long long)(dtime/60.0);
-//            NSString *deltatime;
-//            if (mins<0)
-//            {
-//                mins=mins*(-1);
-//                mins=1440.0-mins;
-//                
-//            }
+            NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];
+            double mins=(long long)(dtime/60.0);
+            NSString *deltatime;
+            if (mins<0)
+            {
+                mins=mins*(-1);
+                mins=1440.0-mins;
+                
+            }
             
             
             //NSTimeInterval dtime=[dateTime timeIntervalSinceDate:todayTime];

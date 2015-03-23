@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- This table view controller displays a list of items representing storyboard files.
- Selecting an item will push the inital view controller of the represented object onto the navigation stack.
- */
 @interface SFUStoryboardListTableViewController : UITableViewController
 @property NSString* targetViewIdentifier;
 @end

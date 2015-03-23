@@ -25,7 +25,6 @@
 //label that displays the next bus time
 @property (weak, nonatomic) IBOutlet UILabel *nextBusTime;
 
-@property (weak, nonatomic) IBOutlet UILabel *nextBusDeltaTime;
 
 //table view holding upcoming buses
 @property (weak, nonatomic) IBOutlet UITableView *upcomingTableView;

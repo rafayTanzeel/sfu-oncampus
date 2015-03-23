@@ -18,21 +18,18 @@
 #import "SFUQRCaptureViewController.h"
 
 @interface SFUQRCaptureViewController ()
-{
-@private
-    AVCaptureSession *session;
-    AVCaptureDevice *device;
-    AVCaptureDeviceInput *input;
-    AVCaptureMetadataOutput *output;
-    AVCaptureVideoPreviewLayer *prevLayer;
-    NSString* result;
-}
 
 
 @end
 
 @implementation SFUQRCaptureViewController
 
+AVCaptureSession *session;
+AVCaptureDevice *device;
+AVCaptureDeviceInput *input;
+AVCaptureMetadataOutput *output;
+AVCaptureVideoPreviewLayer *prevLayer;
+NSMutableString* result;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

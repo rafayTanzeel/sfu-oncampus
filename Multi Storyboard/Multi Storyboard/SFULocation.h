@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- An abstract container used to represent a location on campus, not currently used
- */
 @interface SFULocation : NSObject
 
 @property NSString* displayName;

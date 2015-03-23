@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Loads the local help webpage to give instructions on using map view
+ */
 @interface SFUMapHelpViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 

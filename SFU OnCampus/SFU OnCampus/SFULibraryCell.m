@@ -1,6 +1,8 @@
 //
 //  SFULibraryCell.m
-//  Multi Storyboard
+//  OnCampus
+//  Group 10
+//  Nikhil Gaba, Abram Wiebe, Rafay Tanzeel, Kevin Grant, Sunny Chowdhury
 //
 //  Created by Kevin Grant on 2015-03-14.
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
@@ -61,7 +63,7 @@
     available.text = numberAvailable;
     inUse.text = [NSString stringWithFormat:@"%ld", (long)numberInUse];
     
-    // Calulate progress
+    // Calculate progress
     float progress;
 
     if ([numberAvailable integerValue] != 0) {
@@ -71,30 +73,34 @@
         progress = 0.0;
     }
     
+    //-------------------------------------------------------------------
+    // CALCULATE PROGRESS BAR COLOUR
+    // the progress bar colour shifts from red to green.
+    // the higher percentage the progress bar is at, the greener it is.
+    //-------------------------------------------------------------------
+
     const float intensityShift =0.9;
-    const float redShift = .05; // cause red to occur faster, so it's not just orange until it's so small it isn't visible.
+    const float redShift = .05;     // cause red to occur faster, so it's not just orange until it's so small it isn't visible.
     
-    //cause progress to make the bars converge on yellow
+    // Cause progress to make the bars converge on yellow
     float r = 2*(1.0- progress +redShift);
     float g = 2.0*(progress -redShift);
     
     
-    //The blue portion makes up 1/3 of the color space
+    // The blue portion makes up 1/3 of the color space
     float b = 0;
     
-    //Make the colors not so bright(especially good for yellow
+    // Make the colors not so bright(especially good for yellow
     r*=intensityShift;
     g*=intensityShift;
     
     
-    //actually set the color
+    // Actually set the color
     UIColor* c  = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
     [progressView setProgressTintColor: c];
     
     // Set progress
     [progressView setProgress:progress];
-    
-    
 }
 
 -(void)updateLibraryStatusLabels:(UILabel*) hoursLabel status:(UILabel*) statusLabel withDictionary:(NSDictionary*) d
@@ -107,13 +113,16 @@
     
     // Library Status (open or closed)
     NSNumber *status = [d valueForKey:@"in_range"];
+
+    // Open
     if ([status integerValue] == 1) {
         statusLabel.text = @"OPEN";
-        statusLabel.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];
+        statusLabel.textColor = [UIColor colorWithRed:(0/255.f) green:(150/255.f) blue:(0/255.f) alpha:1.0f];   // Set to Green
     }
+    // Closed
     else {
         statusLabel.text = @"CLOSED";
-        statusLabel.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];
+        statusLabel.textColor = [UIColor colorWithRed:(226/255.f) green:(8/255.f) blue:(19/255.f) alpha:1.0f];  // Set to Red
     }
 }
 

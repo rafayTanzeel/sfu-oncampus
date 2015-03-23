@@ -197,10 +197,15 @@
                 double hours=(long long) (dtime/60.0); //give an hour estimation
                 deltatime=[NSString stringWithFormat:@"Over %.0f h",hours];
             }
+            else if (dtime<0)
+            {
+                deltatime=[NSString stringWithFormat:@"0 mins"];
+
+            }
+            
             else
             {
                 deltatime=[NSString stringWithFormat:@"%.0f mins",dtime];
-
             }
             
             [item setObject:dateTime forKey:@"leavetime"];

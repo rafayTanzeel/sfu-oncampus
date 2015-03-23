@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 @import MapKit;
 @import CoreLocation;
+
+/**
+ Stores necessary information regarding locations descriptions , names and shortcodes of buildings and in the future rooms.
+ */
 @interface SFUMapModel : NSObject
 
 typedef enum SFUMapModelResolutionStatus
@@ -21,6 +25,9 @@ typedef enum SFUMapModelResolutionStatus
 -(NSArray*)listOfDomains;
 -(NSString*)shortCodeForDisplayName:(NSString*)s;
 -(NSString*)displayNameForShortCode:(NSString*)s;
+
+//-(SFULocation*)locationForShortcode;
+
 -(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status;
 @property BOOL shouldTrackHistory;
 

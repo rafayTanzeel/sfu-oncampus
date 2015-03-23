@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ This class represents the history of finding locations on the map in the same way a webbrowser tracks page frequency.
+ It is not currently implemented.
+ \todo Implement
+ */
 @interface SFUMapHistory : NSObject
 
 -(NSUInteger)getAbsoluteFrequencyOfShortcode:(NSString*)s;

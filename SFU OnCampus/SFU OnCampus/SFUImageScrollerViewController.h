@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SFUImageMapsModel.h"
 
+/**
+ Changes the map image according to the building and floor selected by the spinner.
+ @todo Not enough screen real-estate on iOS, use a sectioned spinner instead of a spinner and stepper.
+ */
 @interface SFUImageScrollerViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;

@@ -9,7 +9,7 @@
 //
 //
 //
-// Presently no known bugs
+// Bug: When device is turned into landscape mode, constraints for nextBusTime and nextBusDeltaTime off
 
 #import <UIKit/UIKit.h>
 #import "SFUTransitModel.h"

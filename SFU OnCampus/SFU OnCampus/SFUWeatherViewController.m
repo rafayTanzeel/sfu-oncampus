@@ -20,9 +20,8 @@
     NSMutableDictionary *currentObservation;
     NSArray *forecastDay;
     
-    // String and array for the announcement
-    NSString *announcementOne;
-    NSMutableArray *announcementArray;
+    // Array for the announcement
+    NSArray *announcementArray;
 }
 
 @end
@@ -130,30 +129,59 @@
 }
 
 /**
- * Gets the announcement from the SFU Road Report page.
+ * Get the road conditions data returned by the SFU Road Report API
  */
--(IBAction)getAnnouncement:(id)sender {
+-(IBAction)getRoadConditionsData:(id)sender {
     
-    // Get the HTML data from the road report page
-    NSURL *url = [NSURL URLWithString:@"http://www.sfu.ca/security/sfuroadconditions/"];
-    NSData *HtmlData = [NSData dataWithContentsOfURL:url];
+    // Prepare the URL
+    NSURL *url = [NSURL URLWithString:@"http://www.sfu.ca/security/sfuroadconditions/api/2/current"];
     
-    // Set up parser
-    TFHpple *parser = [TFHpple hppleWithHTMLData:HtmlData];
+    //Get URL page into NSData Object
+    NSData *roadConditionsData = [NSData dataWithContentsOfURL:url];
     
-    // Create queries and create arrays which hold the Hpple objects
-    NSString *queryStringOne = @"//section[@class='announcements']/div/p";
-    NSArray *nodesOne = [parser searchWithXPathQuery:queryStringOne];
+    //Read JSON and convert to object
+    NSError *error;
+    if(roadConditionsData != nil)
+    {
+        error = nil;
+    }
+    else {
+        // Display the error pop up
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
+    }
     
-    // store the returned data in global strings
-    int i = 0;
-    for (TFHppleElement *element in nodesOne) {
-        announcementOne = [[element firstChild] content];
-        [announcementArray replaceObjectAtIndex:i withObject:announcementOne];
-        NSLog(@"--------------------------------");
-        NSLog([announcementArray objectAtIndex:i]);
-        NSLog(@"--------------------------------");
-        i++;
+    // Store the data in dictionary
+    NSMutableDictionary *roadConditionsDictionary = [NSJSONSerialization JSONObjectWithData:roadConditionsData options:kNilOptions error:&error];
+    
+    if (error != nil) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else{
+        NSLog(@"%@", roadConditionsDictionary);
+        NSString *announcements = [NSString stringWithFormat:@"%@", [roadConditionsDictionary valueForKey:@"announcements"]];
+        
+        // -----------------------------------------------------
+        // Remove the HTML formatting characters from the string
+        // -----------------------------------------------------
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"<div>" withString:@""];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"</div>" withString:@""];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"&nbsp" withString:@""];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"&deg;" withString:@"°"];
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"    " withString:@""];
+        
+        // Remove the new line returned by the API at beginning of string (not new line character, actual line)
+        announcements = [announcements stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        
+        // Remove (, ), ", ; characters
+        NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"()\";"];
+        announcements = [[announcements componentsSeparatedByCharactersInSet: doNotWant] componentsJoinedByString: @""];
+        
+        // Split string via the \n character and store each component in global array
+        announcementArray = [announcements componentsSeparatedByString:@"\\n"];
     }
 }
 
@@ -162,7 +190,7 @@
     // Refresh the data
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
-    [self getAnnouncement:self];
+    [self getRoadConditionsData:self];
     [self.tableView reloadData];
     
     // End refreshing
@@ -190,7 +218,7 @@
     
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
-    [self getAnnouncement:self];
+    [self getRoadConditionsData:self];
 }
 
 - (void)didReceiveMemoryWarning

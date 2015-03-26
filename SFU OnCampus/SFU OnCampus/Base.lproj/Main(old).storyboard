@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell2" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="kEk-tj-YfJ" imageView="D4I-mR-owq" style="IBUITableViewCellStyleDefault" id="5fL-Im-uM9">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell2" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell2" textLabel="kEk-tj-YfJ" imageView="D4I-mR-owq" rowHeight="54" style="IBUITableViewCellStyleDefault" id="5fL-Im-uM9">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5fL-Im-uM9" id="Kgm-vV-JYk">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -2602,8 +2602,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="wWC-X9-jYG"/>
         <segue reference="UvV-92-ifD"/>
-        <segue reference="u2l-lC-zyr"/>
         <segue reference="pNg-DC-Rqp"/>
+        <segue reference="o0B-ml-VMf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

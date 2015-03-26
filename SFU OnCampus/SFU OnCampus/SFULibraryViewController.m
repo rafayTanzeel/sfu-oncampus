@@ -140,6 +140,8 @@ NSDictionary *laptops;
     
     [super viewDidLoad];
     
+    self.title = @"Library";
+    
     self.tableView.separatorColor = [UIColor clearColor];
     
     // Colour remains grey if user overscrolls

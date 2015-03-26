@@ -56,6 +56,30 @@
  */
 -(void)emptyComputerLabels:(UILabel*) available used:(UILabel*) inUse locationLabel:(UILabel*) location progressBar:(UIProgressView*) progressView;
 
+/**
+ * updates the computer labels for all locations at SFU Burnaby library
+ *
+ * @param cell          cell containing all computer labels
+ * @param computers     dictionary containing all computer data
+ */
+- (void)updateBurnabyComputerLabels:(SFULibraryCell*) cell withDictionary:(NSDictionary*) computers;
+
+/**
+ * updates the computer labels for all locations at SFU Surrey library
+ *
+ * @param cell          cell containing all computer labels
+ * @param computers     dictionary containing all computer data
+ */
+- (void)updateSurreyComputerLabels:(SFULibraryCell*) cell withDictionary:(NSDictionary*) computers;
+
+/**
+ * updates the computer labels for all locations at SFU Vancouver library
+ *
+ * @param cell          cell containing all computer labels
+ * @param computers     dictionary containing all computer data
+ */
+- (void) updateVancouverComputerLabels:(SFULibraryCell*) cell withDictionary:(NSDictionary*) computers;
+
 // UI View
 @property (weak, nonatomic) IBOutlet UIView *libraryView;
 

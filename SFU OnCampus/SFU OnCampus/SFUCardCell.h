@@ -38,6 +38,13 @@
 - (void)updateForecastImage:(UIImageView*) weatherImage current:(NSString*) icon;
 
 /**
+ * Updates labels for the current conditions.
+ *
+ * @param cell                  the cell containing all the forecast labels
+ * @param currentObservation	dictionary containing current weather data
+ */
+- (void)updateCurrentConiditionLabels:(SFUCardCell*) cell withDictionary:(NSMutableDictionary*) currentObservation;
+/**
  * Sets the labels for the five day forecast.
  * Uses a dictionary returned by the Wunderground weather API to determine 
  * which values should be used. All parameters shall be representative of the 
@@ -54,6 +61,15 @@
  * @param d 			dictionary containing the information used to set the labels and image
  */
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary:(NSDictionary*) d;
+
+/**
+ * calls the {@link #updateForecastLabels() updateForecastLabels} method on each of the
+ * sets of labels for the five day forecast
+ *
+ * @param cell          the cell containing all the forecast labels
+ * @param forecastDay	Array containing the forecast data
+ */
+- (void)updateFiveDayForecastLabels:(SFUCardCell*) cell withDictionary:(NSArray*) forecastDay;
 
 /**
  * Sets the labels for the hourly forecast.

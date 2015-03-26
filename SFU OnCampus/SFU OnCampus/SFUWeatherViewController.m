@@ -248,9 +248,6 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // index of current row
-    // int tableIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-    
     //-----------------------------
     // Main weather module
     //-----------------------------
@@ -258,54 +255,14 @@
         
         SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUCardCell"];
         
-        // Configure the cell
-        if (cell == nil) {
-            cell = [[SFUCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SFUCardCell"];
-        }
-        
         // Set weather location
         cell.location.text = @"SFU Burnaby";
         
-        // Current conditions description
-        NSString *condition = [currentObservation valueForKey:@"weather"];
-        cell.weatherDescription.text = condition;
+        // Update current conditions
+        [cell updateCurrentConiditionLabels:cell withDictionary:currentObservation];
         
-        // Current wind and Precipitation
-        NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
-        NSInteger windInt = [wind integerValue];
-        NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
-        if ([precipitation isEqualToString:@"--"]) {
-            precipitation = @"0";
-        }
-        NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
-        cell.windAndPrecip.text = pw;
-        
-        // Large temperature icon and string
-        NSString *tempString = [currentObservation valueForKey:@"temp_c"];
-        NSInteger temp = [tempString integerValue];
-        cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
-        
-        [cell updateImage:cell.weatherIcon current:condition];
-        
-        // Day One Lables
-        NSDictionary *zero = [forecastDay objectAtIndex:0];
-        [cell updateForecastLabels:cell.dayOne labelHigh:cell.dayOneHigh labelLow:cell.dayOneLow image:cell.iconDayOne withDictionary:zero];
-        
-        // Day Two Labels
-        NSDictionary *one = [forecastDay objectAtIndex:1];
-        [cell updateForecastLabels:cell.dayTwo labelHigh:cell.dayTwoHigh labelLow:cell.dayTwoLow image:cell.iconDayTwo withDictionary:one];
-        
-        // Day Three Labels
-        NSDictionary *two = [forecastDay objectAtIndex:2];
-        [cell updateForecastLabels:cell.dayThree labelHigh:cell.dayThreeHigh labelLow:cell.dayThreeLow image:cell.iconDayThree withDictionary:two];
-        
-        // Day Four Labels
-        NSDictionary *three = [forecastDay objectAtIndex:3];
-        [cell updateForecastLabels:cell.dayFour labelHigh:cell.dayFourHigh labelLow:cell.dayFourLow image:cell.iconDayFour withDictionary:three];
-        
-        // Day Five Labels
-        NSDictionary *four = [forecastDay objectAtIndex:4];
-        [cell updateForecastLabels:cell.dayFive labelHigh:cell.dayFiveHigh labelLow:cell.dayFiveLow image:cell.iconDayFive withDictionary:four];
+        // Five Day forecast labels
+        [cell updateFiveDayForecastLabels:cell withDictionary:forecastDay];
         
         return cell;
     }
@@ -319,7 +276,8 @@
         
         // Announcements
         cell.AnnouncementsTitle.text = @"Announcements";
-
+        
+        // Body
         NSString *announce = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", [announcementArray objectAtIndex:0], [announcementArray objectAtIndex:1], [announcementArray objectAtIndex:2]];
         
         cell.AnnouncementsBody.text = announce;

@@ -144,7 +144,33 @@
     }
 }
 
-// Updates Labels for five day forecast
+// Update labels for current conditions
+- (void)updateCurrentConiditionLabels:(SFUCardCell*) cell withDictionary:(NSMutableDictionary*) currentObservation
+{
+    // Current conditions description
+    NSString *condition = [currentObservation valueForKey:@"weather"];
+    cell.weatherDescription.text = condition;
+    
+    // Current wind and Precipitation
+    NSNumber *wind = [currentObservation valueForKey:@"wind_kph"];
+    NSInteger windInt = [wind integerValue];
+    NSString *precipitation = [currentObservation valueForKey: @"precip_today_metric"];
+    if ([precipitation isEqualToString:@"--"]) {
+        precipitation = @"0";
+    }
+    NSString *pw = [NSString stringWithFormat:@"wind %ldkm/h • precip %@mm",(long)windInt,precipitation];
+    cell.windAndPrecip.text = pw;
+    
+    // Large temperature icon and string
+    NSString *tempString = [currentObservation valueForKey:@"temp_c"];
+    NSInteger temp = [tempString integerValue];
+    cell.temperature.text = [NSString stringWithFormat:@"%ld°",(long)temp];
+    
+    // Main weather icon
+    [cell updateImage:cell.weatherIcon current:condition];
+}
+
+// Updates Labels for five day forecast instance
 - (void)updateForecastLabels:(UILabel*) dayLabel labelHigh:(UILabel*) highLabel labelLow:(UILabel*) lowLabel image:(UIImageView*) imageDay withDictionary: (NSDictionary *) d
 {
     // Strings representing high and low temperatures
@@ -159,6 +185,30 @@
     dayLabel.text = [[d objectForKey:@"date"] objectForKey:@"weekday_short"];
     highLabel.text = high;
     lowLabel.text = low;
+}
+
+// Updates Labels for all of five day forecast
+- (void)updateFiveDayForecastLabels:(SFUCardCell*) cell withDictionary:(NSArray*) forecastDay
+{
+    // Day One Lables
+    NSDictionary *zero = [forecastDay objectAtIndex:0];
+    [cell updateForecastLabels:cell.dayOne labelHigh:cell.dayOneHigh labelLow:cell.dayOneLow image:cell.iconDayOne withDictionary:zero];
+    
+    // Day Two Labels
+    NSDictionary *one = [forecastDay objectAtIndex:1];
+    [cell updateForecastLabels:cell.dayTwo labelHigh:cell.dayTwoHigh labelLow:cell.dayTwoLow image:cell.iconDayTwo withDictionary:one];
+    
+    // Day Three Labels
+    NSDictionary *two = [forecastDay objectAtIndex:2];
+    [cell updateForecastLabels:cell.dayThree labelHigh:cell.dayThreeHigh labelLow:cell.dayThreeLow image:cell.iconDayThree withDictionary:two];
+    
+    // Day Four Labels
+    NSDictionary *three = [forecastDay objectAtIndex:3];
+    [cell updateForecastLabels:cell.dayFour labelHigh:cell.dayFourHigh labelLow:cell.dayFourLow image:cell.iconDayFour withDictionary:three];
+    
+    // Day Five Labels
+    NSDictionary *four = [forecastDay objectAtIndex:4];
+    [cell updateForecastLabels:cell.dayFive labelHigh:cell.dayFiveHigh labelLow:cell.dayFiveLow image:cell.iconDayFive withDictionary:four];
 }
 
 // Update labels for hourly forecast

@@ -240,35 +240,8 @@ NSDictionary *laptops;
         // Library Hours, open status
         [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:burnabyHours];
         
-        // Computer availability label, available label, in use label
-        cell.availabilityLabel.text = @"Computer Availability";
-        cell.available.text = @"available";
-        
         // Computer availability for each location
-        
-        // 6th floor
-        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"6th floor" locationValue:@"ben-6-pc" progressBar:cell.progressOne withDictionary:computers];
-        
-        // 5th floor
-        [cell updateComputerAvaiability:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo locationName:@"5th floor" locationValue:@"ben-5-pc" progressBar:cell.progressTwo withDictionary:computers];
-        
-        // 4th floor
-        [cell updateComputerAvaiability:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree locationName:@"4th floor" locationValue:@"ben-4-4009-pc" progressBar:cell.progressThree withDictionary:computers];
-        
-        // 3rd floor east PCs
-        [cell updateComputerAvaiability:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour locationName:@"3rd floor East - PCs" locationValue:@"ben-3-e-pc" progressBar:cell.progressFour withDictionary:computers];
-        
-        // 3rd floor east Macs
-        [cell updateComputerAvaiability:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive locationName:@"3rd floor East - Macs" locationValue:@"ben-3-e-mac" progressBar:cell.progressFive withDictionary:computers];
-        
-        // 3rd floor west
-        [cell updateComputerAvaiability:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix locationName:@"3rd floor West" locationValue:@"ben-3-w-pc" progressBar:cell.progressSix withDictionary:computers];
-        
-        // 2nd floor
-        [cell updateComputerAvaiability:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven locationName:@"2nd floor" locationValue:@"ben-2-2105-pc" progressBar:cell.progressSeven withDictionary:computers];
-        
-        // Laptops
-        [cell updateComputerAvaiability:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight locationName:@"Laptops" locationValue:@"ben-checkout-laptops" progressBar:cell.progressEight withDictionary:computers];
+        [cell updateBurnabyComputerLabels:cell withDictionary:computers];
         
         return cell;
     }
@@ -288,31 +261,9 @@ NSDictionary *laptops;
         
         // Library Hours, open status
         [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:surreyHours];
-        
-        // Computer availability label, available label, in use label
-        cell.availabilityLabel.text = @"Computer Availability";
-        cell.available.text = @"available";
 
         // Computer availability for each location
-        
-        // PCs
-        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Library PCs" locationValue:@"surrey-lib" progressBar:cell.progressOne withDictionary:computers];
-        
-        // Macs
-        [cell updateComputerAvaiability:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo locationName:@"Library Macs" locationValue:@"surrey-lib-mac" progressBar:cell.progressTwo withDictionary:computers];
-        
-        // Empty the rest of the values
-        [cell emptyComputerLabels:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree progressBar:cell.progressThree];
-        
-        [cell emptyComputerLabels:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour progressBar:cell.progressFour];
-        
-        [cell emptyComputerLabels:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive progressBar:cell.progressFive];
-        
-        [cell emptyComputerLabels:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix progressBar:cell.progressSix];
-        
-        [cell emptyComputerLabels:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven progressBar:cell.progressSeven];
-        
-        [cell emptyComputerLabels:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight progressBar:cell.progressEight];
+        [cell updateSurreyComputerLabels:cell withDictionary:computers];
         
         return cell;
     }
@@ -332,36 +283,13 @@ NSDictionary *laptops;
         
         // Library Hours, open status
         [cell updateLibraryStatusLabels:cell.hours status:cell.libraryStatus withDictionary:vancouverHours];
-        
-        // Computer availability label, available label, in use label
-        cell.availabilityLabel.text = @"Computer Availability";
-        cell.available.text = @"available";
-        
+
         // Computer availability for each location
-        
-        [cell updateComputerAvaiability:cell.availableOne used:cell.usedOne locationLabel:cell.locationOne locationName:@"Library Computers" locationValue:@"bel-pc" progressBar:cell.progressOne withDictionary:computers];
-        
-        // Empty the rest of the values
-        [cell emptyComputerLabels:cell.availableTwo used:cell.usedTwo locationLabel:cell.locationTwo progressBar:cell.progressTwo];
-        
-        [cell emptyComputerLabels:cell.availableThree used:cell.usedThree locationLabel:cell.locationThree progressBar:cell.progressThree];
-        
-        [cell emptyComputerLabels:cell.availableFour used:cell.usedFour locationLabel:cell.locationFour progressBar:cell.progressFour];
-        
-        [cell emptyComputerLabels:cell.availableFive used:cell.usedFive locationLabel:cell.locationFive progressBar:cell.progressFive];
-        
-        [cell emptyComputerLabels:cell.availableSix used:cell.usedSix locationLabel:cell.locationSix progressBar:cell.progressSix];
-        
-        [cell emptyComputerLabels:cell.availableSeven used:cell.usedSeven locationLabel:cell.locationSeven progressBar:cell.progressSeven];
-        
-        [cell emptyComputerLabels:cell.availableEight used:cell.usedEight locationLabel:cell.locationEight progressBar:cell.progressEight];
+        [cell updateVancouverComputerLabels:cell withDictionary:computers];
         
         return cell;
     }
-    
 }
-
-
 
 /**
  * Action displaying the mobile site of the SFU Library catalogue

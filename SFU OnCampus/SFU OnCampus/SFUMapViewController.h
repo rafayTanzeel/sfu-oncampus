@@ -22,9 +22,16 @@
 @property (strong, nonatomic) IBOutlet UITextField *sourceField;
 @property (strong, nonatomic) IBOutlet UIView *searchView;
 @property (strong, nonatomic) IBOutlet UIView *showSearchHelp;
+
 @property SFUMapModel* model;
+
 @property (weak, nonatomic) IBOutlet UIView *debugView;
-@property  NSString* returnedString;
+
+///When the interior view needs information on the selected annotaiton it asks about this, even though is no strict protocol.
+@property  NSString* detailSelectedShortcode;
+
+//When the composer view ends, this is used to hold the resulting shorcode
+@property NSString* returnedString;
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)overlay;

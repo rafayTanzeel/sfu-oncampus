@@ -15,6 +15,7 @@
 @property(nonatomic) BOOL isDestination;
 @property(nonatomic,readonly,copy) NSString* title;
 @property(nonatomic,readonly,copy) NSString* subtitle;
+@property(nonatomic,readonly,copy) NSString* shortcode;
 
 -(SFUMapAnnotation*)initWithTitle:(NSString*)t subtitle:(NSString*)sub shortcode:(NSString*)aShortcode;
 

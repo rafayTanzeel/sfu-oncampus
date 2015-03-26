@@ -39,4 +39,9 @@
 {
     return [NSString stringWithFormat:@"%@ - %@",[shortcode uppercaseString],subtitle];
 }
+
+- (NSString *)shortcode
+{
+    return shortcode;
+}
 @end

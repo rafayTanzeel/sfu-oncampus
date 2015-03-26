@@ -201,6 +201,16 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     return pin;
     
 }
+
+- (void)mapView:(MKMapView *)mapView
+ annotationView:(MKAnnotationView *)view
+calloutAccessoryControlTapped:(UIControl *)control
+{
+    SFUMapAnnotation* a = view.annotation;
+    self.detailSelectedShortcode = a.shortcode;
+    [self performSegueWithIdentifier:@"interiorMapSegue" sender:self];
+}
+
 - (IBAction)swapSourceAndDestination:(id)sender
 {
     NSString* s = self.sourceField.text;

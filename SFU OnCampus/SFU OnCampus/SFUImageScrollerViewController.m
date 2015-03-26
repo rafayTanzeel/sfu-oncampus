@@ -92,6 +92,16 @@ numberOfRowsInComponent:(NSInteger)component
     buildingIndex=row;
 }
 
+-(void)setSourceLocationToShortcode:(NSString*)s
+{
+    
+}
+
+-(void)setDestinationLocationToShortcode:(NSString*)s
+{
+    
+}
+
 /*
 #pragma mark - Navigation
 

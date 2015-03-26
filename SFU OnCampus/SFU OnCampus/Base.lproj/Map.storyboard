@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="byQ-GO-xn6" kind="show" id="SWT-67-p2f"/>
+                                    <segue destination="9hf-Nd-Xs2" kind="show" id="0KP-Kv-22E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -339,6 +339,7 @@
                         <outlet property="searchView" destination="Xt3-9g-1xG" id="7rk-js-8cy"/>
                         <outlet property="showSearchHelp" destination="sbs-7H-jZp" id="VHz-qf-WYX"/>
                         <outlet property="sourceField" destination="2hm-sF-wN2" id="Sgo-mC-rgz"/>
+                        <segue destination="9hf-Nd-Xs2" kind="show" identifier="interiorMapSegue" id="d83-Xv-22j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ce4-WB-7XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +353,7 @@
                         <action selector="showSearch:" destination="Uf5-0l-v9h" id="oD0-tO-mTG"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xPj-7y-BHA" userLabel="Record Long Press Gesture Recognizer">
+                <pongPressGestureRecognizer enabled="NO" allowableMovement="10" minimumPressDuration="0.5" id="xPj-7y-BHA" userLabel="Record Long Press Gesture Recognizer">
                     <connections>
                         <action selector="recordPosition:" destination="Uf5-0l-v9h" id="b8n-cv-TGW"/>
                     </connections>
@@ -652,22 +653,6 @@
             </objects>
             <point key="canvasLocation" x="4698" y="367"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="woN-dd-ewy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="byQ-GO-xn6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jhj-FP-8aO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9hf-Nd-Xs2" kind="relationship" relationship="rootViewController" id="6Eh-yf-rAf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="scM-rV-KAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1057" y="1068"/>
-        </scene>
         <!--Image Scroller View Controller-->
         <scene sceneID="ewY-Fd-Tim">
             <objects>
@@ -677,10 +662,10 @@
                         <viewControllerLayoutGuide type="bottom" id="2CZ-cN-TTS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hi5-fr-wgs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
                                 <rect key="frame" x="0.0" y="64" width="600" height="360"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
@@ -692,7 +677,7 @@
                                 </connections>
                             </scrollView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAm-SH-Chg">
-                                <rect key="frame" x="0.0" y="434" width="602" height="166"/>
+                                <rect key="frame" x="0.0" y="370" width="602" height="166"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Floor Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtu-Nn-DDb">
                                         <rect key="frame" x="403" y="32" width="106" height="41"/>
@@ -744,7 +729,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqd-Rt-c7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153" y="1083"/>
+            <point key="canvasLocation" x="2147" y="1163"/>
         </scene>
     </scenes>
     <resources>
@@ -753,5 +738,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="oIn-Tx-Yb2"/>
         <segue reference="IuL-vh-TlR"/>
+        <segue reference="d83-Xv-22j"/>
     </inferredMetricsTieBreakers>
 </document>

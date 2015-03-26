@@ -132,7 +132,9 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         MKCoordinateRegion r = [self.model regionForString:src status:&status];
         [self.mapView setRegion:r animated:YES];
         NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
-        SFUMapAnnotation* a = [SFUMapAnnotation new];
+        
+        NSString* title = [self.model displayNameForShortCode:src];
+        SFUMapAnnotation* a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
         a.coordinate = r.center;
         a.isDestination =NO;
         [self.mapView addAnnotation: a];
@@ -141,7 +143,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         r = [self.model regionForString:dest status:&status];
         //[self.mapView setRegion:r animated:YES];
         printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
-        SFUMapAnnotation* b = [SFUMapAnnotation new];
+        SFUMapAnnotation* b = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
+        title = [self.model displayNameForShortCode:dest];
         b.coordinate = r.center;
         b.isDestination =YES;
         [self.mapView addAnnotation: b];
@@ -187,6 +190,14 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
             [pin setPinColor: MKPinAnnotationColorGreen];
             
     }
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+  
+    pin.rightCalloutAccessoryView = rightButton;
+    pin.animatesDrop = YES;
+    
+    pin.canShowCallout = YES;
+   
     return pin;
     
 }

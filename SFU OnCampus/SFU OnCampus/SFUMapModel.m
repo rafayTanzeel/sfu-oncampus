@@ -39,6 +39,8 @@
 
 -(NSString*)displayNameForShortCode:(NSString*)s
 {
+    s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    s = [s uppercaseString];
     NSDictionary* b= [d objectForKey:s];
     NSString* name = [b objectForKey:@"displayName"];
     if(name)

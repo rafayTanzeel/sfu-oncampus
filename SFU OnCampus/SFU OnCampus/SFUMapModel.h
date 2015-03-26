@@ -20,6 +20,7 @@ typedef enum SFUMapModelResolutionStatus
 -(NSString*)suggestionForPrefix:(NSString*)p;
 -(NSArray*)listOfDomains;
 -(NSString*)shortCodeForDisplayName:(NSString*)s;
+-(NSString*)displayNameForShortCode:(NSString*)s;
 -(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status;
 @property BOOL shouldTrackHistory;
 

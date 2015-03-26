@@ -13,5 +13,9 @@
 
 @property(nonatomic) CLLocationCoordinate2D coordinate;
 @property(nonatomic) BOOL isDestination;
+@property(nonatomic,readonly,copy) NSString* title;
+@property(nonatomic,readonly,copy) NSString* subtitle;
+
+-(SFUMapAnnotation*)initWithTitle:(NSString*)t subtitle:(NSString*)sub shortcode:(NSString*)aShortcode;
 
 @end

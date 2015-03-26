@@ -665,64 +665,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="360"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7">
                                         <rect key="frame" x="2" y="0.0" width="2048" height="2072"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1iI-98-cV7" secondAttribute="bottom" constant="-1698" id="6LT-Js-nfT"/>
+                                    <constraint firstItem="1iI-98-cV7" firstAttribute="top" secondItem="cy9-BY-lp3" secondAttribute="top" id="HaF-Yp-t1R"/>
+                                    <constraint firstAttribute="trailing" secondItem="1iI-98-cV7" secondAttribute="trailing" constant="-1450" id="Ln3-pS-E5C"/>
+                                    <constraint firstItem="1iI-98-cV7" firstAttribute="leading" secondItem="cy9-BY-lp3" secondAttribute="leading" constant="2" id="d0T-b1-OrC"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="9hf-Nd-Xs2" id="Bhc-S5-B1L"/>
                                 </connections>
                             </scrollView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAm-SH-Chg">
-                                <rect key="frame" x="0.0" y="370" width="602" height="166"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Floor Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtu-Nn-DDb">
-                                        <rect key="frame" x="403" y="32" width="106" height="41"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Gu-XoM">
-                                        <rect key="frame" x="0.0" y="-4" width="320" height="162"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="9hf-Nd-Xs2" id="8YN-TM-z2H"/>
-                                            <outlet property="delegate" destination="9hf-Nd-Xs2" id="Vsp-99-KDw"/>
-                                        </connections>
-                                    </pickerView>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="GMJ-fI-55w">
-                                        <rect key="frame" x="409" y="84" width="94" height="29"/>
-                                        <connections>
-                                            <action selector="floorChanged:" destination="9hf-Nd-Xs2" eventType="valueChanged" id="MNs-l4-Mbm"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Gu-XoM">
+                                <rect key="frame" x="0.0" y="374" width="600" height="162"/>
                                 <constraints>
-                                    <constraint firstItem="tPn-Gu-XoM" firstAttribute="top" secondItem="Wtu-Nn-DDb" secondAttribute="bottom" constant="-77" id="WiD-HC-InH"/>
-                                    <constraint firstItem="GMJ-fI-55w" firstAttribute="centerX" secondItem="Wtu-Nn-DDb" secondAttribute="centerX" id="hra-gF-xcd"/>
-                                    <constraint firstAttribute="height" constant="166" id="mdP-tb-Qbq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wtu-Nn-DDb" secondAttribute="trailing" constant="93" id="zu9-Sw-U36"/>
+                                    <constraint firstAttribute="height" constant="162" id="u8n-P7-UCC"/>
                                 </constraints>
-                            </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="9hf-Nd-Xs2" id="8YN-TM-z2H"/>
+                                    <outlet property="delegate" destination="9hf-Nd-Xs2" id="Vsp-99-KDw"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cy9-BY-lp3" firstAttribute="top" secondItem="SHq-17-Hfe" secondAttribute="bottom" id="JdZ-5I-JvB"/>
-                            <constraint firstItem="KAm-SH-Chg" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leadingMargin" constant="-16" id="QjI-Mw-oPJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cy9-BY-lp3" secondAttribute="trailing" constant="-16" id="V5Q-dh-r3H"/>
-                            <constraint firstItem="2CZ-cN-TTS" firstAttribute="top" secondItem="KAm-SH-Chg" secondAttribute="bottom" id="cba-Wf-nmU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KAm-SH-Chg" secondAttribute="trailing" constant="-18" id="jyH-gn-wmx"/>
-                            <constraint firstItem="cy9-BY-lp3" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leadingMargin" constant="-16" id="vm4-hg-1lK"/>
-                            <constraint firstItem="KAm-SH-Chg" firstAttribute="top" secondItem="cy9-BY-lp3" secondAttribute="bottom" constant="10" id="zil-ZY-iZw"/>
+                            <constraint firstItem="cy9-BY-lp3" firstAttribute="trailing" secondItem="tPn-Gu-XoM" secondAttribute="trailing" id="Mie-SL-4p5"/>
+                            <constraint firstItem="2CZ-cN-TTS" firstAttribute="top" secondItem="tPn-Gu-XoM" secondAttribute="bottom" id="aaS-kk-WLf"/>
+                            <constraint firstItem="cy9-BY-lp3" firstAttribute="leading" secondItem="tPn-Gu-XoM" secondAttribute="leading" id="bDn-sr-lR6"/>
+                            <constraint firstItem="cy9-BY-lp3" firstAttribute="top" secondItem="SHq-17-Hfe" secondAttribute="bottom" id="c45-q0-iHY"/>
+                            <constraint firstItem="tPn-Gu-XoM" firstAttribute="top" secondItem="cy9-BY-lp3" secondAttribute="bottom" id="hcZ-9D-N2v"/>
+                            <constraint firstAttribute="trailing" secondItem="tPn-Gu-XoM" secondAttribute="trailing" id="iLf-D2-856"/>
+                            <constraint firstItem="tPn-Gu-XoM" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leading" id="ztz-z4-E2t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cM2-Np-Tmj"/>
                     <connections>
-                        <outlet property="floorNumberLabel" destination="Wtu-Nn-DDb" id="zvm-PZ-dA6"/>
-                        <outlet property="floorNumberStepper" destination="GMJ-fI-55w" id="Jbv-25-AT8"/>
                         <outlet property="imageView" destination="1iI-98-cV7" id="z2D-vD-UZj"/>
                         <outlet property="scrollView" destination="cy9-BY-lp3" id="dqm-si-9kR"/>
                     </connections>

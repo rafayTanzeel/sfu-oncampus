@@ -40,8 +40,9 @@ NSUInteger buildingIndex;
 }
 -(void)updateFloorLabel
 {
-    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
-        self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
+    //tod deelte, used segmented stepper instead.
+//    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
+//        self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
 }
 - (IBAction)floorChanged:(UIStepper *)sender
 {

@@ -58,11 +58,8 @@
     @catch (NSException *exception) {
         
     }
-    @finally {
-        
-    }
-    if(currentWeatherData == nil)
-    {
+
+    if(currentWeatherData == nil) {
         // Display the error pop up
         [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
@@ -71,8 +68,7 @@
     
     //Read JSON and convert to object
     NSError *error;
-    if(currentWeatherData != nil)
-    {
+    if(currentWeatherData != nil) {
         error = nil;
     }
     NSMutableDictionary *currentDictionary = [NSJSONSerialization JSONObjectWithData:currentWeatherData options:kNilOptions error:&error];
@@ -80,7 +76,7 @@
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    else{
+    else {
         // store the data into the global currentObservation dictionary
         currentObservation = [currentDictionary objectForKey:@"current_observation"];
     }
@@ -98,21 +94,21 @@
     NSURL *url = [NSURL URLWithString:@"http://api.wunderground.com/api/3ff62c9b4941d736/forecast10day/q/Canada/Burnaby.json"];
    
     //Get URL page into NSData Object
-    NSData *forecastWeatherData = [NSData dataWithContentsOfURL:url];
- 
+    NSData *forecastWeatherData = nil;
+    
+    @try {
+        forecastWeatherData = [NSData dataWithContentsOfURL:url];
+    }
+    @catch (NSException *exception) {
+        
+    }
+
     //Read JSON and convert to object   
     NSMutableDictionary *simpleForecast;
     
     NSError *error;
-    if(forecastWeatherData != nil)
-    {
+    if(forecastWeatherData != nil) {
         error = nil;
-    }
-    else {
-    	// Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        return;
     }
     
     NSMutableDictionary *forecastDictionary = [NSJSONSerialization JSONObjectWithData:forecastWeatherData options:kNilOptions error:&error];
@@ -120,7 +116,7 @@
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    else{
+    else {
         simpleForecast = [[forecastDictionary objectForKey:@"forecast"] objectForKey:@"simpleforecast"];
     }
 
@@ -141,15 +137,9 @@
     
     //Read JSON and convert to object
     NSError *error;
-    if(roadConditionsData != nil)
-    {
+    
+    if(roadConditionsData != nil) {
         error = nil;
-    }
-    else {
-        // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        return;
     }
     
     // Store the data in dictionary
@@ -158,31 +148,39 @@
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    else{
+    else {
         NSLog(@"%@", roadConditionsDictionary);
         NSString *announcements = [NSString stringWithFormat:@"%@", [roadConditionsDictionary valueForKey:@"announcements"]];
         
-        // -----------------------------------------------------
         // Remove the HTML formatting characters from the string
-        // -----------------------------------------------------
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"<div>" withString:@""];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"</div>" withString:@""];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"&nbsp" withString:@""];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"&deg;" withString:@"°"];
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"    " withString:@""];
-        
-        // Remove the new line returned by the API at beginning of string (not new line character, actual line)
-        announcements = [announcements stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-        
-        // Remove (, ), ", ; characters
-        NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"()\";"];
-        announcements = [[announcements componentsSeparatedByCharactersInSet: doNotWant] componentsJoinedByString: @""];
+        announcements = [self removeHtmlTagsFromString:announcements];
         
         // Split string via the \n character and store each component in global array
         announcementArray = [announcements componentsSeparatedByString:@"\\n"];
     }
+}
+
+/**
+ * Remove the html tags and other extra data from string returned by SFU Road Report API
+ */
+- (NSString*)removeHtmlTagsFromString:(NSString*) string
+{
+    string = [string stringByReplacingOccurrencesOfString:@"<div>" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"</div>" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"&nbsp" withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@"&deg;" withString:@"°"];
+    string = [string stringByReplacingOccurrencesOfString:@"    " withString:@""];
+    
+    // Remove the new line returned by the API at beginning of string (not new line character, actual line)
+    string = [string stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    
+    // Remove (, ), ", ; characters
+    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"()\";"];
+    string = [[string componentsSeparatedByCharactersInSet: doNotWant] componentsJoinedByString: @""];
+    
+    return string;
 }
 
 - (void)refresh:(id)sender

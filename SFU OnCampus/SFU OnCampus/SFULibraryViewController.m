@@ -53,23 +53,19 @@ NSDictionary *laptops;
     @catch (NSException *exception) {
         
     }
-    @finally {
-        
-    }
-    if(libraryHours == nil)
-    {
+    if(libraryHours == nil) {
         // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Library information cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
     
     //Read JSON and convert to object
     NSError *error;
-    if(libraryHours != nil)
-    {
+    if(libraryHours != nil) {
         error = nil;
     }
+    
     NSArray *hoursArray = [NSJSONSerialization JSONObjectWithData:libraryHours options:kNilOptions error:&error];
     
     if (error != nil) {
@@ -104,21 +100,10 @@ NSDictionary *laptops;
     @catch (NSException *exception) {
         
     }
-    @finally {
-        
-    }
-    if(computerAvailability == nil)
-    {
-        // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        return;
-    }
     
     //Read JSON and convert to object
     NSError *error;
-    if(computerAvailability != nil)
-    {
+    if(computerAvailability != nil) {
         error = nil;
     }
 
@@ -128,7 +113,7 @@ NSDictionary *laptops;
     if (error != nil) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    else{
+    else {
         NSLog(@"%@", computers);
     }
 }

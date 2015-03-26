@@ -228,6 +228,7 @@
 		F87701561AA00513001FE1FE /* SFU_2013_10cm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */; };
 		F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */; };
 		F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */; };
+		F8792F771AC401170030A7FA /* SFUImageOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8792F761AC401170030A7FA /* SFUImageOverlayView.m */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 /* End PBXBuildFile section */
 
@@ -517,6 +518,8 @@
 		F87701521AA00513001FE1FE /* SFU_2013_10cm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SFU_2013_10cm.jpg; sourceTree = "<group>"; };
 		F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sfu_accessibility_map_2010_colour.pdf; sourceTree = "<group>"; };
 		F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sfu_new_campus_map_2k14_50x34(AUG).pdf"; sourceTree = "<group>"; };
+		F8792F751AC401170030A7FA /* SFUImageOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUImageOverlayView.h; sourceTree = "<group>"; };
+		F8792F761AC401170030A7FA /* SFUImageOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUImageOverlayView.m; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -774,6 +777,8 @@
 		F808D8021A95CFA90006FC17 = {
 			isa = PBXGroup;
 			children = (
+				F8792F751AC401170030A7FA /* SFUImageOverlayView.h */,
+				F8792F761AC401170030A7FA /* SFUImageOverlayView.m */,
 				F806CDCE1AC019AF0034BF7D /* Main.storyboard */,
 				F808D80D1A95CFA90006FC17 /* SFU OnCampus */,
 				F808D82A1A95CFA90006FC17 /* SFU OnCampusTests */,
@@ -1347,6 +1352,7 @@
 				35BACEDD1ABEB4C500035E05 /* SFUYouTubeModel.m in Sources */,
 				041F51F01ABA188F005E53E9 /* TFHpple.m in Sources */,
 				F1517B201AB519B600863E16 /* SFUTransitDisplayViewController.m in Sources */,
+				F8792F771AC401170030A7FA /* SFUImageOverlayView.m in Sources */,
 				B4C3A90A1ABE32F900D96A90 /* RSSMainTableViewController.m in Sources */,
 				F81D7ECE1ABAD219004AC1E5 /* SFUMapHistory.m in Sources */,
 				5D010CD21AAD5F16005CC0D2 /* SFUFacebookController.m in Sources */,

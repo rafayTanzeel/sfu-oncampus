@@ -73,7 +73,14 @@ NSUInteger buildingIndex;
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return [_model numberOfBuildings];
+    if(component == 0)
+    {
+        return 2;
+    }
+    else
+    {
+        return 1;
+    }
 }
 -(void)setScrollImage:(UIImage*)img
 {

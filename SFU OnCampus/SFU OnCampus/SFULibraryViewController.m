@@ -34,6 +34,7 @@ NSDictionary *laptops;
     return self;
 }
 
+
 /**
  * Gets the Hours of operation for each Library
  * If it cannot retrieve any data, a pop up is displayed to the user
@@ -311,6 +312,7 @@ NSDictionary *laptops;
     // Push the webview
     [self.navigationController pushViewController:c animated:YES];
 }
+
 
 /*
  // Override to support conditional editing of the table view.

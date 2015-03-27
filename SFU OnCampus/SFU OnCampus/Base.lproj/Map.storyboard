@@ -665,11 +665,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" canCancelContentTouches="NO" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7" userLabel="Background" customClass="SFUImageOverlayView">
                                         <rect key="frame" x="0.0" y="0.0" width="2048" height="2072"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="xT0-Da-aTl" appends="YES" id="wZr-jQ-oKJ"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <connections>
@@ -694,6 +698,9 @@
                             <constraint firstItem="cy9-BY-lp3" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leading" id="wA7-5M-wNI"/>
                             <constraint firstItem="tPn-Gu-XoM" firstAttribute="leading" secondItem="cy9-BY-lp3" secondAttribute="leading" id="zy8-Xa-Iq6"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xT0-Da-aTl" appends="YES" id="NyH-41-4GH"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="cM2-Np-Tmj"/>
                     <connections>
@@ -702,6 +709,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqd-Rt-c7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xT0-Da-aTl">
+                    <connections>
+                        <action selector="recordRelativePosition:" destination="9hf-Nd-Xs2" id="m4X-BR-mps"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2107" y="1143"/>
         </scene>

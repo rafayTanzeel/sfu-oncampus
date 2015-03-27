@@ -16,8 +16,8 @@
     NSUInteger floorIndex;
     NSUInteger buildingIndex;
     
-    CGPoint srcLocation;
-    CGPoint destLocation;
+    CGPoint relativeSrcLocation;
+    CGPoint relativeDestLocation;
 }
 @end
 
@@ -31,6 +31,11 @@
     _model = [SFUImageMapsModel new];
     NSString*imgPath = [_model nameOfImageForBuildingAtIndex:0 onFloorWithIndex:0];
     [self setScrollImage:[UIImage imageNamed:imgPath]];
+    
+    relativeSrcLocation.x=.5;
+    relativeSrcLocation.y=.5;
+    relativeDestLocation.x=.25;
+    relativeDestLocation.y=.25;
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
@@ -136,14 +141,14 @@ numberOfRowsInComponent:(NSInteger)component
         return image;
     }
     
-    if([self pageIsDestPage])
+    if([self pageIsSrcPage])
     {
         // set stroking color and draw circle
-        [[UIColor redColor] setStroke];
-        [[UIColor redColor] setFill];
+        [[UIColor greenColor] setStroke];
+        [[UIColor greenColor] setFill];
         
         // make circle rect 5 px from border
-        CGRect circleRect = CGRectMake(0, 20,
+        CGRect circleRect = CGRectMake(relativeSrcLocation.x*image.size.width, relativeSrcLocation.y*image.size.height,
                                        20,
                                        20);
         //circleRect = CGRectInset(circleRect, 5, 5);
@@ -152,14 +157,14 @@ numberOfRowsInComponent:(NSInteger)component
         CGContextFillEllipseInRect(ctx, circleRect);
     }
     
-    if([self pageIsSrcPage])
+    if([self pageIsDestPage])
     {
         // set stroking color and draw circle
-        [[UIColor greenColor] setStroke];
-        [[UIColor greenColor] setFill];
+        [[UIColor redColor] setStroke];
+        [[UIColor redColor] setFill];
         
         // make circle rect 5 px from border
-        CGRect circleRect = CGRectMake(0, 0,
+        CGRect circleRect = CGRectMake(relativeDestLocation.x*image.size.width  , relativeDestLocation.y*image.size.height,
                                        20,
                                        20);
         //circleRect = CGRectInset(circleRect, 5, 5);
@@ -167,6 +172,8 @@ numberOfRowsInComponent:(NSInteger)component
         // draw circle
         CGContextFillEllipseInRect(ctx, circleRect);
     }
+    
+    
     
     // make image out of bitmap context
     UIImage *retImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -192,6 +199,16 @@ numberOfRowsInComponent:(NSInteger)component
 -(BOOL) pageIsDestPage
 {
     return true;
+}
+
+#pragma mark debug
+
+-(IBAction)recordRelativePosition:(UILongPressGestureRecognizer*)sender
+{
+    CGPoint p = [self.imageView convertPoint:[sender locationInView:self.imageView] fromView:self.imageView];
+    p.x /= self.imageView.image.size.width;
+    p.y /= self.imageView.image.size.height;
+    printf("held relativePos {%f,%f}\n",p.x,p.y);
 }
 
 /*

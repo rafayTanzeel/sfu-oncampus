@@ -37,14 +37,19 @@
 				<string>AQ2000.jpg</string>
 			</dict>
 			<dict>
-				<key>New item</key>
-				<string></string>
 				<key>name</key>
 				<string>3000</string>
 				<key>image</key>
 				<string>AQ3000.jpg</string>
 			</dict>
 			<dict>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string></string>
+					<key>3144</key>
+					<string></string>
+				</dict>
 				<key>name</key>
 				<string>4000</string>
 				<key>image</key>

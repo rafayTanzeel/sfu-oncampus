@@ -205,7 +205,6 @@
 		F81D7ED71ABAD219004AC1E5 /* SFUMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D7EC91ABAD219004AC1E5 /* SFUMapAnnotation.m */; };
 		F81D7ED81ABAD219004AC1E5 /* Burnaby_Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */; };
 		F81D7ED91ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */; };
-		F81D7EDA1ABAD219004AC1E5 /* AQ3000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F81D7ECC1ABAD219004AC1E5 /* AQ3000.jpg */; };
 		F81D7EDD1ABAD504004AC1E5 /* MapHelp.html in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */; };
 		F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */; };
 		F81D7EE41ABAEDDA004AC1E5 /* floorplans.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */; };
@@ -230,6 +229,7 @@
 		F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */; };
 		F8792F771AC401170030A7FA /* SFUImageOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8792F761AC401170030A7FA /* SFUImageOverlayView.m */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
+		F8A825321AC5B78D004284C6 /* maps in Resources */ = {isa = PBXBuildFile; fileRef = F8A825311AC5B78D004284C6 /* maps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -489,7 +489,6 @@
 		F81D7EC91ABAD219004AC1E5 /* SFUMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUMapAnnotation.m; path = "SFU OnCampus/SFUMapAnnotation.m"; sourceTree = "<group>"; };
 		F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burnaby_Campus.jpg; sourceTree = "<group>"; };
 		F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
-		F81D7ECC1ABAD219004AC1E5 /* AQ3000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AQ3000.jpg; sourceTree = "<group>"; };
 		F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MapHelp.html; sourceTree = "<group>"; };
 		F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildingData.plist; sourceTree = "<group>"; };
 		F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = floorplans.plist; sourceTree = "<group>"; };
@@ -522,6 +521,7 @@
 		F8792F761AC401170030A7FA /* SFUImageOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUImageOverlayView.m; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
+		F8A825311AC5B78D004284C6 /* maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = maps; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -803,10 +803,9 @@
 				F81D7EDF1ABAD577004AC1E5 /* Loyalty */,
 				F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */,
 				F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */,
-				F81D7ECC1ABAD219004AC1E5 /* AQ3000.jpg */,
 				F83871F71ABA856F003CF26E /* Loyalty.storyboard */,
-				F81D7EDE1ABAD547004AC1E5 /* Map */,
 				F81D7EAD1ABAD094004AC1E5 /* Map.storyboard */,
+				F81D7EDE1ABAD547004AC1E5 /* Map */,
 				F81D7EAF1ABAD094004AC1E5 /* QRScan.storyboard */,
 				F81D7EA41ABACB52004AC1E5 /* Frameworks */,
 				041F51E91ABA1852005E53E9 /* Hpple (HTML Parsing) */,
@@ -1020,6 +1019,7 @@
 				5D11B5B01AABBBD0000DBC1B /* canvas_icon.png */,
 				5D11B5AE1AABBB31000DBC1B /* forum_icon.png */,
 				5D11B5AC1AABBAFD000DBC1B /* email_icon.png */,
+				F8A825311AC5B78D004284C6 /* maps */,
 				F87701501AA00513001FE1FE /* maps */,
 			);
 			path = images;
@@ -1233,10 +1233,10 @@
 				B4C3A90F1ABE34A900D96A90 /* SFURSSURLs.plist in Resources */,
 				5D11B5AD1AABBAFD000DBC1B /* email_icon.png in Resources */,
 				35BACF1C1ABEB4FB00035E05 /* SFU Alumni.jpg in Resources */,
-				F81D7EDA1ABAD219004AC1E5 /* AQ3000.jpg in Resources */,
 				5D11B5BC1AABE232000DBC1B /* news-97862_1280.png in Resources */,
 				35BACF1B1ABEB4FB00035E05 /* Inst. for the Humanities, SFU.png in Resources */,
 				35D6315C1ABF6FE200CCEC8D /* youtube-128.png in Resources */,
+				F8A825321AC5B78D004284C6 /* maps in Resources */,
 				8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */,
 				F83872051ABA8712003CF26E /* Student Services.storyboard in Resources */,
 				040DC4F11AACFCAF003A713F /* storm_dn.png in Resources */,

@@ -28,7 +28,7 @@
 				<key>name</key>
 				<string>1000</string>
 				<key>image</key>
-				<string>AQ1000.jpg</string>
+				<string>maps/AQ1000.jpg</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -37,6 +37,8 @@
 				<string>AQ2000.jpg</string>
 			</dict>
 			<dict>
+				<key>New item</key>
+				<string></string>
 				<key>name</key>
 				<string>3000</string>
 				<key>image</key>

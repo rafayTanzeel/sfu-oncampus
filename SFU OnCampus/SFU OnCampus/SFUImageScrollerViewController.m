@@ -11,10 +11,13 @@
 @interface SFUImageScrollerViewController ()
 {
 @private
-SFUImageMapsModel* _model;
-NSArray* floorNames;
-NSUInteger floorIndex;
-NSUInteger buildingIndex;
+    SFUImageMapsModel* _model;
+    NSArray* floorNames;
+    NSUInteger floorIndex;
+    NSUInteger buildingIndex;
+    
+    CGPoint srcLocation;
+    CGPoint destLocation;
 }
 @end
 
@@ -41,8 +44,8 @@ NSUInteger buildingIndex;
 -(void)updateFloorLabel
 {
     //tod deelte, used segmented stepper instead.
-//    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
-//        self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
+    //    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
+    //        self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
 }
 - (IBAction)floorChanged:(UIStepper *)sender
 {
@@ -57,13 +60,13 @@ NSUInteger buildingIndex;
 {
     if(component == 0)
     {
-    return [_model nameOfBuildingAtIndex:row];
+        return [_model nameOfBuildingAtIndex:row];
     }
     else
     {
         return [_model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:floorIndex];
     }
-//return @"AQ (Academic Quadrangle";
+    //return @"AQ (Academic Quadrangle";
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -84,7 +87,7 @@ numberOfRowsInComponent:(NSInteger)component
 }
 -(void)setScrollImage:(UIImage*)img
 {
-    self.imageView.image=img;
+    self.imageView.image=[self imageByDrawingCircleOnImage:img];
     self.scrollView.contentSize = self.imageView.image.size;
 }
 - (void)pickerView:(UIPickerView *)pickerView
@@ -96,7 +99,7 @@ numberOfRowsInComponent:(NSInteger)component
     //set floots
     //set stepper to floors count
     //set prefered floor if applicable
-        [self updateFloorLabel];
+    [self updateFloorLabel];
     buildingIndex=row;
 }
 
@@ -110,14 +113,95 @@ numberOfRowsInComponent:(NSInteger)component
     
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark Custom Drawing
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//Derived from https://www.cocoanetics.com/2010/07/drawing-on-uiimages/
+- (UIImage *)imageByDrawingCircleOnImage:(UIImage *)image
+{
+    
+    if(image == nil)
+    {
+        return image;
+    }
+    // begin a graphics context of sufficient size
+    UIGraphicsBeginImageContext(image.size);
+    
+    // draw original image into the context
+    [image drawAtPoint:CGPointZero];
+    
+    // get the context for CoreGraphics
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    if(ctx == nil)
+    {
+        return image;
+    }
+    
+    if([self pageIsDestPage])
+    {
+        // set stroking color and draw circle
+        [[UIColor redColor] setStroke];
+        [[UIColor redColor] setFill];
+        
+        // make circle rect 5 px from border
+        CGRect circleRect = CGRectMake(0, 20,
+                                       20,
+                                       20);
+        //circleRect = CGRectInset(circleRect, 5, 5);
+        
+        // draw circle
+        CGContextFillEllipseInRect(ctx, circleRect);
+    }
+    
+    if([self pageIsSrcPage])
+    {
+        // set stroking color and draw circle
+        [[UIColor greenColor] setStroke];
+        [[UIColor greenColor] setFill];
+        
+        // make circle rect 5 px from border
+        CGRect circleRect = CGRectMake(0, 0,
+                                       20,
+                                       20);
+        //circleRect = CGRectInset(circleRect, 5, 5);
+        
+        // draw circle
+        CGContextFillEllipseInRect(ctx, circleRect);
+    }
+    
+    // make image out of bitmap context
+    UIImage *retImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // free the context
+    UIGraphicsEndImageContext();
+    
+    return retImage;
+    
 }
-*/
+
+/**
+ Is the currently displayed page the page where the source room is?
+ */
+-(BOOL) pageIsSrcPage
+{
+    return true;
+}
+
+/**
+ Is the currently displayed page the page where the destination room is?
+ */
+-(BOOL) pageIsDestPage
+{
+    return true;
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

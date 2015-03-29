@@ -190,4 +190,9 @@
     return [labelToShort objectForKey:s];
 }
 
+-(SFULocation*)locationForShortcode:(NSString*)s
+{
+    return nil;
+}
+
 @end

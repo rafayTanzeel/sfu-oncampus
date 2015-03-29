@@ -22,7 +22,7 @@
 -(NSUInteger)redeemCode:(NSString*)code;
 
 ///Get the current point balance stored on the card.
--(NSUInteger)getBalance;
+@property NSUInteger balance;
 
 ///Verify the card balance with the server
 -(void)syncBalance;

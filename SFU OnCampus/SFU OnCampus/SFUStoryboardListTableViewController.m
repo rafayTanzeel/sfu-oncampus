@@ -75,6 +75,20 @@ SFUStoryboardListModel* model;
     return NO;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == [model sizeOfArray])
+    {
+        return 300.0;
+    }
+    else
+    {
+        return 44.0;
+    }
+    
+}
+
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //        [self.objects removeObjectAtIndex:indexPath.row];
@@ -128,6 +142,7 @@ SFUStoryboardListModel* model;
     
     if([controller respondsToSelector:f])
     {
+
         [controller performSelector:f withObject:param];
     }
     

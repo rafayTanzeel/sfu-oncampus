@@ -230,6 +230,7 @@
 		F8792F771AC401170030A7FA /* SFUImageOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8792F761AC401170030A7FA /* SFUImageOverlayView.m */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 		F8A825321AC5B78D004284C6 /* maps in Resources */ = {isa = PBXBuildFile; fileRef = F8A825311AC5B78D004284C6 /* maps */; };
+		F8A825341AC5CAAB004284C6 /* SFULocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A825331AC5CAAB004284C6 /* SFULocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -522,6 +523,7 @@
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
 		F8A825311AC5B78D004284C6 /* maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = maps; sourceTree = "<group>"; };
+		F8A825331AC5CAAB004284C6 /* SFULocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFULocation.m; path = "SFU OnCampus/SFULocation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -902,6 +904,7 @@
 				F81D7EC61ABAD219004AC1E5 /* SFUBuildingListViewControllerTableViewController.h */,
 				F81D7EB31ABAD219004AC1E5 /* SFUBuildingListViewControllerTableViewController.m */,
 				F81D7EC71ABAD219004AC1E5 /* SFULocation.h */,
+				F8A825331AC5CAAB004284C6 /* SFULocation.m */,
 				F81D7EC81ABAD219004AC1E5 /* SFUMapAnnotation.h */,
 				F81D7EC91ABAD219004AC1E5 /* SFUMapAnnotation.m */,
 			);
@@ -1316,6 +1319,7 @@
 				041F51F21ABA188F005E53E9 /* XPathQuery.m in Sources */,
 				F81D7ECF1ABAD219004AC1E5 /* SFUMapHelpViewController.m in Sources */,
 				5D010CDB1AAD6673005CC0D2 /* SFUTwitterModel.m in Sources */,
+				F8A825341AC5CAAB004284C6 /* SFULocation.m in Sources */,
 				F1517B231AB5276000863E16 /* SFUTransitTableViewController.m in Sources */,
 				F81D7ED51ABAD219004AC1E5 /* SFUQRCaptureViewController.m in Sources */,
 				04EEBE1F1A9F9E25003E1DD3 /* SFUWeatherViewController.m in Sources */,

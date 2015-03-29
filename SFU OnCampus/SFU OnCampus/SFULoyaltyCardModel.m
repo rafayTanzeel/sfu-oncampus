@@ -14,11 +14,11 @@
 {
     NSUInteger redeemedValue =0;
     NSNumber* n = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSFUPointCardBalance"];
-    NSUInteger balance = [n unsignedIntegerValue];
-    balance += redeemedValue;
-    n= [NSNumber numberWithUnsignedInteger:balance];
+    self.balance = [n unsignedIntegerValue];
+    self.balance += redeemedValue;
+    n= [NSNumber numberWithUnsignedInteger:self.balance];
     [[NSUserDefaults standardUserDefaults] setObject:n forKey:@"kSFUPointCardBalance"];
-    return balance;
+    return self.balance;
 }
 
 @end

@@ -16,9 +16,10 @@
 @property NSString* displayName;
 @property NSString* shortCode;
 @property NSString* buildingCode;
+@property NSString* pageName;
 @property NSString* roomCode;
 @property NSString* partitionNumber;
+@property Point pageInset;
 
--(SFULocation*)initWithShortcodeString:(NSString*)shortcode;
 
 @end

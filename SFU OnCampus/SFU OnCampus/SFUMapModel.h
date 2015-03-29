@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SFULocation.h"
 @import MapKit;
 @import CoreLocation;
 
@@ -26,7 +27,7 @@ typedef enum SFUMapModelResolutionStatus
 -(NSString*)shortCodeForDisplayName:(NSString*)s;
 -(NSString*)displayNameForShortCode:(NSString*)s;
 
-//-(SFULocation*)locationForShortcode;
+-(SFULocation*)locationForShortcode:(NSString*)s;
 
 -(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status;
 @property BOOL shouldTrackHistory;

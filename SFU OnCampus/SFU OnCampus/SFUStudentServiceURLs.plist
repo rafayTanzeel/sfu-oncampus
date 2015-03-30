@@ -50,5 +50,13 @@
 		<key>image</key>
 		<string>bus.png</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Directory</string>
+		<key>url</key>
+		<string>http://www.sfu.ca/sfuds</string>
+		<key>image</key>
+		<string>people-search.png</string>
+	</dict>
 </array>
 </plist>

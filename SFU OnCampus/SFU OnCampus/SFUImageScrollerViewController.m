@@ -73,6 +73,10 @@
     }
     //return @"AQ (Academic Quadrangle";
 }
+
+- (IBAction)centreDestinationButtonClicked:(id)sender {
+    [self centreDestination];
+}
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 2;
@@ -171,6 +175,11 @@ numberOfRowsInComponent:(NSInteger)component
         
         // draw circle
         CGContextFillEllipseInRect(ctx, circleRect);
+        self.centreDestinationButton.enabled =YES;
+    }else
+    {
+        self.centreDestinationButton.enabled =NO;
+
     }
     
     
@@ -209,6 +218,26 @@ numberOfRowsInComponent:(NSInteger)component
     p.x /= self.imageView.image.size.width;
     p.y /= self.imageView.image.size.height;
     printf("held relativePos {%f,%f}\n",p.x,p.y);
+}
+
+-(CGPoint)relativePositionToRealPosition:(CGPoint)p
+{
+    p.x *= self.imageView.image.size.width;
+    p.y *= self.imageView.image.size.height;
+    return p;
+}
+
+-(void)scrollToRelativePosition:(CGPoint)p
+{
+    p = [self relativePositionToRealPosition:p];
+    p.x -= (self.scrollView.frame.size.width/2.0);
+    p.y -= (self.scrollView.frame.size.height /2.0);
+    [self.scrollView setContentOffset:p animated:YES];
+}
+
+-(void)centreDestination
+{
+    [self scrollToRelativePosition:relativeDestLocation];
 }
 
 /*

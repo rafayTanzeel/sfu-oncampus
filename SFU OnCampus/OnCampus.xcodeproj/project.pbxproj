@@ -231,6 +231,7 @@
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 		F8A825321AC5B78D004284C6 /* maps in Resources */ = {isa = PBXBuildFile; fileRef = F8A825311AC5B78D004284C6 /* maps */; };
 		F8A825341AC5CAAB004284C6 /* SFULocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A825331AC5CAAB004284C6 /* SFULocation.m */; };
+		F8A825361AC8F0F4004284C6 /* people-search.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A825351AC8F0F4004284C6 /* people-search.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -524,6 +525,7 @@
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
 		F8A825311AC5B78D004284C6 /* maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = maps; sourceTree = "<group>"; };
 		F8A825331AC5CAAB004284C6 /* SFULocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFULocation.m; path = "SFU OnCampus/SFULocation.m"; sourceTree = "<group>"; };
+		F8A825351AC8F0F4004284C6 /* people-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "people-search.png"; path = "SFU OnCampus/images/people-search.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -705,6 +707,7 @@
 		5D11B5B21AABE232000DBC1B /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				F8A825351AC8F0F4004284C6 /* people-search.png */,
 				35D631731ABF7CFA00CCEC8D /* 20-rss-512.png */,
 				35D631611ABF760100CCEC8D /* 700383-icon-14-trophy-one-512.png */,
 				35D631621ABF760100CCEC8D /* facebook-512.png */,
@@ -1167,6 +1170,7 @@
 				5D010D081AAD6BA8005CC0D2 /* sfuolc-tw-icon.jpg in Resources */,
 				5DDC25801AAD06E300243DB4 /* sfuclan-fb-icon.jpg in Resources */,
 				35BACF3B1ABEB4FB00035E05 /* Simon Fraser HCS.jpg in Resources */,
+				F8A825361AC8F0F4004284C6 /* people-search.png in Resources */,
 				5DDC25861AAD099700243DB4 /* sfuenglish-fb-icon.jpg in Resources */,
 				35BACF1F1ABEB4FB00035E05 /* SFU Centre for Dialogue.png in Resources */,
 				5D010CE71AAD6A4A005CC0D2 /* networking.png in Resources */,

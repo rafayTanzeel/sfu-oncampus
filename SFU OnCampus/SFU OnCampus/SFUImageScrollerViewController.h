@@ -23,5 +23,7 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component;
+- (IBAction)centreDestinationButtonClicked:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *centreDestinationButton;
 
 @end

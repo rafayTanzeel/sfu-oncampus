@@ -668,7 +668,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" canCancelContentTouches="NO" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AQ3000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7" userLabel="Background" customClass="SFUImageOverlayView">
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7" userLabel="Background" customClass="SFUImageOverlayView">
                                         <rect key="frame" x="0.0" y="0.0" width="2048" height="2072"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -687,6 +687,17 @@
                                     <outlet property="delegate" destination="9hf-Nd-Xs2" id="Vsp-99-KDw"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-dj-URu">
+                                <rect key="frame" x="9" y="359" width="121" height="30"/>
+                                <color key="backgroundColor" red="0.89405232670000001" green="0.89402556420000001" blue="0.89404076340000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Destination">
+                                    <color key="titleColor" red="0.045304231345653534" green="0.37910553812980652" blue="0.99836111068725586" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centreDestinationButtonClicked:" destination="9hf-Nd-Xs2" eventType="touchUpInside" id="9US-au-nJV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -695,6 +706,8 @@
                             <constraint firstItem="tPn-Gu-XoM" firstAttribute="trailing" secondItem="cy9-BY-lp3" secondAttribute="trailing" id="AXg-Yv-eda"/>
                             <constraint firstItem="tPn-Gu-XoM" firstAttribute="bottom" secondItem="2CZ-cN-TTS" secondAttribute="top" id="L0v-Jm-V4W"/>
                             <constraint firstItem="tPn-Gu-XoM" firstAttribute="top" secondItem="cy9-BY-lp3" secondAttribute="bottom" id="Ley-bk-w9i"/>
+                            <constraint firstItem="2CZ-cN-TTS" firstAttribute="top" secondItem="Hgv-dj-URu" secondAttribute="bottom" constant="147" id="RTp-03-e8s"/>
+                            <constraint firstItem="Hgv-dj-URu" firstAttribute="leading" secondItem="tPn-Gu-XoM" secondAttribute="leading" constant="9" id="pAR-fK-vwf"/>
                             <constraint firstItem="cy9-BY-lp3" firstAttribute="leading" secondItem="hi5-fr-wgs" secondAttribute="leading" id="wA7-5M-wNI"/>
                             <constraint firstItem="tPn-Gu-XoM" firstAttribute="leading" secondItem="cy9-BY-lp3" secondAttribute="leading" id="zy8-Xa-Iq6"/>
                         </constraints>
@@ -704,6 +717,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cM2-Np-Tmj"/>
                     <connections>
+                        <outlet property="centreDestinationButton" destination="Hgv-dj-URu" id="ZlW-aD-iGB"/>
                         <outlet property="imageView" destination="1iI-98-cV7" id="z2D-vD-UZj"/>
                         <outlet property="scrollView" destination="cy9-BY-lp3" id="YiP-Ga-QqJ"/>
                     </connections>
@@ -718,9 +732,6 @@
             <point key="canvasLocation" x="2107" y="1143"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AQ3000.jpg" width="2048" height="2072"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oIn-Tx-Yb2"/>
         <segue reference="IuL-vh-TlR"/>

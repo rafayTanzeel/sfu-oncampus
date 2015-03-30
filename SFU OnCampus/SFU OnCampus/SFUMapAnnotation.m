@@ -37,6 +37,10 @@
 // optional
 - (NSString *)subtitle
 {
+    if(subtitle == nil || [subtitle isEqualToString:@""])
+    {
+        return [NSString stringWithFormat:@"%@",[shortcode uppercaseString]];
+    }
     return [NSString stringWithFormat:@"%@ - %@",[shortcode uppercaseString],subtitle];
 }
 

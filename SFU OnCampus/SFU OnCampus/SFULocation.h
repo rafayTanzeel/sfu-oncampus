@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  An abstract container used to represent a location on campus, not currently used
@@ -19,7 +19,7 @@
 @property NSString* pageName;
 @property NSString* roomCode;
 @property NSString* partitionNumber;
-@property Point pageInset;
+@property CGPoint pageInset;
 
 
 @end

@@ -192,7 +192,29 @@
 
 -(SFULocation*)locationForShortcode:(NSString*)s
 {
-    return nil;
+   
+    
+    s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    s = [s uppercaseString];
+    NSArray* a = [s componentsSeparatedByString:@"-"];
+    NSString* building = [a objectAtIndex:0];
+    NSString* roomPart,*room,*partition;
+    if([a count] == 2)
+    {
+        roomPart= [a objectAtIndex:1];
+        a=[roomPart componentsSeparatedByString:@"."] ;
+        room = [a objectAtIndex:0];
+        
+        if([a count]==2)
+            partition = [a objectAtIndex:1];
+    }
+    SFULocation* l = [SFULocation new];
+    l.displayName = [self displayNameForShortCode:building];
+    l.shortCode = s;
+    l.buildingCode= building;
+    l.roomCode=room;
+    l.partitionNumber=partition;
+    return l;
 }
 
 @end

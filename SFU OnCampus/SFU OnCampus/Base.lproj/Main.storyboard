@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="LuF-sF-Rtm" style="IBUITableViewCellStyleDefault" id="0na-lh-y4z">
+                            <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="LuF-sF-Rtm" imageView="J8i-Lm-fvy" style="IBUITableViewCellStyleDefault" id="0na-lh-y4z">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0na-lh-y4z" id="yK2-fX-SbI">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -25,6 +25,9 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="1373715942.png" id="J8i-Lm-fvy">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -203,6 +206,7 @@ The menu sometimes obstructs the information behind it, so to dismiss menu when 
         </scene>
     </scenes>
     <resources>
+        <image name="1373715942.png" width="719" height="800"/>
         <image name="LogoBlock.jpg" width="651" height="486"/>
     </resources>
     <color key="tintColor" white="0.82419023719999995" alpha="1" colorSpace="calibratedWhite"/>

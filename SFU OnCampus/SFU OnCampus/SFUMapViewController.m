@@ -132,8 +132,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         MKCoordinateRegion r = [self.model regionForString:src status:&status];
         [self.mapView setRegion:r animated:YES];
         NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
-        
-        NSString* title = [self.model displayNameForShortCode:src];
+        SFULocation* loc = [self.model locationForShortcode:src];
+        NSString* title = loc.displayName;
         SFUMapAnnotation* a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
         a.coordinate = r.center;
         a.isDestination =NO;

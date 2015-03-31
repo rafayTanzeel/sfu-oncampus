@@ -100,22 +100,53 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pja-TQ-Ldr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrb-K1-E1w">
+                                <rect key="frame" x="0.0" y="486" width="600" height="50"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKk-tU-Hhh">
+                                        <rect key="frame" x="543" y="5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="shouldShowHelpSwitchChanged:" destination="JRf-sD-U5j" eventType="valueChanged" id="MNy-Ua-nBE"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show this screen when the map feature is opened?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHV-jh-nah">
+                                        <rect key="frame" x="8" y="15" width="393" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88941491169999998" green="0.88941491169999998" blue="0.88941491169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="YHV-jh-nah" firstAttribute="leading" secondItem="jrb-K1-E1w" secondAttribute="leading" constant="8" id="4HK-Dq-alG"/>
+                                    <constraint firstItem="oKk-tU-Hhh" firstAttribute="centerY" secondItem="jrb-K1-E1w" secondAttribute="centerY" id="G7d-VX-c0L"/>
+                                    <constraint firstAttribute="height" constant="50" id="Si3-dF-gW5"/>
+                                    <constraint firstItem="oKk-tU-Hhh" firstAttribute="trailing" secondItem="jrb-K1-E1w" secondAttribute="trailingMargin" id="Uw5-vb-Gqa"/>
+                                    <constraint firstAttribute="bottom" secondItem="YHV-jh-nah" secondAttribute="bottom" constant="14" id="fSe-yv-Opm"/>
+                                    <constraint firstItem="YHV-jh-nah" firstAttribute="top" secondItem="jrb-K1-E1w" secondAttribute="top" constant="15" id="kN5-TD-EjD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G3P-Vd-9kL" firstAttribute="top" secondItem="pja-TQ-Ldr" secondAttribute="bottom" id="HWK-r1-5xo"/>
                             <constraint firstAttribute="trailing" secondItem="pja-TQ-Ldr" secondAttribute="trailing" id="IVc-cC-MjU"/>
+                            <constraint firstItem="jrb-K1-E1w" firstAttribute="trailing" secondItem="pja-TQ-Ldr" secondAttribute="trailing" id="RFj-vD-DtL"/>
                             <constraint firstItem="pja-TQ-Ldr" firstAttribute="bottom" secondItem="G3P-Vd-9kL" secondAttribute="top" id="RFy-Sk-TFO"/>
                             <constraint firstItem="pja-TQ-Ldr" firstAttribute="top" secondItem="sQj-GJ-fYN" secondAttribute="bottom" id="RRO-wQ-b2N"/>
+                            <constraint firstItem="jrb-K1-E1w" firstAttribute="bottom" secondItem="G3P-Vd-9kL" secondAttribute="top" id="hPi-CP-NRX"/>
+                            <constraint firstItem="G3P-Vd-9kL" firstAttribute="top" secondItem="jrb-K1-E1w" secondAttribute="bottom" id="isq-PY-YR4"/>
                             <constraint firstItem="pja-TQ-Ldr" firstAttribute="leading" secondItem="O45-48-OfJ" secondAttribute="leading" id="o3T-nK-0kM"/>
+                            <constraint firstItem="jrb-K1-E1w" firstAttribute="leading" secondItem="pja-TQ-Ldr" secondAttribute="leading" id="oXX-St-qne"/>
                             <constraint firstItem="pja-TQ-Ldr" firstAttribute="leading" secondItem="O45-48-OfJ" secondAttribute="leading" id="tc0-gI-Nc6"/>
                             <constraint firstAttribute="trailing" secondItem="pja-TQ-Ldr" secondAttribute="trailing" id="y0P-u6-1nG"/>
                             <constraint firstItem="pja-TQ-Ldr" firstAttribute="top" secondItem="sQj-GJ-fYN" secondAttribute="bottom" id="zoP-AS-IV5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="shouldShowHelpSwitch" destination="oKk-tU-Hhh" id="d40-aZ-XPt"/>
                         <outlet property="webView" destination="pja-TQ-Ldr" id="r9J-Ow-UY3"/>
                     </connections>
                 </viewController>
@@ -249,7 +280,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="JRf-sD-U5j" kind="show" id="POR-sM-aK8"/>
+                                            <segue destination="JRf-sD-U5j" kind="show" identifier="helpSegue" id="POR-sM-aK8"/>
                                         </connections>
                                     </button>
                                 </subviews>

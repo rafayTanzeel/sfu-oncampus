@@ -57,6 +57,12 @@ CLLocationManager* locationManager;
         self.sourceField.text=self.returnedString;
     }
     
+    BOOL shouldShowMapHelpOnRun = [[NSUserDefaults standardUserDefaults] boolForKey:@"shouldShowMapHelpOnRun"];
+    if(shouldShowMapHelpOnRun)
+    {
+        [self performSegueWithIdentifier:@"helpSegue" sender:self];
+    }
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager

@@ -26,6 +26,9 @@
     NSURLRequest* req = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:req];
     // Do any additional setup after loading the view.
+    
+    BOOL shouldShowMapHelpOnRun = [[NSUserDefaults standardUserDefaults] boolForKey:@"shouldShowMapHelpOnRun"];
+    self.shouldShowHelpSwitch.on = shouldShowMapHelpOnRun;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,5 +45,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)shouldShowHelpSwitchChanged:(UISwitch *)sender
+{
+    [[NSUserDefaults standardUserDefaults] setBool: sender.on forKey:@"shouldShowMapHelpOnRun"];
+}
 
 @end

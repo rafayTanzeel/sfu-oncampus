@@ -25,6 +25,12 @@
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"global.didfirstrun"])
+    {
+        [self firstRun];
+    }
+    
     return YES;
 }
 
@@ -64,6 +70,18 @@
     } else {
         return NO;
     }
+}
+
+#pragma mark other
+
+-(void)firstRun
+{
+    NSUserDefaults* d = [NSUserDefaults standardUserDefaults];
+    [d setBool:YES forKey:@"shouldShowMapHelpOnRun"];
+    
+    
+    //no longer first run
+    [d setBool:YES forKey:@"global.didfirstrun"];
 }
 
 /**

@@ -29,16 +29,24 @@ CLLocationManager* locationManager;
     locationManager.delegate = self;
     [locationManager requestAlwaysAuthorization];
     
+    
     //prevent the menu from appearing when we swipt the left hand side of the screen.
     self.splitViewController.presentsWithGesture = NO;
 #ifndef DEBUG
     self.debugView.hidden = YES;
 #endif
     
-    
-    CLGeocoder* geocoder = [CLGeocoder new];
+        CLGeocoder* geocoder = [CLGeocoder new];
     [geocoder geocodeAddressString:@"Simon Fraser University"
-                 completionHandler:^(NSArray* placemarks, NSError* error){
+                 completionHandler:^(NSArray* placemarks, NSError* error)
+    {
+                     if(self.mapView.showsUserLocation)
+                     {
+                         //location services sucessful so , ignore default geocode.
+                         
+                     }else
+                     {
+                     
                      for (CLPlacemark* aPlacemark in placemarks)
                      {
                          MKCoordinateRegion region = { aPlacemark.location.coordinate ,span };
@@ -47,7 +55,13 @@ CLLocationManager* locationManager;
                          // Process the placemark.
                          NSLog(@"%@",aPlacemark.location.description);
                      }
-                 }];
+                    
+                     }
+                     
+    }
+     ];
+                 
+    
     
     if(destinationFieldSelected)
     {
@@ -68,7 +82,10 @@ CLLocationManager* locationManager;
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
+    MKCoordinateSpan span = {0.00525,0.00525};
     self.mapView.showsUserLocation = YES;
+    MKCoordinateRegion region = { manager.location.coordinate ,span };
+    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,10 +146,11 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     {
         hasDest=YES;
     }
-    
+    SFUMapAnnotation* a,*b;
     @try {
         //TODO, be smarter about where to zoom and draw based on the presenece of a source and dest
-        
+        if(hasSrc)
+        {
         SFUMapModelResolutionStatus status;
         ///Zoom to and draw source
         MKCoordinateRegion r = [self.model regionForString:src status:&status];
@@ -140,26 +158,37 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
         SFULocation* loc = [self.model locationForShortcode:src];
         NSString* title = loc.displayName;
-        SFUMapAnnotation* a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
+         a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
         a.coordinate = r.center;
         a.isDestination =NO;
         [self.mapView addAnnotation: a];
+        }
         
+        if(hasDest)
+        {
+            SFUMapModelResolutionStatus status;
+             MKCoordinateRegion r = [self.model regionForString:src status:&status];
+            SFULocation* loc = [self.model locationForShortcode:src];
         ///Zoom to and draw destination
         r = [self.model regionForString:dest status:&status];
         //[self.mapView setRegion:r animated:YES];
         printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
-        SFUMapAnnotation* b = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
+            NSString* title = loc.displayName;
+       b = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:dest];
         title = [self.model displayNameForShortCode:dest];
         b.coordinate = r.center;
         b.isDestination =YES;
         [self.mapView addAnnotation: b];
+        }
         
+        if(hasSrc && hasDest)
+        {
         CLLocationCoordinate2D points[2];
         points[0]= a.coordinate;
         points[1]=b.coordinate;
         MKPolyline* line = [MKPolyline polylineWithCoordinates:points count:2];
         [self.mapView addOverlay:line level: MKOverlayLevelAboveLabels];
+        }
         
     }
     @catch (NSException *exception) {
@@ -179,7 +208,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 }
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    
+    //If drawingthe annotation of the current user location, use the system provided one.
     if (annotation == mapView.userLocation)
     {
         return nil;

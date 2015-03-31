@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>OnCampus needs your permission to use your location.</string>
 	<key>UIViewEdgeAntialiasing</key>
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
@@ -32,6 +34,7 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>location-services</string>
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>

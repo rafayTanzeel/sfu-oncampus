@@ -177,18 +177,24 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     r.strokeColor = [UIColor greenColor];
     return r;
 }
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)overlay
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
+    
+    if (annotation == mapView.userLocation)
+    {
+        return nil;
+    }
+    
     NSString* identifier = @"pin";
     
     MKPinAnnotationView* pin = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     
     if(!pin)
-    pin =[[MKPinAnnotationView alloc] initWithAnnotation:overlay reuseIdentifier:identifier];
+    pin =[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
     
-    if([overlay isKindOfClass: [SFUMapAnnotation class]])
+    if([annotation isKindOfClass: [SFUMapAnnotation class]])
     {
-        SFUMapAnnotation* o = overlay;
+        SFUMapAnnotation* o = annotation;
         
         if(o.isDestination)
             [pin setPinColor: MKPinAnnotationColorRed];

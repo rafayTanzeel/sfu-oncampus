@@ -13,13 +13,14 @@
 @interface SFUMapViewController ()
 {
     BOOL destinationFieldSelected;
+    CLLocationManager* locationManager;
 }
 
 @end
 
 @implementation SFUMapViewController
 
-CLLocationManager* locationManager;
+
 - (void)viewDidLoad {
     self.model = [SFUMapModel new];
     [super viewDidLoad];
@@ -27,6 +28,7 @@ CLLocationManager* locationManager;
     MKCoordinateSpan span = {0.00525,0.00525};
     locationManager = [CLLocationManager new] ;
     locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest; //pedestrians so try for best accuracy.
     [locationManager requestAlwaysAuthorization];
     
     

@@ -58,5 +58,13 @@
 		<key>image</key>
 		<string>people-search.png</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Book Store</string>
+		<key>url</key>
+		<string>http://www.sfu.ca/bookstore</string>
+		<key>image</key>
+		<string>credit.png</string>
+	</dict>
 </array>
 </plist>

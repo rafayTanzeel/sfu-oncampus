@@ -228,6 +228,7 @@
 		F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701531AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf */; };
 		F87701581AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf in Resources */ = {isa = PBXBuildFile; fileRef = F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */; };
 		F8792F771AC401170030A7FA /* SFUImageOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8792F761AC401170030A7FA /* SFUImageOverlayView.m */; };
+		F8821BC61ACB8361006D6992 /* SFULocationListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8821BC51ACB8361006D6992 /* SFULocationListTableViewController.m */; };
 		F8A28D2E1A995A0200CD5829 /* SFUWebListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */; };
 		F8A825321AC5B78D004284C6 /* maps in Resources */ = {isa = PBXBuildFile; fileRef = F8A825311AC5B78D004284C6 /* maps */; };
 		F8A825341AC5CAAB004284C6 /* SFULocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A825331AC5CAAB004284C6 /* SFULocation.m */; };
@@ -521,6 +522,8 @@
 		F87701541AA00513001FE1FE /* sfu_new_campus_map_2k14_50x34(AUG).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "sfu_new_campus_map_2k14_50x34(AUG).pdf"; sourceTree = "<group>"; };
 		F8792F751AC401170030A7FA /* SFUImageOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUImageOverlayView.h; sourceTree = "<group>"; };
 		F8792F761AC401170030A7FA /* SFUImageOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUImageOverlayView.m; sourceTree = "<group>"; };
+		F8821BC41ACB8361006D6992 /* SFULocationListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFULocationListTableViewController.h; path = "SFU OnCampus/SFULocationListTableViewController.h"; sourceTree = "<group>"; };
+		F8821BC51ACB8361006D6992 /* SFULocationListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFULocationListTableViewController.m; path = "SFU OnCampus/SFULocationListTableViewController.m"; sourceTree = "<group>"; };
 		F8A28D2C1A995A0200CD5829 /* SFUWebListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUWebListController.h; sourceTree = "<group>"; };
 		F8A28D2D1A995A0200CD5829 /* SFUWebListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUWebListController.m; sourceTree = "<group>"; };
 		F8A825311AC5B78D004284C6 /* maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = maps; sourceTree = "<group>"; };
@@ -887,6 +890,8 @@
 		F81D7EDE1ABAD547004AC1E5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				F8821BC41ACB8361006D6992 /* SFULocationListTableViewController.h */,
+				F8821BC51ACB8361006D6992 /* SFULocationListTableViewController.m */,
 				F81D7EDB1ABAD504004AC1E5 /* MapHelp */,
 				F81D7EC31ABAD219004AC1E5 /* SFUMapViewController.h */,
 				F81D7EB91ABAD219004AC1E5 /* SFUMapViewController.m */,
@@ -1316,6 +1321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8821BC61ACB8361006D6992 /* SFULocationListTableViewController.m in Sources */,
 				041F51F11ABA188F005E53E9 /* TFHppleElement.m in Sources */,
 				04EEBE231A9F9E44003E1DD3 /* SFUCardCell.m in Sources */,
 				F81D7ED11ABAD219004AC1E5 /* SFUImageScrollerViewController.m in Sources */,

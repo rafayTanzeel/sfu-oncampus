@@ -63,7 +63,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1373715942.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Z0-ho-su2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chanceofrain_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Z0-ho-su2">
                                                     <rect key="frame" x="8" y="75" width="88" height="88"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="88" id="RHw-og-jib"/>
@@ -86,7 +86,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon-60" translatesAutoresizingMaskIntoConstraints="NO" id="oXw-eJ-3Om">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mostly_cloudy_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="oXw-eJ-3Om">
                                                     <rect key="frame" x="12" y="217" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="dXC-JO-nIS"/>
@@ -120,7 +120,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-KW-Pin">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mostly_cloudy_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-KW-Pin">
                                                     <rect key="frame" x="280" y="217" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="mC0-1N-MzT"/>
@@ -151,7 +151,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="wgM-Uh-v0M">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mostly_cloudy_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="wgM-Uh-v0M">
                                                     <rect key="frame" x="85" y="217" width="24" height="24"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-sZ-Rdf">
@@ -175,7 +175,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="sVB-iq-cfL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mostly_cloudy_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="sVB-iq-cfL">
                                                     <rect key="frame" x="474" y="217" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="xAr-U6-7yQ"/>
@@ -192,7 +192,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ovi-98-Pzm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mostly_cloudy_d.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ovi-98-Pzm">
                                                     <rect key="frame" x="548" y="217" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="E3z-uh-805"/>
@@ -748,9 +748,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1373715942.png" width="719" height="800"/>
         <image name="Icon" width="57" height="57"/>
-        <image name="Icon-60" width="60" height="60"/>
+        <image name="chanceofrain_d.png" width="600" height="600"/>
+        <image name="mostly_cloudy_d.png" width="600" height="600"/>
     </resources>
     <color key="tintColor" white="0.82419023722627749" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -33,9 +33,14 @@
     buildingIndex =0;
 
     self.model = [SFUImageMapsModel new];
-    NSUInteger i = [self.model indexOfBuildingWithShortcode:[self.defaultLocation.buildingCode ]];
-    NSUInteger j = [self.model indexOfPageWithName:[self.defaultLocation.pageName ] inBuildingAtIndex:i];
-    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:i onFloorWithIndex:j];
+    
+    if(self.defaultLocation != nil)
+    {
+    buildingIndex = [self.model indexOfBuildingWithShortcode:self.defaultLocation.buildingCode];
+    floorIndex = [self.model indexOfPageWithName:self.defaultLocation.pageName inBuildingAtIndex:buildingIndex];
+    
+    }
+    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:floorIndex];
     [self setScrollImage:[UIImage imageNamed:imgPath]];
     
     relativeSrcLocation.x=.5;

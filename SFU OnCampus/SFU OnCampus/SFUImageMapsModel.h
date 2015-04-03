@@ -21,4 +21,7 @@
 -(NSUInteger)numberOfFloorsForBuildingAtIndex:(NSUInteger)i;
 -(NSString*)shortCodeForBuildingAtIndex:(NSUInteger)i;
 
+-(NSUInteger)indexOfBuildingWithShortcode:(NSString*)s;
+-(NSUInteger)indexOfPageWithName:(NSString*)s inBuildingAtIndex:(NSUInteger)i;
+
 @end

@@ -43,7 +43,7 @@
     [geocoder geocodeAddressString:@"Simon Fraser University"
                  completionHandler:^(NSArray* placemarks, NSError* error)
      {
-         if(self.mapView.showsUserLocation)
+         if(locationManager.location != nil)
          {
              //location services sucessful so , ignore default geocode.
              
@@ -346,9 +346,10 @@ calloutAccessoryControlTapped:(UIControl *)control
         destinationFieldSelected = YES;
     }
     
-    if([segue.identifier isEqualToString:@"interiorSegue"])
+    if([segue.identifier isEqualToString:@"interiorMapSegue"])
     {
         SFUImageScrollerViewController* vc = [segue destinationViewController];
+        vc.defaultLocation = [self.model locationForShortcode:self.detailSelectedShortcode];
         vc.src = [self.model locationForShortcode:self.sourceField.text];
          vc.dest = [self.model locationForShortcode:self.destinationField.text];
     }

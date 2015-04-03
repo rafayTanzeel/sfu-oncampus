@@ -76,5 +76,33 @@
     return [d objectForKey:@"shortcode"];
 }
 
+-(NSUInteger)indexOfBuildingWithShortcode:(NSString*)s
+{
+    return [a indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop)
+            {
+                NSDictionary *d = (NSDictionary*)obj;
+                if([[d objectForKey:@"shortcode" ] isEqualToString:s])
+                {
+                    return YES;
+                }
+                return NO;
+            }];
+}
+-(NSUInteger)indexOfPageWithName:(NSString*)s inBuildingAtIndex:(NSUInteger)i
+{
+    NSArray* ps = [[a objectAtIndex:i]objectForKey:@"pages"];
+    return [ps indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop)
+    {
+        NSDictionary *d = (NSDictionary*)obj;
+        if([[d objectForKey:@"name" ] isEqualToString:s])
+           {
+               return YES;
+           }
+           return NO;
+    }];
+    return 0;
+
+}
+
 
 @end

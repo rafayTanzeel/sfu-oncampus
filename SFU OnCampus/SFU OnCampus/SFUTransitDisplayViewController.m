@@ -92,7 +92,7 @@
     {
         [timer invalidate]; //fails to get XML invalidate timer
         // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Bus Time cannot be displayed.  The newtwork may be unavailable, or the selected top is out of service." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Bus Time cannot be displayed.  The newtwork may be unavailable, or the selected stop is out of service." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }

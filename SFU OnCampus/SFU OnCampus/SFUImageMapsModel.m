@@ -104,5 +104,12 @@
 
 }
 
+-(CGPoint) relativeLocationOfRoom:(NSString*)roomName onFloorAtIndex: (NSUInteger)floorIndex inBuildingAtIndex: (NSUInteger)buildingIndex
+{
+    NSDictionary* p = [[[a objectAtIndex:buildingIndex] objectForKey:@"pages"] objectAtIndex:floorIndex];
+    NSString* point = [[p objectForKey:@"rooms"]objectForKey:roomName];
+    return CGPointFromString(point);
+}
+
 
 @end

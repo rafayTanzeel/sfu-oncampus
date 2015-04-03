@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Simon Fraser University. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  Retrieves metadata for maps that are represented using a static image, such as interiors.
@@ -23,5 +23,7 @@
 
 -(NSUInteger)indexOfBuildingWithShortcode:(NSString*)s;
 -(NSUInteger)indexOfPageWithName:(NSString*)s inBuildingAtIndex:(NSUInteger)i;
+-(CGPoint) relativeLocationOfRoom:(NSString*)roomName onFloorAtIndex: (NSUInteger)floorIndex inBuildingAtIndex: (NSUInteger)buildingIndex;
+
 
 @end

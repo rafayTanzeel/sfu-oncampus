@@ -213,8 +213,10 @@
     l.shortCode = s;
     l.buildingCode= building;
     l.roomCode=room;
+    l.pageName = [NSString stringWithFormat:@"%c000",[room characterAtIndex:0]];
     l.partitionNumber=partition;
     return l;
 }
+
 
 @end

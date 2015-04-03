@@ -38,15 +38,29 @@
     {
     buildingIndex = [self.model indexOfBuildingWithShortcode:self.defaultLocation.buildingCode];
     floorIndex = [self.model indexOfPageWithName:self.defaultLocation.pageName inBuildingAtIndex:buildingIndex];
-    
+        [self.pickerView selectRow:buildingIndex inComponent:0 animated:YES];
+        [self.pickerView selectRow:floorIndex inComponent:1 animated:YES];
     }
-    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:floorIndex];
-    [self setScrollImage:[UIImage imageNamed:imgPath]];
     
     relativeSrcLocation.x=.5;
     relativeSrcLocation.y=.5;
     relativeDestLocation.x=.25;
     relativeDestLocation.y=.25;
+    
+    NSString* floor = [self.model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:floorIndex];
+    BOOL rightSrcPage = [floor characterAtIndex:0] == [self.src.pageName characterAtIndex:0];
+    BOOL rightDestPage = [floor characterAtIndex:0] == [self.dest.pageName characterAtIndex:0];
+    
+    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    BOOL rightDestBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    
+    self.pageIsSrcPage = rightSrcBuilding && rightSrcPage;
+    self.pageIsDestPage = rightDestPage && rightDestBuilding;
+    
+    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:floorIndex];
+    [self setScrollImage:[UIImage imageNamed:imgPath]];
+    
+    
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
@@ -103,6 +117,8 @@ numberOfRowsInComponent:(NSInteger)component
 }
 -(void)setScrollImage:(UIImage*)img
 {
+    relativeSrcLocation = [self.model relativeLocationOfRoom:self.src.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
+    relativeDestLocation = [self.model relativeLocationOfRoom:self.dest.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
     self.imageView.image=[self imageByDrawingCircleOnImage:img];
     self.scrollView.contentSize = self.imageView.image.size;
 }

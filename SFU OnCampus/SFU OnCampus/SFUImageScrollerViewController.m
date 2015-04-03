@@ -36,6 +36,7 @@
     self.splitViewController.presentsWithGesture = NO;
 
     self.model = [SFUImageMapsModel new];
+    self.scrollView.clipsToBounds = YES;
     
     if(self.defaultLocation != nil)
     {
@@ -64,7 +65,6 @@
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-
     return self.imageView;
 }
 
@@ -121,7 +121,19 @@ numberOfRowsInComponent:(NSInteger)component
     relativeSrcLocation = [self.model relativeLocationOfRoom:self.src.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
     relativeDestLocation = [self.model relativeLocationOfRoom:self.dest.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
     self.imageView= [self.imageView initWithImage:img];
-    self.scrollView.contentSize = self.imageView.frame.size;
+    
+    //Tell the image view to sacle itself according to its content image.
+    //For some reason scale to fit doesn't consier width and height properly, so do it manually.
+    [self.imageView setFrame:CGRectMake(self.imageView.frame.origin.x, self.imageView.frame.origin.y, img.size.width, img.size.height)];
+    
+    self.scrollView.zoomScale=1.0;
+    self.scrollView.contentSize= img.size;
+    [self.scrollView setNeedsLayout];
+    
+//    CGSize s = self.imageView.image.size;
+//    s.height *= self.scrollView.contentScaleFactor;
+//    s.width  *= self.scrollView.contentScaleFactor;
+//    self.scrollView.contentSize= s;
 
 
    
@@ -129,10 +141,14 @@ numberOfRowsInComponent:(NSInteger)component
 }
 
 
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView
+                       withView:(UIView *)view
+                        atScale:(CGFloat)scale
 {
-
- 
+    CGSize s = self.imageView.image.size;
+    s.height *= scale;
+    s.width  *= scale;
+    scrollView.contentSize= s;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView

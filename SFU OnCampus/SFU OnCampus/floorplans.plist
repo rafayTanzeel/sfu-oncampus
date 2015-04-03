@@ -10,8 +10,61 @@
 		<key>pages</key>
 		<array>
 			<dict>
+				<key>name</key>
+				<string>Satellite</string>
 				<key>image</key>
 				<string>Burnaby_Campus.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Accessiblity</string>
+				<key>image</key>
+				<string>accessibilityMap.jpg</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>requiresLogin</key>
+		<false/>
+		<key>displayName</key>
+		<string>Surrey Campus</string>
+		<key>pages</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Grand Hall</string>
+				<key>image</key>
+				<string>Surrey/GRAND.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Podium 2</string>
+				<key>image</key>
+				<string>Surrey/PODIUM 2.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Podium 3</string>
+				<key>image</key>
+				<string>Surrey/PODIUM 3.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Galleria 3</string>
+				<key>image</key>
+				<string>Surrey/GALLERIA 3.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Galleria 4</string>
+				<key>image</key>
+				<string>Surrey/GALLERIA 4.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Galleria 5</string>
+				<key>image</key>
+				<string>Surrey/GALLERIA 5.jpg</string>
 			</dict>
 		</array>
 	</dict>
@@ -37,24 +90,21 @@
 				<string>2000</string>
 				<key>image</key>
 				<string>AQ2000.jpg</string>
-                
-                
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>3000</string>
 				<key>image</key>
 				<string>AQ3000.jpg</string>
-                <key>rooms</key>
-                <dict>
-                    <key>3154</key>
-                    <string>{0.864258,0.839286}</string>
-                    <key>3144</key>
-                    <string>{0.862793,0.179537}</string>
-                </dict>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string>{0.864258,0.839286}</string>
+					<key>3144</key>
+					<string>{0.862793,0.179537}</string>
+				</dict>
 			</dict>
 			<dict>
-
 				<key>name</key>
 				<string>4000</string>
 				<key>image</key>

@@ -31,6 +31,9 @@
     [super viewDidLoad];
     floorIndex = 0;
     buildingIndex =0;
+    
+    //prevent the menu from appearing when we swipt the left hand side of the screen.
+    self.splitViewController.presentsWithGesture = NO;
 
     self.model = [SFUImageMapsModel new];
     
@@ -41,11 +44,7 @@
         [self.pickerView selectRow:buildingIndex inComponent:0 animated:YES];
         [self.pickerView selectRow:floorIndex inComponent:1 animated:YES];
     }
-    
-    relativeSrcLocation.x=.5;
-    relativeSrcLocation.y=.5;
-    relativeDestLocation.x=.25;
-    relativeDestLocation.y=.25;
+
     
     NSString* floor = [self.model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:floorIndex];
     BOOL rightSrcPage = [floor characterAtIndex:0] == [self.src.pageName characterAtIndex:0];
@@ -58,12 +57,14 @@
     self.pageIsDestPage = rightDestPage && rightDestBuilding;
     
     NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:floorIndex];
-    [self setScrollImage:[UIImage imageNamed:imgPath]];
+    UIImage* img =[UIImage imageNamed:imgPath];
+    [self setScrollImage:img];
     
     
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
+
     return self.imageView;
 }
 
@@ -119,8 +120,19 @@ numberOfRowsInComponent:(NSInteger)component
 {
     relativeSrcLocation = [self.model relativeLocationOfRoom:self.src.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
     relativeDestLocation = [self.model relativeLocationOfRoom:self.dest.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
-    self.imageView.image=[self imageByDrawingCircleOnImage:img];
-    self.scrollView.contentSize = self.imageView.image.size;
+    self.imageView= [self.imageView initWithImage:img];
+    self.scrollView.contentSize = self.imageView.frame.size;
+
+
+   
+    
+}
+
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+
+ 
 }
 
 - (void)pickerView:(UIPickerView *)pickerView

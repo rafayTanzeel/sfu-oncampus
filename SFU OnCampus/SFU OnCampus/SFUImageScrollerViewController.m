@@ -120,7 +120,7 @@ numberOfRowsInComponent:(NSInteger)component
 {
     relativeSrcLocation = [self.model relativeLocationOfRoom:self.src.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
     relativeDestLocation = [self.model relativeLocationOfRoom:self.dest.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
-    self.imageView= [self.imageView initWithImage:img];
+    self.imageView= [self.imageView initWithImage:[self imageByDrawingCircleOnImage:img]];
     
     //Tell the image view to sacle itself according to its content image.
     //For some reason scale to fit doesn't consier width and height properly, so do it manually.
@@ -297,8 +297,9 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)scrollToRelativePosition:(CGPoint)p
 {
     p = [self relativePositionToRealPosition:p];
-    p.x -= (self.scrollView.frame.size.width/2.0);
-    p.y -= (self.scrollView.frame.size.height /2.0);
+    p=[self.imageView convertPoint:p toView:self.scrollView];
+    p.x -= self.scrollView.frame.size.width/2.0;
+    p.y -= self.scrollView.frame.size.height/2.0;
     [self.scrollView setContentOffset:p animated:YES];
 }
 

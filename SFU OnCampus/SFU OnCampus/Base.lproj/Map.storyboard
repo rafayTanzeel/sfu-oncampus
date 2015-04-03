@@ -894,7 +894,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" indicatorStyle="white" canCancelContentTouches="NO" maximumZoomScale="4" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" indicatorStyle="white" canCancelContentTouches="NO" minimumZoomScale="0.10000000000000001" maximumZoomScale="4" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cy9-BY-lp3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="374"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1iI-98-cV7" userLabel="Background" customClass="SFUImageOverlayView">

@@ -669,6 +669,44 @@
 				<real>49.279842</real>
 			</dict>
 		</dict>
+		<key>WMC-Starbucks</key>
+		<dict>
+			<key>displayName</key>
+			<string>Starbucks Coffee</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.921781</real>
+				<key>y</key>
+				<real>49.279842</real>
+			</dict>
+		</dict>
+		<key>WMC-TimHortons</key>
+		<dict>
+			<key>displayName</key>
+			<string>Tim Horton&apos;s Coffee</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.921781</real>
+				<key>y</key>
+				<real>49.279842</real>
+			</dict>
+		</dict>
 	</dict>
 	<key>fixtures</key>
 	<dict>
@@ -721,6 +759,25 @@
 		<dict>
 			<key>displayName</key>
 			<string>Tim Horton&apos;s Coffee</string>
+			<key>span</key>
+			<dict>
+				<key>x</key>
+				<real>0.001789</real>
+				<key>y</key>
+				<real>0.001876</real>
+			</dict>
+			<key>centre</key>
+			<dict>
+				<key>x</key>
+				<real>-122.921781</real>
+				<key>y</key>
+				<real>49.279842</real>
+			</dict>
+		</dict>
+		<key>MAKENZIECAFE - Todo</key>
+		<dict>
+			<key>displayName</key>
+			<string>Makenzie Cafe (AQ Cafeteria)</string>
 			<key>span</key>
 			<dict>
 				<key>x</key>

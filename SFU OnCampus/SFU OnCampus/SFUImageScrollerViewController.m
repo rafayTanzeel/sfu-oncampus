@@ -95,6 +95,8 @@
 - (IBAction)centreDestinationButtonClicked:(id)sender {
     [self centreDestination];
 }
+
+#pragma mark Picker Delegate
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 2;
@@ -116,6 +118,8 @@ numberOfRowsInComponent:(NSInteger)component
         return [self.model numberOfFloorsForBuildingAtIndex:buildingIndex];
     }
 }
+
+#pragma mark ScrollView
 -(void)setScrollImage:(UIImage*)img
 {
     relativeSrcLocation = [self.model relativeLocationOfRoom:self.src.roomCode onFloorAtIndex: floorIndex inBuildingAtIndex: buildingIndex];
@@ -176,7 +180,7 @@ numberOfRowsInComponent:(NSInteger)component
     BOOL rightDestPage = [floor characterAtIndex:0] == [self.dest.pageName characterAtIndex:0];
     
     
-    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.src.buildingCode ];
     BOOL rightDestBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
     
     self.pageIsSrcPage = rightSrcBuilding && rightSrcPage;
@@ -243,9 +247,11 @@ numberOfRowsInComponent:(NSInteger)component
         // draw circle
         CGContextFillEllipseInRect(ctx, circleRect);
         self.centreDestinationButton.enabled =YES;
+        self.centreDestinationButton.hidden=NO;
     }else
     {
         self.centreDestinationButton.enabled =NO;
+        self.centreDestinationButton.hidden=YES;
 
     }
     
@@ -287,6 +293,7 @@ numberOfRowsInComponent:(NSInteger)component
     printf("held relativePos {%f,%f}\n",p.x,p.y);
 }
 
+#pragma mark coordinate conversion
 -(CGPoint)relativePositionToRealPosition:(CGPoint)p
 {
     p.x *= self.imageView.image.size.width;

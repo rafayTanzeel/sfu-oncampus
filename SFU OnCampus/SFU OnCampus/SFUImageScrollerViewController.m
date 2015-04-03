@@ -176,7 +176,7 @@ numberOfRowsInComponent:(NSInteger)component
     BOOL rightDestPage = [floor characterAtIndex:0] == [self.dest.pageName characterAtIndex:0];
     
     
-    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.src.buildingCode ];
     BOOL rightDestBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
     
     self.pageIsSrcPage = rightSrcBuilding && rightSrcPage;

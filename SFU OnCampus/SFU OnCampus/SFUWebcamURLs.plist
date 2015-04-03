@@ -4,67 +4,33 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>goSFU</string>
+		<string>AQ North</string>
 		<key>url</key>
-		<string>https://go.sfu.ca</string>
-		<key>image</key>
-		<string>student_services.png</string>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=aqcam-desktop&amp;nocache=1&amp;update=2000&amp;timeout=1800000</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Canvas</string>
+		<string>AQ South West</string>
 		<key>url</key>
-		<string>https://canvas.sfu.ca</string>
-		<key>image</key>
-		<string>canvas_icon.png</string>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=aqcamsw-desktop&amp;nocache=1&amp;update=2000&amp;timeout=1800000</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>SFU Connect</string>
+		<string>University Drive North</string>
 		<key>url</key>
-		<string>https://connect.sfu.ca</string>
-		<key>image</key>
-		<string>email_icon.png</string>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=libcam&amp;nocache=0.9614924991037697&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Student Feedback</string>
+		<string>Convocation Mall</string>
 		<key>url</key>
-		<string>https://docs.google.com/forms/d/1N6am2DL08W_3EDhzdSBWVFBRg9MOuetXzLvedwnEPpI/viewform?usp=send_form</string>
-		<key>image</key>
-		<string>journal.png</string>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=mallcam&amp;nocache=1&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>talkSFU</string>
+		<string>Gaglardi Intersection</string>
 		<key>url</key>
-		<string>http://talksfu.ca</string>
-		<key>image</key>
-		<string>forum_icon.png</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Missed Your Bus?</string>
-		<key>url</key>
-		<string>http://www.sfu.ca/busstop.html</string>
-		<key>image</key>
-		<string>bus.png</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Directory</string>
-		<key>url</key>
-		<string>http://www.sfu.ca/sfuds</string>
-		<key>image</key>
-		<string>people-search.png</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Book Store</string>
-		<key>url</key>
-		<string>http://www.sfu.ca/bookstore</string>
-		<key>image</key>
-		<string>credit.png</string>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=gaglardicam&amp;nocache=1&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
 	</dict>
 </array>
 </plist>

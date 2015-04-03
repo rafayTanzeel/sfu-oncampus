@@ -58,6 +58,8 @@
 
 /**
  * updates the computer labels for all locations at SFU Burnaby library
+ * Calls {@link #updateComputerAvailability() updateComputerAvailability} the appropriate number of times
+ * on the appropriate rooms.
  *
  * @param cell          cell containing all computer labels
  * @param computers     dictionary containing all computer data
@@ -66,6 +68,10 @@
 
 /**
  * updates the computer labels for all locations at SFU Surrey library
+ * Calls {@link #updateComputerAvailability() updateComputerAvailability} the appropriate number of times
+ * on the appropriate rooms.
+ * Calls {@link #emptyComputerLabels() emptyComputerLabels} the appropriate number of times
+ * on the appropriate rooms.
  *
  * @param cell          cell containing all computer labels
  * @param computers     dictionary containing all computer data
@@ -74,6 +80,10 @@
 
 /**
  * updates the computer labels for all locations at SFU Vancouver library
+ * Calls {@link #updateComputerAvailability() updateComputerAvailability} the appropriate number of times
+ * on the appropriate rooms.
+ * Calls {@link #emptyComputerLabels() emptyComputerLabels} the appropriate number of times
+ * on the appropriate rooms.
  *
  * @param cell          cell containing all computer labels
  * @param computers     dictionary containing all computer data

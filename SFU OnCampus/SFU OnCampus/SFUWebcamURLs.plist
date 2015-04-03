@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>AQ North</string>
+		<key>url</key>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=aqcam-desktop&amp;nocache=1&amp;update=2000&amp;timeout=1800000</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>AQ South West</string>
+		<key>url</key>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=aqcamsw-desktop&amp;nocache=1&amp;update=2000&amp;timeout=1800000</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>University Drive North</string>
+		<key>url</key>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=libcam&amp;nocache=0.9614924991037697&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Convocation Mall</string>
+		<key>url</key>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=mallcam&amp;nocache=1&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Gaglardi Intersection</string>
+		<key>url</key>
+		<string>http://cgi.sfu.ca/~netops/cgi-bin/image.php?cam=gaglardicam&amp;nocache=1&amp;update=2000&amp;timeout=1800000&amp;offset=4</string>
+	</dict>
+</array>
+</plist>

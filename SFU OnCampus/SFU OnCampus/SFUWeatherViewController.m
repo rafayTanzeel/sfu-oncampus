@@ -10,6 +10,8 @@
 #import "SFUWeatherViewController.h"
 #import "SFUCardCell.h"
 #import "SFUAnnouncementCell.h"
+#import "SFUWebListModel.h"
+#import "SFUWebListController.h"
 
 // HTML Parsing
 #import "TFHpple.h"
@@ -240,7 +242,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 /**
@@ -271,7 +273,7 @@
     //-----------------------------
     // Announcements
     //-----------------------------
-    else {
+    else if(indexPath.row == 1) {
         
         SFUAnnouncementCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SFUAnnouncementCell"];
         
@@ -285,6 +287,11 @@
         
         return cell;
     }
+    
+    else {
+        SFUCardCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"webcamCell"];
+        return cell;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -292,8 +299,23 @@
     if(indexPath.row == 0) {
         return 350;
     }
-    else {
+    else if(indexPath.row == 1){
         return 210;
+    }
+    else {
+        return 40;
+    }
+}
+
+#pragma mark - Navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"webcamSegue"]) {
+        
+        SFUWebListModel* m = [SFUWebListModel alloc];
+        [ m initWithPlist:@"SFUWebcamURLs"];
+        ((SFUWebListController*)[segue destinationViewController]).model =m;
     }
 }
 
@@ -335,15 +357,9 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
 
 @end

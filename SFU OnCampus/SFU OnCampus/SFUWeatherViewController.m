@@ -165,10 +165,13 @@
  */
 - (NSString*)removeHtmlTagsFromString:(NSString*) string
 {
-    string = [string stringByReplacingOccurrencesOfString:@"<div>" withString:@""];
-    string = [string stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
-    string = [string stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-    string = [string stringByReplacingOccurrencesOfString:@"</div>" withString:@""];
+    // Removes occurences of '<xxxx>'
+    NSRange r;
+    while ((r = [string rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound) {
+        string = [string stringByReplacingCharactersInRange:r withString:@""];
+    }
+    
+    // Remove some other extra stuff
     string = [string stringByReplacingOccurrencesOfString:@"&nbsp" withString:@""];
     string = [string stringByReplacingOccurrencesOfString:@"&deg;" withString:@"°"];
     string = [string stringByReplacingOccurrencesOfString:@"    " withString:@""];

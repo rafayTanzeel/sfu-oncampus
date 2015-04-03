@@ -9,6 +9,7 @@
 #import "SFUMapViewController.h"
 #import "SFUShortCodeComposerViewController.h"
 #import "SFUMapModel.h"
+#include "SFUImageScrollerViewController.h"
 
 @interface SFUMapViewController ()
 {
@@ -38,31 +39,31 @@
     self.debugView.hidden = YES;
 #endif
     
-        CLGeocoder* geocoder = [CLGeocoder new];
+    CLGeocoder* geocoder = [CLGeocoder new];
     [geocoder geocodeAddressString:@"Simon Fraser University"
                  completionHandler:^(NSArray* placemarks, NSError* error)
-    {
-                     if(self.mapView.showsUserLocation)
-                     {
-                         //location services sucessful so , ignore default geocode.
-                         
-                     }else
-                     {
-                     
-                     for (CLPlacemark* aPlacemark in placemarks)
-                     {
-                         MKCoordinateRegion region = { aPlacemark.location.coordinate ,span };
-                         //[self.mapView setCenterCoordinate:aPlacemark.location.coordinate animated:YES];
-                         [self.mapView setRegion:region animated:NO];
-                         // Process the placemark.
-                         NSLog(@"%@",aPlacemark.location.description);
-                     }
-                    
-                     }
-                     
-    }
+     {
+         if(self.mapView.showsUserLocation)
+         {
+             //location services sucessful so , ignore default geocode.
+             
+         }else
+         {
+             
+             for (CLPlacemark* aPlacemark in placemarks)
+             {
+                 MKCoordinateRegion region = { aPlacemark.location.coordinate ,span };
+                 //[self.mapView setCenterCoordinate:aPlacemark.location.coordinate animated:YES];
+                 [self.mapView setRegion:region animated:NO];
+                 // Process the placemark.
+                 NSLog(@"%@",aPlacemark.location.description);
+             }
+             
+         }
+         
+     }
      ];
-                 
+    
     
     
     if(destinationFieldSelected)
@@ -101,7 +102,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     NSLog(@"%@\nspan\n{\n%f\n,\n%f\n},\ncentre{\n%f\n,\n%f\n}\n\n",self.regionNameTextField.text,self.mapView.region.span.longitudeDelta,self.mapView.region.span.latitudeDelta,self.mapView.region.center.longitude,self.mapView.region.center.latitude);
     [self.regionNameTextField resignFirstResponder];
-
+    
 }
 -(void)reportNullRegion
 {
@@ -153,43 +154,43 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         //TODO, be smarter about where to zoom and draw based on the presenece of a source and dest
         if(hasSrc)
         {
-        SFUMapModelResolutionStatus status;
-        ///Zoom to and draw source
-        MKCoordinateRegion r = [self.model regionForString:src status:&status];
-        [self.mapView setRegion:r animated:YES];
-        NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
-        SFULocation* loc = [self.model locationForShortcode:src];
-        NSString* title = loc.displayName;
-         a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
-        a.coordinate = r.center;
-        a.isDestination =NO;
-        [self.mapView addAnnotation: a];
+            SFUMapModelResolutionStatus status;
+            ///Zoom to and draw source
+            MKCoordinateRegion r = [self.model regionForString:src status:&status];
+            [self.mapView setRegion:r animated:YES];
+            NSLog(@"%@\nspan{%f,%f},centre{%f,%f}\n\n",self.destinationField.text,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
+            SFULocation* loc = [self.model locationForShortcode:src];
+            NSString* title = loc.displayName;
+            a = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:src];
+            a.coordinate = r.center;
+            a.isDestination =NO;
+            [self.mapView addAnnotation: a];
         }
         
         if(hasDest)
         {
             SFUMapModelResolutionStatus status;
-             MKCoordinateRegion r = [self.model regionForString:src status:&status];
+            MKCoordinateRegion r = [self.model regionForString:src status:&status];
             SFULocation* loc = [self.model locationForShortcode:src];
-        ///Zoom to and draw destination
-        r = [self.model regionForString:dest status:&status];
-        //[self.mapView setRegion:r animated:YES];
-        printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
+            ///Zoom to and draw destination
+            r = [self.model regionForString:dest status:&status];
+            //[self.mapView setRegion:r animated:YES];
+            printf("%s\nspan{\n%f\n,\n%f},centre{\n%f\n,\n%f\n}\n\n",self.destinationField.text.UTF8String,r.span.longitudeDelta,r.span.latitudeDelta,r.center.longitude,r.center.latitude);
             NSString* title = loc.displayName;
-       b = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:dest];
-        title = [self.model displayNameForShortCode:dest];
-        b.coordinate = r.center;
-        b.isDestination =YES;
-        [self.mapView addAnnotation: b];
+            b = [[SFUMapAnnotation alloc] initWithTitle:title subtitle:@"" shortcode:dest];
+            title = [self.model displayNameForShortCode:dest];
+            b.coordinate = r.center;
+            b.isDestination =YES;
+            [self.mapView addAnnotation: b];
         }
         
         if(hasSrc && hasDest)
         {
-        CLLocationCoordinate2D points[2];
-        points[0]= a.coordinate;
-        points[1]=b.coordinate;
-        MKPolyline* line = [MKPolyline polylineWithCoordinates:points count:2];
-        [self.mapView addOverlay:line level: MKOverlayLevelAboveLabels];
+            CLLocationCoordinate2D points[2];
+            points[0]= a.coordinate;
+            points[1]=b.coordinate;
+            MKPolyline* line = [MKPolyline polylineWithCoordinates:points count:2];
+            [self.mapView addOverlay:line level: MKOverlayLevelAboveLabels];
         }
         
     }
@@ -221,7 +222,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
     MKPinAnnotationView* pin = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     
     if(!pin)
-    pin =[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        pin =[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
     
     if([annotation isKindOfClass: [SFUMapAnnotation class]])
     {
@@ -231,16 +232,16 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
             [pin setPinColor: MKPinAnnotationColorRed];
         else
             [pin setPinColor: MKPinAnnotationColorGreen];
-            
+        
     }
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
-  
+    
     pin.rightCalloutAccessoryView = rightButton;
     pin.animatesDrop = YES;
     
     pin.canShowCallout = YES;
-   
+    
     return pin;
     
 }
@@ -299,33 +300,33 @@ calloutAccessoryControlTapped:(UIControl *)control
 -(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     //Experimenting with autocompletion
-//    if(range.length ==0) // was singe character indertion,deletio or edit
-//    {
-//        if(textField.text.length <3)
-//        {
-//            //Trying to suggest before 3 characters significantly increases the number of suggestions
-//            return YES;
-//        }
-//        NSString* suggestion = [self.model suggestionForPrefix:textField.text];
-//        if(suggestion !=nil)
-//        {
-//            
-//        NSUInteger delta = suggestion.length - textField.text.length;
-//            //fromhttps://developer.sinnerschrader-mobile.com/setting-text-selection-and-cursor-position-in-uitextfields/455/
-//            NSRange r = NSMakeRange(range.location, delta);
-//            UITextPosition *from = [textField positionFromPosition:[textField beginningOfDocument] offset:r.location];
-//            UITextPosition *to = [textField positionFromPosition:from offset:-r.length];
-//            textField.text = suggestion;
-//            [textField setSelectedTextRange:[textField textRangeFromPosition:from toPosition:to]];
-//            
-//            
-//            
-//
-//            //  [sender setSelectedTextRange:newRange];
-//            return NO;
-//        }
-//        
-//    }
+    //    if(range.length ==0) // was singe character indertion,deletio or edit
+    //    {
+    //        if(textField.text.length <3)
+    //        {
+    //            //Trying to suggest before 3 characters significantly increases the number of suggestions
+    //            return YES;
+    //        }
+    //        NSString* suggestion = [self.model suggestionForPrefix:textField.text];
+    //        if(suggestion !=nil)
+    //        {
+    //
+    //        NSUInteger delta = suggestion.length - textField.text.length;
+    //            //fromhttps://developer.sinnerschrader-mobile.com/setting-text-selection-and-cursor-position-in-uitextfields/455/
+    //            NSRange r = NSMakeRange(range.location, delta);
+    //            UITextPosition *from = [textField positionFromPosition:[textField beginningOfDocument] offset:r.location];
+    //            UITextPosition *to = [textField positionFromPosition:from offset:-r.length];
+    //            textField.text = suggestion;
+    //            [textField setSelectedTextRange:[textField textRangeFromPosition:from toPosition:to]];
+    //
+    //
+    //
+    //
+    //            //  [sender setSelectedTextRange:newRange];
+    //            return NO;
+    //        }
+    //
+    //    }
     //NSLog(@"shouldchangeCharsInRange:[%d,%d],\"%@\"",range.location,range.length,string);
     return YES;
 }
@@ -337,13 +338,21 @@ calloutAccessoryControlTapped:(UIControl *)control
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   if([segue.identifier isEqualToString:@"srcSegue"])
-   {
-       destinationFieldSelected = NO;
-   }else
-   {
-       destinationFieldSelected = YES;
-   }
+    if([segue.identifier isEqualToString:@"srcSegue"])
+    {
+        destinationFieldSelected = NO;
+    }else
+    {
+        destinationFieldSelected = YES;
+    }
+    
+    if([segue.identifier isEqualToString:@"interiorSegue"])
+    {
+        SFUImageScrollerViewController* vc = [segue destinationViewController];
+        vc.src = [self.model locationForShortcode:self.sourceField.text];
+         vc.dest = [self.model locationForShortcode:self.destinationField.text];
+    }
+    
 }
 
 

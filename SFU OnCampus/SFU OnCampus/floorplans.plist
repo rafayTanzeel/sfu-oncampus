@@ -20,6 +20,8 @@
 		<true/>
 		<key>displayName</key>
 		<string>AQ (Academic Quadrangle)</string>
+		<key>shortcode</key>
+		<string>AQ</string>
 		<key>preferedPage</key>
 		<string>3000</string>
 		<key>pages</key>
@@ -28,7 +30,7 @@
 				<key>name</key>
 				<string>1000</string>
 				<key>image</key>
-				<string>maps/AQ3000(labeled).jpg</string>
+				<string>AQ1000.jpg</string>
 			</dict>
 			<dict>
 				<key>name</key>

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SFUImageMapsModel.h"
+#import "SFULocation.h"
 
 /**
  Changes the map image according to the building and floor selected by the spinner.
@@ -16,14 +17,25 @@
 @interface SFUImageScrollerViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UILabel *floorNumberLabel;
-@property (strong, nonatomic) IBOutlet UIStepper *floorNumberStepper;
-- (IBAction)floorChanged:(UIStepper *)sender;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+
+@property SFULocation* src;
+@property SFULocation* dest;
+@property SFULocation* defaultLocation;
+
+@property BOOL pageIsSrcPage;
+@property BOOL pageIsDestPage;
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component;
+
+ @property (strong, atomic)   SFUImageMapsModel* model;
+
 - (IBAction)centreDestinationButtonClicked:(id)sender;
+
+
 @property (strong, nonatomic) IBOutlet UIButton *centreDestinationButton;
 
 @end

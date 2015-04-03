@@ -490,7 +490,7 @@
 		F81D7EC71ABAD219004AC1E5 /* SFULocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFULocation.h; path = "SFU OnCampus/SFULocation.h"; sourceTree = "<group>"; };
 		F81D7EC81ABAD219004AC1E5 /* SFUMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFUMapAnnotation.h; path = "SFU OnCampus/SFUMapAnnotation.h"; sourceTree = "<group>"; };
 		F81D7EC91ABAD219004AC1E5 /* SFUMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFUMapAnnotation.m; path = "SFU OnCampus/SFUMapAnnotation.m"; sourceTree = "<group>"; };
-		F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burnaby_Campus.jpg; sourceTree = "<group>"; };
+		F81D7ECA1ABAD219004AC1E5 /* Burnaby_Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Burnaby_Campus.jpg; path = images/maps/Burnaby_Campus.jpg; sourceTree = "<group>"; };
 		F81D7ECB1ABAD219004AC1E5 /* SFUHourlyForecastTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUHourlyForecastTableCell.m; sourceTree = "<group>"; };
 		F81D7EDC1ABAD504004AC1E5 /* MapHelp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MapHelp.html; sourceTree = "<group>"; };
 		F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildingData.plist; sourceTree = "<group>"; };
@@ -899,16 +899,16 @@
 				F81D7EBE1ABAD219004AC1E5 /* SFUMapModel.m */,
 				F81D7EB51ABAD219004AC1E5 /* SFUMapHistory.h */,
 				F81D7EB61ABAD219004AC1E5 /* SFUMapHistory.m */,
-				F81D7EB71ABAD219004AC1E5 /* SFUMapHelpViewController.m */,
 				F81D7EB81ABAD219004AC1E5 /* SFUMapHelpViewController.h */,
+				F81D7EB71ABAD219004AC1E5 /* SFUMapHelpViewController.m */,
 				F81D7EBA1ABAD219004AC1E5 /* SFUImageMapsModel.h */,
-				F81D7EBB1ABAD219004AC1E5 /* SFUImageScrollerViewController.m */,
 				F81D7EBC1ABAD219004AC1E5 /* SFUImageMapsModel.m */,
 				F81D7EBD1ABAD219004AC1E5 /* SFUImageScrollerViewController.h */,
+				F81D7EBB1ABAD219004AC1E5 /* SFUImageScrollerViewController.m */,
 				F81D7EBF1ABAD219004AC1E5 /* SFUMapPOI.h */,
 				F81D7EC01ABAD219004AC1E5 /* SFUMapPOI.m */,
-				F81D7EC41ABAD219004AC1E5 /* SFUShortCodeComposerViewController.m */,
 				F81D7EC51ABAD219004AC1E5 /* SFUShortCodeComposerViewController.h */,
+				F81D7EC41ABAD219004AC1E5 /* SFUShortCodeComposerViewController.m */,
 				F81D7EC61ABAD219004AC1E5 /* SFUBuildingListViewControllerTableViewController.h */,
 				F81D7EB31ABAD219004AC1E5 /* SFUBuildingListViewControllerTableViewController.m */,
 				F81D7EC71ABAD219004AC1E5 /* SFULocation.h */,

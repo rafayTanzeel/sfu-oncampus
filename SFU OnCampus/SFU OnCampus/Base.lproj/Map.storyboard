@@ -909,7 +909,7 @@
                                     <outlet property="delegate" destination="9hf-Nd-Xs2" id="wKG-kg-aza"/>
                                 </connections>
                             </scrollView>
-                            <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Gu-XoM">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPn-Gu-XoM">
                                 <rect key="frame" x="0.0" y="374" width="600" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9hf-Nd-Xs2" id="8YN-TM-z2H"/>
@@ -948,6 +948,7 @@
                     <connections>
                         <outlet property="centreDestinationButton" destination="Hgv-dj-URu" id="ZlW-aD-iGB"/>
                         <outlet property="imageView" destination="1iI-98-cV7" id="z2D-vD-UZj"/>
+                        <outlet property="pickerView" destination="tPn-Gu-XoM" id="vWH-fV-I3A"/>
                         <outlet property="scrollView" destination="cy9-BY-lp3" id="YiP-Ga-QqJ"/>
                     </connections>
                 </viewController>

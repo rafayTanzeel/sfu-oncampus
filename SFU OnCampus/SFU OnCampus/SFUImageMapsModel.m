@@ -38,14 +38,20 @@
     return [a count];
 }
 
+
+-(NSUInteger)numberOfFloorsForBuildingAtIndex:(NSUInteger)i
+{
+    return [[[a objectAtIndex:i] objectForKey:@"pages"]count];
+}
+
 -(NSString*)nameOfImageForBuildingAtIndex:(NSUInteger)i onFloorWithIndex:(NSUInteger)j
 {
     @try{
-    NSDictionary* d = [a objectAtIndex:i];
+    NSDictionary* d = (NSDictionary*)[a objectAtIndex:i];
     NSArray* ps = [d objectForKey:@"pages"];
     NSDictionary* p = [ps objectAtIndex:j];
     if(p == nil)return nil;
-    return [p objectForKey:@"image"];
+    return [@"maps/" stringByAppendingString:[p objectForKey:@"image"]];
     }@catch(NSException* e)
     {
         return nil;
@@ -62,6 +68,12 @@
     NSDictionary* d = [a objectAtIndex:i];
     NSArray* ps = [d objectForKey:@"pages"];
     return [ps count];
+}
+
+-(NSString*)shortCodeForBuildingAtIndex:(NSUInteger)i;
+{
+    NSDictionary* d = (NSDictionary*)[a objectAtIndex:i];
+    return [d objectForKey:@"shortcode"];
 }
 
 

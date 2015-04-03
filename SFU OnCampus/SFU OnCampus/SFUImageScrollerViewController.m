@@ -11,10 +11,12 @@
 @interface SFUImageScrollerViewController ()
 {
 @private
-    SFUImageMapsModel* _model;
+
     NSArray* floorNames;
     NSUInteger floorIndex;
     NSUInteger buildingIndex;
+    
+    
     
     CGPoint relativeSrcLocation;
     CGPoint relativeDestLocation;
@@ -24,12 +26,16 @@
 @implementation SFUImageScrollerViewController
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    floorIndex =buildingIndex =0;
-    [self updateFloorLabel];// Do any additional setup after loading the view.
-    _model = [SFUImageMapsModel new];
-    NSString*imgPath = [_model nameOfImageForBuildingAtIndex:0 onFloorWithIndex:0];
+    floorIndex = 0;
+    buildingIndex =0;
+
+    self.model = [SFUImageMapsModel new];
+    NSUInteger i = [self.model indexOfBuildingWithShortcode:[self.defaultLocation.buildingCode ]];
+    NSUInteger j = [self.model indexOfPageWithName:[self.defaultLocation.pageName ] inBuildingAtIndex:i];
+    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:i onFloorWithIndex:j];
     [self setScrollImage:[UIImage imageNamed:imgPath]];
     
     relativeSrcLocation.x=.5;
@@ -46,30 +52,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)updateFloorLabel
-{
-    //tod deelte, used segmented stepper instead.
-    //    self.floorNumberStepper.maximumValue= [_model floorCountForBuldingWithIndex:floorIndex];
-    //        self.floorNumberLabel.text = [[NSNumber numberWithInteger:self.floorNumberStepper.value] stringValue];
-}
-- (IBAction)floorChanged:(UIStepper *)sender
-{
-    [self updateFloorLabel];
-    NSString*imgPath = [_model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:self.floorNumberStepper.value];
-    [self setScrollImage:[UIImage imageNamed:imgPath]];
-}
+
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
+    if(self.model == nil)
+        self.model = [SFUImageMapsModel new];
+    
     if(component == 0)
     {
-        return [_model nameOfBuildingAtIndex:row];
+        return [self.model nameOfBuildingAtIndex:row];
     }
     else
     {
-        return [_model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:floorIndex];
+        return [self.model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:row];
     }
     //return @"AQ (Academic Quadrangle";
 }
@@ -82,16 +80,20 @@
     return 2;
 }
 
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
+    if(self.model == nil)
+        self.model = [SFUImageMapsModel new];
+    
     if(component == 0)
     {
-        return 2;
+        return  [self.model numberOfBuildings];
     }
     else
     {
-        return 1;
+        return [self.model numberOfFloorsForBuildingAtIndex:buildingIndex];
     }
 }
 -(void)setScrollImage:(UIImage*)img
@@ -99,28 +101,44 @@ numberOfRowsInComponent:(NSInteger)component
     self.imageView.image=[self imageByDrawingCircleOnImage:img];
     self.scrollView.contentSize = self.imageView.image.size;
 }
+
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component
 {
-    NSString*imgPath = [_model nameOfImageForBuildingAtIndex:row onFloorWithIndex:self.floorNumberStepper.value];
+    
+    
+    if(component == 0)
+    {
+        buildingIndex = row;
+        floorIndex=0;
+        [pickerView reloadComponent:1];
+        [pickerView selectRow:0 inComponent:1 animated:NO];
+    }
+    else
+    {
+        floorIndex = row;
+    }
+    
+    NSString*imgPath = [self.model nameOfImageForBuildingAtIndex:buildingIndex onFloorWithIndex:floorIndex];
+    
+    NSString* floor = [self.model nameOfFloorInBuildingWithIndex:buildingIndex onFloorWithIndex:row];
+    BOOL rightSrcPage = [floor characterAtIndex:0] == [self.src.pageName characterAtIndex:0];
+    BOOL rightDestPage = [floor characterAtIndex:0] == [self.dest.pageName characterAtIndex:0];
+    
+    
+    BOOL rightSrcBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    BOOL rightDestBuilding = [[self.model shortCodeForBuildingAtIndex:buildingIndex ] isEqualToString: self.dest.buildingCode ];
+    
+    self.pageIsSrcPage = rightSrcBuilding && rightSrcPage;
+    self.pageIsDestPage = rightDestPage && rightDestBuilding;
+    
     [self setScrollImage:[UIImage imageNamed:imgPath]];
-    //set floots
-    //set stepper to floors count
-    //set prefered floor if applicable
-    [self updateFloorLabel];
-    buildingIndex=row;
+    
+
 }
 
--(void)setSourceLocationToShortcode:(NSString*)s
-{
-    
-}
 
--(void)setDestinationLocationToShortcode:(NSString*)s
-{
-    
-}
 
 #pragma mark Custom Drawing
 
@@ -194,21 +212,21 @@ numberOfRowsInComponent:(NSInteger)component
     
 }
 
-/**
- Is the currently displayed page the page where the source room is?
- */
--(BOOL) pageIsSrcPage
-{
-    return true;
-}
-
-/**
- Is the currently displayed page the page where the destination room is?
- */
--(BOOL) pageIsDestPage
-{
-    return true;
-}
+///**
+// Is the currently displayed page the page where the source room is?
+// */
+//-(BOOL) pageIsSrcPage
+//{
+//    return true;
+//}
+//
+///**
+// Is the currently displayed page the page where the destination room is?
+// */
+//-(BOOL) pageIsDestPage
+//{
+//    return true;
+//}
 
 #pragma mark debug
 

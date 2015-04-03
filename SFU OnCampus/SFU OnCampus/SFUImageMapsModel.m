@@ -61,6 +61,10 @@
 {
     NSDictionary* d = [a objectAtIndex:i];
     NSArray* ps = [d objectForKey:@"pages"];
+    if (j>=[ps count])
+    {
+        j=[ps count]-1;
+    }
     return [[ps objectAtIndex:j] objectForKey:@"name"];
 }
 -(NSUInteger)floorCountForBuldingWithIndex:(NSUInteger)i

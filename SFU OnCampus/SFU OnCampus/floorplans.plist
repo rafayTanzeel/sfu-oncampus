@@ -131,21 +131,97 @@
 		<array>
 			<dict>
 				<key>name</key>
+				<string>8000</string>
+				<key>image</key>
+				<string>ASB8000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>9000</string>
 				<key>image</key>
-				<string>AQ1000.jpg</string>
+				<string>ASB9000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>10000</string>
+				<key>image</key>
+				<string>ASB10000.jpg</string>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string>{0.864258,0.839286}</string>
+					<key>3144</key>
+					<string>{0.862793,0.179537}</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>requiresLogin</key>
+		<true/>
+		<key>displayName</key>
+		<string>BLU (Blusson Hall)</string>
+		<key>shortcode</key>
+		<string>BLU</string>
+		<key>preferedPage</key>
+		<string>9000</string>
+		<key>pages</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>9000</string>
+				<key>image</key>
+				<string>BLU9000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>10000</string>
+				<key>image</key>
+				<string>BLU10000.jpg</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>11000</string>
+				<key>image</key>
+				<string>BLU11000.jpg</string>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string>{0.864258,0.839286}</string>
+					<key>3144</key>
+					<string>{0.862793,0.179537}</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>requiresLogin</key>
+		<true/>
+		<key>displayName</key>
+		<string>WMC (West Mall Centre)</string>
+		<key>shortcode</key>
+		<string>WMC</string>
+		<key>preferedPage</key>
+		<string>3000</string>
+		<key>pages</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>1000</string>
+				<key>image</key>
+				<string>WMC 1000.jpg</string>
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>2000</string>
 				<key>image</key>
-				<string>AQ2000.jpg</string>
+				<string>WMC 2000.jpg</string>
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>3000</string>
 				<key>image</key>
-				<string>AQ3000.jpg</string>
+				<string>WMC 3000.jpg</string>
 				<key>rooms</key>
 				<dict>
 					<key>3154</key>
@@ -158,13 +234,27 @@
 				<key>name</key>
 				<string>4000</string>
 				<key>image</key>
-				<string>AQ4000.jpg</string>
+				<string>WMC 4000.jpg</string>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string>{0.864258,0.839286}</string>
+					<key>3144</key>
+					<string>{0.862793,0.179537}</string>
+				</dict>
 			</dict>
 			<dict>
 				<key>name</key>
 				<string>5000</string>
 				<key>image</key>
-				<string>AQ5000.jpg</string>
+				<string>WMC 5000.jpg</string>
+				<key>rooms</key>
+				<dict>
+					<key>3154</key>
+					<string>{0.864258,0.839286}</string>
+					<key>3144</key>
+					<string>{0.862793,0.179537}</string>
+				</dict>
 			</dict>
 		</array>
 	</dict>

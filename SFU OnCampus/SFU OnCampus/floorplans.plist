@@ -168,6 +168,13 @@
 		<key>pages</key>
 		<array>
 			<dict>
+				<key>rooms</key>
+				<dict>
+					<key>9660</key>
+					<string>{0.575228,0.814991}</string>
+					<key>9865</key>
+					<string>{0.715166,0.675580}</string>
+				</dict>
 				<key>name</key>
 				<string>9000</string>
 				<key>image</key>
@@ -206,6 +213,13 @@
 		<key>pages</key>
 		<array>
 			<dict>
+				<key>rooms</key>
+				<dict>
+					<key>1607</key>
+					<string>{0.244913,0.380295}</string>
+					<key>1640</key>
+					<string>{0.354175,0.170772}</string>
+				</dict>
 				<key>name</key>
 				<string>1000</string>
 				<key>image</key>

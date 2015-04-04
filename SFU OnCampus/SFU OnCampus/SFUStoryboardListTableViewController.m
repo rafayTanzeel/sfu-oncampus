@@ -30,8 +30,8 @@ SFUStoryboardListModel* model;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    UIBarButtonItem* navItem = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(loginSelected)];
-    self.navigationItem.rightBarButtonItem = navItem;
+    //UIBarButtonItem* navItem = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(loginSelected)];
+    //self.navigationItem.rightBarButtonItem = navItem;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }

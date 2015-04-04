@@ -147,6 +147,7 @@
 		5D11B5BB1AABE232000DBC1B /* journal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B61AABE232000DBC1B /* journal.png */; };
 		5D11B5BC1AABE232000DBC1B /* news-97862_1280.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11B5B71AABE232000DBC1B /* news-97862_1280.png */; };
 		5D566C4A1ACF52EE00F583C8 /* SFUWebcamURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D566C491ACF52EE00F583C8 /* SFUWebcamURLs.plist */; };
+		5D566C4C1ACF630E00F583C8 /* Command Prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D566C4B1ACF630E00F583C8 /* Command Prompt.png */; };
 		5DDC257A1AAD041900243DB4 /* SFUFacebookURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC25791AAD041900243DB4 /* SFUFacebookURLs.plist */; };
 		5DDC257C1AAD048400243DB4 /* sfu-fb-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC257B1AAD048400243DB4 /* sfu-fb-icon.jpg */; };
 		5DDC257E1AAD05C300243DB4 /* sfusurrey-fb-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DDC257D1AAD05C300243DB4 /* sfusurrey-fb-icon.png */; };
@@ -405,6 +406,7 @@
 		5D11B5B61AABE232000DBC1B /* journal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = journal.png; sourceTree = "<group>"; };
 		5D11B5B71AABE232000DBC1B /* news-97862_1280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news-97862_1280.png"; sourceTree = "<group>"; };
 		5D566C491ACF52EE00F583C8 /* SFUWebcamURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUWebcamURLs.plist; sourceTree = "<group>"; };
+		5D566C4B1ACF630E00F583C8 /* Command Prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Command Prompt.png"; sourceTree = "<group>"; };
 		5DDC25791AAD041900243DB4 /* SFUFacebookURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFUFacebookURLs.plist; sourceTree = "<group>"; };
 		5DDC257B1AAD048400243DB4 /* sfu-fb-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sfu-fb-icon.jpg"; sourceTree = "<group>"; };
 		5DDC257D1AAD05C300243DB4 /* sfusurrey-fb-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sfusurrey-fb-icon.png"; sourceTree = "<group>"; };
@@ -712,6 +714,7 @@
 		5D11B5B21AABE232000DBC1B /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				5D566C4B1ACF630E00F583C8 /* Command Prompt.png */,
 				F8A825351AC8F0F4004284C6 /* people-search.png */,
 				35D631731ABF7CFA00CCEC8D /* 20-rss-512.png */,
 				35D631611ABF760100CCEC8D /* 700383-icon-14-trophy-one-512.png */,
@@ -1287,6 +1290,7 @@
 				5D11B5BA1AABE232000DBC1B /* clapboard-311208_1280.png in Resources */,
 				35D6316E1ABF760100CCEC8D /* internt_web_technology-13-512.png in Resources */,
 				040DC4E31AACFCAF003A713F /* chanceofstorm_n.png in Resources */,
+				5D566C4C1ACF630E00F583C8 /* Command Prompt.png in Resources */,
 				F87701571AA00513001FE1FE /* sfu_accessibility_map_2010_colour.pdf in Resources */,
 				35BACF221ABEB4FB00035E05 /* SFU Computing Science Dual Degree Program.png in Resources */,
 				35D6316F1ABF760100CCEC8D /* rss_circle_color-512.png in Resources */,

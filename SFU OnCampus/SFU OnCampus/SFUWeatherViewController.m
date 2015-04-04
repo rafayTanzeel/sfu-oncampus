@@ -211,6 +211,10 @@
     // If user overscrolls, colour is still grey
     self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1];
     
+    // Locks to portrait
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl.backgroundColor = [UIColor colorWithRed:(166/255.f) green:(25/255.f) blue:(46/255.f) alpha:1.0f];
@@ -306,6 +310,7 @@
         return 40;
     }
 }
+
 
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation

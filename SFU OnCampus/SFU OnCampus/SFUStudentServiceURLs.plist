@@ -36,6 +36,14 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>Coursys</string>
+		<key>url</key>
+		<string>https://courses.cs.sfu.ca/</string>
+		<key>image</key>
+		<string>Command Prompt.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>talkSFU</string>
 		<key>url</key>
 		<string>http://talksfu.ca</string>
@@ -60,7 +68,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Book Store</string>
+		<string>Bookstore</string>
 		<key>url</key>
 		<string>http://www.sfu.ca/bookstore</string>
 		<key>image</key>

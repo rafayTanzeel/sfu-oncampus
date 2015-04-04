@@ -40,13 +40,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Locks to portrait
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    
     self.model=[[SFUTransitModel alloc] initWithPlist:self.loopName]; //initialize with plist
     NSInteger BusIndex=[self.BusPath row]; //determine which bus was clicked
+    
     //NSLog([self.model stopStringForIndex:BusIndex]);
     //NSLog([self.model routeStringForIndex:BusIndex]);
+    
     NSString *firstHalfurl=@"http://api.translink.ca/rttiapi/v1/stops/";
     NSString *secondHalfurl=[firstHalfurl stringByAppendingString:[self.model stopStringForIndex:BusIndex]];
     NSString *thirdHalfurl=[secondHalfurl stringByAppendingString:@"/estimates?apikey=qij3Jo3VrVDKuO8uAXOk&count=6&timeframe=1440&routeNo="];
+    
     apiURL=[thirdHalfurl stringByAppendingString:[self.model routeStringForIndex:BusIndex]];
     
     NSLog(apiURL);

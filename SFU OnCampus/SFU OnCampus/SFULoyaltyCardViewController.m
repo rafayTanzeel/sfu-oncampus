@@ -7,6 +7,7 @@
 //
 
 #import "SFULoyaltyCardViewController.h"
+#import "SFULoyaltyCardModel.h"
 
 @interface SFULoyaltyCardViewController ()
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSNumber* n = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSFUPointCardBalance"];
+    
+    self.pointsLabel.text=[n stringValue];
+
     // Do any additional setup after loading the view.
 }
 
@@ -40,6 +45,8 @@
     NSString* value = [lines objectAtIndex:0];
     NSLog(@"redeem code value=%@",value);
     NSInteger i = [value integerValue];
+    SFULoyaltyCardModel* model=[SFULoyaltyCardModel new];
+    NSInteger balancelabel=[model setBalance:i];
     if(i <0)
     {
         self.statusLine.text = @"Bad code or no value";
@@ -47,7 +54,9 @@
     {
         self.statusLine.text = [NSString stringWithFormat:@"Redeemed code for %@ points",value];
     }
+    
     //update label
+    self.pointsLabel.text=[NSString stringWithFormat:@"%ld",(long)balancelabel];
 }
 
 #pragma mark - Navigation

@@ -78,7 +78,7 @@
                             <outlet property="delegate" destination="FAG-s8-81V" id="Z2P-sc-FIJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Main Menu" id="oAm-5a-Izh"/>
+                    <navigationItem key="navigationItem" title="SFU" id="oAm-5a-Izh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUf-KA-eKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

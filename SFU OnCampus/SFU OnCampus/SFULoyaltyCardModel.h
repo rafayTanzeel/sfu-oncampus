@@ -19,10 +19,9 @@
  @post Value synced with server.
  @return point value for code
  */
--(NSUInteger)redeemCode:(NSString*)code;
+-(NSInteger)setBalance:(NSInteger)input;
 
 ///Get the current point balance stored on the card.
-@property NSUInteger balance;
 
 ///Verify the card balance with the server
 -(void)syncBalance;

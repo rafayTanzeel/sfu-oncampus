@@ -46,7 +46,7 @@
     NSLog(@"redeem code value=%@",value);
     NSInteger i = [value integerValue];
     SFULoyaltyCardModel* model=[SFULoyaltyCardModel new];
-    NSInteger balancelabel=[model setBalance:i];
+    NSInteger balancelabel=[model addBalance:i];
     if(i <0)
     {
         self.statusLine.text = @"Bad code or no value";

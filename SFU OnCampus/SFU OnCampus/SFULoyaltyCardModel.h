@@ -19,7 +19,10 @@
  @post Value synced with server.
  @return point value for code
  */
--(NSInteger)setBalance:(NSInteger)input;
+-(NSInteger)addBalance:(NSInteger)input;
+
+-(NSInteger)getBalance;
+
 
 ///Get the current point balance stored on the card.
 

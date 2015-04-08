@@ -165,6 +165,9 @@
 		8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF21ABDFDBA007A135E /* News.storyboard */; };
 		8869FAF71ABE05BC007A135E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF61ABE05BC007A135E /* Login.storyboard */; };
 		8869FAF91ABE0776007A135E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF81ABE0776007A135E /* Library.storyboard */; };
+		A32A9F081AD35743002913C5 /* TestTranlinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F071AD35743002913C5 /* TestTranlinkModel.m */; };
+		A32A9F0A1AD358EC002913C5 /* LoyaltyCardModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F091AD358EC002913C5 /* LoyaltyCardModelTest.m */; };
+		A32A9F0C1AD38C7D002913C5 /* TestSFUMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F0B1AD38C7D002913C5 /* TestSFUMapModel.m */; };
 		B4C3A90A1ABE32F900D96A90 /* RSSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9051ABE32F900D96A90 /* RSSMainTableViewController.m */; };
 		B4C3A90B1ABE32F900D96A90 /* RSSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9071ABE32F900D96A90 /* RSSModel.m */; };
 		B4C3A90C1ABE32F900D96A90 /* RSSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9091ABE32F900D96A90 /* RSSTableViewController.m */; };
@@ -425,6 +428,9 @@
 		8869FAF21ABDFDBA007A135E /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		8869FAF61ABE05BC007A135E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8869FAF81ABE0776007A135E /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
+		A32A9F071AD35743002913C5 /* TestTranlinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTranlinkModel.m; path = Test/TestTranlinkModel.m; sourceTree = SOURCE_ROOT; };
+		A32A9F091AD358EC002913C5 /* LoyaltyCardModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoyaltyCardModelTest.m; path = Test/LoyaltyCardModelTest.m; sourceTree = "<group>"; };
+		A32A9F0B1AD38C7D002913C5 /* TestSFUMapModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSFUMapModel.m; path = Test/TestSFUMapModel.m; sourceTree = "<group>"; };
 		B4C3A9041ABE32F900D96A90 /* RSSMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSMainTableViewController.h; sourceTree = "<group>"; };
 		B4C3A9051ABE32F900D96A90 /* RSSMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSMainTableViewController.m; sourceTree = "<group>"; };
 		B4C3A9061ABE32F900D96A90 /* RSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSModel.h; sourceTree = "<group>"; };
@@ -834,6 +840,7 @@
 				F83872031ABA8712003CF26E /* Student Services.storyboard */,
 				F83872001ABA8642003CF26E /* Social.storyboard */,
 				F83871FA1ABA8587003CF26E /* Weather.storyboard */,
+				A32A9F071AD35743002913C5 /* TestTranlinkModel.m */,
 				F83871F41ABA84D4003CF26E /* Social */,
 				F83871F51ABA84E3003CF26E /* Web */,
 				F83871F61ABA84EC003CF26E /* Core */,
@@ -902,6 +909,7 @@
 				F81D7EB91ABAD219004AC1E5 /* SFUMapViewController.m */,
 				F81D7EB41ABAD219004AC1E5 /* SFUMapModel.h */,
 				F81D7EBE1ABAD219004AC1E5 /* SFUMapModel.m */,
+				A32A9F0B1AD38C7D002913C5 /* TestSFUMapModel.m */,
 				F81D7EB51ABAD219004AC1E5 /* SFUMapHistory.h */,
 				F81D7EB61ABAD219004AC1E5 /* SFUMapHistory.m */,
 				F81D7EB81ABAD219004AC1E5 /* SFUMapHelpViewController.h */,
@@ -932,6 +940,7 @@
 				F81D7EC21ABAD219004AC1E5 /* SFUQRCaptureViewController.h */,
 				F83D759B1AA5A79000D82AF2 /* SFULoyaltyCardModel.h */,
 				F83D759C1AA5A79000D82AF2 /* SFULoyaltyCardModel.m */,
+				A32A9F091AD358EC002913C5 /* LoyaltyCardModelTest.m */,
 				F8189DCF1ABB7E6E008A9A9D /* SFULoyaltyCardViewController.h */,
 				F8189DD01ABB7E6E008A9A9D /* SFULoyaltyCardViewController.m */,
 				F8189DD21ABB801D008A9A9D /* SFUQRCaptureDelegate.h */,
@@ -1387,6 +1396,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32A9F0A1AD358EC002913C5 /* LoyaltyCardModelTest.m in Sources */,
+				A32A9F0C1AD38C7D002913C5 /* TestSFUMapModel.m in Sources */,
+				A32A9F081AD35743002913C5 /* TestTranlinkModel.m in Sources */,
 				F808D82E1A95CFA90006FC17 /* SFU_OnCampusTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

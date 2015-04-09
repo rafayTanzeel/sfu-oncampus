@@ -56,7 +56,7 @@ NSDictionary *laptops;
     }
     if(libraryHours == nil) {
         // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Library information cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Library information cannot be displayed." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
@@ -106,6 +106,9 @@ NSDictionary *laptops;
     NSError *error;
     if(computerAvailability != nil) {
         error = nil;
+    }
+    else {
+        return;
     }
 
     // Store the data in the computers dictionary 

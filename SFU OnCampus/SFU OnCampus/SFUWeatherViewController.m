@@ -63,7 +63,7 @@
 
     if(currentWeatherData == nil) {
         // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Weather cannot be displayed." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
@@ -112,6 +112,9 @@
     if(forecastWeatherData != nil) {
         error = nil;
     }
+    else {
+        return;
+    }
     
     NSMutableDictionary *forecastDictionary = [NSJSONSerialization JSONObjectWithData:forecastWeatherData options:kNilOptions error:&error];
     
@@ -142,6 +145,9 @@
     
     if(roadConditionsData != nil) {
         error = nil;
+    }
+    else {
+        return;
     }
     
     // Store the data in dictionary

@@ -139,6 +139,7 @@ NSDictionary *laptops;
     
 }
 
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -146,6 +147,10 @@ NSDictionary *laptops;
     self.title = @"Library";
     
     self.tableView.separatorColor = [UIColor clearColor];
+    
+    // Locks to portrait
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
     
     // Colour remains grey if user overscrolls
     self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1];

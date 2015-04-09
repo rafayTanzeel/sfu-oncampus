@@ -194,6 +194,8 @@
     return string;
 }
 
+
+
 - (void)refresh:(id)sender
 {
     // Refresh the data
@@ -204,6 +206,14 @@
     
     // End refreshing
     [(UIRefreshControl *)sender endRefreshing];
+}
+
+/*
+ * Locks the device to portrait
+ */
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void)viewDidLoad
@@ -232,6 +242,7 @@
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
     [self getRoadConditionsData:self];
+    [self supportedInterfaceOrientations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -329,6 +340,8 @@
         ((SFUWebListController*)[segue destinationViewController]).model =m;
     }
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

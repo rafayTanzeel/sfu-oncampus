@@ -8,17 +8,29 @@
 
 #import "SFULoyaltyCardModel.h"
 
+@interface SFULoyaltyCardModel()
+{
+    @private NSInteger balance;
+}
+@end
+
 @implementation SFULoyaltyCardModel
 
--(NSUInteger)redeemCode:(NSString*)code
+-(NSInteger)addBalance:(NSInteger)input
 {
-    NSUInteger redeemedValue =0;
+    NSUInteger redeemedValue =input;
     NSNumber* n = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSFUPointCardBalance"];
-    self.balance = [n unsignedIntegerValue];
-    self.balance += redeemedValue;
-    n= [NSNumber numberWithUnsignedInteger:self.balance];
+    balance = [n unsignedIntegerValue];
+    balance += redeemedValue;
+    n= [NSNumber numberWithUnsignedInteger:balance];
     [[NSUserDefaults standardUserDefaults] setObject:n forKey:@"kSFUPointCardBalance"];
-    return self.balance;
+    return balance;
+}
+
+-(NSInteger)getBalance
+{
+    NSNumber* n = [[NSUserDefaults standardUserDefaults] objectForKey:@"kSFUPointCardBalance"];
+    return [n integerValue];
 }
 
 @end

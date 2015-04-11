@@ -63,7 +63,7 @@
 
     if(currentWeatherData == nil) {
         // Display the error pop up
-        [[[UIAlertView alloc] initWithTitle:@"Network Unavailable" message:@"Weather cannot be displayed" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Weather cannot be displayed." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil] show];
         [self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
@@ -112,6 +112,9 @@
     if(forecastWeatherData != nil) {
         error = nil;
     }
+    else {
+        return;
+    }
     
     NSMutableDictionary *forecastDictionary = [NSJSONSerialization JSONObjectWithData:forecastWeatherData options:kNilOptions error:&error];
     
@@ -142,6 +145,9 @@
     
     if(roadConditionsData != nil) {
         error = nil;
+    }
+    else {
+        return;
     }
     
     // Store the data in dictionary
@@ -188,6 +194,8 @@
     return string;
 }
 
+
+
 - (void)refresh:(id)sender
 {
     // Refresh the data
@@ -198,6 +206,14 @@
     
     // End refreshing
     [(UIRefreshControl *)sender endRefreshing];
+}
+
+/*
+ * Locks the device to portrait
+ */
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void)viewDidLoad
@@ -226,6 +242,7 @@
     [self getCurrentWeather:self];
     [self getForecastWeather:self];
     [self getRoadConditionsData:self];
+    [self supportedInterfaceOrientations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -323,6 +340,8 @@
         ((SFUWebListController*)[segue destinationViewController]).model =m;
     }
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

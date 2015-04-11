@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PF7-DZ-6aY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PF7-DZ-6aY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -55,9 +55,9 @@
                                     <segue destination="8zU-0u-tbM" kind="show" id="KMC-g0-l1w"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoB-OL-Gx4" userLabel="Status Line">
-                                <rect key="frame" x="77" y="262" width="447" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoB-OL-Gx4" userLabel="Status Line">
+                                <rect key="frame" x="77" y="241" width="447" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -78,7 +78,7 @@
                             <constraint firstItem="IoB-OL-Gx4" firstAttribute="leading" secondItem="hE8-rR-PG9" secondAttribute="leading" id="h9q-oz-1Lq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1SH-GK-6aF" secondAttribute="trailing" constant="16" id="iST-nG-uFT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X0V-Xc-B3t" secondAttribute="trailing" constant="16" id="r4p-KU-5N9"/>
-                            <constraint firstItem="IoB-OL-Gx4" firstAttribute="top" secondItem="X0V-Xc-B3t" secondAttribute="bottom" constant="8" symbolic="YES" id="tac-9y-khY"/>
+                            <constraint firstItem="IoB-OL-Gx4" firstAttribute="top" secondItem="X0V-Xc-B3t" secondAttribute="bottom" constant="-13" id="tac-9y-khY"/>
                             <constraint firstItem="rDN-4G-TrY" firstAttribute="top" secondItem="hE8-rR-PG9" secondAttribute="bottom" constant="59" id="w6R-bW-pex"/>
                             <constraint firstAttribute="centerX" secondItem="1SH-GK-6aF" secondAttribute="centerX" constant="-5.5" id="x0g-DJ-Hyf"/>
                         </constraints>

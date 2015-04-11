@@ -4,6 +4,18 @@
 <array>
 	<dict>
 		<key>title</key>
+		<string>Calendar</string>
+		<key>path</key>
+		<string>WebView</string>
+		<key>image</key>
+		<string>calendar_icon.png</string>
+		<key>sel</key>
+		<string>displayPageForURLString:</string>
+		<key>param</key>
+		<string>https://events.sfu.ca/iCal.html?integral=0</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Dining Options</string>
 		<key>path</key>
 		<string>WebView</string>

@@ -214,6 +214,7 @@
 		F81D7EE21ABADE2E004AC1E5 /* buildingData.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */; };
 		F81D7EE41ABAEDDA004AC1E5 /* floorplans.plist in Resources */ = {isa = PBXBuildFile; fileRef = F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */; };
 		F82359621AD8F5B100B25096 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F82359601AD8F5B100B25096 /* Calendar.storyboard */; };
+		F83209AF1AD9092F0092AD3B /* calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F83209AE1AD9092F0092AD3B /* calendar_icon.png */; };
 		F83871F91ABA856F003CF26E /* Loyalty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871F71ABA856F003CF26E /* Loyalty.storyboard */; };
 		F83871FC1ABA8587003CF26E /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83871FA1ABA8587003CF26E /* Weather.storyboard */; };
 		F83872021ABA8642003CF26E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83872001ABA8642003CF26E /* Social.storyboard */; };
@@ -507,6 +508,7 @@
 		F81D7EE11ABADE2E004AC1E5 /* buildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = buildingData.plist; sourceTree = "<group>"; };
 		F81D7EE31ABAEDDA004AC1E5 /* floorplans.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = floorplans.plist; sourceTree = "<group>"; };
 		F82359611AD8F5B100B25096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
+		F83209AE1AD9092F0092AD3B /* calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_icon.png; path = "SFU OnCampus/images/calendar_icon.png"; sourceTree = "<group>"; };
 		F83871F81ABA856F003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "SFU OnCampus/Base.lproj/Loyalty.storyboard"; sourceTree = "<group>"; };
 		F83871FB1ABA8587003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weather.storyboard; sourceTree = "<group>"; };
 		F83871FE1ABA8607003CF26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main(old).storyboard"; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 		F808D8021A95CFA90006FC17 = {
 			isa = PBXGroup;
 			children = (
+				F83209AE1AD9092F0092AD3B /* calendar_icon.png */,
 				F8792F751AC401170030A7FA /* SFUImageOverlayView.h */,
 				F8792F761AC401170030A7FA /* SFUImageOverlayView.m */,
 				F806CDCE1AC019AF0034BF7D /* Main.storyboard */,
@@ -1286,6 +1289,7 @@
 				35BACF131ABEB4FB00035E05 /* COGSsfu.png in Resources */,
 				35BACF0F1ABEB4FB00035E05 /* #SimonFraserUniversity.png in Resources */,
 				5DDC257C1AAD048400243DB4 /* sfu-fb-icon.jpg in Resources */,
+				F83209AF1AD9092F0092AD3B /* calendar_icon.png in Resources */,
 				F83871F91ABA856F003CF26E /* Loyalty.storyboard in Resources */,
 				35BACF231ABEB4FB00035E05 /* SFU Economics.png in Resources */,
 				5D010D061AAD6BA8005CC0D2 /* sfuhealth-tw-icon.png in Resources */,

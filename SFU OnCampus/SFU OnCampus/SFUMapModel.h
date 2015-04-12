@@ -21,12 +21,21 @@ typedef enum SFUMapModelResolutionStatus
     FULL,PARTIAL,NONE
 }SFUMapModelResolutionStatus;
 
+/**
+ Get a map view region for a given shortcode"
+ */
 -(MKCoordinateRegion)regionForShortCode:(NSString*)s;
 -(NSString*)suggestionForPrefix:(NSString*)p;
+/**
+ List all the domains(buildings) display names on campus
+ */
 -(NSArray*)listOfDomains;
 -(NSString*)shortCodeForDisplayName:(NSString*)s;
 -(NSString*)displayNameForShortCode:(NSString*)s;
 
+/**
+ Return an abstract container that a shortcode represents
+ */
 -(SFULocation*)locationForShortcode:(NSString*)s;
 
 -(MKCoordinateRegion)regionForString:(NSString*)s status:(SFUMapModelResolutionStatus*)status;

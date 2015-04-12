@@ -210,12 +210,12 @@
 
 /*
  * Locks the device to portrait
- */
+ 
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
 }
-
+*/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -228,8 +228,8 @@
     self.view.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1];
     
     // Locks to portrait
-    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
-    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+    // NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    // [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
     
     // Initialize the refresh control.
     self.refreshControl = [[UIRefreshControl alloc] init];

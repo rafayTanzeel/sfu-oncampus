@@ -39,8 +39,8 @@
     self.cardView.layer.shadowOpacity = 1;
     
     // Lowers the performance required to build shadows.
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.cardView.bounds];
-    self.cardView.layer.shadowPath = path.CGPath;
+    // UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.cardView.bounds];
+    // self.cardView.layer.shadowPath = path.CGPath;
     
     // Set the background colour
     self.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]; 

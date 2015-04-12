@@ -165,9 +165,6 @@
 		8869FAF31ABDFDBA007A135E /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF21ABDFDBA007A135E /* News.storyboard */; };
 		8869FAF71ABE05BC007A135E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF61ABE05BC007A135E /* Login.storyboard */; };
 		8869FAF91ABE0776007A135E /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8869FAF81ABE0776007A135E /* Library.storyboard */; };
-		A32A9F081AD35743002913C5 /* TestTranlinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F071AD35743002913C5 /* TestTranlinkModel.m */; };
-		A32A9F0A1AD358EC002913C5 /* LoyaltyCardModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F091AD358EC002913C5 /* LoyaltyCardModelTest.m */; };
-		A32A9F0C1AD38C7D002913C5 /* TestSFUMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A32A9F0B1AD38C7D002913C5 /* TestSFUMapModel.m */; };
 		B4C3A90A1ABE32F900D96A90 /* RSSMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9051ABE32F900D96A90 /* RSSMainTableViewController.m */; };
 		B4C3A90B1ABE32F900D96A90 /* RSSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9071ABE32F900D96A90 /* RSSModel.m */; };
 		B4C3A90C1ABE32F900D96A90 /* RSSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C3A9091ABE32F900D96A90 /* RSSTableViewController.m */; };
@@ -1404,9 +1401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A32A9F0A1AD358EC002913C5 /* LoyaltyCardModelTest.m in Sources */,
-				A32A9F0C1AD38C7D002913C5 /* TestSFUMapModel.m in Sources */,
-				A32A9F081AD35743002913C5 /* TestTranlinkModel.m in Sources */,
 				F808D82E1A95CFA90006FC17 /* SFU_OnCampusTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
